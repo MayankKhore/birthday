@@ -1,0 +1,258 @@
+/**
+ * Design Tokens — BirthdayWish "Gilded Porcelain"
+ * An editorial gifting-house aesthetic: warm porcelain canvas, aubergine ink,
+ * a mulberry signature, antique-gold detail. Every token referenced anywhere
+ * in the app is defined here.
+ */
+
+:root {
+  /* ============================================================
+   * Canvas & Surfaces
+   * ============================================================ */
+  --color-page: #FAF7F2;               /* Warm porcelain canvas */
+  --color-background: #FAF7F2;
+  --color-surface: #FFFFFF;            /* Cards, panels */
+  --color-surface-elevated: #FFFFFF;
+  --color-surface-sunken: #F1ECE3;     /* Recessed wells, disabled, tracks */
+  --color-surface-warm: #F4EFE7;       /* Warm secondary surface */
+  --color-surface-lavender: #F7EFF4;   /* Mulberry-tinted accent surface */
+  --color-surface-hover: #F6F2EB;
+  --color-muted-bg: #F1ECE3;
+  --color-cream: #F5EFE5;
+  --color-warm: #F4EFE7;
+  --color-warm-deep: #EAE3D7;
+
+  /* ============================================================
+   * Ink & Text
+   * ============================================================ */
+  --color-ink: #241D2E;                /* Near-black aubergine */
+  --color-plum: #241D2E;               /* Legacy alias */
+  --color-text-primary: #241D2E;
+  --color-text-secondary: #575064;
+  --color-text-tertiary: #736C82;
+  --color-text-muted: #7E7790;
+  --color-text-on-dark: #FAF7F2;
+  --color-text-on-primary: #FFFFFF;
+  --color-text-on-violet: #FFFFFF;
+  --color-ivory: #FAF7F2;              /* Text on dark bands */
+  --color-primary: #A02F60;
+  --color-secondary: #6E9B84;
+  --color-accent: #A87F2E;
+
+  /* ============================================================
+   * Signature — Mulberry (brand scale)
+   * ============================================================ */
+  --color-brand-50: #FCF3F7;
+  --color-brand-100: #F8E3EC;
+  --color-brand-200: #F0C4D7;
+  --color-brand-300: #E39EBE;
+  --color-brand-400: #D4729C;
+  --color-brand-500: #BC4A7C;
+  --color-brand-600: #A02F60;          /* Primary actions */
+  --color-brand-700: #83234D;
+  --color-brand-800: #6A1D3F;
+  --color-brand-900: #541833;
+  --color-brand-950: #350C1F;
+  --color-brand-500-10: rgba(160, 47, 96, 0.10);
+
+  /* ============================================================
+   * Gilded Gold detail
+   * ============================================================ */
+  --color-gold: #A87F2E;               /* Decorative */
+  --color-gold-deep: #8A6524;          /* Gold text (AA on porcelain) */
+  --color-gold-light: #E5C171;
+  --color-gold-soft: #F7EDD8;
+  --color-champagne: #EFDDB8;
+
+  /* ============================================================
+   * Decorative tints (gradients, confetti, illustrations)
+   * ============================================================ */
+  --color-lavender: #D8BFD2;
+  --color-periwinkle: #A99BD6;
+  --color-midnight: #1A1424;           /* Deep ink for dark bands */
+  --color-peach: #F0A186;
+  --color-butter: #F0D48A;
+  --color-mint: #93C3AC;
+
+  /* ============================================================
+   * Typography
+   * ============================================================ */
+  --font-display: 'Fraunces', 'Georgia', 'Times New Roman', serif;
+  --font-body: 'Plus Jakarta Sans', 'Inter', 'system-ui', -apple-system, sans-serif;
+  --font-mono: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+  --text-6xl: 3.75rem;
+  --text-7xl: 4.5rem;
+
+  --leading-tight: 1.08;
+  --leading-snug: 1.25;
+  --leading-normal: 1.55;
+  --leading-relaxed: 1.7;
+
+  --tracking-tight: -0.02em;
+  --tracking-normal: 0em;
+  --tracking-wide: 0.05em;
+  --tracking-widest: 0.12em;
+
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  --weight-extrabold: 800;
+
+  /* ============================================================
+   * Spacing
+   * ============================================================ */
+  --space-0: 0;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+
+  /* ============================================================
+   * Shadows — layered, warm-tinted, soft
+   * ============================================================ */
+  --clay-shadow-xs: 0 1px 2px rgba(36, 29, 46, 0.05);
+  --clay-shadow-sm: 0 1px 2px rgba(36, 29, 46, 0.05), 0 2px 6px rgba(36, 29, 46, 0.04);
+  --clay-shadow-md: 0 2px 4px rgba(36, 29, 46, 0.04), 0 8px 20px -6px rgba(36, 29, 46, 0.10);
+  --clay-shadow-lg: 0 4px 12px -2px rgba(36, 29, 46, 0.07), 0 18px 44px -12px rgba(36, 29, 46, 0.14);
+  --clay-shadow-xl: 0 8px 24px -4px rgba(36, 29, 46, 0.10), 0 32px 72px -16px rgba(36, 29, 46, 0.18);
+  --clay-shadow-pressed: inset 0 1px 3px rgba(36, 29, 46, 0.10);
+  --clay-glow-coral: 0 0 0 4px rgba(188, 74, 124, 0.16);
+  --clay-glow-mulberry: 0 0 0 4px rgba(188, 74, 124, 0.16);
+  --clay-glow-blush: 0 2px 10px rgba(212, 114, 158, 0.22), 0 10px 30px rgba(188, 74, 124, 0.12);
+
+  /* Glass shadows */
+  --glass-shadow: 0 1px 2px rgba(36, 29, 46, 0.05), 0 2px 6px rgba(36, 29, 46, 0.04);
+  --glass-shadow-lg: 0 4px 12px -2px rgba(36, 29, 46, 0.07), 0 18px 44px -12px rgba(36, 29, 46, 0.14);
+
+  /* Blur */
+  --blur-sm: 4px;
+  --blur-md: 12px;
+  --blur-lg: 24px;
+  --blur-xl: 40px;
+
+  /* ============================================================
+   * Transitions & Motion — calm, "settling" feel
+   * ============================================================ */
+  --duration-instant: 120ms;
+  --duration-fast: 180ms;
+  --duration-normal: 260ms;
+  --duration-slow: 400ms;
+  --duration-slower: 600ms;
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-spring: cubic-bezier(0.34, 1.4, 0.64, 1);
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* ============================================================
+   * Z-Index
+   * ============================================================ */
+  --z-base: 1;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-overlay: 300;
+  --z-modal: 400;
+  --z-toast: 500;
+
+  /* ============================================================
+   * Layout
+   * ============================================================ */
+  --max-width-sm: 640px;
+  --max-width-md: 768px;
+  --max-width-lg: 1024px;
+  --max-width-xl: 1200px;
+  --max-width-2xl: 1440px;
+  --header-height: 72px;
+
+  /* ============================================================
+   * Radius
+   * ============================================================ */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.625rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.25rem;
+  --radius-3xl: 1.75rem;
+  --radius-full: 9999px;
+
+  /* ============================================================
+   * Focus
+   * ============================================================ */
+  --color-focus-ring: var(--color-brand-600);
+  --color-focus-ring-offset: var(--color-page);
+
+  /* ============================================================
+   * Decorative tints (continued) — rose, coral (mulberry), sage
+   * ============================================================ */
+  --color-rose: #DE8FA8;
+  --color-rose-soft: #F8E4EC;
+  --color-rose-light: #E9A9C0;
+  --color-rose-dark: #8C2E50;
+  --color-rose-blush: #FDF2F6;
+  --color-coral: #BC4A7C;              /* Legacy warm accent -> mulberry */
+  --color-coral-light: #D4729E;
+  --color-sage: #6E9B84;
+  --color-sage-light: #E7F0EA;
+
+  /* ============================================================
+   * Semantic
+   * ============================================================ */
+  --color-success: #4E7D63;
+  --color-success-light: #E7F1EA;
+  --color-success-dark: #3B6450;
+  --color-success-bg: #E7F1EA;
+  --color-warning: #B4802A;
+  --color-warning-light: #F9EFDD;
+  --color-warning-dark: #8A5F1C;
+  --color-error: #B3323E;
+  --color-error-light: #FBE9EB;
+  --color-error-dark: #8E2430;
+  --color-info: #3F6DA8;
+  --color-info-light: #E9F0F8;
+  --color-info-dark: #2F5580;
+
+  /* ============================================================
+   * Borders & Dividers (warm hairlines)
+   * ============================================================ */
+  --color-border: #E8E1D6;
+  --color-border-strong: #D9D0C2;
+  --color-divider: #EDE7DD;
+
+  /* Glass aliases */
+  --color-glass-bg: var(--color-surface);
+  --color-glass-bg-strong: var(--color-surface-warm);
+  --color-glass-bg-subtle: var(--color-surface);
+  --color-glass-border: var(--color-border);
+  --color-glass-highlight: rgba(255, 255, 255, 0.7);
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-instant: 0ms;
+    --duration-fast: 0ms;
+    --duration-normal: 0ms;
+    --duration-slow: 0ms;
+    --duration-slower: 0ms;
+  }
+}
+

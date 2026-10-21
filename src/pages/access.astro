@@ -1,0 +1,13 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { RecipientAccessScreen } from '@/components/preview/RecipientAccessScreen';
+---
+
+<BaseLayout
+  title="Open a birthday page"
+  description="Recipient access to a locally saved birthday page."
+>
+  <section class="section">
+    <RecipientAccessScreen client:load />
+  </section>
+</BaseLayout>

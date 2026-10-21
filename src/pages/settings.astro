@@ -1,0 +1,25 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { ROUTES } from '@/utils/routes';
+---
+
+<BaseLayout title="Settings" description="Manage your account settings.">
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="mx-auto max-w-2xl text-center">
+        <p class="badge badge-primary mb-4">Coming Soon</p>
+        <h1 class="text-heading-xl font-extrabold text-neutral-900 dark:text-neutral-50">
+          Settings
+        </h1>
+        <p class="mt-4 text-body-lg text-neutral-600 dark:text-neutral-300">
+          Account settings and preferences are under construction.
+        </p>
+        <div class="mt-8">
+          <a href={ROUTES.DASHBOARD} class="btn btn-primary btn-full sm:w-auto">
+            Back to Dashboard
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

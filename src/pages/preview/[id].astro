@@ -1,0 +1,19 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { ExperienceApp } from '@/components/experience/ExperienceApp';
+
+
+
+const { id } = Astro.params;
+
+---
+
+<BaseLayout
+  title="Preview"
+  description="A shared birthday surprise."
+  bodyClass="preview-page"
+>
+  <section class="section" style="padding: 0; min-height: 100vh; background: var(--color-page);">
+    <ExperienceApp projectId={id ?? ''} client:load />
+  </section>
+</BaseLayout>

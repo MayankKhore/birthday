@@ -1,0 +1,96 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { ROUTES } from '@/utils/routes';
+---
+
+<BaseLayout title="FAQ" description="Frequently asked questions about BirthdayWish.">
+  <section class="py-20">
+    <div class="container mx-auto px-4">
+      <div class="mx-auto max-w-3xl text-center">
+        <h1 class="text-heading-xl font-extrabold text-neutral-900 dark:text-neutral-50">
+          Frequently Asked Questions
+        </h1>
+        <p class="mt-4 text-body-lg text-neutral-600 dark:text-neutral-300">
+          Everything you need to know about creating birthday experiences.
+        </p>
+      </div>
+
+      <div class="mx-auto mt-12 max-w-3xl space-y-6">
+        <details class="card group p-6">
+          <summary class="flex cursor-pointer items-center justify-between text-heading-sm font-semibold text-neutral-900 dark:text-neutral-50">
+            Is BirthdayWish free to use?
+            <svg class="h-5 w-5 flex-shrink-0 text-neutral-400 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <p class="mt-4 text-neutral-600 dark:text-neutral-300">
+            Yes! BirthdayWish offers a generous free tier that includes up to 3 birthday projects
+            with 5 photos each and access to all free themes. Premium features are available for
+            those who need more.
+          </p>
+        </details>
+
+        <details class="card group p-6">
+          <summary class="flex cursor-pointer items-center justify-between text-heading-sm font-semibold text-neutral-900 dark:text-neutral-50">
+            Do I need to create an account?
+            <svg class="h-5 w-5 flex-shrink-0 text-neutral-400 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <p class="mt-4 text-neutral-600 dark:text-neutral-300">
+            No account is required to start creating. Your drafts are saved locally in your browser.
+            Creating an account lets you access your projects from any device.
+          </p>
+        </details>
+
+        <details class="card group p-6">
+          <summary class="flex cursor-pointer items-center justify-between text-heading-sm font-semibold text-neutral-900 dark:text-neutral-50">
+            Where are my photos stored?
+            <svg class="h-5 w-5 flex-shrink-0 text-neutral-400 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <p class="mt-4 text-neutral-600 dark:text-neutral-300">
+            In the current demo version, photos are stored locally in your browser using
+            IndexedDB or localStorage. No photos are uploaded to any server.
+          </p>
+        </details>
+
+        <details class="card group p-6">
+          <summary class="flex cursor-pointer items-center justify-between text-heading-sm font-semibold text-neutral-900 dark:text-neutral-50">
+            Can I use my own message?
+            <svg class="h-5 w-5 flex-shrink-0 text-neutral-400 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <p class="mt-4 text-neutral-600 dark:text-neutral-300">
+            Absolutely! You can choose from our prewritten templates or write your own
+            completely custom message. Every message can be personalized with names and details.
+          </p>
+        </details>
+
+        <details class="card group p-6">
+          <summary class="flex cursor-pointer items-center justify-between text-heading-sm font-semibold text-neutral-900 dark:text-neutral-50">
+            What themes are available?
+            <svg class="h-5 w-5 flex-shrink-0 text-neutral-400 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <p class="mt-4 text-neutral-600 dark:text-neutral-300">
+            We offer a variety of themes including elegant, fun, minimal, and animated styles.
+            Premium themes with additional visual effects are available with a Premium plan.
+          </p>
+        </details>
+      </div>
+
+      <div class="mx-auto mt-12 max-w-3xl text-center">
+        <p class="text-neutral-600 dark:text-neutral-300">
+          Still have questions?{' '}
+          <a href={ROUTES.HOME} class="font-medium text-brand-600 hover:underline dark:text-brand-400">
+            Reach out to us
+          </a>
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

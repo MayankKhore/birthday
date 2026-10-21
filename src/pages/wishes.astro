@@ -1,0 +1,319 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { ROUTES } from '@/utils/routes';
+import { CATEGORY_OPTIONS, TONE_OPTIONS, LENGTH_OPTIONS } from '@/lib/wishes/generator';
+
+const chipOptions = [{ id: '', display: 'Surprise me' }, ...CATEGORY_OPTIONS];
+---
+
+<BaseLayout
+  title="Write a Birthday Wish"
+  description="Personalize an original, hand-written birthday message &mdash; edit it, then copy it. No AI, just good words."
+>
+<section class="section ambient-bg">
+  <div class="container-page" style="position: relative; z-index: 1;">
+    <!-- Hero -->
+    <div class="mx-auto text-center" style="max-width: 640px; margin-bottom: var(--space-8);">
+      <span class="clay-badge clay-badge-primary">Personalized from original templates</span>
+      <h1 class="text-display" style="font-size: clamp(2.25rem, 5vw, 3.25rem); margin: var(--space-4) 0 var(--space-3);">
+        Write a birthday wish
+      </h1>
+      <p class="text-body">Hand-written messages you can personalize and edit &mdash; no AI, just good words.</p>
+    </div>
+
+    <!-- Category filter chips -->
+    <div style="max-width: 900px; margin: 0 auto var(--space-8); text-align: center;">
+      <p class="clay-label" id="chips-label" style="text-align: center;">Who is it for?</p>
+      <div class="flex flex-wrap justify-center gap-2" role="group" aria-labelledby="chips-label">
+        {chipOptions.map((cat) => (
+          <button
+            type="button"
+            class="clay-chip"
+            data-cat={cat.id}
+            aria-pressed={cat.id === 'best-friend' ? 'true' : 'false'}
+            aria-label={`Show ${cat.display.toLowerCase()} messages`}
+          >
+            {cat.display}
+          </button>
+        ))}
+      </div>
+    </div>
+
+    <div class="grid gap-6 lg:grid-cols-2" style="max-width: 1040px; margin: 0 auto; align-items: start;">
+      <!-- Form card -->
+      <form id="wish-form" class="clay-card-static p-8" novalidate aria-label="Birthday message details">
+        <h2 class="font-display text-lg font-bold" style="color: var(--color-text-primary); margin-bottom: var(--space-5);">
+          Make it personal
+        </h2>
+
+        <div class="grid gap-4 sm:grid-cols-2" style="margin-bottom: var(--space-5);">
+          <div>
+            <label class="clay-label" for="wish-recipient">Their name</label>
+            <input class="clay-input" type="text" id="wish-recipient" placeholder="e.g. Maya" autocomplete="off" />
+          </div>
+          <div>
+            <label class="clay-label" for="wish-sender">Your name (optional)</label>
+            <input class="clay-input" type="text" id="wish-sender" placeholder="e.g. Alex" autocomplete="off" />
+          </div>
+        </div>
+
+        <div class="grid gap-4 sm:grid-cols-2" style="margin-bottom: var(--space-5);">
+          <div>
+            <label class="clay-label" for="wish-tone">Tone</label>
+            <select class="clay-input" id="wish-tone">
+              <option value="" selected>Any tone</option>
+              {TONE_OPTIONS.map((tone) => (
+                <option value={tone.id}>{tone.display}</option>
+              ))}
+            </select>
+          </div>
+          <div>
+            <label class="clay-label" for="wish-length">Message length</label>
+            <select class="clay-input" id="wish-length">
+              <option value="" selected>Any length</option>
+              {LENGTH_OPTIONS.map((len) => (
+                <option value={len.id}>{len.display}</option>
+              ))}
+            </select>
+          </div>
+        </div>
+
+        <div style="margin-bottom: var(--space-6);">
+          <label class="clay-label" for="wish-memory">A memory or detail (optional)</label>
+          <textarea class="clay-input" id="wish-memory" rows="2" placeholder="e.g. that road trip where we got hilariously lost"></textarea>
+          <span class="clay-help">We'll weave it in when it fits.</span>
+        </div>
+
+        <button type="submit" class="clay-btn clay-btn-primary clay-btn-full clay-btn-lg" id="btn-generate">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v3m0 12v3M3 12h3m12 0h3M5.6 5.6l2.1 2.1m8.6 8.6 2.1 2.1m0-12.8-2.1 2.1M7.7 16.3l-2.1 2.1"/></svg>
+          Generate message
+        </button>
+      </form>
+
+      <div class="clay-card-static p-8" id="result-card" style="min-height: 380px; display: flex; flex-direction: column;">
+        <!-- Empty state -->
+        <div id="result-empty" style="flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: var(--space-8) var(--space-4); gap: var(--space-3);">
+          <span class="deco-star deco-star-lg" aria-hidden="true" style="color: var(--color-periwinkle);"></span>
+          <p class="font-display text-lg font-bold" style="color: var(--color-text-primary);">Your wish starts here</p>
+          <p class="text-sm" style="color: var(--color-text-secondary); max-width: 280px;">Pick who it's for, add a name, and generate a message you can edit before you send.</p>
+        </div>
+
+        <!-- Generated message -->
+        <div id="result-content" hidden style="flex: 1; display: flex; flex-direction: column;">
+          <div class="flex flex-wrap items-center justify-between gap-2" style="margin-bottom: var(--space-4);">
+            <p class="text-xs font-semibold" style="letter-spacing: var(--tracking-widest); color: var(--color-brand-600); margin: 0;">YOUR MESSAGE</p>
+            <div class="flex flex-wrap gap-2" aria-label="Message attributes">
+              <span class="clay-badge clay-badge-primary" id="badge-category"></span>
+              <span class="clay-badge clay-badge-outline" id="badge-tone"></span>
+              <span class="clay-badge clay-badge-outline" id="badge-length"></span>
+            </div>
+          </div>
+
+          <div class="clay-card-lavender" style="position: relative; padding: var(--space-6); margin-bottom: var(--space-5);">
+            <span aria-hidden="true" style="position: absolute; top: 8px; left: 16px; font-size: 2.5rem; font-family: var(--font-display); color: var(--color-periwinkle); opacity: 0.5; line-height: 1;">&ldquo;</span>
+            <div id="message-view" class="font-display" style="position: relative; font-size: 1.2rem; line-height: var(--leading-relaxed, 1.7); color: var(--color-text-primary); white-space: pre-wrap;"></div>
+            <textarea id="message-edit" class="clay-input" rows="7" hidden aria-label="Edit your birthday message" style="font-family: var(--font-display); font-size: 1.05rem; line-height: 1.7; background: var(--color-surface); resize: vertical;"></textarea>
+            <div class="flex items-center justify-between" style="margin-top: var(--space-4);">
+              <span class="deco-star deco-star-sm" aria-hidden="true" style="color: var(--color-rose);"></span>
+              <span class="text-xs" id="word-count" style="color: var(--color-text-tertiary);"></span>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-3">
+            <button type="button" id="btn-copy" class="clay-btn clay-btn-primary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              <span id="copy-label">Copy message</span>
+            </button>
+            <button type="button" id="btn-edit" class="clay-btn clay-btn-secondary" aria-pressed="false">Edit message</button>
+            <button type="button" id="btn-regenerate" class="clay-btn clay-btn-ghost">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-2.6-6.4M21 3v6h-6"/></svg>
+              Generate another
+            </button>
+          </div>
+
+          <p id="copy-status" class="text-sm" role="status" aria-live="polite" hidden style="margin-top: var(--space-4); padding: var(--space-2) var(--space-4); border-radius: var(--radius-lg);"></p>
+
+          <p class="text-xs" style="color: var(--color-text-tertiary); margin-top: auto; padding-top: var(--space-5);">
+            Original, human-written templates &mdash; edited by you before you send.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center" style="margin-top: var(--space-10);">
+      <a href={ROUTES.CREATE} class="clay-btn clay-btn-secondary clay-btn-lg">Turn this wish into a full birthday page</a>
+    </div>
+  </div>
+</section>
+
+<script>
+  import {
+    generateMessage,
+    CATEGORY_OPTIONS,
+    TONE_OPTIONS,
+    LENGTH_OPTIONS,
+  } from '@/lib/wishes/generator';
+  import type { GeneratedMessage } from '@/types';
+
+  const $ = (id: string) => document.getElementById(id)!;
+  const form = $('wish-form') as HTMLFormElement;
+  const recipientEl = $('wish-recipient') as HTMLInputElement;
+  const senderEl = $('wish-sender') as HTMLInputElement;
+  const toneEl = $('wish-tone') as HTMLSelectElement;
+  const lengthEl = $('wish-length') as HTMLSelectElement;
+  const memoryEl = $('wish-memory') as HTMLTextAreaElement;
+  const emptyEl = $('result-empty');
+  const contentEl = $('result-content');
+  const viewEl = $('message-view');
+  const editEl = $('message-edit') as HTMLTextAreaElement;
+  const wordCountEl = $('word-count');
+  const badgeCat = $('badge-category');
+  const badgeTone = $('badge-tone');
+  const badgeLen = $('badge-length');
+  const btnEdit = $('btn-edit') as HTMLButtonElement;
+  const btnCopy = $('btn-copy') as HTMLButtonElement;
+  const btnRegen = $('btn-regenerate') as HTMLButtonElement;
+  const copyLabel = $('copy-label');
+  const statusEl = $('copy-status');
+  const chips = Array.from(document.querySelectorAll<HTMLButtonElement>('.clay-chip[data-cat]'));
+
+  let current: GeneratedMessage | null = null;
+  let category = 'best-friend';
+  let seedCounter = Math.floor(Math.random() * 10000);
+  let editing = false;
+  let copyResetTimer: ReturnType<typeof setTimeout> | undefined;
+
+  const labelFor = (list: { id: string; display: string }[], id: string) =>
+    list.find((o) => o.id === id)?.display ?? id;
+
+  function activeMessage(): string {
+    return editing ? editEl.value.trim() : (viewEl.textContent ?? '').trim();
+  }
+
+  function updateWordCount(): void {
+    const text = activeMessage();
+    const words = text ? text.split(/\s+/).length : 0;
+    wordCountEl.textContent = words > 0 ? `${words} word${words === 1 ? '' : 's'}` : '';
+  }
+
+  function showStatus(message: string, kind: 'success' | 'error'): void {
+    statusEl.textContent = message;
+    statusEl.hidden = false;
+    statusEl.style.background =
+      kind === 'success' ? 'var(--color-success-light)' : 'var(--color-error-light)';
+    statusEl.style.color =
+      kind === 'success' ? 'var(--color-success-dark)' : 'var(--color-error-dark)';
+  }
+
+  function hideStatus(): void {
+    statusEl.hidden = true;
+    statusEl.textContent = '';
+  }
+
+  function setEditing(on: boolean): void {
+    editing = on;
+    viewEl.hidden = on;
+    editEl.hidden = !on;
+    btnEdit.textContent = on ? 'Done editing' : 'Edit message';
+    btnEdit.setAttribute('aria-pressed', String(on));
+    if (on) {
+      editEl.value = viewEl.textContent ?? '';
+      editEl.focus();
+    } else if (editEl.value.trim()) {
+      viewEl.textContent = editEl.value.trim();
+    }
+    updateWordCount();
+  }
+
+  function render(message: GeneratedMessage): void {
+    current = message;
+    setEditing(false);
+    viewEl.textContent = message.text;
+    badgeCat.textContent = labelFor(CATEGORY_OPTIONS, message.category);
+    badgeTone.textContent = labelFor(TONE_OPTIONS, message.tone);
+    badgeLen.textContent = labelFor(LENGTH_OPTIONS, message.length);
+    emptyEl.hidden = true;
+    contentEl.hidden = false;
+    hideStatus();
+    updateWordCount();
+    contentEl.classList.remove('animate-pop');
+    void contentEl.offsetWidth;
+    contentEl.classList.add('animate-pop');
+  }
+
+  function generate(excludePrevious: boolean): void {
+    seedCounter += 1;
+    render(
+      generateMessage({
+        recipientName: recipientEl.value,
+        senderName: senderEl.value,
+        category: (category || undefined) as never,
+        tone: (toneEl.value || undefined) as never,
+        length: (lengthEl.value || undefined) as never,
+        memory: memoryEl.value,
+        seed: seedCounter,
+        ...(excludePrevious && current ? { excludeId: current.templateId } : {}),
+      })
+    );
+  }
+
+  chips.forEach((chip) => {
+    chip.addEventListener('click', () => {
+      category = chip.dataset.cat ?? '';
+      chips.forEach((c) => {
+        const on = c === chip;
+        c.classList.toggle('clay-chip-active', on);
+        c.setAttribute('aria-pressed', String(on));
+      });
+      if (current) generate(true);
+    });
+  });
+
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    generate(false);
+  });
+
+  btnRegen.addEventListener('click', () => generate(true));
+
+  btnEdit.addEventListener('click', () => setEditing(!editing));
+
+  editEl.addEventListener('input', updateWordCount);
+
+  btnCopy.addEventListener('click', async () => {
+    const text = activeMessage();
+    if (!text) return;
+    if (editing) setEditing(false);
+    viewEl.textContent = text;
+    hideStatus();
+    clearTimeout(copyResetTimer);
+    try {
+      if (!navigator.clipboard?.writeText) {
+        throw new Error('Clipboard unavailable');
+      }
+      await navigator.clipboard.writeText(text);
+      copyLabel.textContent = 'Copied!';
+      showStatus('Copied! Your message is on the clipboard.', 'success');
+      copyResetTimer = setTimeout(() => {
+        copyLabel.textContent = 'Copy message';
+      }, 2000);
+    } catch {
+      showStatus(
+        "Couldn't copy automatically \u2014 select the message and copy it manually.",
+        'error'
+      );
+    }
+  });
+</script>
+
+<style>
+  /*
+   * The result panels toggle the `hidden` attribute, but #result-content also
+   * carries an inline `display: flex`. Without this guard the inline style
+   * would win and both panels would render at once.
+   */
+  [hidden] {
+    display: none !important;
+  }
+</style>
+</BaseLayout>

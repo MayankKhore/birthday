@@ -1,0 +1,2572 @@
+15:21:07 [types] Generated 3ms
+
+ astro  v4.16.19 ready in 964 ms
+
+┃ Local    http://localhost:4321/
+┃ Network  http://192.168.182.1:4321/
+           http://192.168.220.1:4321/
+           http://10.198.43.102:4321/
+
+15:21:07 watching for file changes...
+15:21:08 [ERROR] [vite] Error: [31m  Failed to scan for dependencies from entries:
+  D:/New folder (3)/src/components/AuthMenu.astro
+D:/New folder (3)/src/layouts/BaseLayout.astro
+D:/New folder (3)/src/pages/404.astro
+D:/New folder (3)/src/pages/about.astro
+D:/New folder (3)/src/pages/access.astro
+D:/New folder (3)/src/pages/contact.astro
+D:/New folder (3)/src/pages/create.astro
+D:/New folder (3)/src/pages/dashboard.astro
+D:/New folder (3)/src/pages/design-system.astro
+D:/New folder (3)/src/pages/faq.astro
+D:/New folder (3)/src/pages/forgot-password.astro
+D:/New folder (3)/src/pages/how-it-works.astro
+D:/New folder (3)/src/pages/index.astro
+D:/New folder (3)/src/pages/login.astro
+D:/New folder (3)/src/pages/pricing.astro
+D:/New folder (3)/src/pages/privacy.astro
+D:/New folder (3)/src/pages/register.astro
+D:/New folder (3)/src/pages/settings.astro
+D:/New folder (3)/src/pages/templates.astro
+D:/New folder (3)/src/pages/terms.astro
+D:/New folder (3)/src/pages/wishes.astro
+D:/New folder (3)/src/components/editor/EditorProvider.tsx
+D:/New folder (3)/src/components/editor/EditorShell.tsx
+D:/New folder (3)/src/components/editor/MusicPlayer.tsx
+D:/New folder (3)/src/components/editor/PhotoManager.tsx
+D:/New folder (3)/src/components/editor/PreviewApp.tsx
+D:/New folder (3)/src/components/editor/PreviewRenderer.tsx
+D:/New folder (3)/src/components/editor/ProgressIndicator.tsx
+D:/New folder (3)/src/components/editor/StepNavigation.tsx
+D:/New folder (3)/src/components/editor/TierComparison.tsx
+D:/New folder (3)/src/components/experience/Balloons.tsx
+D:/New folder (3)/src/components/experience/BirthdayExperience.tsx
+D:/New folder (3)/src/components/experience/CakeCelebration.tsx
+D:/New folder (3)/src/components/experience/CardSequence.tsx
+D:/New folder (3)/src/components/experience/Confetti.tsx
+D:/New folder (3)/src/components/experience/CountdownCard.tsx
+D:/New folder (3)/src/components/experience/EnvelopeOpener.tsx
+D:/New folder (3)/src/components/experience/ExperienceApp.tsx
+D:/New folder (3)/src/components/experience/ExperienceMusicPlayer.tsx
+D:/New folder (3)/src/components/experience/GiftRevealCard.tsx
+D:/New folder (3)/src/components/experience/MemoryGalleryCard.tsx
+D:/New folder (3)/src/components/experience/MemoryMatchCard.tsx
+D:/New folder (3)/src/components/experience/PhotoTimelineCard.tsx
+D:/New folder (3)/src/components/experience/PresentationCard.tsx
+D:/New folder (3)/src/components/experience/QuizCard.tsx
+D:/New folder (3)/src/components/experience/RouletteCard.tsx
+D:/New folder (3)/src/components/experience/StorybookCard.tsx
+D:/New folder (3)/src/components/preview/PreviewShell.tsx
+D:/New folder (3)/src/components/preview/QRCodePanel.tsx
+D:/New folder (3)/src/components/preview/RecipientAccessScreen.tsx
+D:/New folder (3)/src/components/preview/ShareApp.tsx
+D:/New folder (3)/src/components/preview/SharePanel.tsx
+D:/New folder (3)/src/pages/experience/[id].astro
+D:/New folder (3)/src/pages/preview/[id].astro
+D:/New folder (3)/src/pages/share/[slug].astro
+D:/New folder (3)/src/components/editor/steps/Step1Occasion.tsx
+D:/New folder (3)/src/components/editor/steps/Step2Details.tsx
+D:/New folder (3)/src/components/editor/steps/Step3Theme.tsx
+D:/New folder (3)/src/components/editor/steps/Step4Photos.tsx
+D:/New folder (3)/src/components/editor/steps/Step5Personalize.tsx
+D:/New folder (3)/src/components/editor/steps/Step6Preview.tsx
+D:/New folder (3)/src/components/editor/themeRenderers/AfterglowRenderer.tsx
+D:/New folder (3)/src/components/editor/themeRenderers/DaydreamRenderer.tsx
+D:/New folder (3)/src/components/editor/themeRenderers/KeepsakeRenderer.tsx
+D:/New folder (3)/src/components/editor/themeRenderers/StarlitRenderer.tsx
+
+  [39m[31mX [41;31m[[41;97mERROR[41;31m][0m [1mSyntax error "\"[0m
+
+    src/components/experience/BirthdayExperience.tsx:223:188:
+[37m      223 │ ...adow-sm animate-fade-in group' style={{ animationDelay: \[32m[37m\ms\ }}>
+          ╵                                                             [32m^[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mSyntax error "\"[0m
+
+    src/components/experience/CakeCelebration.tsx:187:13:
+[37m      187 │       left: \[32m[37m\%\,
+          ╵              [32m^[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mSyntax error "C"[0m
+
+    src/components/experience/ExperienceMusicPlayer.tsx:106:25:
+[37m      106 │           setAudioError(\[32m[37mCouldn't play audio: \\);
+          ╵                          [32m^[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mSyntax error "\x0A"[0m
+
+    src/components/experience/GiftRevealCard.tsx:52:41:
+[37m      52 │   const giftBoxSVG = (open: boolean) => \[32m[37m
+         ╵                                          [32m^[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mMultiple exports with the same name "DEFAULT_EXPERIENCE_CONFIG"[0m
+
+    src/lib/experience/types.ts:261:13:
+[37m      261 │ export const [32mDEFAULT_EXPERIENCE_CONFIG[37m: ExperienceConfig = {
+          ╵              [32m~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  The name "DEFAULT_EXPERIENCE_CONFIG" was originally exported here:
+
+    src/lib/experience/types.ts:195:13:
+[37m      195 │ export const [32mDEFAULT_EXPERIENCE_CONFIG[37m: ExperienceConfig = {
+          ╵              [32m~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mThe symbol "DEFAULT_EXPERIENCE_CONFIG" has already been declared[0m
+
+    src/lib/experience/types.ts:261:13:
+[37m      261 │ export const [32mDEFAULT_EXPERIENCE_CONFIG[37m: ExperienceConfig = {
+          ╵              [32m~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  The symbol "DEFAULT_EXPERIENCE_CONFIG" was originally declared here:
+
+    src/lib/experience/types.ts:195:13:
+[37m      195 │ export const [32mDEFAULT_EXPERIENCE_CONFIG[37m: ExperienceConfig = {
+          ╵              [32m~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    at D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:945:25
+    at runOnEndCallbacks (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1315:45)
+    at buildResponseToResult (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:943:7)
+    at D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:955:9
+    at new Promise (<anonymous>)
+    at requestCallbacks.on-end (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:954:54)
+    at handleRequest (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:647:17)
+    at handleIncomingPacket (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:672:7)
+    at Socket.readFromStdout (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:600:7)
+15:21:24 [200] / 25ms
+15:21:28 [ERROR] Multiple exports with the same name "DEFAULT_EXPERIENCE_CONFIG"
+  Stack trace:
+    at D:\New folder (3)\D:\New folder (3)\D:\New folder (3)\src\lib\experience\types.ts:261:13
+    [...] See full stack trace in the browser, or rerun with --verbose.
+15:21:28 [200] /access 9ms
+15:21:29 [200] /pricing 6ms
+15:21:34 [ERROR] Syntax error "\"
+  Stack trace:
+    at D:\New folder (3)\D:\New folder (3)\src\components\experience\BirthdayExperience.tsx:223:188
+    [...] See full stack trace in the browser, or rerun with --verbose.
+15:22:51 [200] / 27ms
+15:22:52 [ERROR] Multiple exports with the same name "DEFAULT_EXPERIENCE_CONFIG"
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+15:22:52 [200] /wishes 7ms
+15:22:54 [200] / 5ms
+15:22:54 [200] /wishes 4ms
+15:22:54 [ERROR] Multiple exports with the same name "DEFAULT_EXPERIENCE_CONFIG"
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+15:23:21 [200] / 5ms
+15:23:26 [ERROR] Multiple exports with the same name "DEFAULT_EXPERIENCE_CONFIG"
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+15:23:26 [200] /access 7ms
+15:23:27 [200] /pricing 5ms
+15:23:27 [200] /wishes 7ms
+15:23:53 [200] / 6ms
+15:23:54 [200] /wishes 3ms
+15:23:54 [ERROR] Multiple exports with the same name "DEFAULT_EXPERIENCE_CONFIG"
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+15:24:36 [200] / 4ms
+15:24:37 [200] /pricing 8ms
+15:24:37 [200] /wishes 6ms
+15:24:37 [ERROR] Multiple exports with the same name "DEFAULT_EXPERIENCE_CONFIG"
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+15:24:37 [200] /login 5ms
+15:25:18 [watch] src/lib/experience/types.ts
+15:25:23 [200] / 9ms
+15:25:24 [200] /wishes 5ms
+15:25:24 [ERROR] Syntax error "\"
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+15:25:28 [200] / 3ms
+15:25:29 [200] /wishes 3ms
+15:25:29 [ERROR] Syntax error "\"
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+15:25:36 [200] / 2ms
+15:25:36 [200] /wishes 3ms
+15:25:36 [ERROR] Syntax error "\"
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+15:25:38 [200] / 2ms
+15:25:38 [200] /wishes 3ms
+15:25:38 [ERROR] Syntax error "\"
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+15:25:39 [200] / 3ms
+15:25:39 [200] /wishes 2ms
+15:25:39 [ERROR] Syntax error "\"
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+15:25:41 [200] / 3ms
+15:25:41 [200] /wishes 3ms
+15:25:41 [ERROR] Syntax error "\"
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+15:26:05 [200] / 6ms
+15:27:46 [200] /wishes 5ms
+15:27:46 [ERROR] Syntax error "\"
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+15:27:48 [200] / 9ms
+15:27:49 [200] /wishes 8ms
+15:27:49 [ERROR] Syntax error "\"
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+15:28:49 [200] / 4ms
+15:28:50 [200] /wishes 4ms
+15:28:50 [ERROR] Syntax error "\"
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+15:29:56 [watch] src/components/experience/BirthdayExperience.tsx
+15:29:57 [200] / 6ms
+15:30:39 [watch] src/components/experience/CakeCelebration.tsx
+15:30:40 [200] / 5ms
+15:35:43 [200] /wishes 7ms
+15:35:43 [ERROR] Unterminated regular expression
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+15:37:13 [watch] src/components/experience/BirthdayExperience.tsx
+15:37:14 [200] / 8ms
+15:37:44 [watch] src/components/experience/BirthdayExperience.tsx
+15:37:46 [200] / 12ms
+15:37:48 [200] /wishes 46ms
+15:37:48 [ERROR] Syntax error "\"
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+15:37:50 [200] / 4ms
+15:37:51 [200] /wishes 5ms
+15:37:51 [ERROR] Syntax error "\"
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+15:38:04 [200] / 3ms
+15:38:04 [200] /wishes 3ms
+15:38:04 [ERROR] Syntax error "\"
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+15:39:21 [watch] src/components/experience/BirthdayExperience.tsx
+15:39:23 [200] / 7ms
+15:40:04 [watch] src/components/experience/BirthdayExperience.tsx
+15:40:05 [200] / 5ms
+15:40:41 [watch] src/components/experience/BirthdayExperience.tsx
+15:40:42 [200] / 7ms
+15:40:44 [200] /wishes 4ms
+15:40:44 [ERROR] Syntax error "\"
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+15:40:48 [200] / 10ms
+15:41:27 [watch] src/components/experience/BirthdayExperience.tsx
+15:41:28 [200] / 8ms
+15:42:12 [watch] src/components/experience/BirthdayExperience.tsx
+15:42:14 [200] / 10ms
+15:42:51 [watch] src/components/experience/BirthdayExperience.tsx
+15:42:52 [200] / 6ms
+15:43:24 [200] /wishes 4ms
+15:43:24 [ERROR] Syntax error " "
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+15:43:25 [200] / 6ms
+15:43:26 [200] /wishes 4ms
+15:43:26 [ERROR] Syntax error " "
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+15:43:31 [watch] src/components/experience/BirthdayExperience.tsx
+15:43:32 [200] / 1056ms
+15:43:33 [200] /wishes 5ms
+15:43:33 [ERROR] Unterminated regular expression
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+15:44:25 [watch] src/components/experience/ExperienceMusicPlayer.tsx
+15:44:26 [200] / 7ms
+15:45:03 [200] / 3ms
+15:48:31 [200] /wishes 5ms
+15:48:31 [ERROR] Unterminated regular expression
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+15:48:32 [200] / 3ms
+15:48:33 [200] /wishes 3ms
+15:48:33 [ERROR] Unterminated regular expression
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+15:51:08 [200] / 15ms
+15:51:08 [200] /wishes 4ms
+15:51:08 [ERROR] Unterminated regular expression
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+15:51:57 [watch] src/components/experience/BirthdayExperience.tsx
+15:51:58 [200] / 6ms
+16:00:58 [200] /wishes 4ms
+16:00:58 [ERROR] Unterminated regular expression
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+16:01:00 [200] / 5ms
+16:01:00 [200] /wishes 3ms
+16:01:00 [ERROR] Unterminated regular expression
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+16:01:27 [200] / 5ms
+16:01:28 [200] /pricing 3ms
+16:01:28 [200] /wishes 4ms
+16:01:28 [ERROR] Unterminated regular expression
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+16:01:28 [200] /login 5ms
+16:08:06 [watch] src/components/experience/BirthdayExperience.tsx
+16:08:07 [200] / 9ms
+16:10:56 [watch] src/components/experience/BirthdayExperience.tsx
+16:10:57 [200] / 11ms
+16:11:24 [200] /wishes 4ms
+16:11:24 [ERROR] Expected ")" but found "}"
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+16:11:27 [200] / 27ms
+16:11:38 [watch] src/components/experience/BirthdayExperience.tsx
+16:11:40 [200] / 17ms
+16:13:17 [200] / 7ms
+16:13:39 [200] / 8ms
+16:17:10 [200] /wishes 4ms
+16:17:10 [ERROR] Syntax error "\x0A"
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+16:17:12 [200] / 3ms
+16:17:13 [200] /wishes 3ms
+16:17:13 [ERROR] Syntax error "\x0A"
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+16:18:04 [watch] src/components/experience/StorybookCard.tsx
+16:18:06 [200] / 5ms
+16:18:33 [watch] src/components/experience/StorybookCard.tsx
+16:18:34 [200] / 10ms
+16:18:40 [watch] src/components/experience/StorybookCard.tsx
+16:18:41 [200] / 12ms
+16:18:46 [watch] src/components/experience/StorybookCard.tsx
+16:18:47 [200] / 5ms
+16:18:52 [watch] src/components/experience/StorybookCard.tsx
+16:18:54 [200] / 6ms
+16:20:43 [200] / 7ms
+16:20:47 [200] / 5ms
+16:25:16 [watch] src/components/experience/StorybookCard.tsx
+16:25:17 [200] / 5ms
+16:25:26 [200] / 5ms
+16:25:27 [200] /pricing 3ms
+16:25:27 [200] /wishes 5ms
+16:25:27 [200] /login 4ms
+16:25:27 [ERROR] Syntax error "\x0A"
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+16:29:02 [watch] src/components/experience/StorybookCard.tsx
+16:29:03 [200] / 12ms
+16:29:05 [200] /wishes 3ms
+16:29:05 [ERROR] Syntax error "\x0A"
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+16:30:00 [200] / 5ms
+16:30:00 [200] /wishes 3ms
+16:30:00 [ERROR] Syntax error "\x0A"
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+16:30:01 [200] / 2ms
+16:30:02 [200] /wishes 3ms
+16:30:02 [ERROR] Syntax error "\x0A"
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+16:30:03 [200] / 3ms
+16:30:04 [200] /wishes 5ms
+16:30:04 [ERROR] Syntax error "\x0A"
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+16:30:05 [200] / 3ms
+16:30:06 [200] /wishes 4ms
+16:30:06 [ERROR] Syntax error "\x0A"
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+16:30:07 [200] / 13ms
+16:30:08 [200] /wishes 4ms
+16:30:08 [ERROR] Syntax error "\x0A"
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+16:30:09 [200] / 7ms
+16:30:09 [200] /wishes 2ms
+16:30:09 [ERROR] Syntax error "\x0A"
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+16:30:10 [200] / 2ms
+16:30:10 [200] /wishes 2ms
+16:30:10 [ERROR] Syntax error "\x0A"
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+16:31:00 [watch] src/components/experience/GiftRevealCard.tsx
+16:31:01 [200] / 9ms
+16:32:41 [watch] src/components/experience/GiftRevealCard.tsx
+16:32:41 [200] / 5ms
+16:33:05 [200] /wishes 3ms
+16:33:05 [ERROR] Expected "class" but found "sparkle"
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+16:33:18 [200] / 6ms
+16:33:18 [200] /wishes 5ms
+16:33:18 [ERROR] Expected "class" but found "sparkle"
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+16:33:56 [watch] src/components/experience/GiftRevealCard.tsx
+16:33:57 [200] / 9ms
+16:34:11 [watch] src/components/experience/GiftRevealCard.tsx
+16:34:12 [200] / 30ms
+16:34:22 [watch] src/components/experience/GiftRevealCard.tsx
+16:34:23 [200] / 9ms
+16:34:59 [watch] src/components/experience/GiftRevealCard.tsx
+16:35:00 [200] / 6ms
+16:35:24 [watch] src/components/experience/GiftRevealCard.tsx
+16:35:25 [200] / 7ms
+16:41:00 [200] /wishes 6ms
+16:41:00 [ERROR] Expected ";" but found "\"'react'\""
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+16:41:28 [watch] src/components/experience/GiftRevealCard.tsx
+16:41:29 [200] / 11ms
+16:41:58 [200] / 6ms
+16:41:59 [200] /pricing 5ms
+16:41:59 [200] /wishes 4ms
+16:41:59 [200] /login 3ms
+16:41:59 [ERROR] Unterminated string literal
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+16:43:25 [watch] src/components/experience/GiftRevealCard.tsx
+16:43:26 [200] / 6ms
+16:48:46 [200] /wishes 9ms
+16:48:46 [ERROR] Could not import `/src/components/experience/GiftRevealCard.tsx`.
+  Hint:
+    This is often caused by a typo in the import path. Please make sure the file exists.
+  Error reference:
+    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/
+  Stack trace:
+    at loadAndTransform (file:///D:/New%20folder%20(3)/node_modules/astro/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51969:17)
+16:50:46 [200] / 8ms
+16:50:47 [200] /wishes 9ms
+16:50:47 [ERROR] Could not import `/src/components/experience/GiftRevealCard.tsx`.
+  Hint:
+    This is often caused by a typo in the import path. Please make sure the file exists.
+  Error reference:
+    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/
+  Stack trace:
+    at loadAndTransform (file:///D:/New%20folder%20(3)/node_modules/astro/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51969:17)
+16:50:49 [200] / 4ms
+16:50:49 [200] /wishes 4ms
+16:50:49 [ERROR] Could not import `/src/components/experience/GiftRevealCard.tsx`.
+  Hint:
+    This is often caused by a typo in the import path. Please make sure the file exists.
+  Error reference:
+    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/
+  Stack trace:
+    at loadAndTransform (file:///D:/New%20folder%20(3)/node_modules/astro/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51969:17)
+17:00:14 [watch] src/components/experience/GiftRevealCard.tsx
+17:00:15 [200] / 14ms
+17:00:56 [watch] src/components/experience/GiftRevealCard.tsx
+17:00:56 [watch] src/components/experience/GiftRevealCard.tsx
+17:00:57 [200] / 15ms
+17:01:11 [watch] src/components/experience/GiftRevealCard.tsx
+17:01:11 [watch] src/components/experience/GiftRevealCard.tsx
+17:01:11 [watch] src/components/experience/GiftRevealCard.tsx
+17:01:11 [watch] src/components/experience/GiftRevealCard.tsx
+17:01:11 [watch] src/components/experience/GiftRevealCard.tsx
+17:01:12 [200] / 11ms
+17:01:12 [watch] src/components/experience/GiftRevealCard.tsx
+17:01:12 [watch] src/components/experience/GiftRevealCard.tsx
+17:01:12 [watch] src/components/experience/GiftRevealCard.tsx
+17:01:12 [watch] src/components/experience/GiftRevealCard.tsx
+17:01:12 [watch] src/components/experience/GiftRevealCard.tsx
+17:01:12 [watch] src/components/experience/GiftRevealCard.tsx
+17:01:12 [watch] src/components/experience/GiftRevealCard.tsx
+17:01:13 [watch] src/components/experience/GiftRevealCard.tsx
+17:01:13 [watch] src/components/experience/GiftRevealCard.tsx
+17:01:13 [watch] src/components/experience/GiftRevealCard.tsx
+17:01:13 [watch] src/components/experience/GiftRevealCard.tsx
+17:01:13 [watch] src/components/experience/GiftRevealCard.tsx
+17:01:13 [watch] src/components/experience/GiftRevealCard.tsx
+17:01:14 [200] / 14ms
+17:17:13 [200] /wishes 15ms
+17:17:13 [ERROR] Expected ":" but found "handleUnwrap"
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+17:17:33 [watch] src/components/experience/GiftRevealCard.tsx
+17:17:34 [200] / 16ms
+17:17:51 [watch] src/components/experience/GiftRevealCard.tsx
+17:17:52 [200] / 12ms
+17:18:22 [watch] src/components/experience/GiftRevealCard.tsx
+17:18:24 [200] / 11ms
+17:19:05 [watch] src/components/experience/GiftRevealCard.tsx
+17:19:06 [200] / 10ms
+17:19:21 [200] /wishes 10ms
+17:19:21 [ERROR] Unterminated string literal
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+17:23:20 [200] / 13ms
+17:23:20 [ERROR] Unterminated string literal
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+17:23:20 [200] /wishes 9ms
+17:25:12 [200] / 10ms
+17:25:38 [watch] src/components/experience/GiftRevealCard.tsx
+17:25:39 [200] / 14ms
+17:26:48 [200] / 5ms
+17:27:03 [watch] src/components/experience/GiftRevealCard.tsx
+17:27:04 [200] / 52ms
+17:27:38 [200] / 7ms
+17:27:59 [200] /wishes 9ms
+17:27:59 [ERROR] Unterminated string literal
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+17:28:24 [200] / 6ms
+17:28:25 [200] /pricing 8ms
+17:28:25 [200] /wishes 8ms
+17:28:25 [ERROR] Unterminated string literal
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+17:28:25 [200] /login 4ms
+17:29:55 [200] / 47ms
+17:29:55 [200] / 48ms
+17:29:55 [200] / 49ms
+17:29:55 [200] / 50ms
+17:29:56 [200] /pricing 11ms
+17:29:56 [200] /wishes 9ms
+17:29:56 [200] /login 5ms
+17:29:56 [ERROR] Unterminated string literal
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+17:30:14 [200] / 19ms
+17:30:15 [200] / 9ms
+17:30:15 [200] /pricing 9ms
+17:30:15 [200] /wishes 6ms
+17:30:15 [200] /login 11ms
+17:30:15 [ERROR] Unterminated string literal
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+17:30:35 [watch] src/components/experience/ExperienceMusicPlayer.tsx
+17:30:36 [200] / 15ms
+17:30:36 [200] / 16ms
+17:30:37 [200] /pricing 14ms
+17:30:37 [200] /wishes 11ms
+17:30:37 [200] /login 12ms
+17:30:37 [ERROR] Unterminated string literal
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+17:32:37 [200] /wishes 9ms
+17:32:37 [ERROR] Unterminated string literal
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+17:32:39 [200] / 30ms
+17:32:40 [200] /wishes 7ms
+17:32:40 [ERROR] Unterminated string literal
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+17:33:55 [watch] src/components/experience/ExperienceMusicPlayer.tsx
+17:33:56 [200] / 10ms
+17:34:46 [watch] src/components/experience/ExperienceMusicPlayer.tsx
+17:34:47 [200] / 10ms
+17:36:30 [watch] src/components/experience/ExperienceMusicPlayer.tsx
+17:36:31 [200] / 23ms
+17:37:05 [200] /wishes 17ms
+17:37:05 [ERROR] Unterminated string literal
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+17:37:34 [200] / 14ms
+17:37:47 [watch] src/components/experience/ExperienceMusicPlayer.tsx
+17:37:48 [200] / 16ms
+17:38:50 [watch] src/components/experience/ExperienceMusicPlayer.tsx
+17:38:51 [200] / 11ms
+17:39:20 [200] /wishes 26ms
+17:39:20 [ERROR] Unterminated string literal
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+17:39:40 [watch] src/components/experience/ExperienceMusicPlayer.tsx
+17:39:41 [200] / 15ms
+17:40:22 [watch] src/components/experience/ExperienceMusicPlayer.tsx
+17:40:23 [200] / 11ms
+17:41:50 [200] /wishes 74ms
+17:41:50 [ERROR] Unterminated string literal
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+17:42:54 [watch] src/components/experience/ExperienceMusicPlayer.tsx
+17:42:55 [200] / 11ms
+17:44:49 [200] /wishes 10ms
+17:44:49 [ERROR] Unterminated string literal
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+17:44:54 [200] / 10ms
+17:44:55 [200] /wishes 7ms
+17:44:55 [ERROR] Unterminated string literal
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+17:45:38 [watch] src/components/experience/ExperienceMusicPlayer.tsx
+17:45:39 [200] / 16ms
+17:46:19 [watch] src/components/experience/ExperienceMusicPlayer.tsx
+17:46:20 [200] / 7ms
+17:47:59 [watch] src/components/experience/ExperienceMusicPlayer.tsx
+17:48:00 [200] / 16ms
+17:49:40 [200] /wishes 11ms
+17:49:40 [ERROR] Syntax error "\"
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+17:50:42 [watch] src/components/experience/ExperienceMusicPlayer.tsx
+17:50:43 [200] / 15ms
+17:55:37 [watch] src/components/experience/ExperienceMusicPlayer.tsx
+17:55:38 [200] / 12ms
+17:56:16 [watch] src/components/experience/ExperienceMusicPlayer.tsx
+17:56:17 [200] / 15ms
+17:56:26 [200] /wishes 10ms
+17:56:26 [200] /create 15ms
+17:56:33 [200] / 3ms
+17:56:34 [200] /wishes 6ms
+17:56:34 [200] /create 12ms
+17:56:36 [200] /wishes 6ms
+17:56:36 [200] /create 10ms
+17:56:36 [200] / 7ms
+17:57:20 [200] /about 6ms
+17:57:20 [200] /contact 8ms
+17:57:20 [200] /templates 7ms
+17:57:20 [200] /privacy 9ms
+17:57:22 [watch] src/components/experience/ExperienceMusicPlayer.tsx
+17:57:23 [200] /wishes 17ms
+17:57:23 [200] / 11ms
+17:57:23 [ERROR] Unexpected end of file
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+17:57:23 [ERROR] Unexpected end of file
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+17:57:27 [200] /wishes 10ms
+17:57:28 [ERROR] Unexpected end of file
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+17:57:28 [200] / 11ms
+17:57:29 [200] / 9ms
+17:57:30 [ERROR] Unexpected end of file
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+17:57:30 [200] /wishes 8ms
+17:57:34 [200] / 9ms
+17:57:35 [200] /wishes 5ms
+17:57:35 [ERROR] Unexpected end of file
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+17:57:53 [200] / 24ms
+17:57:54 [200] /wishes 6ms
+17:57:54 [ERROR] Unexpected end of file
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+17:58:57 [watch] src/components/experience/ExperienceMusicPlayer.tsx
+17:58:58 [200] / 15ms
+18:01:53 [200] /wishes 6ms
+18:01:53 [200] /create 10ms
+18:02:21 [200] /faq 8ms
+18:02:22 [200] /contact 5ms
+18:02:22 [200] /about 8ms
+18:02:22 [200] /templates 5ms
+18:02:22 [200] /pricing 6ms
+18:02:22 [200] /privacy 6ms
+18:02:22 [200] /terms 5ms
+18:02:22 [200] /how-it-works 5ms
+18:02:23 [200] /wishes 4ms
+18:02:24 [200] / 4ms
+18:02:24 [200] /create 7ms
+18:02:26 [200] /create 7ms
+18:02:26 [200] / 7ms
+18:02:26 [200] /wishes 10ms
+18:02:29 [vite] [32m✨ new dependencies optimized: [33mzod, qrcode[32m[39m
+18:02:29 [vite] [32m✨ optimized dependencies changed. reloading[39m
+18:02:31 [200] /create 18ms
+18:02:34 [200] /wishes 10ms
+18:02:34 [200] / 9ms
+18:02:34 [404] /audio/sfx-pop.mp3 20ms
+18:02:34 [404] /audio/sfx-chime.mp3 20ms
+18:02:34 [404] /audio/sfx-whoosh.mp3 20ms
+18:02:34 [404] /audio/sfx-confetti.mp3 21ms
+18:02:34 [404] /audio/sfx-sparkle.mp3 21ms
+18:02:34 [404] /audio/sfx-unwrap.mp3 4ms
+18:02:34 [404] /audio/sfx-flip.mp3 7ms
+18:02:34 [404] /audio/sfx-match.mp3 4ms
+18:02:43 [200] /contact 4ms
+18:02:43 [200] /templates 7ms
+18:02:43 [200] /about 8ms
+18:02:43 [200] /privacy 8ms
+18:02:43 [200] /terms 8ms
+18:02:43 [200] /how-it-works 9ms
+18:02:43 [200] /pricing 9ms
+18:02:43 [200] /faq 6ms
+18:02:55 [200] /preview/7445530e-a545-4638-ba54-020acd4a75c3 10ms
+Warning: Invalid DOM property `stroke-width`. Did you mean `strokeWidth`?
+    at svg
+    at div
+    at div
+    at div
+    at PreviewApp (eval at instantiateModule (file:///D:/New%20folder%20(3)/node_modules/astro/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:53012:24), <anonymous>:14:23)
+Warning: Invalid DOM property `stroke-linecap`. Did you mean `strokeLinecap`?
+    at svg
+    at div
+    at div
+    at div
+    at PreviewApp (eval at instantiateModule (file:///D:/New%20folder%20(3)/node_modules/astro/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:53012:24), <anonymous>:14:23)
+Warning: Invalid DOM property `stroke-linejoin`. Did you mean `strokeLinejoin`?
+    at svg
+    at div
+    at div
+    at div
+    at PreviewApp (eval at instantiateModule (file:///D:/New%20folder%20(3)/node_modules/astro/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:53012:24), <anonymous>:14:23)
+18:02:55 [200] / 9ms
+18:02:55 [200] /wishes 8ms
+18:02:55 [200] /create 12ms
+18:02:57 [200] /about 10ms
+18:02:57 [200] /contact 10ms
+18:02:57 [200] /templates 7ms
+18:02:57 [200] /privacy 6ms
+18:02:57 [200] /pricing 13ms
+18:02:57 [200] /how-it-works 11ms
+18:02:57 [200] /terms 8ms
+18:02:57 [200] /faq 6ms
+18:03:10 [200] /create 12ms
+18:03:10 [200] / 8ms
+18:03:10 [200] /wishes 7ms
+18:03:10 [404] /audio/sfx-pop.mp3 9ms
+18:03:10 [404] /audio/sfx-chime.mp3 7ms
+18:03:10 [404] /audio/sfx-whoosh.mp3 7ms
+18:03:11 [404] /audio/sfx-confetti.mp3 12ms
+18:03:11 [404] /audio/sfx-sparkle.mp3 10ms
+18:03:11 [404] /audio/sfx-unwrap.mp3 8ms
+18:03:11 [404] /audio/sfx-flip.mp3 8ms
+18:03:11 [404] /audio/sfx-match.mp3 8ms
+18:03:12 [200] /create 19ms
+18:03:12 [200] / 15ms
+18:03:12 [200] /wishes 10ms
+18:03:12 [404] /audio/sfx-pop.mp3 11ms
+18:03:13 [404] /audio/sfx-chime.mp3 13ms
+18:03:13 [404] /audio/sfx-whoosh.mp3 11ms
+18:03:13 [404] /audio/sfx-confetti.mp3 8ms
+18:03:13 [404] /audio/sfx-sparkle.mp3 4ms
+18:03:13 [404] /audio/sfx-unwrap.mp3 5ms
+18:03:13 [404] /audio/sfx-flip.mp3 5ms
+18:03:13 [404] /audio/sfx-match.mp3 6ms
+18:03:21 [200] /create 13ms
+18:03:21 [200] /pricing 12ms
+18:03:21 [200] / 11ms
+18:03:21 [200] /wishes 8ms
+18:03:21 [200] /login 5ms
+18:03:22 [200] /create 19ms
+18:03:23 [200] /pricing 22ms
+18:03:23 [200] /wishes 12ms
+18:03:23 [200] / 15ms
+18:03:23 [200] /login 6ms
+18:04:44 [200] /templates 12ms
+18:04:44 [200] /how-it-works 18ms
+18:04:44 [200] /faq 13ms
+18:04:44 [200] /about 11ms
+18:04:44 [200] /contact 41ms
+18:04:44 [200] /privacy 7ms
+18:04:44 [200] /terms 8ms
+18:05:26 Configuration file updated. Restarting...
+18:05:26 [types] Generated 5ms
+18:06:44 [200] /create 50ms
+18:06:47 [200] /login 8ms
+18:06:47 [200] /wishes 8ms
+18:06:48 [200] / 11ms
+18:06:51 [200] /about 17ms
+18:06:51 [200] /templates 4ms
+18:06:51 [200] /contact 5ms
+18:06:51 [200] /privacy 5ms
+18:06:51 [200] /terms 5ms
+18:06:51 [200] /pricing 7ms
+18:06:51 [200] /how-it-works 7ms
+18:06:52 [200] /faq 8ms
+18:06:55 [200] / 5ms
+18:06:56 [200] /pricing 5ms
+18:06:56 [200] /wishes 9ms
+18:06:56 [200] /create 9ms
+18:06:56 [200] /login 3ms
+18:06:58 [200] /create 11ms
+18:06:58 [200] /pricing 7ms
+18:06:58 [200] / 7ms
+18:06:59 [200] /wishes 9ms
+18:06:59 [200] /login 8ms
+18:07:00 [200] /templates 4ms
+18:07:00 [200] /about 7ms
+18:07:00 [200] /contact 3ms
+18:07:01 [200] /privacy 8ms
+18:07:01 [200] /how-it-works 5ms
+18:07:01 [200] /terms 5ms
+18:07:01 [200] /faq 5ms
+18:07:04 [200] / 5ms
+18:07:04 [200] /pricing 3ms
+18:07:04 [200] /wishes 4ms
+18:07:04 [200] /create 8ms
+18:07:04 [200] /login 3ms
+18:07:07 [200] /create 6ms
+18:07:07 [200] /pricing 8ms
+18:07:07 [200] / 6ms
+18:07:07 [200] /wishes 7ms
+18:07:07 [200] /login 8ms
+18:07:47 [200] / 7ms
+18:07:47 [200] /wishes 7ms
+18:07:47 [200] /login 11ms
+18:08:03 [200] /templates 4ms
+18:08:03 [200] /pricing 5ms
+18:08:03 [200] /how-it-works 5ms
+18:08:03 [200] /faq 4ms
+18:08:03 [200] /about 4ms
+18:08:03 [200] /contact 4ms
+18:08:03 [200] /privacy 4ms
+18:08:03 [200] /terms 4ms
+18:08:04 [200] / 6ms
+18:08:05 [200] /pricing 6ms
+18:08:05 [200] /wishes 4ms
+18:08:05 [200] /create 7ms
+18:08:05 [200] /login 3ms
+18:08:47 [watch] dist/404.html
+18:08:47 [watch] dist/about/index.html
+18:08:47 [watch] dist/access/index.html
+18:08:47 [watch] dist/contact/index.html
+18:08:47 [watch] dist/create/index.html
+18:08:47 [watch] dist/dashboard/index.html
+18:08:47 [watch] dist/design-system/index.html
+18:09:47 [watch] dist/404.html
+18:09:47 [watch] dist/about/index.html
+18:09:47 [watch] dist/access/index.html
+18:09:47 [watch] dist/contact/index.html
+18:09:47 [watch] dist/create/index.html
+18:09:47 [watch] dist/dashboard/index.html
+18:09:47 [watch] dist/design-system/index.html
+18:09:55 [watch] dist/404.html
+18:09:55 [watch] dist/access/index.html
+18:09:55 [watch] dist/about/index.html
+18:09:55 [watch] dist/contact/index.html
+18:09:55 [watch] dist/create/index.html
+18:09:55 [watch] dist/dashboard/index.html
+18:09:55 [watch] dist/design-system/index.html
+18:10:31 [200] /create 16ms
+18:10:31 [200] /pricing 6ms
+18:10:31 [200] / 16ms
+18:10:31 [200] /wishes 8ms
+18:10:31 [200] /login 9ms
+18:10:39 [200] /templates 8ms
+18:10:39 [200] /how-it-works 8ms
+18:10:39 [200] /faq 7ms
+18:10:39 [200] /about 7ms
+18:10:39 [200] /contact 5ms
+18:10:39 [200] /privacy 5ms
+18:10:39 [200] /terms 5ms
+18:10:41 [200] / 7ms
+18:10:41 [200] /pricing 9ms
+18:10:41 [200] /wishes 10ms
+18:10:41 [200] /login 8ms
+18:10:41 [200] /create 11ms
+18:10:48 [200] / 6ms
+18:10:49 [200] /pricing 5ms
+18:10:49 [200] /wishes 6ms
+18:10:49 [200] /create 11ms
+18:10:49 [200] /login 8ms
+18:10:49 [200] /create 12ms
+18:10:50 [200] /pricing 10ms
+18:10:50 [200] /wishes 8ms
+18:10:50 [200] / 7ms
+18:10:50 [200] /login 5ms
+18:10:51 [200] /login 6ms
+18:10:51 [200] /pricing 20ms
+18:10:51 [200] / 51ms
+18:10:51 [200] /wishes 35ms
+18:10:51 [200] /create 41ms
+18:10:52 [200] /create 12ms
+18:10:53 [200] /pricing 8ms
+18:10:53 [200] / 5ms
+18:10:53 [200] /wishes 9ms
+18:10:53 [200] /login 8ms
+18:11:05 [200] /templates 4ms
+18:11:05 [200] /about 5ms
+18:11:05 [200] /contact 4ms
+18:11:05 [200] /privacy 5ms
+18:11:05 [200] /terms 4ms
+18:11:10 [200] /how-it-works 6ms
+18:11:10 [200] /faq 8ms
+18:11:13 [200] / 22ms
+18:11:14 [200] /pricing 5ms
+18:11:14 [200] /wishes 8ms
+18:11:14 [200] /create 12ms
+18:11:14 [200] /login 5ms
+18:11:18 [200] /create 10ms
+18:11:18 [200] /pricing 4ms
+18:11:18 [200] / 7ms
+18:11:18 [200] /wishes 6ms
+18:11:18 [200] /login 7ms
+18:11:22 [watch] src/pages/experience/[id].astro
+18:11:23 [200] /create 22ms
+18:11:24 [200] / 14ms
+18:11:24 [200] /wishes 15ms
+18:11:24 [200] /login 11ms
+18:11:25 [watch] src/pages/preview/[id].astro
+18:11:26 [200] /templates 28ms
+18:11:26 [200] /how-it-works 29ms
+18:11:26 [200] /faq 29ms
+18:11:26 [200] /about 29ms
+18:11:26 [200] /pricing 33ms
+18:11:26 [200] /create 76ms
+18:11:26 [200] /contact 17ms
+18:11:26 [200] /privacy 26ms
+18:11:26 [200] /terms 7ms
+18:11:27 [200] / 72ms
+18:11:27 [200] /wishes 13ms
+18:11:27 [200] /login 15ms
+18:11:28 [200] /about 4ms
+18:11:29 [watch] src/pages/share/[slug].astro
+18:11:29 [200] /create 17ms
+18:11:30 [200] / 6ms
+18:11:30 [200] /wishes 13ms
+18:11:30 [200] /login 4ms
+18:11:32 [200] /templates 6ms
+18:11:32 [200] /pricing 7ms
+18:11:32 [200] /how-it-works 4ms
+18:11:32 [200] /faq 4ms
+18:11:32 [200] /contact 5ms
+18:11:32 [200] /about 7ms
+18:11:33 [200] /privacy 26ms
+18:11:33 [200] /terms 10ms
+18:11:39 [200] / 6ms
+18:11:39 [200] /pricing 4ms
+18:11:39 [200] /wishes 4ms
+18:11:39 [200] /login 4ms
+18:11:39 [200] /create 8ms
+18:11:40 [200] /create 7ms
+18:11:41 [200] /pricing 5ms
+18:11:41 [200] / 5ms
+18:11:41 [200] /wishes 7ms
+18:11:41 [200] /login 8ms
+18:11:43 [200] /about 10ms
+18:11:43 [200] /contact 6ms
+18:11:52 [200] /templates 5ms
+18:11:52 [200] /how-it-works 5ms
+18:11:52 [200] /faq 4ms
+18:11:52 [200] /privacy 6ms
+18:11:52 [200] /terms 5ms
+18:11:54 [200] / 5ms
+18:11:55 [200] /pricing 5ms
+18:11:55 [200] /wishes 6ms
+18:11:55 [200] /login 8ms
+18:11:55 [200] /create 9ms
+18:12:04 [watch] dist/404.html
+18:12:04 [watch] dist/about/index.html
+18:12:04 [watch] dist/access/index.html
+18:12:04 [watch] dist/contact/index.html
+18:12:04 [watch] dist/create/index.html
+18:12:04 [watch] dist/dashboard/index.html
+18:12:04 [watch] dist/design-system/index.html
+18:12:12 [watch] dist/404.html
+18:12:12 [watch] dist/access/index.html
+18:12:12 [watch] dist/contact/index.html
+18:12:12 [watch] dist/about/index.html
+18:12:12 [watch] dist/create/index.html
+18:12:12 [watch] dist/dashboard/index.html
+18:12:12 [watch] dist/index.html
+18:12:12 [watch] dist/design-system/index.html
+18:12:12 [watch] dist/faq/index.html
+18:12:12 [watch] dist/forgot-password/index.html
+18:12:12 [watch] dist/how-it-works/index.html
+18:12:12 [watch] dist/login/index.html
+18:12:12 [watch] dist/experience/demo/index.html
+18:12:12 [watch] dist/privacy/index.html
+18:12:12 [watch] dist/pricing/index.html
+18:12:12 [watch] dist/register/index.html
+18:12:12 [watch] dist/settings/index.html
+18:12:12 [watch] dist/preview/demo/index.html
+18:12:12 [watch] dist/templates/index.html
+18:12:12 [watch] dist/terms/index.html
+18:12:12 [watch] dist/wishes/index.html
+18:12:12 [watch] dist/share/demo/index.html
+18:12:36 [watch] dist/404.html
+18:12:36 [watch] dist/access/index.html
+18:12:36 [watch] dist/about/index.html
+18:12:36 [watch] dist/contact/index.html
+18:12:36 [watch] dist/create/index.html
+18:12:36 [watch] dist/dashboard/index.html
+18:12:36 [watch] dist/design-system/index.html
+18:12:36 [watch] dist/experience/demo/index.html
+18:12:36 [watch] dist/faq/index.html
+18:12:36 [watch] dist/forgot-password/index.html
+18:12:36 [watch] dist/how-it-works/index.html
+18:12:36 [watch] dist/login/index.html
+18:12:36 [watch] dist/preview/demo/index.html
+18:12:36 [watch] dist/pricing/index.html
+18:12:36 [watch] dist/privacy/index.html
+18:12:36 [watch] dist/register/index.html
+18:12:36 [watch] dist/settings/index.html
+18:12:36 [watch] dist/index.html
+18:12:36 [watch] dist/share/demo/index.html
+18:12:36 [watch] dist/templates/index.html
+18:12:36 [watch] dist/terms/index.html
+18:12:36 [watch] dist/wishes/index.html
+18:12:45 [watch] dist/404.html
+18:12:45 [watch] dist/access/index.html
+18:12:45 [watch] dist/about/index.html
+18:12:45 [watch] dist/contact/index.html
+18:12:45 [watch] dist/dashboard/index.html
+18:12:45 [watch] dist/create/index.html
+18:12:45 [watch] dist/design-system/index.html
+18:12:45 [watch] dist/faq/index.html
+18:12:45 [watch] dist/index.html
+18:12:45 [watch] dist/forgot-password/index.html
+18:12:45 [watch] dist/how-it-works/index.html
+18:12:45 [watch] dist/experience/demo/index.html
+18:12:45 [watch] dist/login/index.html
+18:12:45 [watch] dist/privacy/index.html
+18:12:45 [watch] dist/pricing/index.html
+18:12:45 [watch] dist/register/index.html
+18:12:45 [watch] dist/settings/index.html
+18:12:45 [watch] dist/preview/demo/index.html
+18:12:45 [watch] dist/terms/index.html
+18:12:45 [watch] dist/templates/index.html
+18:12:45 [watch] dist/wishes/index.html
+18:12:45 [watch] dist/share/demo/index.html
+18:13:28 [200] /create 18ms
+18:13:29 [200] /pricing 4ms
+18:13:29 [200] /wishes 5ms
+18:13:29 [200] /login 5ms
+18:13:29 [200] / 7ms
+18:13:38 [200] /templates 9ms
+18:13:38 [200] /how-it-works 6ms
+18:13:38 [200] /faq 6ms
+18:13:38 [200] /about 6ms
+18:13:38 [200] /contact 8ms
+18:13:38 [200] /privacy 6ms
+18:13:38 [200] /terms 7ms
+18:13:41 [200] / 52ms
+18:13:42 [200] /wishes 14ms
+18:13:42 [200] /login 23ms
+18:13:42 [200] /create 52ms
+18:14:44 [200] /create 8ms
+18:14:45 [200] /pricing 5ms
+18:14:45 [200] / 10ms
+18:14:45 [200] /wishes 9ms
+18:14:45 [200] /login 8ms
+18:14:46 [200] /create 6ms
+18:14:46 [200] /create 16ms
+18:14:47 [200] /create 13ms
+18:14:47 [200] /create 9ms
+18:14:47 [200] /create 19ms
+18:14:47 [200] /pricing 8ms
+18:14:47 [200] / 8ms
+18:14:47 [200] /wishes 6ms
+18:14:47 [200] /login 7ms
+18:14:53 [200] /create 9ms
+18:14:54 [200] /pricing 4ms
+18:14:54 [200] / 6ms
+18:14:54 [200] /wishes 6ms
+18:14:54 [200] /login 4ms
+18:14:55 [200] /about 5ms
+18:14:55 [200] /contact 5ms
+18:14:55 [200] /templates 7ms
+18:14:55 [200] /privacy 4ms
+18:14:55 [200] /terms 4ms
+18:14:55 [200] /how-it-works 6ms
+18:14:55 [200] /faq 4ms
+18:17:06 [200] / 6ms
+18:17:07 [200] /pricing 5ms
+18:17:07 [200] /wishes 6ms
+18:17:07 [200] /create 8ms
+18:17:07 [200] /login 7ms
+18:17:12 [200] /wishes 8ms
+18:17:13 [200] /pricing 3ms
+18:17:13 [200] / 7ms
+18:17:13 [200] /create 6ms
+18:17:13 [200] /login 4ms
+18:17:40 [200] /about 5ms
+18:17:40 [200] /contact 5ms
+18:17:40 [200] /templates 6ms
+18:17:40 [200] /privacy 5ms
+18:17:40 [200] /terms 5ms
+18:17:40 [200] /how-it-works 4ms
+18:17:41 [200] /faq 4ms
+18:17:56 [200] /create 17ms
+18:17:57 [200] /pricing 29ms
+18:17:57 [200] / 13ms
+18:17:57 [200] /wishes 15ms
+18:17:57 [200] /login 9ms
+18:17:59 [200] / 6ms
+18:18:00 [200] /wishes 12ms
+18:18:00 [200] /create 8ms
+18:18:00 [200] /login 5ms
+18:18:01 [200] / 6ms
+18:18:02 [200] /pricing 5ms
+18:18:02 [200] /wishes 8ms
+18:18:02 [200] /create 11ms
+18:18:02 [200] /login 6ms
+18:18:12 [200] /create 15ms
+18:18:12 [200] /pricing 6ms
+18:18:12 [200] / 7ms
+18:18:12 [200] /wishes 6ms
+18:18:12 [200] /login 8ms
+18:18:15 [200] / 9ms
+18:18:15 [200] /wishes 7ms
+18:18:15 [200] /login 7ms
+18:18:15 [200] /create 11ms
+18:18:16 [200] /wishes 10ms
+18:18:16 [200] /pricing 5ms
+18:18:17 [200] / 6ms
+18:18:17 [200] /create 12ms
+18:18:17 [200] /login 6ms
+18:18:18 [200] / 8ms
+18:18:19 [200] /create 21ms
+18:18:19 [200] /login 21ms
+18:18:19 [200] /wishes 25ms
+18:18:23 [200] /create 12ms
+18:18:23 [200] /pricing 4ms
+18:18:23 [200] / 6ms
+18:18:23 [200] /wishes 4ms
+18:18:23 [200] /login 5ms
+18:18:28 [200] /about 5ms
+18:18:37 [200] /contact 10ms
+18:18:37 [200] /templates 7ms
+18:18:37 [200] /privacy 7ms
+18:18:37 [200] /how-it-works 5ms
+18:18:37 [200] /terms 6ms
+18:18:37 [200] /faq 5ms
+18:18:52 [200] / 12ms
+18:18:53 [200] /pricing 8ms
+18:18:53 [200] /wishes 7ms
+18:18:53 [200] /create 12ms
+18:18:53 [200] /login 4ms
+18:18:57 [200] /wishes 12ms
+18:18:57 [200] /pricing 5ms
+18:18:57 [200] / 6ms
+18:18:57 [200] /create 7ms
+18:18:57 [200] /login 4ms
+18:18:59 [200] / 8ms
+18:18:59 [200] /create 8ms
+18:18:59 [200] /wishes 5ms
+18:18:59 [200] /login 4ms
+18:19:00 [200] /wishes 5ms
+18:19:00 [200] /pricing 3ms
+18:19:00 [200] / 7ms
+18:19:00 [200] /create 8ms
+18:19:00 [200] /login 5ms
+18:19:01 [200] /create 7ms
+18:19:01 [200] /pricing 8ms
+18:19:01 [200] / 5ms
+18:19:01 [200] /wishes 11ms
+18:19:01 [200] /login 5ms
+18:19:03 [200] /about 4ms
+18:19:03 [200] /contact 5ms
+18:21:01 [200] /create 10ms
+18:21:02 [200] / 10ms
+18:21:02 [200] /wishes 5ms
+18:21:02 [200] /login 5ms
+18:21:02 [200] /create 15ms
+18:21:03 [200] / 4ms
+18:21:03 [200] /wishes 4ms
+18:21:03 [200] /login 6ms
+18:21:09 [200] /templates 7ms
+18:21:09 [200] /pricing 7ms
+18:21:09 [200] /about 5ms
+18:21:09 [200] /contact 5ms
+18:21:09 [200] /privacy 6ms
+18:21:09 [200] /terms 7ms
+18:21:12 [200] /how-it-works 10ms
+18:21:12 [200] /faq 7ms
+18:21:13 [200] / 9ms
+18:21:14 [200] /pricing 10ms
+18:21:14 [200] /wishes 11ms
+18:21:14 [200] /create 15ms
+18:21:14 [200] /login 5ms
+18:21:14 [200] /wishes 10ms
+18:21:15 [200] /pricing 6ms
+18:21:15 [200] /create 7ms
+18:21:15 [200] /login 5ms
+18:21:15 [200] / 8ms
+18:21:15 [200] / 5ms
+18:21:16 [200] /create 11ms
+18:21:16 [200] /wishes 8ms
+18:21:16 [200] /login 4ms
+18:21:19 [200] /faq 4ms
+18:21:19 [200] /about 6ms
+18:21:19 [200] /contact 6ms
+18:21:19 [200] /templates 6ms
+18:21:19 [200] /privacy 7ms
+18:21:19 [200] /pricing 7ms
+18:21:20 [200] /how-it-works 6ms
+18:21:20 [200] /terms 7ms
+18:21:20 [200] /create 13ms
+18:21:21 [200] /pricing 3ms
+18:21:21 [200] /wishes 5ms
+18:21:21 [200] / 6ms
+18:21:21 [200] /login 3ms
+18:21:30 [200] /create 9ms
+18:21:31 [200] / 5ms
+18:21:31 [200] /wishes 5ms
+18:21:31 [200] /login 4ms
+18:21:34 [200] /pricing 13ms
+18:23:00 [watch] dist/404.html
+18:23:00 [watch] dist/about/index.html
+18:23:00 [watch] dist/access/index.html
+18:23:00 [watch] dist/contact/index.html
+18:23:00 [watch] dist/dashboard/index.html
+18:23:00 [watch] dist/create/index.html
+18:23:00 [watch] dist/design-system/index.html
+18:23:00 [watch] dist/experience/demo/index.html
+18:23:00 [watch] dist/faq/index.html
+18:23:00 [watch] dist/forgot-password/index.html
+18:23:00 [watch] dist/how-it-works/index.html
+18:23:00 [watch] dist/login/index.html
+18:23:00 [watch] dist/preview/demo/index.html
+18:23:00 [watch] dist/index.html
+18:23:00 [watch] dist/pricing/index.html
+18:23:00 [watch] dist/privacy/index.html
+18:23:00 [watch] dist/register/index.html
+18:23:00 [watch] dist/settings/index.html
+18:23:00 [watch] dist/share/demo/index.html
+18:23:00 [watch] dist/terms/index.html
+18:23:00 [watch] dist/templates/index.html
+18:23:00 [watch] dist/wishes/index.html
+18:23:10 [watch] dist/404.html
+18:23:10 [watch] dist/access/index.html
+18:23:10 [watch] dist/about/index.html
+18:23:10 [watch] dist/contact/index.html
+18:23:10 [watch] dist/create/index.html
+18:23:10 [watch] dist/dashboard/index.html
+18:23:10 [watch] dist/design-system/index.html
+18:23:10 [watch] dist/index.html
+18:23:10 [watch] dist/faq/index.html
+18:23:10 [watch] dist/forgot-password/index.html
+18:23:10 [watch] dist/how-it-works/index.html
+18:23:10 [watch] dist/experience/demo/index.html
+18:23:10 [watch] dist/login/index.html
+18:23:10 [watch] dist/pricing/index.html
+18:23:10 [watch] dist/privacy/index.html
+18:23:10 [watch] dist/register/index.html
+18:23:10 [watch] dist/settings/index.html
+18:23:10 [watch] dist/preview/demo/index.html
+18:23:10 [watch] dist/templates/index.html
+18:23:10 [watch] dist/terms/index.html
+18:23:10 [watch] dist/wishes/index.html
+18:23:10 [watch] dist/share/demo/index.html
+18:23:15 [200] /create 10ms
+18:23:15 [200] / 16ms
+18:23:15 [200] /wishes 7ms
+18:23:15 [200] /login 10ms
+18:23:18 [200] /wishes 5ms
+18:23:19 [200] /pricing 4ms
+18:23:19 [200] / 6ms
+18:23:19 [200] /login 4ms
+18:23:19 [200] /create 7ms
+18:23:20 [200] /about 41ms
+18:23:20 [200] /contact 17ms
+18:23:20 [200] /templates 23ms
+18:23:20 [200] /privacy 12ms
+18:23:20 [200] /terms 16ms
+18:23:20 [200] /how-it-works 6ms
+18:23:20 [200] /faq 7ms
+18:23:52 [watch] /src/components/experience/CakeCelebration.tsx, /node_modules/@astrojs/tailwind/base.css, /src/styles/base.css
+18:24:20 [200] /wishes 9ms
+18:24:20 [200] /pricing 4ms
+18:24:20 [200] / 7ms
+18:24:20 [200] /login 5ms
+18:24:20 [ERROR] Could not import `/src/components/experience/CakeCelebration.tsx`.
+  Hint:
+    This is often caused by a typo in the import path. Please make sure the file exists.
+  Error reference:
+    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/
+  Stack trace:
+    at loadAndTransform (file:///D:/New%20folder%20(3)/node_modules/astro/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51969:17)
+18:24:23 [ERROR] Could not import `/src/components/experience/CakeCelebration.tsx`.
+  Hint:
+    This is often caused by a typo in the import path. Please make sure the file exists.
+  Error reference:
+    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/
+  Stack trace:
+    at loadAndTransform (file:///D:/New%20folder%20(3)/node_modules/astro/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51969:17)
+18:24:25 [200] / 10ms
+18:24:25 [200] /login 6ms
+18:24:25 [200] /wishes 29ms
+18:24:26 [200] /templates 75ms
+18:24:26 [ERROR] Could not import `/src/components/experience/CakeCelebration.tsx`.
+  Hint:
+    This is often caused by a typo in the import path. Please make sure the file exists.
+  Error reference:
+    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/
+  Stack trace:
+    at loadAndTransform (file:///D:/New%20folder%20(3)/node_modules/astro/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51969:17)
+18:24:26 [200] /pricing 45ms
+18:24:26 [200] /how-it-works 11ms
+18:24:26 [200] /faq 27ms
+18:24:26 [200] /about 15ms
+18:24:26 [200] /contact 16ms
+18:24:26 [200] /privacy 10ms
+18:24:26 [200] /terms 11ms
+18:24:27 [200] /wishes 11ms
+18:24:28 [200] /pricing 7ms
+18:24:28 [200] / 7ms
+18:24:28 [ERROR] Could not import `/src/components/experience/CakeCelebration.tsx`.
+  Hint:
+    This is often caused by a typo in the import path. Please make sure the file exists.
+  Error reference:
+    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/
+  Stack trace:
+    at loadAndTransform (file:///D:/New%20folder%20(3)/node_modules/astro/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51969:17)
+18:24:28 [200] /login 5ms
+18:24:31 [200] / 19ms
+18:24:31 [200] /pricing 3ms
+18:24:31 [200] /wishes 4ms
+18:24:31 [ERROR] Could not import `/src/components/experience/CakeCelebration.tsx`.
+  Hint:
+    This is often caused by a typo in the import path. Please make sure the file exists.
+  Error reference:
+    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/
+  Stack trace:
+    at loadAndTransform (file:///D:/New%20folder%20(3)/node_modules/astro/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51969:17)
+18:24:31 [200] /login 6ms
+18:24:33 [ERROR] Could not import `/src/components/experience/CakeCelebration.tsx`.
+  Hint:
+    This is often caused by a typo in the import path. Please make sure the file exists.
+  Error reference:
+    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/
+  Stack trace:
+    at loadAndTransform (file:///D:/New%20folder%20(3)/node_modules/astro/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51969:17)
+18:24:34 [200] / 11ms
+18:24:35 [200] /pricing 3ms
+18:24:35 [200] /wishes 3ms
+18:24:35 [ERROR] Could not import `/src/components/experience/CakeCelebration.tsx`.
+  Hint:
+    This is often caused by a typo in the import path. Please make sure the file exists.
+  Error reference:
+    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/
+  Stack trace:
+    at loadAndTransform (file:///D:/New%20folder%20(3)/node_modules/astro/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51969:17)
+18:24:35 [200] /login 6ms
+18:24:52 [watch] /src/components/experience/CakeCelebration.tsx
+18:24:53 [200] / 15ms
+18:25:38 [watch] /src/components/experience/CakeCelebration.tsx
+18:27:04 [watch] /src/components/experience/CakeCelebration.tsx
+18:27:30 [watch] /src/components/experience/CakeCelebration.tsx
+18:28:22 [watch] dist/404.html
+18:28:22 [watch] dist/access/index.html
+18:28:22 [watch] dist/about/index.html
+18:28:22 [watch] dist/contact/index.html
+18:28:22 [watch] dist/create/index.html
+18:28:22 [watch] dist/dashboard/index.html
+18:28:22 [watch] dist/design-system/index.html
+18:28:22 [watch] dist/experience/demo/index.html
+18:28:22 [watch] dist/faq/index.html
+18:28:22 [watch] dist/forgot-password/index.html
+18:28:22 [watch] dist/how-it-works/index.html
+18:28:22 [watch] dist/login/index.html
+18:28:22 [watch] dist/preview/demo/index.html
+18:28:22 [watch] dist/pricing/index.html
+18:28:22 [watch] dist/privacy/index.html
+18:28:22 [watch] dist/register/index.html
+18:28:22 [watch] dist/index.html
+18:28:22 [watch] dist/settings/index.html
+18:28:22 [watch] dist/share/demo/index.html
+18:28:22 [watch] dist/templates/index.html
+18:28:22 [watch] dist/terms/index.html
+18:28:22 [watch] dist/wishes/index.html
+18:28:30 [watch] dist/404.html
+18:28:30 [watch] dist/about/index.html
+18:28:30 [watch] dist/access/index.html
+18:28:30 [watch] dist/contact/index.html
+18:28:30 [watch] dist/create/index.html
+18:28:31 [watch] dist/dashboard/index.html
+18:28:31 [watch] dist/design-system/index.html
+18:28:31 [watch] dist/index.html
+18:28:31 [watch] dist/forgot-password/index.html
+18:28:31 [watch] dist/faq/index.html
+18:28:31 [watch] dist/how-it-works/index.html
+18:28:31 [watch] dist/experience/demo/index.html
+18:28:31 [watch] dist/login/index.html
+18:28:31 [watch] dist/pricing/index.html
+18:28:31 [watch] dist/privacy/index.html
+18:28:31 [watch] dist/register/index.html
+18:28:31 [watch] dist/settings/index.html
+18:28:31 [watch] dist/preview/demo/index.html
+18:28:31 [watch] dist/templates/index.html
+18:28:31 [watch] dist/terms/index.html
+18:28:31 [watch] dist/wishes/index.html
+18:28:31 [watch] dist/share/demo/index.html
+18:28:49 [watch] /src/components/experience/CakeCelebration.tsx
+18:29:08 [watch] /src/components/experience/CakeCelebration.tsx
+18:29:55 [watch] dist/404.html
+18:29:55 [watch] dist/about/index.html
+18:29:55 [watch] dist/access/index.html
+18:29:55 [watch] dist/contact/index.html
+18:29:55 [watch] dist/create/index.html
+18:29:55 [watch] dist/dashboard/index.html
+18:29:55 [watch] dist/design-system/index.html
+18:29:55 [watch] dist/experience/demo/index.html
+18:29:55 [watch] dist/forgot-password/index.html
+18:29:55 [watch] dist/faq/index.html
+18:29:55 [watch] dist/index.html
+18:29:55 [watch] dist/how-it-works/index.html
+18:29:55 [watch] dist/login/index.html
+18:29:55 [watch] dist/preview/demo/index.html
+18:29:55 [watch] dist/pricing/index.html
+18:29:55 [watch] dist/privacy/index.html
+18:29:55 [watch] dist/register/index.html
+18:29:55 [watch] dist/settings/index.html
+18:29:55 [watch] dist/share/demo/index.html
+18:29:55 [watch] dist/templates/index.html
+18:29:55 [watch] dist/terms/index.html
+18:29:55 [watch] dist/wishes/index.html
+18:30:03 [watch] dist/404.html
+18:30:03 [watch] dist/access/index.html
+18:30:03 [watch] dist/contact/index.html
+18:30:03 [watch] dist/about/index.html
+18:30:03 [watch] dist/create/index.html
+18:30:03 [watch] dist/dashboard/index.html
+18:30:03 [watch] dist/design-system/index.html
+18:30:03 [watch] dist/forgot-password/index.html
+18:30:03 [watch] dist/faq/index.html
+18:30:03 [watch] dist/index.html
+18:30:03 [watch] dist/how-it-works/index.html
+18:30:03 [watch] dist/experience/demo/index.html
+18:30:03 [watch] dist/login/index.html
+18:30:03 [watch] dist/pricing/index.html
+18:30:03 [watch] dist/privacy/index.html
+18:30:03 [watch] dist/register/index.html
+18:30:03 [watch] dist/settings/index.html
+18:30:03 [watch] dist/preview/demo/index.html
+18:30:03 [watch] dist/templates/index.html
+18:30:03 [watch] dist/terms/index.html
+18:30:03 [watch] dist/wishes/index.html
+18:30:03 [watch] dist/share/demo/index.html
+18:39:45 [watch] /src/components/experience/CakeCelebration.tsx
+18:54:39 [watch] /src/components/experience/BirthdayExperience.tsx, /node_modules/@astrojs/tailwind/base.css, /src/styles/base.css
+18:54:59 [watch] /src/components/experience/BirthdayExperience.tsx, /node_modules/@astrojs/tailwind/base.css, /src/styles/base.css
+18:55:01 [watch] /src/components/experience/BirthdayExperience.tsx, /node_modules/@astrojs/tailwind/base.css, /src/styles/base.css
+18:55:44 [watch] /src/components/experience/BirthdayExperience.tsx, /node_modules/@astrojs/tailwind/base.css, /src/styles/base.css
+18:57:54 [watch] /src/components/experience/BirthdayExperience.tsx, /node_modules/@astrojs/tailwind/base.css, /src/styles/base.css
+18:58:46 [watch] /src/components/experience/BirthdayExperience.tsx, /node_modules/@astrojs/tailwind/base.css, /src/styles/base.css
+18:59:27 [watch] /src/components/experience/BirthdayExperience.tsx, /node_modules/@astrojs/tailwind/base.css, /src/styles/base.css
+19:00:48 [watch] /src/components/experience/BirthdayExperience.tsx, /node_modules/@astrojs/tailwind/base.css, /src/styles/base.css
+19:01:55 [watch] /src/components/experience/StorybookCard.tsx, /node_modules/@astrojs/tailwind/base.css, /src/styles/base.css
+19:01:58 [watch] /src/components/experience/StorybookCard.tsx, /node_modules/@astrojs/tailwind/base.css, /src/styles/base.css
+19:04:51 [watch] dist/404.html
+19:04:51 [watch] dist/about/index.html
+19:04:51 [watch] dist/access/index.html
+19:04:51 [watch] dist/contact/index.html
+19:04:51 [watch] dist/create/index.html
+19:04:51 [watch] dist/dashboard/index.html
+19:04:51 [watch] dist/design-system/index.html
+19:04:51 [watch] dist/experience/demo/index.html
+19:04:51 [watch] dist/faq/index.html
+19:04:51 [watch] dist/forgot-password/index.html
+19:04:51 [watch] dist/how-it-works/index.html
+19:04:51 [watch] dist/login/index.html
+19:04:51 [watch] dist/preview/demo/index.html
+19:04:51 [watch] dist/pricing/index.html
+19:04:51 [watch] dist/privacy/index.html
+19:04:51 [watch] dist/register/index.html
+19:04:51 [watch] dist/settings/index.html
+19:04:51 [watch] dist/share/demo/index.html
+19:04:51 [watch] dist/index.html
+19:04:51 [watch] dist/templates/index.html
+19:04:51 [watch] dist/terms/index.html
+19:04:51 [watch] dist/wishes/index.html
+19:04:56 [watch] dist/404.html
+19:04:56 [watch] dist/about/index.html
+19:04:56 [watch] dist/create/index.html
+19:04:56 [watch] dist/access/index.html
+19:04:56 [watch] dist/contact/index.html
+19:04:56 [watch] dist/dashboard/index.html
+19:04:56 [watch] dist/design-system/index.html
+19:04:56 [watch] dist/index.html
+19:04:56 [watch] dist/faq/index.html
+19:04:56 [watch] dist/forgot-password/index.html
+19:04:56 [watch] dist/how-it-works/index.html
+19:04:56 [watch] dist/login/index.html
+19:04:56 [watch] dist/experience/demo/index.html
+19:04:56 [watch] dist/pricing/index.html
+19:04:56 [watch] dist/privacy/index.html
+19:04:56 [watch] dist/register/index.html
+19:04:56 [watch] dist/settings/index.html
+19:04:57 [watch] dist/preview/demo/index.html
+19:04:57 [watch] dist/terms/index.html
+19:04:57 [watch] dist/templates/index.html
+19:04:57 [watch] dist/wishes/index.html
+19:04:57 [watch] dist/share/demo/index.html
+19:09:10 [200] /pricing 9ms
+19:09:10 [200] /login 9ms
+19:09:10 [200] / 13ms
+19:09:10 [200] /wishes 28ms
+19:09:10 [200] /create 6ms
+19:09:11 [200] /wishes 2ms
+19:09:11 [200] /pricing 4ms
+19:09:11 [200] /create 4ms
+19:09:11 [200] /login 2ms
+19:09:21 [200] /wishes 3ms
+19:09:21 [200] /pricing 3ms
+19:09:21 [200] /create 5ms
+19:09:21 [200] / 2ms
+19:09:21 [200] /login 3ms
+19:09:22 [200] /create 4ms
+19:09:22 [200] /pricing 3ms
+19:09:22 [200] / 4ms
+19:09:22 [200] /wishes 3ms
+19:09:22 [200] /login 3ms
+19:09:28 [200] /create 3ms
+19:09:28 [200] /create 4ms
+19:09:28 [200] /create 4ms
+19:09:28 [200] /create 5ms
+19:09:29 [200] /create 7ms
+19:09:29 [200] /create 8ms
+19:09:29 [200] / 3ms
+19:09:29 [200] /wishes 2ms
+19:09:29 [200] /login 3ms
+19:09:41 [200] /templates 3ms
+19:09:41 [200] /pricing 3ms
+19:09:41 [200] /how-it-works 3ms
+19:09:41 [200] /faq 2ms
+19:09:41 [200] /about 3ms
+19:09:41 [200] /contact 2ms
+19:09:41 [200] /privacy 3ms
+19:09:41 [200] /terms 5ms
+19:09:47 [200] / 3ms
+19:09:47 [200] /pricing 3ms
+19:09:47 [200] /wishes 5ms
+19:09:47 [200] /login 3ms
+19:09:47 [200] /create 6ms
+19:11:42 [200] /wishes 5ms
+19:11:43 [200] /pricing 4ms
+19:11:43 [200] / 4ms
+19:11:43 [200] /create 5ms
+19:11:43 [200] /login 4ms
+19:11:46 [200] /create 7ms
+19:11:46 [200] / 3ms
+19:11:46 [200] /login 3ms
+19:11:46 [200] /wishes 5ms
+19:11:53 [200] /templates 3ms
+19:11:53 [200] /pricing 5ms
+19:11:53 [200] /how-it-works 3ms
+19:11:53 [200] /faq 3ms
+19:11:53 [200] /about 3ms
+19:11:53 [200] /contact 3ms
+19:11:53 [200] /privacy 3ms
+19:11:53 [200] /terms 3ms
+19:11:56 [200] / 3ms
+19:11:56 [200] /pricing 4ms
+19:11:56 [200] /wishes 3ms
+19:11:56 [200] /create 6ms
+19:11:56 [200] /login 2ms
+19:11:57 [200] / 3ms
+19:11:57 [200] /pricing 3ms
+19:11:57 [200] /wishes 4ms
+19:11:57 [200] /create 5ms
+19:11:57 [200] /login 2ms
+19:12:01 [200] / 2ms
+19:12:01 [200] /wishes 3ms
+19:12:01 [200] /create 5ms
+19:12:01 [200] /login 3ms
+19:16:51 [watch] src/lib/auth/interfaces.ts
+19:16:52 [200] / 7ms
+19:16:58 [watch] src/lib/auth/interfaces.ts
+19:16:59 [200] / 9ms
+19:17:09 [watch] src/lib/auth/LocalAuthAdapter.ts
+19:17:10 [200] / 7ms
+19:17:31 [watch] src/lib/auth/LocalAuthAdapter.ts
+19:17:32 [200] / 8ms
+19:19:51 [200] /wishes 4ms
+19:19:52 [200] /create 10ms
+19:19:52 [200] /login 6ms
+19:19:57 [200] /create 11ms
+19:19:57 [200] /pricing 4ms
+19:19:57 [200] / 6ms
+19:19:57 [200] /wishes 4ms
+19:19:57 [200] /login 3ms
+19:20:02 [200] /templates 3ms
+19:20:02 [200] /how-it-works 4ms
+19:20:02 [200] /faq 3ms
+19:20:02 [200] /about 3ms
+19:20:02 [200] /contact 3ms
+19:20:02 [200] /privacy 3ms
+19:20:02 [200] /terms 4ms
+19:20:05 [200] / 5ms
+19:20:05 [200] /wishes 3ms
+19:20:05 [200] /login 4ms
+19:20:05 [200] /create 5ms
+19:20:06 [200] /pricing 3ms
+19:20:07 [200] /create 7ms
+19:20:07 [200] /pricing 3ms
+19:20:07 [200] /wishes 5ms
+19:20:07 [200] / 4ms
+19:20:07 [200] /login 5ms
+19:20:11 [200] /about 3ms
+19:20:11 [200] /contact 4ms
+19:20:11 [200] /templates 4ms
+19:20:11 [200] /privacy 3ms
+19:20:11 [200] /terms 5ms
+19:20:11 [200] /how-it-works 3ms
+19:20:27 [200] /faq 3ms
+19:24:53 [200] / 3ms
+19:24:54 [200] /pricing 3ms
+19:24:54 [200] /wishes 5ms
+19:24:54 [200] /create 5ms
+19:24:54 [200] /login 3ms
+19:24:54 [200] /create 6ms
+19:24:54 [200] /pricing 3ms
+19:24:54 [200] / 4ms
+19:24:54 [200] /wishes 3ms
+19:24:54 [200] /login 3ms
+19:25:27 [200] /about 2ms
+19:25:27 [200] /contact 4ms
+19:25:27 [200] /templates 3ms
+19:25:27 [200] /privacy 3ms
+19:25:27 [200] /terms 3ms
+19:25:27 [200] /how-it-works 2ms
+19:28:02 [watch] src/lib/auth/auth.test.ts
+19:28:03 [200] /create 7ms
+19:29:38 [watch] src/lib/auth/client.ts
+19:29:40 [200] /create 8ms
+19:29:47 [watch] src/lib/auth/client.ts
+19:29:48 [200] /create 11ms
+19:30:27 [watch] /node_modules/@astrojs/tailwind/base.css, /src/styles/base.css, /src/components/editor/steps/Step6Preview.tsx, /src/components/editor/steps/Step5Personalize.tsx
+19:30:54 [watch] /node_modules/@astrojs/tailwind/base.css, /src/styles/base.css, /src/components/editor/PhotoManager.tsx, /src/components/editor/TierComparison.tsx
+19:31:42 [watch] /node_modules/@astrojs/tailwind/base.css, /src/styles/base.css, /src/components/editor/PhotoManager.tsx
+19:31:59 [watch] /node_modules/@astrojs/tailwind/base.css, /src/styles/base.css, /src/components/preview/SharePanel.tsx
+19:33:55 [watch] /node_modules/@astrojs/tailwind/base.css, /src/styles/base.css, /src/components/preview/QRCodePanel.tsx
+19:33:56 [200] /login 9ms
+19:33:56 [200] / 12ms
+19:33:56 [200] /wishes 19ms
+19:33:58 [200] /create 7ms
+19:33:58 [200] / 3ms
+19:33:58 [200] /wishes 4ms
+19:33:58 [200] /login 2ms
+19:34:06 [200] /templates 3ms
+19:34:06 [200] /pricing 3ms
+19:34:06 [200] /how-it-works 3ms
+19:34:06 [200] /faq 2ms
+19:34:06 [200] /about 3ms
+19:34:06 [200] /contact 2ms
+19:34:06 [200] /privacy 6ms
+19:34:06 [200] /terms 2ms
+19:34:08 [200] /create 4ms
+19:34:08 [200] /pricing 2ms
+19:34:08 [200] / 2ms
+19:34:08 [200] /wishes 3ms
+19:34:08 [200] /login 6ms
+19:34:14 [200] /create 5ms
+19:34:14 [200] /pricing 2ms
+19:34:14 [200] / 3ms
+19:34:14 [200] /wishes 2ms
+19:34:14 [200] /login 2ms
+19:34:17 [200] /about 2ms
+19:34:17 [200] /contact 3ms
+19:34:17 [200] /templates 2ms
+19:34:17 [200] /privacy 3ms
+19:34:17 [200] /terms 2ms
+19:34:17 [200] /how-it-works 3ms
+19:34:17 [200] /faq 2ms
+19:34:20 [200] /create 5ms
+19:34:21 [200] /pricing 2ms
+19:34:21 [200] / 4ms
+19:34:21 [200] /wishes 3ms
+19:34:21 [200] /login 2ms
+19:34:21 [200] /wishes 4ms
+19:34:21 [200] /pricing 3ms
+19:34:21 [200] / 3ms
+19:34:21 [200] /create 4ms
+19:34:21 [200] /login 2ms
+19:34:22 [200] / 2ms
+19:34:22 [200] /create 3ms
+19:34:22 [200] /wishes 5ms
+19:34:22 [200] /login 5ms
+19:35:23 [watch] /node_modules/@astrojs/tailwind/base.css, /src/styles/base.css, /src/components/editor/steps/Step6Preview.tsx
+19:35:34 [watch] /node_modules/@astrojs/tailwind/base.css, /src/styles/base.css, /src/components/editor/steps/Step6Preview.tsx
+19:35:47 [watch] /node_modules/@astrojs/tailwind/base.css, /src/styles/base.css, /src/components/editor/steps/Step6Preview.tsx
+19:37:19 [watch] /node_modules/@astrojs/tailwind/base.css, /src/styles/base.css, /src/components/editor/steps/Step6Preview.tsx
+19:37:28 [watch] src/lib/subscriptions/LocalSubscriptionAdapter.ts
+19:37:29 [200] / 10ms
+19:37:33 [watch] src/lib/subscriptions/LocalSubscriptionAdapter.ts
+19:37:34 [200] / 5ms
+19:37:56 [watch] src/lib/subscriptions/PlanComparisons.ts
+19:37:57 [200] / 5ms
+19:38:08 [watch] src/test/setup.ts
+19:38:08 [200] / 5ms
+19:40:30 [watch] src/lib/auth/client.ts
+19:40:30 [200] / 7ms
+19:40:37 [200] /wishes 4ms
+19:40:37 [200] /login 2ms
+19:40:37 [200] /create 5ms
+19:40:38 [watch] src/lib/auth/client.ts
+19:40:38 [200] / 5ms
+19:40:39 [200] /wishes 6ms
+19:40:39 [200] /create 4ms
+19:40:39 [200] /login 3ms
+19:40:43 [200] /login 4ms
+19:40:43 [200] / 3ms
+19:40:43 [200] /wishes 3ms
+19:40:43 [200] /create 4ms
+19:40:43 [200] /pricing 5ms
+19:40:44 [watch] /node_modules/@astrojs/tailwind/base.css, /src/styles/base.css, /src/components/editor/PhotoManager.tsx, /src/components/editor/TierComparison.tsx
+19:40:45 [200] /forgot-password 9ms
+19:40:45 [200] /register 9ms
+19:40:45 [200] /create 6ms
+19:40:46 [200] /pricing 19ms
+19:40:46 [200] / 22ms
+19:40:46 [200] /wishes 23ms
+19:40:46 [200] /login 8ms
+19:40:48 [200] /about 4ms
+19:40:48 [200] /templates 5ms
+19:40:48 [200] /contact 3ms
+19:40:48 [200] /privacy 3ms
+19:40:48 [200] /terms 4ms
+19:41:03 [watch] /node_modules/@astrojs/tailwind/base.css, /src/styles/base.css, /src/components/preview/SharePanel.tsx
+19:41:38 [watch] /node_modules/@astrojs/tailwind/base.css, /src/styles/base.css, /src/components/editor/steps/Step6Preview.tsx
+19:41:49 [watch] /node_modules/@astrojs/tailwind/base.css, /src/styles/base.css, /src/components/editor/steps/Step6Preview.tsx
+19:42:15 [watch] /node_modules/@astrojs/tailwind/base.css, /src/styles/base.css, /src/components/editor/steps/Step6Preview.tsx
+19:43:35 [watch] src/lib/auth/client.ts
+19:43:37 [200] /create 10ms
+19:44:01 [watch] /node_modules/@astrojs/tailwind/base.css, /src/styles/base.css, /src/components/editor/PhotoManager.tsx, /src/components/editor/TierComparison.tsx
+19:44:33 [watch] /node_modules/@astrojs/tailwind/base.css, /src/styles/base.css, /src/components/editor/steps/Step6Preview.tsx
+19:44:50 [watch] /node_modules/@astrojs/tailwind/base.css, /src/styles/base.css, /src/components/editor/steps/Step6Preview.tsx
+19:44:57 [watch] src/lib/subscriptions/LocalSubscriptionAdapter.ts
+19:44:58 [200] /create 7ms
+19:45:43 [watch] /node_modules/@astrojs/tailwind/base.css, /src/styles/base.css, /src/components/editor/steps/Step6Preview.tsx
+19:46:02 [watch] /node_modules/@astrojs/tailwind/base.css, /src/styles/base.css, /src/components/editor/steps/Step6Preview.tsx, /src/components/editor/EditorProvider.tsx, /src/components/editor/steps/Step5Personalize.tsx, /src/components/editor/steps/Step3Theme.tsx
+19:46:03 [vite] [33mhmr invalidate [39m[2m/src/components/editor/EditorProvider.tsx[22m Could not Fast Refresh ("useEditor" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+19:46:03 [watch] /node_modules/@astrojs/tailwind/base.css, /src/components/editor/EditorShell.tsx, /src/styles/base.css, /src/components/editor/steps/Step4Photos.tsx, /src/components/editor/steps/Step6Preview.tsx, /src/components/editor/steps/Step2Details.tsx, /src/components/editor/steps/Step1Occasion.tsx, /src/components/editor/steps/Step3Theme.tsx, /src/components/editor/steps/Step5Personalize.tsx, /src/components/editor/PhotoManager.tsx, /src/components/editor/MusicPlayer.tsx
+19:46:48 [watch] /node_modules/@astrojs/tailwind/base.css, /src/styles/base.css, /src/components/editor/steps/Step6Preview.tsx
+19:46:54 [watch] /node_modules/@astrojs/tailwind/base.css, /src/styles/base.css, /src/components/editor/steps/Step6Preview.tsx
+19:47:12 [watch] /src/components/editor/steps/Step5Personalize.tsx, /node_modules/@astrojs/tailwind/base.css, /src/styles/base.css
+19:47:54 [watch] /src/components/editor/steps/Step5Personalize.tsx, /node_modules/@astrojs/tailwind/base.css, /src/styles/base.css
+19:48:16 [watch] /src/components/editor/steps/Step5Personalize.tsx, /node_modules/@astrojs/tailwind/base.css, /src/styles/base.css
+19:49:44 [watch] /src/components/editor/steps/Step5Personalize.tsx, /node_modules/@astrojs/tailwind/base.css, /src/styles/base.css
+19:51:46 [200] /templates 103ms
+19:51:46 [200] /about 104ms
+19:51:46 [200] /login 111ms
+19:51:46 [200] /pricing 112ms
+19:51:46 [200] / 120ms
+19:51:46 [200] /wishes 144ms
+19:51:46 [200] /contact 13ms
+19:51:46 [200] /privacy 8ms
+19:51:46 [200] /terms 8ms
+19:51:51 [200] /create 9ms
+19:51:51 [200] / 8ms
+19:51:51 [200] /wishes 8ms
+19:51:51 [200] /login 6ms
+19:51:55 [200] / 4ms
+19:51:56 [200] /pricing 6ms
+19:51:56 [200] /wishes 4ms
+19:51:56 [200] /login 5ms
+19:51:56 [200] /create 9ms
+19:52:54 [watch] /src/components/editor/steps/Step5Personalize.tsx, /node_modules/@astrojs/tailwind/base.css, /src/styles/base.css
+19:53:14 [watch] /src/components/editor/steps/Step5Personalize.tsx, /node_modules/@astrojs/tailwind/base.css, /src/styles/base.css
+19:55:39 [watch] dist/404.html
+19:55:39 [watch] dist/about/index.html
+19:55:39 [watch] dist/access/index.html
+19:55:39 [watch] dist/contact/index.html
+19:55:39 [watch] dist/create/index.html
+19:55:39 [watch] dist/dashboard/index.html
+19:55:39 [watch] dist/design-system/index.html
+19:55:39 [watch] dist/experience/demo/index.html
+19:55:39 [watch] dist/faq/index.html
+19:55:39 [watch] dist/forgot-password/index.html
+19:55:39 [watch] dist/how-it-works/index.html
+19:55:39 [watch] dist/index.html
+19:55:39 [watch] dist/login/index.html
+19:55:39 [watch] dist/preview/demo/index.html
+19:55:39 [watch] dist/pricing/index.html
+19:55:39 [watch] dist/privacy/index.html
+19:55:39 [watch] dist/register/index.html
+19:55:39 [watch] dist/settings/index.html
+19:55:39 [watch] dist/share/demo/index.html
+19:55:39 [watch] dist/terms/index.html
+19:55:39 [watch] dist/templates/index.html
+19:55:39 [watch] dist/wishes/index.html
+19:55:47 [watch] dist/404.html
+19:55:47 [watch] dist/about/index.html
+19:55:47 [watch] dist/access/index.html
+19:55:47 [watch] dist/contact/index.html
+19:55:47 [watch] dist/create/index.html
+19:55:48 [watch] dist/dashboard/index.html
+19:55:48 [watch] dist/design-system/index.html
+19:55:48 [watch] dist/faq/index.html
+19:55:48 [watch] dist/forgot-password/index.html
+19:55:48 [watch] dist/index.html
+19:55:48 [watch] dist/experience/demo/index.html
+19:55:48 [watch] dist/how-it-works/index.html
+19:55:48 [watch] dist/login/index.html
+19:55:48 [watch] dist/pricing/index.html
+19:55:48 [watch] dist/privacy/index.html
+19:55:48 [watch] dist/register/index.html
+19:55:48 [watch] dist/settings/index.html
+19:55:48 [watch] dist/preview/demo/index.html
+19:55:48 [watch] dist/templates/index.html
+19:55:48 [watch] dist/terms/index.html
+19:55:48 [watch] dist/wishes/index.html
+19:55:48 [watch] dist/share/demo/index.html
+19:56:33 [200] /create 15ms
+19:56:33 [200] /create 13ms
+19:56:34 [200] / 15ms
+19:56:34 [200] /wishes 12ms
+19:56:34 [200] /login 4ms
+19:56:38 [200] /about 4ms
+19:56:38 [200] /contact 8ms
+19:56:38 [200] /templates 4ms
+19:56:38 [200] /privacy 4ms
+19:56:46 [200] /pricing 7ms
+19:56:46 [200] /how-it-works 8ms
+19:56:46 [200] /faq 8ms
+19:56:46 [200] /terms 7ms
+19:56:54 [watch] /src/components/editor/EditorProvider.tsx, /node_modules/@astrojs/tailwind/base.css, /src/styles/base.css
+19:56:54 [vite] [33mhmr invalidate [39m[2m/src/components/editor/EditorProvider.tsx[22m Could not Fast Refresh ("useEditor" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+19:56:54 [watch] /node_modules/@astrojs/tailwind/base.css, /src/components/editor/EditorShell.tsx, /src/styles/base.css, /src/components/editor/steps/Step4Photos.tsx, /src/components/editor/steps/Step6Preview.tsx, /src/components/editor/steps/Step2Details.tsx, /src/components/editor/steps/Step1Occasion.tsx, /src/components/editor/steps/Step3Theme.tsx, /src/components/editor/steps/Step5Personalize.tsx, /src/components/editor/PhotoManager.tsx, /src/components/editor/MusicPlayer.tsx
+19:56:56 [vite] [33mhmr invalidate [39m[2m/src/components/editor/MusicPlayer.tsx[22m Could not Fast Refresh ("SAMPLE_AUDIO_TRACKS" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+19:56:56 [watch] /node_modules/@astrojs/tailwind/base.css, /src/styles/base.css, /src/components/editor/steps/Step5Personalize.tsx
+19:57:10 [200] / 12ms
+19:57:11 [200] /wishes 6ms
+19:57:11 [200] /login 7ms
+19:57:11 [200] /create 11ms
+19:57:13 [200] /pricing 11ms
+19:57:13 [watch] /src/components/editor/EditorProvider.tsx, /node_modules/@astrojs/tailwind/base.css, /src/styles/base.css
+19:57:15 [200] /create 10ms
+19:57:16 [200] /pricing 38ms
+19:57:16 [200] / 25ms
+19:57:16 [200] /wishes 17ms
+19:57:16 [200] /login 17ms
+19:57:28 [200] /templates 7ms
+19:57:28 [200] /how-it-works 6ms
+19:57:28 [200] /faq 5ms
+19:57:28 [200] /about 5ms
+19:57:28 [200] /contact 4ms
+19:57:28 [200] /privacy 4ms
+19:57:29 [200] /terms 6ms
+19:57:31 [200] / 13ms
+19:57:32 [200] /pricing 4ms
+19:57:32 [200] /wishes 9ms
+19:57:32 [200] /create 12ms
+19:57:32 [200] /login 4ms
+19:57:33 [200] /create 13ms
+19:57:33 [200] /pricing 8ms
+19:57:33 [200] / 7ms
+19:57:33 [200] /wishes 7ms
+19:57:33 [200] /login 4ms
+19:57:55 [watch] /src/components/editor/EditorProvider.tsx, /node_modules/@astrojs/tailwind/base.css, /src/styles/base.css
+19:57:56 [vite] [33mhmr invalidate [39m[2m/src/components/editor/EditorProvider.tsx[22m Could not Fast Refresh ("useEditor" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+19:57:56 [watch] /node_modules/@astrojs/tailwind/base.css, /src/components/editor/EditorShell.tsx, /src/styles/base.css, /src/components/editor/steps/Step4Photos.tsx, /src/components/editor/steps/Step6Preview.tsx, /src/components/editor/steps/Step2Details.tsx, /src/components/editor/steps/Step1Occasion.tsx, /src/components/editor/steps/Step3Theme.tsx, /src/components/editor/steps/Step5Personalize.tsx, /src/components/editor/PhotoManager.tsx, /src/components/editor/MusicPlayer.tsx
+19:57:57 [vite] [33mhmr invalidate [39m[2m/src/components/editor/MusicPlayer.tsx[22m Could not Fast Refresh ("SAMPLE_AUDIO_TRACKS" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+19:57:57 [watch] /node_modules/@astrojs/tailwind/base.css, /src/styles/base.css, /src/components/editor/steps/Step5Personalize.tsx
+19:58:21 [watch] /src/components/editor/EditorProvider.tsx, /node_modules/@astrojs/tailwind/base.css, /src/styles/base.css
+19:58:22 [vite] [33mhmr invalidate [39m[2m/src/components/editor/EditorProvider.tsx[22m Could not Fast Refresh ("useEditor" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+19:58:22 [watch] /node_modules/@astrojs/tailwind/base.css, /src/components/editor/EditorShell.tsx, /src/styles/base.css, /src/components/editor/steps/Step4Photos.tsx, /src/components/editor/steps/Step6Preview.tsx, /src/components/editor/steps/Step2Details.tsx, /src/components/editor/steps/Step1Occasion.tsx, /src/components/editor/steps/Step3Theme.tsx, /src/components/editor/steps/Step5Personalize.tsx, /src/components/editor/PhotoManager.tsx, /src/components/editor/MusicPlayer.tsx
+19:58:22 [vite] [33mhmr invalidate [39m[2m/src/components/editor/MusicPlayer.tsx[22m Could not Fast Refresh ("SAMPLE_AUDIO_TRACKS" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+19:58:22 [watch] /node_modules/@astrojs/tailwind/base.css, /src/styles/base.css, /src/components/editor/steps/Step5Personalize.tsx
+19:58:40 [200] /templates 18ms
+19:58:40 [200] /how-it-works 19ms
+19:58:40 [200] /about 19ms
+19:58:40 [200] /contact 19ms
+19:58:40 [200] /privacy 20ms
+19:58:40 [200] /terms 20ms
+19:58:46 [200] /faq 4ms
+19:58:54 [200] /create 14ms
+19:58:55 [200] /pricing 13ms
+19:58:55 [200] / 10ms
+19:58:55 [200] /wishes 8ms
+19:58:55 [200] /login 6ms
+19:58:59 [200] /about 7ms
+19:58:59 [200] /contact 5ms
+19:58:59 [200] /templates 4ms
+19:58:59 [200] /privacy 5ms
+19:58:59 [200] /terms 4ms
+19:58:59 [200] /how-it-works 4ms
+19:58:59 [200] /faq 4ms
+19:59:27 [watch] /src/components/editor/EditorProvider.tsx, /node_modules/@astrojs/tailwind/base.css, /src/styles/base.css
+19:59:28 [vite] [33mhmr invalidate [39m[2m/src/components/editor/EditorProvider.tsx[22m Could not Fast Refresh ("useEditor" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+19:59:28 [watch] /node_modules/@astrojs/tailwind/base.css, /src/components/editor/EditorShell.tsx, /src/styles/base.css, /src/components/editor/steps/Step4Photos.tsx, /src/components/editor/steps/Step6Preview.tsx, /src/components/editor/steps/Step2Details.tsx, /src/components/editor/steps/Step1Occasion.tsx, /src/components/editor/steps/Step3Theme.tsx, /src/components/editor/steps/Step5Personalize.tsx, /src/components/editor/PhotoManager.tsx, /src/components/editor/MusicPlayer.tsx
+19:59:29 [vite] [33mhmr invalidate [39m[2m/src/components/editor/MusicPlayer.tsx[22m Could not Fast Refresh ("SAMPLE_AUDIO_TRACKS" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+19:59:29 [watch] /node_modules/@astrojs/tailwind/base.css, /src/styles/base.css, /src/components/editor/steps/Step5Personalize.tsx
+19:59:45 [watch] /src/components/editor/EditorProvider.tsx, /node_modules/@astrojs/tailwind/base.css, /src/styles/base.css
+19:59:46 [vite] [33mhmr invalidate [39m[2m/src/components/editor/EditorProvider.tsx[22m Could not Fast Refresh ("useEditor" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+19:59:46 [watch] /node_modules/@astrojs/tailwind/base.css, /src/components/editor/EditorShell.tsx, /src/styles/base.css, /src/components/editor/steps/Step4Photos.tsx, /src/components/editor/steps/Step6Preview.tsx, /src/components/editor/steps/Step2Details.tsx, /src/components/editor/steps/Step1Occasion.tsx, /src/components/editor/steps/Step3Theme.tsx, /src/components/editor/steps/Step5Personalize.tsx, /src/components/editor/PhotoManager.tsx, /src/components/editor/MusicPlayer.tsx
+19:59:47 [vite] [33mhmr invalidate [39m[2m/src/components/editor/MusicPlayer.tsx[22m Could not Fast Refresh ("SAMPLE_AUDIO_TRACKS" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+19:59:47 [watch] /node_modules/@astrojs/tailwind/base.css, /src/styles/base.css, /src/components/editor/steps/Step5Personalize.tsx
+20:00:17 [watch] /src/components/editor/EditorShell.tsx, /node_modules/@astrojs/tailwind/base.css, /src/styles/base.css
+20:00:17 [ERROR] [vite] [31mInternal server error: Failed to resolve import "@/components/editor/steps/Step6Music" from "src/components/editor/EditorShell.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mD:/New folder (3)/src/components/editor/EditorShell.tsx[39m:19:27
+[33m  25 |  import { Step4Photos } from "@/components/editor/steps/Step4Photos";
+  26 |  import { Step5Personalize } from "@/components/editor/steps/Step5Personalize";
+  27 |  import { Step6Music } from "@/components/editor/steps/Step6Music";
+     |                              ^
+  28 |  import { Step7Advanced } from "@/components/editor/steps/Step7Advanced";
+  29 |  import { Step8Preview } from "@/components/editor/steps/Step8Preview";[39m
+      at TransformPluginContext._formatError (file:///D:/New%20folder%20(3)/node_modules/astro/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///D:/New%20folder%20(3)/node_modules/astro/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///D:/New%20folder%20(3)/node_modules/astro/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async file:///D:/New%20folder%20(3)/node_modules/astro/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 12)
+      at async TransformPluginContext.transform (file:///D:/New%20folder%20(3)/node_modules/astro/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///D:/New%20folder%20(3)/node_modules/astro/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///D:/New%20folder%20(3)/node_modules/astro/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+      at async viteTransformMiddleware (file:///D:/New%20folder%20(3)/node_modules/astro/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:62106:24)
+20:00:33 [watch] src/components/editor/EditorShell.tsx
+20:00:34 [ERROR] Cannot find module '@/components/editor/steps/Step6Music' imported from 'D:/New folder (3)/src/components/editor/EditorShell.tsx'
+  Stack trace:
+    at nodeImport (file:///D:/New%20folder%20(3)/node_modules/astro/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:53096:19)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+20:01:40 [ERROR] Cannot find module '@/components/editor/steps/Step6Music' imported from 'D:/New folder (3)/src/components/editor/EditorShell.tsx'
+  Stack trace:
+    at nodeImport (file:///D:/New%20folder%20(3)/node_modules/astro/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:53096:19)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+20:01:41 [ERROR] Cannot find module '@/components/editor/steps/Step6Music' imported from 'D:/New folder (3)/src/components/editor/EditorShell.tsx'
+  Stack trace:
+    at nodeImport (file:///D:/New%20folder%20(3)/node_modules/astro/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:53096:19)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+20:14:04 [ERROR] Cannot find module '@/components/editor/steps/Step6Music' imported from 'D:/New folder (3)/src/components/editor/EditorShell.tsx'
+  Stack trace:
+    at nodeImport (file:///D:/New%20folder%20(3)/node_modules/astro/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:53096:19)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+20:14:06 [ERROR] Cannot find module '@/components/editor/steps/Step6Music' imported from 'D:/New folder (3)/src/components/editor/EditorShell.tsx'
+  Stack trace:
+    at nodeImport (file:///D:/New%20folder%20(3)/node_modules/astro/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:53096:19)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+20:14:29 [ERROR] Cannot find module '@/components/editor/steps/Step8Preview' imported from 'D:/New folder (3)/src/components/editor/EditorShell.tsx'
+  Stack trace:
+    at nodeImport (file:///D:/New%20folder%20(3)/node_modules/astro/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:53096:19)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+20:15:09 [watch] src/components/editor/steps/Step7Advanced.tsx
+20:15:09 [ERROR] test is not defined
+  Stack trace:
+    at eval (eval at instantiateModule (file:///D:/New%20folder%20(3)/node_modules/astro/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:53012:24), <anonymous>:3:14)
+20:16:57 [watch] src/components/editor/steps/Step7Advanced.tsx
+20:16:58 [ERROR] Cannot find module '@/components/editor/steps/Step8Preview' imported from 'D:/New folder (3)/src/components/editor/EditorShell.tsx'
+  Stack trace:
+    at nodeImport (file:///D:/New%20folder%20(3)/node_modules/astro/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:53096:19)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+20:18:11 [watch] src/components/editor/steps/Step7Advanced.tsx
+20:18:12 [ERROR] Cannot find module '@/components/editor/steps/Step8Preview' imported from 'D:/New folder (3)/src/components/editor/EditorShell.tsx'
+  Stack trace:
+    at nodeImport (file:///D:/New%20folder%20(3)/node_modules/astro/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:53096:19)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+20:19:11 [watch] src/components/editor/steps/Step7Advanced.tsx
+20:19:12 [ERROR] Cannot find module '@/components/editor/steps/Step8Preview' imported from 'D:/New folder (3)/src/components/editor/EditorShell.tsx'
+  Stack trace:
+    at nodeImport (file:///D:/New%20folder%20(3)/node_modules/astro/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:53096:19)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+20:20:45 [ERROR] Unexpected end of file
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+20:21:25 [watch] src/components/editor/steps/Step8Preview.tsx
+20:21:25 [200] /create 7ms
+20:21:39 [watch] dist/404.html
+20:21:39 [watch] dist/about/index.html
+20:21:39 [watch] dist/access/index.html
+20:21:39 [watch] dist/contact/index.html
+20:21:39 [watch] dist/create/index.html
+20:21:39 [watch] dist/dashboard/index.html
+20:21:39 [watch] dist/design-system/index.html
+20:21:39 [watch] dist/experience/demo/index.html
+20:21:39 [watch] dist/faq/index.html
+20:21:39 [watch] dist/forgot-password/index.html
+20:21:39 [watch] dist/how-it-works/index.html
+20:21:39 [watch] dist/index.html
+20:21:39 [watch] dist/login/index.html
+20:21:39 [watch] dist/preview/demo/index.html
+20:21:39 [watch] dist/pricing/index.html
+20:21:39 [watch] dist/privacy/index.html
+20:21:39 [watch] dist/register/index.html
+20:21:39 [watch] dist/settings/index.html
+20:21:39 [watch] dist/share/demo/index.html
+20:21:39 [watch] dist/templates/index.html
+20:21:39 [watch] dist/terms/index.html
+20:21:39 [watch] dist/wishes/index.html
+20:21:45 [watch] dist/404.html
+20:21:45 [watch] dist/about/index.html
+20:21:45 [watch] dist/access/index.html
+20:21:45 [watch] dist/contact/index.html
+20:21:45 [watch] dist/create/index.html
+20:21:45 [watch] dist/dashboard/index.html
+20:21:45 [watch] dist/design-system/index.html
+20:21:45 [watch] dist/faq/index.html
+20:21:45 [watch] dist/forgot-password/index.html
+20:21:45 [watch] dist/index.html
+20:21:45 [watch] dist/experience/demo/index.html
+20:21:45 [watch] dist/how-it-works/index.html
+20:21:45 [watch] dist/login/index.html
+20:21:45 [watch] dist/pricing/index.html
+20:21:45 [watch] dist/register/index.html
+20:21:45 [watch] dist/privacy/index.html
+20:21:45 [watch] dist/settings/index.html
+20:21:45 [watch] dist/preview/demo/index.html
+20:21:45 [watch] dist/templates/index.html
+20:21:45 [watch] dist/wishes/index.html
+20:21:45 [watch] dist/terms/index.html
+20:21:45 [watch] dist/share/demo/index.html
+20:22:30 [watch] src/pages/create.astro
+20:22:31 [200] /create 4ms
+20:23:30 [watch] dist/404.html
+20:23:30 [watch] dist/about/index.html
+20:23:30 [watch] dist/access/index.html
+20:23:30 [watch] dist/contact/index.html
+20:23:30 [watch] dist/create/index.html
+20:23:30 [watch] dist/dashboard/index.html
+20:23:30 [watch] dist/design-system/index.html
+20:23:30 [watch] dist/experience/demo/index.html
+20:23:30 [watch] dist/faq/index.html
+20:23:30 [watch] dist/forgot-password/index.html
+20:23:30 [watch] dist/how-it-works/index.html
+20:23:30 [watch] dist/index.html
+20:23:30 [watch] dist/login/index.html
+20:23:30 [watch] dist/preview/demo/index.html
+20:23:30 [watch] dist/pricing/index.html
+20:23:30 [watch] dist/privacy/index.html
+20:23:30 [watch] dist/register/index.html
+20:23:30 [watch] dist/settings/index.html
+20:23:30 [watch] dist/share/demo/index.html
+20:23:30 [watch] dist/templates/index.html
+20:23:30 [watch] dist/wishes/index.html
+20:23:30 [watch] dist/terms/index.html
+20:23:34 [200] /pricing 4ms
+20:23:34 [200] /wishes 5ms
+20:23:34 [200] /login 5ms
+20:23:34 [200] / 7ms
+20:23:36 [200] /create 7ms
+20:23:37 [watch] dist/404.html
+20:23:37 [watch] dist/about/index.html
+20:23:37 [watch] dist/access/index.html
+20:23:37 [watch] dist/contact/index.html
+20:23:37 [watch] dist/create/index.html
+20:23:37 [watch] dist/dashboard/index.html
+20:23:37 [watch] dist/index.html
+20:23:37 [watch] dist/design-system/index.html
+20:23:37 [watch] dist/faq/index.html
+20:23:37 [200] / 4ms
+20:23:37 [200] /wishes 4ms
+20:23:37 [200] /login 3ms
+20:23:37 [watch] dist/forgot-password/index.html
+20:23:37 [watch] dist/how-it-works/index.html
+20:23:37 [watch] dist/login/index.html
+20:23:37 [watch] dist/pricing/index.html
+20:23:37 [watch] dist/privacy/index.html
+20:23:37 [watch] dist/register/index.html
+20:23:37 [watch] dist/settings/index.html
+20:23:37 [watch] dist/templates/index.html
+20:23:37 [watch] dist/terms/index.html
+20:23:37 [watch] dist/wishes/index.html
+20:23:37 [200] /create 6ms
+20:23:37 [watch] dist/experience/demo/index.html
+20:23:37 [watch] dist/preview/demo/index.html
+20:23:37 [watch] dist/share/demo/index.html
+20:23:38 [200] / 4ms
+20:23:38 [200] /wishes 5ms
+20:23:38 [200] /login 3ms
+20:23:39 [200] /about 2ms
+20:23:39 [200] /templates 5ms
+20:23:39 [200] /contact 5ms
+20:23:39 [200] /privacy 5ms
+20:23:40 [200] /pricing 4ms
+20:23:40 [200] /how-it-works 3ms
+20:23:40 [200] /terms 3ms
+20:23:40 [200] /faq 4ms
+20:23:45 [200] / 3ms
+20:23:46 [200] /wishes 3ms
+20:23:46 [200] /login 3ms
+20:23:46 [200] /create 7ms
+20:23:54 [200] /create 8ms
+20:23:55 [200] /pricing 3ms
+20:23:55 [200] / 4ms
+20:23:55 [200] /wishes 4ms
+20:23:55 [200] /login 3ms
+20:23:56 [200] /about 4ms
+20:24:30 [200] /templates 3ms
+20:24:30 [200] /how-it-works 4ms
+20:24:30 [200] /faq 2ms
+20:24:30 [200] /contact 4ms
+20:24:30 [200] /privacy 2ms
+20:24:30 [200] /terms 3ms
+20:24:31 [watch] /src/components/editor/EditorProvider.tsx, /node_modules/@astrojs/tailwind/base.css, /src/styles/base.css
+20:24:32 [vite] [33mhmr invalidate [39m[2m/src/components/editor/EditorProvider.tsx[22m Could not Fast Refresh ("useEditor" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+20:24:32 [watch] /node_modules/@astrojs/tailwind/base.css, /src/components/editor/EditorShell.tsx, /src/styles/base.css, /src/components/editor/steps/Step4Photos.tsx, /src/components/editor/steps/Step6Preview.tsx, /src/components/editor/steps/Step2Details.tsx, /src/components/editor/steps/Step1Occasion.tsx, /src/components/editor/steps/Step3Theme.tsx, /src/components/editor/steps/Step5Personalize.tsx, /src/components/editor/PhotoManager.tsx, /src/components/editor/MusicPlayer.tsx, /src/components/editor/steps/Step6Music.tsx, /src/components/editor/steps/Step7Advanced.tsx, /src/components/editor/steps/Step8Preview.tsx
+20:24:32 [vite] [33mhmr invalidate [39m[2m/src/components/editor/MusicPlayer.tsx[22m Could not Fast Refresh ("SAMPLE_AUDIO_TRACKS" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+20:24:32 [watch] /node_modules/@astrojs/tailwind/base.css, /src/styles/base.css, /src/components/editor/steps/Step5Personalize.tsx, /src/components/editor/steps/Step6Music.tsx
+20:24:42 [200] / 5ms
+20:24:43 [200] /pricing 4ms
+20:24:43 [200] /wishes 5ms
+20:24:43 [200] /login 4ms
+20:24:43 [200] /create 6ms
+20:24:44 [200] /create 9ms
+20:24:44 [200] /pricing 3ms
+20:24:44 [200] / 2ms
+20:24:44 [200] /wishes 3ms
+20:24:44 [200] /login 5ms
+20:24:56 [watch] dist/404.html
+20:24:56 [watch] dist/about/index.html
+20:24:56 [watch] dist/access/index.html
+20:24:56 [watch] dist/contact/index.html
+20:24:56 [watch] dist/create/index.html
+20:24:56 [watch] dist/dashboard/index.html
+20:24:56 [watch] dist/design-system/index.html
+20:24:56 [watch] dist/experience/demo/index.html
+20:24:56 [watch] dist/faq/index.html
+20:24:56 [watch] dist/forgot-password/index.html
+20:24:56 [watch] dist/how-it-works/index.html
+20:24:56 [watch] dist/login/index.html
+20:24:56 [watch] dist/preview/demo/index.html
+20:24:56 [watch] dist/pricing/index.html
+20:24:56 [watch] dist/privacy/index.html
+20:24:56 [watch] dist/register/index.html
+20:24:56 [watch] dist/settings/index.html
+20:24:56 [watch] dist/share/demo/index.html
+20:24:56 [watch] dist/index.html
+20:24:56 [watch] dist/templates/index.html
+20:24:56 [watch] dist/terms/index.html
+20:24:56 [watch] dist/wishes/index.html
+20:25:02 [watch] dist/404.html
+20:25:02 [watch] dist/about/index.html
+20:25:02 [watch] dist/access/index.html
+20:25:02 [watch] dist/contact/index.html
+20:25:02 [watch] dist/create/index.html
+20:25:02 [watch] dist/dashboard/index.html
+20:25:02 [watch] dist/index.html
+20:25:02 [watch] dist/design-system/index.html
+20:25:02 [watch] dist/faq/index.html
+20:25:02 [watch] dist/forgot-password/index.html
+20:25:02 [watch] dist/how-it-works/index.html
+20:25:02 [watch] dist/experience/demo/index.html
+20:25:02 [watch] dist/login/index.html
+20:25:02 [watch] dist/pricing/index.html
+20:25:02 [watch] dist/register/index.html
+20:25:02 [watch] dist/privacy/index.html
+20:25:02 [watch] dist/settings/index.html
+20:25:02 [watch] dist/preview/demo/index.html
+20:25:02 [watch] dist/templates/index.html
+20:25:02 [watch] dist/terms/index.html
+20:25:02 [watch] dist/wishes/index.html
+20:25:02 [watch] dist/share/demo/index.html
+20:27:32 [200] /create 6ms
+20:27:33 [200] / 3ms
+20:27:33 [200] /wishes 8ms
+20:27:33 [200] /login 3ms
+20:27:40 [200] /create 8ms
+20:27:41 [200] / 3ms
+20:27:41 [200] /wishes 5ms
+20:27:41 [200] /login 3ms
+20:27:43 [200] / 6ms
+20:27:43 [200] /wishes 5ms
+20:27:43 [200] /create 11ms
+20:27:43 [200] /login 7ms
+20:27:43 [watch] dist/404.html
+20:27:43 [watch] dist/about/index.html
+20:27:43 [watch] dist/access/index.html
+20:27:43 [watch] dist/contact/index.html
+20:27:43 [watch] dist/create/index.html
+20:27:43 [watch] dist/dashboard/index.html
+20:27:43 [watch] dist/design-system/index.html
+20:27:43 [watch] dist/experience/demo/index.html
+20:27:43 [watch] dist/faq/index.html
+20:27:43 [watch] dist/forgot-password/index.html
+20:27:43 [watch] dist/how-it-works/index.html
+20:27:43 [watch] dist/login/index.html
+20:27:43 [watch] dist/preview/demo/index.html
+20:27:43 [watch] dist/pricing/index.html
+20:27:43 [watch] dist/privacy/index.html
+20:27:43 [watch] dist/register/index.html
+20:27:43 [watch] dist/settings/index.html
+20:27:43 [watch] dist/share/demo/index.html
+20:27:43 [watch] dist/templates/index.html
+20:27:43 [watch] dist/terms/index.html
+20:27:43 [watch] dist/wishes/index.html
+20:27:43 [watch] dist/index.html
+20:27:45 [200] /create 5ms
+20:27:46 [200] /pricing 3ms
+20:27:46 [200] / 7ms
+20:27:46 [200] /wishes 2ms
+20:27:46 [200] /login 3ms
+20:27:50 [watch] dist/404.html
+20:27:50 [watch] dist/about/index.html
+20:27:50 [watch] dist/access/index.html
+20:27:50 [watch] dist/contact/index.html
+20:27:50 [watch] dist/create/index.html
+20:27:50 [watch] dist/dashboard/index.html
+20:27:50 [watch] dist/design-system/index.html
+20:27:50 [watch] dist/faq/index.html
+20:27:50 [watch] dist/forgot-password/index.html
+20:27:50 [watch] dist/experience/demo/index.html
+20:27:50 [watch] dist/index.html
+20:27:50 [watch] dist/how-it-works/index.html
+20:27:50 [watch] dist/login/index.html
+20:27:50 [watch] dist/pricing/index.html
+20:27:50 [watch] dist/privacy/index.html
+20:27:51 [watch] dist/preview/demo/index.html
+20:27:51 [watch] dist/register/index.html
+20:27:51 [watch] dist/settings/index.html
+20:27:51 [watch] dist/templates/index.html
+20:27:51 [watch] dist/terms/index.html
+20:27:51 [watch] dist/wishes/index.html
+20:27:51 [watch] dist/share/demo/index.html
+20:28:04 [200] /create 10ms
+20:28:04 [200] / 4ms
+20:28:04 [200] /wishes 7ms
+20:28:04 [200] /login 5ms
+20:28:05 [200] /create 8ms
+20:28:05 [200] /create 8ms
+20:28:05 [200] /create 4ms
+20:28:05 [200] /create 8ms
+20:28:05 [200] /create 8ms
+20:28:06 [200] /create 9ms
+20:28:06 [200] /create 8ms
+20:28:06 [200] / 3ms
+20:28:06 [200] /wishes 5ms
+20:28:06 [200] /login 3ms
+20:28:07 [200] /pricing 3ms
+20:28:08 [200] / 4ms
+20:28:08 [200] /pricing 3ms
+20:28:08 [200] /wishes 3ms
+20:28:08 [200] /login 5ms
+20:28:08 [200] /create 8ms
+20:28:10 [200] /wishes 4ms
+20:28:11 [200] /pricing 2ms
+20:28:11 [200] / 2ms
+20:28:11 [200] /create 5ms
+20:28:11 [200] /login 4ms
+20:28:12 [200] /create 5ms
+20:28:12 [200] /pricing 2ms
+20:28:12 [200] / 4ms
+20:28:12 [200] /login 3ms
+20:28:12 [200] /wishes 3ms
+20:33:52 [watch] /src/components/editor/ProgressIndicator.tsx, /node_modules/@astrojs/tailwind/base.css, /src/styles/base.css
+20:34:07 [watch] /src/components/editor/ProgressIndicator.tsx, /node_modules/@astrojs/tailwind/base.css, /src/styles/base.css
+20:35:11 [watch] dist/404.html
+20:35:11 [watch] dist/about/index.html
+20:35:11 [watch] dist/access/index.html
+20:35:11 [watch] dist/contact/index.html
+20:35:11 [watch] dist/create/index.html
+20:35:11 [watch] dist/dashboard/index.html
+20:35:11 [watch] dist/design-system/index.html
+20:35:11 [watch] dist/experience/demo/index.html
+20:35:11 [watch] dist/faq/index.html
+20:35:11 [watch] dist/forgot-password/index.html
+20:35:11 [watch] dist/how-it-works/index.html
+20:35:11 [watch] dist/login/index.html
+20:35:11 [watch] dist/preview/demo/index.html
+20:35:11 [watch] dist/pricing/index.html
+20:35:11 [watch] dist/privacy/index.html
+20:35:11 [watch] dist/register/index.html
+20:35:11 [watch] dist/settings/index.html
+20:35:11 [watch] dist/share/demo/index.html
+20:35:11 [watch] dist/templates/index.html
+20:35:11 [watch] dist/terms/index.html
+20:35:11 [watch] dist/wishes/index.html
+20:35:11 [watch] dist/index.html
+20:35:16 [watch] dist/404.html
+20:35:16 [watch] dist/about/index.html
+20:35:16 [watch] dist/access/index.html
+20:35:16 [watch] dist/contact/index.html
+20:35:16 [watch] dist/create/index.html
+20:35:16 [watch] dist/dashboard/index.html
+20:35:16 [watch] dist/design-system/index.html
+20:35:16 [watch] dist/index.html
+20:35:16 [watch] dist/faq/index.html
+20:35:16 [watch] dist/forgot-password/index.html
+20:35:16 [watch] dist/how-it-works/index.html
+20:35:16 [watch] dist/login/index.html
+20:35:16 [watch] dist/experience/demo/index.html
+20:35:16 [watch] dist/pricing/index.html
+20:35:16 [watch] dist/privacy/index.html
+20:35:16 [watch] dist/register/index.html
+20:35:16 [watch] dist/settings/index.html
+20:35:16 [watch] dist/templates/index.html
+20:35:16 [watch] dist/preview/demo/index.html
+20:35:16 [watch] dist/terms/index.html
+20:35:16 [watch] dist/wishes/index.html
+20:35:16 [watch] dist/share/demo/index.html
+20:37:42 [watch] /src/components/editor/StepNavigation.tsx, /node_modules/@astrojs/tailwind/base.css, /src/styles/base.css
+20:38:14 [watch] dist/404.html
+20:38:14 [watch] dist/about/index.html
+20:38:14 [watch] dist/access/index.html
+20:38:14 [watch] dist/contact/index.html
+20:38:14 [watch] dist/create/index.html
+20:38:14 [watch] dist/dashboard/index.html
+20:38:14 [watch] dist/design-system/index.html
+20:38:14 [watch] dist/experience/demo/index.html
+20:38:14 [watch] dist/faq/index.html
+20:38:14 [watch] dist/index.html
+20:38:14 [watch] dist/forgot-password/index.html
+20:38:14 [watch] dist/how-it-works/index.html
+20:38:14 [watch] dist/login/index.html
+20:38:14 [watch] dist/preview/demo/index.html
+20:38:14 [watch] dist/pricing/index.html
+20:38:14 [watch] dist/privacy/index.html
+20:38:14 [watch] dist/register/index.html
+20:38:14 [watch] dist/settings/index.html
+20:38:14 [watch] dist/share/demo/index.html
+20:38:14 [watch] dist/templates/index.html
+20:38:14 [watch] dist/terms/index.html
+20:38:14 [watch] dist/wishes/index.html
+20:38:19 [watch] dist/404.html
+20:38:19 [watch] dist/about/index.html
+20:38:19 [watch] dist/access/index.html
+20:38:19 [watch] dist/contact/index.html
+20:38:19 [watch] dist/create/index.html
+20:38:20 [watch] dist/dashboard/index.html
+20:38:20 [watch] dist/index.html
+20:38:20 [watch] dist/design-system/index.html
+20:38:20 [watch] dist/faq/index.html
+20:38:20 [watch] dist/forgot-password/index.html
+20:38:20 [watch] dist/how-it-works/index.html
+20:38:20 [watch] dist/login/index.html
+20:38:20 [watch] dist/experience/demo/index.html
+20:38:20 [watch] dist/pricing/index.html
+20:38:20 [watch] dist/privacy/index.html
+20:38:20 [watch] dist/register/index.html
+20:38:20 [watch] dist/settings/index.html
+20:38:20 [watch] dist/preview/demo/index.html
+20:38:20 [watch] dist/templates/index.html
+20:38:20 [watch] dist/wishes/index.html
+20:38:20 [watch] dist/terms/index.html
+20:38:20 [watch] dist/share/demo/index.html
+20:43:19 [watch] dist/404.html
+20:43:19 [watch] dist/about/index.html
+20:43:19 [watch] dist/access/index.html
+20:43:19 [watch] dist/contact/index.html
+20:43:19 [watch] dist/create/index.html
+20:43:19 [watch] dist/dashboard/index.html
+20:43:19 [watch] dist/design-system/index.html
+20:43:19 [watch] dist/experience/demo/index.html
+20:43:19 [watch] dist/faq/index.html
+20:43:19 [watch] dist/forgot-password/index.html
+20:43:19 [watch] dist/how-it-works/index.html
+20:43:19 [watch] dist/login/index.html
+20:43:19 [watch] dist/preview/demo/index.html
+20:43:19 [watch] dist/pricing/index.html
+20:43:19 [watch] dist/privacy/index.html
+20:43:19 [watch] dist/register/index.html
+20:43:19 [watch] dist/settings/index.html
+20:43:19 [watch] dist/share/demo/index.html
+20:43:19 [watch] dist/templates/index.html
+20:43:19 [watch] dist/terms/index.html
+20:43:19 [watch] dist/wishes/index.html
+20:43:19 [watch] dist/index.html
+20:43:24 [watch] dist/404.html
+20:43:24 [watch] dist/about/index.html
+20:43:24 [watch] dist/access/index.html
+20:43:24 [watch] dist/contact/index.html
+20:43:24 [watch] dist/create/index.html
+20:43:24 [watch] dist/dashboard/index.html
+20:43:24 [watch] dist/design-system/index.html
+20:43:24 [watch] dist/faq/index.html
+20:43:24 [watch] dist/index.html
+20:43:24 [watch] dist/experience/demo/index.html
+20:43:24 [watch] dist/forgot-password/index.html
+20:43:24 [watch] dist/how-it-works/index.html
+20:43:25 [watch] dist/login/index.html
+20:43:25 [watch] dist/pricing/index.html
+20:43:25 [watch] dist/register/index.html
+20:43:25 [watch] dist/privacy/index.html
+20:43:25 [watch] dist/settings/index.html
+20:43:25 [watch] dist/preview/demo/index.html
+20:43:25 [watch] dist/templates/index.html
+20:43:25 [watch] dist/terms/index.html
+20:43:25 [watch] dist/wishes/index.html
+20:43:25 [watch] dist/share/demo/index.html
+20:44:56 [watch] /src/components/editor/steps/Step4Photos.tsx, /node_modules/@astrojs/tailwind/base.css, /src/styles/base.css
+20:45:12 [watch] /src/components/editor/steps/Step5Personalize.tsx, /node_modules/@astrojs/tailwind/base.css, /src/styles/base.css
+20:45:30 [watch] dist/404.html
+20:45:30 [watch] dist/about/index.html
+20:45:30 [watch] dist/access/index.html
+20:45:30 [watch] dist/contact/index.html
+20:45:30 [watch] dist/create/index.html
+20:45:30 [watch] dist/dashboard/index.html
+20:45:30 [watch] dist/design-system/index.html
+20:45:30 [watch] dist/experience/demo/index.html
+20:45:30 [watch] dist/faq/index.html
+20:45:30 [watch] dist/forgot-password/index.html
+20:45:30 [watch] dist/how-it-works/index.html
+20:45:30 [watch] dist/login/index.html
+20:45:30 [watch] dist/preview/demo/index.html
+20:45:30 [watch] dist/pricing/index.html
+20:45:30 [watch] dist/privacy/index.html
+20:45:30 [watch] dist/index.html
+20:45:30 [watch] dist/register/index.html
+20:45:30 [watch] dist/settings/index.html
+20:45:30 [watch] dist/share/demo/index.html
+20:45:30 [watch] dist/templates/index.html
+20:45:30 [watch] dist/terms/index.html
+20:45:30 [watch] dist/wishes/index.html
+20:45:36 [watch] dist/404.html
+20:45:36 [watch] dist/about/index.html
+20:45:36 [watch] dist/access/index.html
+20:45:36 [watch] dist/contact/index.html
+20:45:36 [watch] dist/create/index.html
+20:45:36 [watch] dist/dashboard/index.html
+20:45:36 [watch] dist/design-system/index.html
+20:45:36 [watch] dist/faq/index.html
+20:45:36 [watch] dist/index.html
+20:45:36 [watch] dist/forgot-password/index.html
+20:45:36 [watch] dist/experience/demo/index.html
+20:45:36 [watch] dist/how-it-works/index.html
+20:45:36 [watch] dist/login/index.html
+20:45:36 [watch] dist/pricing/index.html
+20:45:36 [watch] dist/privacy/index.html
+20:45:36 [watch] dist/register/index.html
+20:45:36 [watch] dist/preview/demo/index.html
+20:45:36 [watch] dist/settings/index.html
+20:45:36 [watch] dist/templates/index.html
+20:45:36 [watch] dist/terms/index.html
+20:45:36 [watch] dist/wishes/index.html
+20:45:36 [watch] dist/share/demo/index.html
+20:51:50 [watch] /src/components/editor/ProgressIndicator.tsx, /node_modules/@astrojs/tailwind/base.css, /src/styles/base.css
+20:52:03 [watch] /src/components/editor/ProgressIndicator.tsx, /node_modules/@astrojs/tailwind/base.css, /src/styles/base.css
+20:52:25 [watch] dist/404.html
+20:52:25 [watch] dist/about/index.html
+20:52:25 [watch] dist/access/index.html
+20:52:25 [watch] dist/contact/index.html
+20:52:25 [watch] dist/create/index.html
+20:52:25 [watch] dist/dashboard/index.html
+20:52:25 [watch] dist/design-system/index.html
+20:52:25 [watch] dist/experience/demo/index.html
+20:52:25 [watch] dist/faq/index.html
+20:52:25 [watch] dist/forgot-password/index.html
+20:52:25 [watch] dist/how-it-works/index.html
+20:52:25 [watch] dist/index.html
+20:52:25 [watch] dist/login/index.html
+20:52:25 [watch] dist/preview/demo/index.html
+20:52:25 [watch] dist/pricing/index.html
+20:52:25 [watch] dist/privacy/index.html
+20:52:25 [watch] dist/register/index.html
+20:52:25 [watch] dist/settings/index.html
+20:52:25 [watch] dist/share/demo/index.html
+20:52:25 [watch] dist/templates/index.html
+20:52:25 [watch] dist/terms/index.html
+20:52:25 [watch] dist/wishes/index.html
+20:52:33 [watch] dist/404.html
+20:52:33 [watch] dist/about/index.html
+20:52:33 [watch] dist/access/index.html
+20:52:33 [watch] dist/contact/index.html
+20:52:33 [watch] dist/create/index.html
+20:52:33 [watch] dist/dashboard/index.html
+20:52:33 [watch] dist/design-system/index.html
+20:52:33 [watch] dist/faq/index.html
+20:52:33 [watch] dist/index.html
+20:52:33 [watch] dist/forgot-password/index.html
+20:52:33 [watch] dist/how-it-works/index.html
+20:52:33 [watch] dist/experience/demo/index.html
+20:52:33 [watch] dist/login/index.html
+20:52:33 [watch] dist/pricing/index.html
+20:52:33 [watch] dist/privacy/index.html
+20:52:33 [watch] dist/register/index.html
+20:52:33 [watch] dist/settings/index.html
+20:52:33 [watch] dist/templates/index.html
+20:52:33 [watch] dist/preview/demo/index.html
+20:52:33 [watch] dist/terms/index.html
+20:52:33 [watch] dist/wishes/index.html
+20:52:33 [watch] dist/share/demo/index.html
+21:00:35 [watch] dist/404.html
+21:00:35 [watch] dist/about/index.html
+21:00:35 [watch] dist/access/index.html
+21:00:35 [watch] dist/contact/index.html
+21:00:35 [watch] dist/create/index.html
+21:00:35 [watch] dist/dashboard/index.html
+21:00:35 [watch] dist/design-system/index.html
+21:00:35 [watch] dist/experience/demo/index.html
+21:00:35 [watch] dist/faq/index.html
+21:00:35 [watch] dist/forgot-password/index.html
+21:00:35 [watch] dist/how-it-works/index.html
+21:00:35 [watch] dist/index.html
+21:00:35 [watch] dist/login/index.html
+21:00:35 [watch] dist/preview/demo/index.html
+21:00:35 [watch] dist/pricing/index.html
+21:00:35 [watch] dist/privacy/index.html
+21:00:35 [watch] dist/register/index.html
+21:00:35 [watch] dist/settings/index.html
+21:00:35 [watch] dist/share/demo/index.html
+21:00:35 [watch] dist/templates/index.html
+21:00:35 [watch] dist/terms/index.html
+21:00:35 [watch] dist/wishes/index.html
+21:00:43 [watch] dist/404.html
+21:00:43 [watch] dist/about/index.html
+21:00:43 [watch] dist/access/index.html
+21:00:43 [watch] dist/contact/index.html
+21:00:43 [watch] dist/create/index.html
+21:00:43 [watch] dist/dashboard/index.html
+21:00:43 [watch] dist/design-system/index.html
+21:00:43 [watch] dist/index.html
+21:00:43 [watch] dist/faq/index.html
+21:00:43 [watch] dist/forgot-password/index.html
+21:00:43 [watch] dist/how-it-works/index.html
+21:00:43 [watch] dist/experience/demo/index.html
+21:00:43 [watch] dist/login/index.html
+21:00:43 [watch] dist/pricing/index.html
+21:00:43 [watch] dist/privacy/index.html
+21:00:43 [watch] dist/register/index.html
+21:00:43 [watch] dist/settings/index.html
+21:00:43 [watch] dist/preview/demo/index.html
+21:00:43 [watch] dist/terms/index.html
+21:00:43 [watch] dist/templates/index.html
+21:00:43 [watch] dist/wishes/index.html
+21:00:43 [watch] dist/share/demo/index.html

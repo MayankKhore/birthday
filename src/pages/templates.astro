@@ -1,0 +1,29 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { ROUTES } from '@/utils/routes';
+---
+
+<BaseLayout title="Templates" description="Browse birthday templates and themes.">
+  <section class="py-20">
+    <div class="container mx-auto px-4">
+      <div class="mx-auto max-w-2xl text-center">
+        <p class="badge badge-accent mb-4">Coming Soon</p>
+        <h1 class="text-heading-xl font-extrabold text-neutral-900 dark:text-neutral-50">
+          Template Gallery
+        </h1>
+        <p class="mt-4 text-body-lg text-neutral-600 dark:text-neutral-300">
+          Our curated template gallery is under construction. Soon you will be able to
+          browse and start from professionally designed templates.
+        </p>
+        <div class="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <a href={ROUTES.CREATE} class="btn btn-primary btn-full sm:w-auto">
+            Start From Scratch
+          </a>
+          <a href={ROUTES.HOME} class="btn btn-secondary btn-full sm:w-auto">
+            Back to Home
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

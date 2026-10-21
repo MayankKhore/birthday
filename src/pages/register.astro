@@ -1,0 +1,108 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { ROUTES } from '@/utils/routes';
+---
+
+<BaseLayout title="Create Account" description="Create a local BirthdayWish demo profile — email and display name only.">
+<section class="section ambient-bg">
+<div class="container-page" style="position: relative; z-index: 1;">
+<div class="mx-auto" style="max-width: 480px;">
+<div class="clay-card-static p-8">
+<div class="text-center" style="margin-bottom: var(--space-6);">
+<span class="clay-badge clay-badge-primary" style="margin-bottom: var(--space-4);">Demo prototype</span>
+<h1 class="text-display" style="font-size: var(--text-3xl); margin-bottom: var(--space-2);">Create a demo profile</h1>
+<p class="text-sm" style="color: var(--color-text-secondary);">Email plus display name. No password is asked for, stored, or needed.</p>
+</div>
+<div id="register-error" class="hidden" role="alert" tabindex="-1" style="margin-bottom: var(--space-4); padding: var(--space-3) var(--space-4); border-radius: var(--radius-lg); background: var(--color-error-light); color: var(--color-error-dark); font-size: var(--text-sm);"></div>
+<form id="register-form" novalidate aria-label="Demo registration form">
+<div style="margin-bottom: var(--space-5);">
+<label class="clay-label" for="register-name">Display name</label>
+<input class="clay-input" type="text" id="register-name" name="displayName" required autocomplete="nickname" maxlength="50" placeholder="e.g. Sam" />
+</div>
+<div style="margin-bottom: var(--space-6);">
+<label class="clay-label" for="register-email">Email</label>
+<input class="clay-input" type="email" id="register-email" name="email" required autocomplete="email" placeholder="you@example.com" />
+<span class="clay-help">A local demo profile is saved in this browser only.</span>
+</div>
+<button type="submit" id="register-submit" class="clay-btn clay-btn-primary clay-btn-full clay-btn-lg">Create demo profile</button>
+</form>
+<p class="text-sm text-center" style="color: var(--color-text-secondary); margin-top: var(--space-6);">
+Already have a demo profile? <a href={ROUTES.LOGIN}>Sign in</a>
+</p>
+</div>
+</div>
+</div>
+</section>
+</BaseLayout>
+
+<script>
+(function () {
+var form = document.getElementById('register-form');
+var nameEl = document.getElementById('register-name');
+var emailEl = document.getElementById('register-email');
+var submitBtn = document.getElementById('register-submit');
+var errorBox = document.getElementById('register-error');
+var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+function showError(msg, focusEl) {
+if (!errorBox) return;
+errorBox.textContent = msg;
+errorBox.classList.remove('hidden');
+errorBox.focus();
+if (focusEl) focusEl.focus();
+}
+function clearError() {
+if (!errorBox) return;
+errorBox.textContent = '';
+errorBox.classList.add('hidden');
+}
+function uuid() {
+if (window.crypto && window.crypto.randomUUID) return window.crypto.randomUUID();
+return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+var r = Math.random() * 16 | 0;
+var v = c === 'x' ? r : (r & 0x3 | 0x8);
+return v.toString(16);
+});
+}
+if (form) {
+form.addEventListener('submit', function (e) {
+e.preventDefault();
+clearError();
+var displayName = nameEl ? nameEl.value.trim() : '';
+var email = emailEl ? emailEl.value.trim().toLowerCase() : '';
+if (!displayName || displayName.length > 50) {
+showError('Display name must be 1–50 characters.', nameEl);
+return;
+}
+if (!EMAIL_RE.test(email)) {
+showError('Enter a valid email address, like you@example.com.', emailEl);
+return;
+}
+if (submitBtn) { submitBtn.disabled = true; submitBtn.classList.add('clay-btn-loading'); submitBtn.textContent = 'Creating…'; }
+window.setTimeout(function () {
+var now = new Date().toISOString();
+var registry = {};
+try {
+var raw = window.localStorage.getItem('bp_bp_demo_users');
+registry = raw ? JSON.parse(raw) : {};
+} catch (err) { registry = {}; }
+if (registry[email] && typeof registry[email].email === 'string') {
+showError('This demo email is already registered. Try signing in instead.', emailEl);
+if (submitBtn) { submitBtn.disabled = false; submitBtn.classList.remove('clay-btn-loading'); submitBtn.textContent = 'Create demo profile'; }
+return;
+}
+var user = { id: uuid(), email: email, displayName: displayName, role: 'user', createdAt: now, updatedAt: now, subscriptionTier: 'free', subscriptionStatus: 'active' };
+registry[email] = user;
+try {
+window.localStorage.setItem('bp_bp_demo_users', JSON.stringify(registry));
+window.localStorage.setItem('bp_user_profile', JSON.stringify(user));
+} catch (err) {
+showError('Browser storage is unavailable, so this demo profile cannot be saved. You can still browse and create.');
+if (submitBtn) { submitBtn.disabled = false; submitBtn.classList.remove('clay-btn-loading'); submitBtn.textContent = 'Create demo profile'; }
+return;
+}
+window.location.href = '/dashboard';
+}, 250);
+});
+}
+})();
+</script>

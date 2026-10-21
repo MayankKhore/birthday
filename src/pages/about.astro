@@ -1,0 +1,36 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { ROUTES } from '@/utils/routes';
+---
+
+<BaseLayout title="About" description="About BirthdayWish — a small studio-style platform for personal, memorable birthday pages.">
+  <section class="section">
+    <div class="container-page">
+      <div class="mx-auto text-center" style="max-width: 640px; margin-bottom: var(--space-12);">
+        <span class="clay-badge clay-badge-primary">About</span>
+        <h1 class="text-display" style="font-size: clamp(2.25rem, 5vw, 3.5rem); margin: var(--space-4) 0 var(--space-4);">Birthdays deserve more than a text box</h1>
+        <p class="text-body">BirthdayWish is a small, independent project: one joyful page per birthday, with a real message, favorite photos, and a theme that feels like the person. No feeds, no follower counts, no noise.</p>
+      </div>
+      <div class="grid gap-6 md:grid-cols-3" style="max-width: 960px; margin: 0 auto;">
+        <div class="clay-card-static p-8 text-center">
+          <span class="deco-star deco-star-lg block" style="margin-bottom: var(--space-3);">✦</span>
+          <h2 class="font-display text-lg font-bold" style="color: var(--color-text-primary); margin-bottom: var(--space-2);">Personal first</h2>
+          <p class="text-sm" style="color: var(--color-text-secondary); line-height: var(--leading-relaxed);">Names, occasions, tones, and photos shape every page. Nothing here is a generic template with your name pasted on.</p>
+        </div>
+        <div class="clay-card-static p-8 text-center">
+          <span class="deco-star deco-star-lg deco-star-rose block" style="margin-bottom: var(--space-3);">✦</span>
+          <h2 class="font-display text-lg font-bold" style="color: var(--color-text-primary); margin-bottom: var(--space-2);">Preview before sharing</h2>
+          <p class="text-sm" style="color: var(--color-text-secondary); line-height: var(--leading-relaxed);">See the full mobile and desktop page first. Change the message, swap photos, try another theme.</p>
+        </div>
+        <div class="clay-card-static p-8 text-center">
+          <span class="deco-star deco-star-lg deco-star-mint block" style="margin-bottom: var(--space-3);">✦</span>
+          <h2 class="font-display text-lg font-bold" style="color: var(--color-text-primary); margin-bottom: var(--space-2);">Private by default</h2>
+          <p class="text-sm" style="color: var(--color-text-secondary); line-height: var(--leading-relaxed);">This demo keeps drafts in your browser. There are no real accounts, payments, or remote uploads yet.</p>
+        </div>
+      </div>
+      <div class="text-center" style="margin-top: var(--space-10);">
+        <a href={ROUTES.CREATE} class="clay-btn clay-btn-primary clay-btn-lg">Create your first page</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

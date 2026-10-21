@@ -1,0 +1,425 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { ROUTES } from '@/utils/routes';
+---
+
+<BaseLayout
+  title="Home"
+  description="Create an unforgettable birthday experience — personalized wishes, photos, and an interactive birthday page."
+>
+  <!-- 3/4/5. Hero: headline + supporting copy + two primary actions -->
+  <section class="ambient-bg" style="position: relative;" aria-labelledby="hero-heading">
+    <div class="animate-float" style="position: absolute; top: 90px; left: 5%; z-index: 1;" aria-hidden="true"><span class="deco-star deco-star-lg">✦</span></div>
+    <div class="animate-float-delay-2" style="position: absolute; top: 150px; right: 7%; z-index: 1;" aria-hidden="true"><span class="deco-star deco-star-md deco-star-rose">✦</span></div>
+    <div class="animate-float-delay-1" style="position: absolute; bottom: 80px; left: 10%; z-index: 1;" aria-hidden="true"><span class="deco-star deco-star-sm deco-star-mint">✦</span></div>
+    <div class="deco-ball animate-float-delay-3" style="width: 56px; height: 56px; top: 22%; right: 14%; background: radial-gradient(circle at 30% 30%, var(--color-peach), #FFA88F);" aria-hidden="true"></div>
+
+    <div class="container-page" style="position: relative; z-index: 1; padding-top: var(--space-24); padding-bottom: var(--space-20);">
+      <div class="grid items-center gap-12 lg:grid-cols-2">
+        <div class="text-center lg:text-left">
+          <span class="clay-badge clay-badge-primary animate-fade-in">Free to start · No sign-up needed</span>
+          <h1 id="hero-heading" class="text-display animate-slide-up" style="font-size: clamp(2.5rem, 5.5vw, 4rem); margin: var(--space-4) 0 var(--space-5);">
+            Make their birthday feel like a little world of its own.
+          </h1>
+          <p class="animate-slide-up" style="font-size: var(--text-lg); color: var(--color-text-secondary); line-height: var(--leading-relaxed); max-width: 520px; margin: 0 auto var(--space-8); animation-delay: 80ms;">
+            Write a heartfelt wish, add favorite photos, pick a playful clay theme — then preview and share one joyful page made just for them.
+          </p>
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 animate-slide-up" style="animation-delay: 140ms;">
+            <a href={ROUTES.CREATE} class="clay-btn clay-btn-primary clay-btn-lg">Create a Birthday Surprise</a>
+            <a href={ROUTES.WISHES} class="clay-btn clay-btn-secondary clay-btn-lg">Write a Birthday Wish</a>
+          </div>
+          <p class="animate-fade-in" style="font-size: var(--text-xs); color: var(--color-text-tertiary); margin-top: var(--space-5); animation-delay: 200ms;">
+            Preview everything before sharing. Drafts stay in this browser.
+          </p>
+        </div>
+        <div class="animate-scale-in" style="animation-delay: 120ms;">
+          <div style="position: relative;">
+            <div class="deco-ball animate-float-delay-1" style="width: 88px; height: 88px; top: -28px; right: -14px; background: radial-gradient(circle at 30% 30%, var(--color-butter), #F5D67A); z-index: 0;" aria-hidden="true"></div>
+            <div class="deco-ball animate-float-delay-2" style="width: 48px; height: 48px; bottom: -18px; left: -16px; background: radial-gradient(circle at 30% 30%, var(--color-mint), #9FD6B4); z-index: 0;" aria-hidden="true"></div>
+            <div class="clay-card-static" style="position: relative; z-index: 1; padding: var(--space-4); border-radius: var(--radius-3xl);" role="img" aria-label="Miniature preview of a finished birthday page for Maya, with message and photos">
+              <div class="flex items-center gap-2" style="padding: var(--space-2) var(--space-3);">
+                <span class="deco-dot deco-dot-rose"></span>
+                <span class="deco-dot deco-dot-butter"></span>
+                <span class="deco-dot deco-dot-mint"></span>
+                <span class="text-xs" style="color: var(--color-text-tertiary); margin-left: var(--space-2);">birthdaywish · maya-turns-30</span>
+              </div>
+              <div style="border-radius: var(--radius-2xl); padding: var(--space-6) var(--space-5); text-align: center; background: linear-gradient(160deg, var(--color-brand-100) 0%, var(--color-lavender) 45%, var(--color-rose) 130%);">
+                <p class="text-xs font-semibold" style="letter-spacing: var(--tracking-widest); color: var(--color-brand-600); margin-bottom: var(--space-2);">HAPPY 30TH</p>
+                <p class="font-display text-2xl font-bold" style="color: var(--color-text-primary); margin-bottom: var(--space-3);">Maya, this day is all you</p>
+                <p class="text-sm" style="color: var(--color-text-secondary); max-width: 300px; margin: 0 auto var(--space-4);">Thirty candles, one unforgettable friend. Here is a little world built from your favorite moments.</p>
+                <div style="display: flex; justify-content: center; gap: var(--space-2);">
+                  <span class="clay-btn clay-btn-primary clay-btn-sm" aria-hidden="true">Read the wish</span>
+                  <span class="clay-btn clay-btn-secondary clay-btn-sm" aria-hidden="true">See photos</span>
+                </div>
+              </div>
+            </div>
+            <p class="text-xs text-center" style="color: var(--color-text-tertiary); margin-top: var(--space-4);">Every page previews on phone and desktop before you share it.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- 8. How it works — Personalize, Preview, Share -->
+  <section class="section" aria-labelledby="steps-heading">
+    <div class="container-page">
+      <div class="mx-auto text-center" style="max-width: 640px;">
+        <span class="clay-badge clay-badge-primary">How it works</span>
+        <h2 id="steps-heading" class="text-display" style="font-size: clamp(1.875rem, 4vw, 2.75rem); margin: var(--space-4) 0;">Three small steps to a big surprise</h2>
+        <p class="text-body">No design skills, no accounts, no waiting. Most pages come together in about ten minutes.</p>
+      </div>
+      <div class="grid gap-6 md:grid-cols-3" style="margin-top: var(--space-12);">
+        <div class="clay-card-static p-8 text-center">
+          <span class="clay-badge clay-badge-primary">1</span>
+          <h3 class="font-display text-lg font-bold" style="color: var(--color-text-primary); margin: var(--space-4) 0 var(--space-2);">Personalize</h3>
+          <p class="text-sm" style="color: var(--color-text-secondary); line-height: var(--leading-relaxed);">Their name, their age, your relationship. Pick an occasion and a tone — the message starts writing itself.</p>
+        </div>
+        <div class="clay-card-static p-8 text-center">
+          <span class="clay-badge clay-badge-success">2</span>
+          <h3 class="font-display text-lg font-bold" style="color: var(--color-text-primary); margin: var(--space-4) 0 var(--space-2);">Preview</h3>
+          <p class="text-sm" style="color: var(--color-text-secondary); line-height: var(--leading-relaxed);">See the full page exactly as they will — on phone and desktop. Swap photos, edit words, try another theme.</p>
+        </div>
+        <div class="clay-card-static p-8 text-center">
+          <span class="clay-badge clay-badge-warning">3</span>
+          <h3 class="font-display text-lg font-bold" style="color: var(--color-text-primary); margin: var(--space-4) 0 var(--space-2);">Share</h3>
+          <p class="text-sm" style="color: var(--color-text-secondary); line-height: var(--leading-relaxed);">Send one delightful link by text, chat, or email. They open it, you get the credit, the day is made.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- 6. Visual showcase: a fictional birthday page in a realistic browser mockup -->
+  <section class="section ambient-bg" id="showcase" aria-labelledby="showcase-heading">
+    <div class="container-page" style="position: relative; z-index: 1;">
+      <div class="mx-auto text-center" style="max-width: 640px; margin-bottom: var(--space-12);">
+        <span class="clay-badge clay-badge-primary">One link, a whole little world</span>
+        <h2 id="showcase-heading" class="text-display" style="font-size: clamp(1.875rem, 4vw, 2.75rem); margin: var(--space-4) 0;">Explore a finished birthday page</h2>
+        <p class="text-body">This is a fictional sample — "Nadia turns 29" — built with the same pieces you will use: a message, photos, music, and a theme. Every element is yours to change.</p>
+      </div>
+      <div class="clay-card-static" style="padding: var(--space-3); border-radius: var(--radius-3xl); max-width: 860px; margin: 0 auto;" role="img" aria-label="Desktop browser preview of a fictional birthday page for Nadia">
+        <div class="flex items-center gap-2" style="padding: var(--space-2) var(--space-3);">
+          <span class="deco-dot deco-dot-rose"></span>
+          <span class="deco-dot deco-dot-butter"></span>
+          <span class="deco-dot deco-dot-mint"></span>
+          <span class="text-xs" style="color: var(--color-text-tertiary); margin: 0 auto; background: var(--color-surface-sunken); border-radius: var(--radius-full); padding: var(--space-1) var(--space-4);">birthdaywish.example/nadia-turns-29</span>
+        </div>
+        <div style="border-radius: var(--radius-2xl); overflow: hidden; background: linear-gradient(165deg, #FFF3E0 0%, var(--color-peach) 55%, var(--color-rose) 130%); padding: var(--space-10) var(--space-8); text-align: center; position: relative;">
+          <div style="position: absolute; top: 18px; left: 8%; color: rgba(160,47,96,0.35); font-size: 1.1rem;" aria-hidden="true">✦</div>
+          <div style="position: absolute; top: 60px; right: 10%; color: rgba(160,47,96,0.3); font-size: 0.9rem;" aria-hidden="true">✦</div>
+          <div class="mx-auto" style="width: 84px; height: 84px; border-radius: var(--radius-full); background: linear-gradient(150deg, var(--color-butter), var(--color-peach)); box-shadow: var(--clay-shadow-md); display: flex; align-items: center; justify-content: center; font-size: 2rem; margin-bottom: var(--space-5);" aria-hidden="true">🎂</div>
+          <p class="text-xs font-semibold" style="letter-spacing: var(--tracking-widest); color: var(--color-error-dark); margin-bottom: var(--space-2);">HAPPY 29TH, NADIA</p>
+          <p class="font-display text-3xl font-bold" style="color: var(--color-text-primary); margin-bottom: var(--space-3);">Nine years of inside jokes and counting</p>
+          <p class="text-sm" style="color: var(--color-text-secondary); max-width: 420px; margin: 0 auto var(--space-6);">From road-trip playlists to 2am pep talks — this page holds the moments that made us. Press play, scroll slowly, save room for cake.</p>
+          <div class="mx-auto" style="display: flex; gap: var(--space-2); justify-content: center; max-width: 320px; margin-bottom: var(--space-6);">
+            <span style="flex: 1; height: 54px; border-radius: var(--radius-lg); background: linear-gradient(140deg, var(--color-lavender), var(--color-periwinkle)); box-shadow: var(--clay-shadow-sm);" aria-hidden="true"></span>
+            <span style="flex: 1; height: 54px; border-radius: var(--radius-lg); background: linear-gradient(140deg, var(--color-butter), var(--color-peach)); box-shadow: var(--clay-shadow-sm);" aria-hidden="true"></span>
+            <span style="flex: 1; height: 54px; border-radius: var(--radius-lg); background: linear-gradient(140deg, var(--color-mint), #9FD6B4); box-shadow: var(--clay-shadow-sm);" aria-hidden="true"></span>
+          </div>
+          <div style="display: inline-flex; gap: var(--space-2);">
+            <span class="clay-btn clay-btn-primary clay-btn-sm" aria-hidden="true">♪ Our song</span>
+            <span class="clay-btn clay-btn-secondary clay-btn-sm" aria-hidden="true">Leave a note</span>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3" style="margin-top: var(--space-8);">
+        <a href={ROUTES.CREATE} class="clay-btn clay-btn-primary">Build one like this</a>
+        <a href={ROUTES.WISHES} class="clay-btn clay-btn-ghost">Start with words</a>
+      </div>
+    </div>
+  </section>
+  <!-- 7. Curated birthday experience cards — each opens its own theme preview -->
+  <section class="section" aria-labelledby="themes-heading">
+    <div class="container-page">
+      <div class="mx-auto text-center" style="max-width: 640px; margin-bottom: var(--space-12);">
+        <span class="clay-badge clay-badge-primary">Four original themes</span>
+        <h2 id="themes-heading" class="text-display" style="font-size: clamp(1.875rem, 4vw, 2.75rem); margin: var(--space-4) 0;">Pick a world that feels like them</h2>
+        <p class="text-body">Every theme is an original clay palette. Open a preview to see a full sample page, then start from the one you love.</p>
+      </div>
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4" style="max-width: 1120px; margin: 0 auto;">
+        <div class="clay-card clay-card-hover p-6 text-center">
+          <div style="height: 120px; border-radius: var(--radius-xl); background: linear-gradient(150deg, var(--color-lavender) 0%, var(--color-periwinkle) 100%); box-shadow: var(--clay-shadow-sm); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-4);" aria-hidden="true"><span style="font-size: 2rem;">🎈</span></div>
+          <h3 class="font-display text-lg font-bold" style="color: var(--color-text-primary); margin-bottom: var(--space-1);">Lavender Parade</h3>
+          <p class="text-sm" style="color: var(--color-text-secondary); margin-bottom: var(--space-4);">Soft violets, floating confetti, gentle joy.</p>
+          <button type="button" class="clay-btn clay-btn-secondary clay-btn-full theme-preview-btn" data-theme="lavender-parade" aria-haspopup="dialog">Preview theme</button>
+        </div>
+        <div class="clay-card clay-card-hover p-6 text-center">
+          <div style="height: 120px; border-radius: var(--radius-xl); background: linear-gradient(150deg, #FFE3D3 0%, var(--color-peach) 60%, #FFA88F 100%); box-shadow: var(--clay-shadow-sm); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-4);" aria-hidden="true"><span style="font-size: 2rem;">🌅</span></div>
+          <h3 class="font-display text-lg font-bold" style="color: var(--color-text-primary); margin-bottom: var(--space-1);">Peach Morning</h3>
+          <p class="text-sm" style="color: var(--color-text-secondary); margin-bottom: var(--space-4);">Warm sunrise tones for golden-hearted people.</p>
+          <button type="button" class="clay-btn clay-btn-secondary clay-btn-full theme-preview-btn" data-theme="peach-morning" aria-haspopup="dialog">Preview theme</button>
+        </div>
+        <div class="clay-card clay-card-hover p-6 text-center">
+          <div style="height: 120px; border-radius: var(--radius-xl); background: linear-gradient(150deg, #E4F4EA 0%, var(--color-mint) 60%, #9FD6B4 100%); box-shadow: var(--clay-shadow-sm); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-4);" aria-hidden="true"><span style="font-size: 2rem;">🌿</span></div>
+          <h3 class="font-display text-lg font-bold" style="color: var(--color-text-primary); margin-bottom: var(--space-1);">Mint Meadow</h3>
+          <p class="text-sm" style="color: var(--color-text-secondary); margin-bottom: var(--space-4);">Fresh greens for calm, outdoorsy souls.</p>
+          <button type="button" class="clay-btn clay-btn-secondary clay-btn-full theme-preview-btn" data-theme="mint-meadow" aria-haspopup="dialog">Preview theme</button>
+        </div>
+        <div class="clay-card clay-card-hover p-6 text-center">
+          <div style="height: 120px; border-radius: var(--radius-xl); background: linear-gradient(150deg, #2B2452 0%, var(--color-midnight) 60%, #100E38 100%); box-shadow: var(--clay-shadow-sm); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-4);" aria-hidden="true"><span style="font-size: 2rem;">🌙</span></div>
+          <h3 class="font-display text-lg font-bold" style="color: var(--color-text-primary); margin-bottom: var(--space-1);">Midnight Toast</h3>
+          <p class="text-sm" style="color: var(--color-text-secondary); margin-bottom: var(--space-4);">Starlit navy and candlelight gold.</p>
+          <button type="button" class="clay-btn clay-btn-secondary clay-btn-full theme-preview-btn" data-theme="midnight-toast" aria-haspopup="dialog">Preview theme</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Theme preview dialog (single dialog, filled per theme) -->
+  <div id="theme-dialog-backdrop" class="hidden" style="position: fixed; inset: 0; z-index: var(--z-modal); background: rgba(32,28,56,0.45); padding: var(--space-4);">
+    <div id="theme-dialog" role="dialog" aria-modal="true" aria-labelledby="theme-dialog-title" class="clay-card-static" style="max-width: 560px; width: 100%; max-height: 85vh; overflow-y: auto; padding: var(--space-6);">
+      <div class="flex items-center justify-between" style="margin-bottom: var(--space-4);">
+        <h3 id="theme-dialog-title" class="font-display text-xl font-bold" style="color: var(--color-text-primary);">Theme preview</h3>
+        <button type="button" id="theme-dialog-close" class="clay-icon-btn clay-icon-btn-sm" aria-label="Close preview">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <div id="theme-dialog-art" style="border-radius: var(--radius-2xl); padding: var(--space-8) var(--space-6); text-align: center; margin-bottom: var(--space-5);"></div>
+      <p id="theme-dialog-copy" class="text-sm" style="color: var(--color-text-secondary); line-height: var(--leading-relaxed); margin-bottom: var(--space-6);"></p>
+      <div class="flex flex-col sm:flex-row gap-3">
+        <a href={ROUTES.CREATE} class="clay-btn clay-btn-primary clay-btn-full">Use this theme</a>
+        <button type="button" id="theme-dialog-back" class="clay-btn clay-btn-ghost clay-btn-full">Back to themes</button>
+      </div>
+    </div>
+  </div>
+  <!-- 9. Birthday message generator preview (links to the complete generator) -->
+  <section class="section ambient-bg" aria-labelledby="generator-heading">
+    <div class="container-page" style="position: relative; z-index: 1;">
+      <div class="grid items-center gap-10 lg:grid-cols-2">
+        <div class="text-center lg:text-left">
+          <span class="clay-badge clay-badge-primary">Message generator</span>
+          <h2 id="generator-heading" class="text-display" style="font-size: clamp(1.875rem, 4vw, 2.75rem); margin: var(--space-4) 0;">Never stare at a blank card again</h2>
+          <p class="text-body" style="margin-bottom: var(--space-6);">Pick who it is for, choose a tone, and start from an original message written for real birthdays — then make every line yours.</p>
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3">
+            <a href={ROUTES.WISHES} class="clay-btn clay-btn-primary">Open the generator</a>
+            <a href={ROUTES.CREATE} class="clay-btn clay-btn-ghost">Use it in a page</a>
+          </div>
+        </div>
+        <div class="clay-card-static p-8">
+          <p class="text-xs font-semibold" style="letter-spacing: var(--tracking-widest); color: var(--color-brand-600); margin-bottom: var(--space-3);">PREVIEW MESSAGE</p>
+          <p class="font-display text-xl" style="color: var(--color-text-primary); line-height: var(--leading-snug); margin-bottom: var(--space-4);">
+            "Maya, thank you for turning ordinary Tuesdays into small celebrations. May this year bring you back every bit of joy you give away so freely."
+          </p>
+          <div class="flex flex-wrap gap-2" style="margin-bottom: var(--space-5);">
+            <span class="clay-badge clay-badge-success">Heartfelt</span>
+            <span class="clay-badge clay-badge-outline">Best friend</span>
+            <span class="clay-badge clay-badge-outline">120 words</span>
+          </div>
+          <a href={ROUTES.WISHES} class="clay-btn clay-btn-secondary clay-btn-full">Personalize this message</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- 10. Premium photo feature preview -->
+  <section class="section" aria-labelledby="photos-heading">
+    <div class="container-page">
+      <div class="grid items-center gap-10 lg:grid-cols-2">
+        <div class="flex justify-center" style="order: 2;" aria-hidden="true">
+          <div style="position: relative; max-width: 420px; width: 100%;">
+            <div class="clay-card-static p-4" style="transform: rotate(-3deg);">
+              <div style="height: 190px; border-radius: var(--radius-xl); background: linear-gradient(140deg, var(--color-rose), var(--color-peach)); display: flex; align-items: center; justify-content: center; font-size: 3rem;">🏖️</div>
+              <p class="text-sm text-center font-semibold" style="color: var(--color-text-primary); padding: var(--space-3) 0 var(--space-1);">Beach weekend, '22</p>
+            </div>
+            <div class="clay-card-static p-4" style="transform: rotate(2deg); margin-top: -60px; margin-left: 60px;">
+              <div style="height: 190px; border-radius: var(--radius-xl); background: linear-gradient(140deg, var(--color-mint), var(--color-periwinkle)); display: flex; align-items: center; justify-content: center; font-size: 3rem;">🎡</div>
+              <p class="text-sm text-center font-semibold" style="color: var(--color-text-primary); padding: var(--space-3) 0 var(--space-1);">Fair lights</p>
+            </div>
+          </div>
+        </div>
+        <div class="text-center lg:text-left" style="order: 1;">
+          <span class="clay-badge clay-badge-warning">Photo memories</span>
+          <h2 id="photos-heading" class="text-display" style="font-size: clamp(1.875rem, 4vw, 2.75rem); margin: var(--space-4) 0;">Their favorite photos, softly framed</h2>
+          <p class="text-body" style="margin-bottom: var(--space-6);">Add up to five photos per page — captioned, tilted, and tucked into clay frames that feel like a scrapbook made by someone who cares.</p>
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3">
+            <a href={ROUTES.CREATE} class="clay-btn clay-btn-primary">Add photos to a page</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. Occasions and relationships -->
+  <section class="section ambient-bg" aria-labelledby="occasions-heading">
+    <div class="container-page" style="position: relative; z-index: 1;">
+      <div class="mx-auto text-center" style="max-width: 640px; margin-bottom: var(--space-12);">
+        <span class="clay-badge clay-badge-primary">Whoever they are to you</span>
+        <h2 id="occasions-heading" class="text-display" style="font-size: clamp(1.875rem, 4vw, 2.75rem); margin: var(--space-4) 0;">A page for every kind of birthday person</h2>
+        <p class="text-body">Choose a relationship to open the message generator with the right tone already picked.</p>
+      </div>
+      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-5" style="max-width: 1120px; margin: 0 auto;">
+        <a href={ROUTES.WISHES} class="clay-card clay-card-hover p-6 text-center no-underline">
+          <div style="font-size: 2rem; margin-bottom: var(--space-2);" aria-hidden="true">🫶</div>
+          <p class="font-display font-bold" style="color: var(--color-text-primary); margin-bottom: var(--space-1);">Best friend</p>
+          <p class="text-xs" style="color: var(--color-text-secondary);">Inside jokes welcome</p>
+        </a>
+        <a href={ROUTES.WISHES} class="clay-card clay-card-hover p-6 text-center no-underline">
+          <div style="font-size: 2rem; margin-bottom: var(--space-2);" aria-hidden="true">💛</div>
+          <p class="font-display font-bold" style="color: var(--color-text-primary); margin-bottom: var(--space-1);">Partner</p>
+          <p class="text-xs" style="color: var(--color-text-secondary);">Tender and a little grand</p>
+        </a>
+        <a href={ROUTES.WISHES} class="clay-card clay-card-hover p-6 text-center no-underline">
+          <div style="font-size: 2rem; margin-bottom: var(--space-2);" aria-hidden="true">🏡</div>
+          <p class="font-display font-bold" style="color: var(--color-text-primary); margin-bottom: var(--space-1);">Parent</p>
+          <p class="text-xs" style="color: var(--color-text-secondary);">Grateful, warm, sincere</p>
+        </a>
+        <a href={ROUTES.WISHES} class="clay-card clay-card-hover p-6 text-center no-underline">
+          <div style="font-size: 2rem; margin-bottom: var(--space-2);" aria-hidden="true">🧸</div>
+          <p class="font-display font-bold" style="color: var(--color-text-primary); margin-bottom: var(--space-1);">Sibling</p>
+          <p class="text-xs" style="color: var(--color-text-secondary);">Teasing with love</p>
+        </a>
+        <a href={ROUTES.WISHES} class="clay-card clay-card-hover p-6 text-center no-underline">
+          <div style="font-size: 2rem; margin-bottom: var(--space-2);" aria-hidden="true">☕</div>
+          <p class="font-display font-bold" style="color: var(--color-text-primary); margin-bottom: var(--space-1);">Colleague</p>
+          <p class="text-xs" style="color: var(--color-text-secondary);">Kind and office-safe</p>
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- 12. Frequently asked questions -->
+  <section class="section" aria-labelledby="faq-heading">
+    <div class="container-page">
+      <div class="mx-auto text-center" style="max-width: 640px; margin-bottom: var(--space-10);">
+        <span class="clay-badge clay-badge-primary">Questions</span>
+        <h2 id="faq-heading" class="text-display" style="font-size: clamp(1.875rem, 4vw, 2.75rem); margin: var(--space-4) 0;">Everything else you're wondering</h2>
+        <p class="text-body">Straight answers, no fine print. <a href={ROUTES.FAQ} style="color: var(--color-brand-600); text-decoration: underline;">See all questions</a>.</p>
+      </div>
+      <div class="mx-auto grid gap-4" style="max-width: 760px;">
+        <details class="clay-card-static p-5">
+          <summary class="font-display font-semibold cursor-pointer" style="color: var(--color-text-primary);">Is BirthdayWish free to use?</summary>
+          <p class="text-sm" style="color: var(--color-text-secondary); margin-top: var(--space-2);">Yes. The free tier includes up to three pages with five photos each. Premium is simulated for now — no real payment is taken.</p>
+        </details>
+        <details class="clay-card-static p-5">
+          <summary class="font-display font-semibold cursor-pointer" style="color: var(--color-text-primary);">Do I need an account?</summary>
+          <p class="text-sm" style="color: var(--color-text-secondary); margin-top: var(--space-2);">No. Drafts stay in this browser. The sign-in page opens a demo flow you can try without creating a real account.</p>
+        </details>
+        <details class="clay-card-static p-5">
+          <summary class="font-display font-semibold cursor-pointer" style="color: var(--color-text-primary);">Where do my photos go?</summary>
+          <p class="text-sm" style="color: var(--color-text-secondary); margin-top: var(--space-2);">Nowhere yet — previews stay on your device. A future version can connect approved cloud storage when you choose it.</p>
+        </details>
+        <details class="clay-card-static p-5">
+          <summary class="font-display font-semibold cursor-pointer" style="color: var(--color-text-primary);">Can I preview before sharing?</summary>
+          <p class="text-sm" style="color: var(--color-text-secondary); margin-top: var(--space-2);">Always. Every page has a full mobile and desktop preview, and you can edit the message, theme, and photos first.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 13b. Final call to action -->
+  <section class="section" aria-labelledby="cta-heading">
+    <div class="container-page">
+      <div class="clay-card-static text-center" style="padding: var(--space-16) var(--space-8); background: linear-gradient(150deg, var(--color-midnight) 0%, var(--color-brand-700) 60%, var(--color-brand-500) 100%); border: none; position: relative; overflow: hidden;">
+        <div class="animate-twinkle" style="position: absolute; top: 24px; left: 8%;" aria-hidden="true"><span class="deco-star deco-star-md" style="color: var(--color-butter);">✦</span></div>
+        <div class="animate-twinkle" style="position: absolute; top: 40px; right: 10%; animation-delay: 1s;" aria-hidden="true"><span class="deco-star deco-star-sm" style="color: var(--color-rose);">✦</span></div>
+        <div class="animate-twinkle" style="position: absolute; bottom: 30px; left: 14%; animation-delay: 2s;" aria-hidden="true"><span class="deco-star deco-star-sm" style="color: var(--color-mint);">✦</span></div>
+        <h2 id="cta-heading" class="text-display" style="font-size: clamp(2rem, 4vw, 3rem); color: white; margin-bottom: var(--space-4); position: relative;">Ready to make their day?</h2>
+        <p style="color: rgba(255,255,255,0.82); font-size: var(--text-lg); max-width: 520px; margin: 0 auto var(--space-8); position: relative;">Build a small world of memories — a message, a few photos, and a theme that feels like them.</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4" style="position: relative;">
+          <a href={ROUTES.CREATE} class="clay-btn clay-btn-lg" style="background: white; color: var(--color-brand-700);">Create a Birthday Surprise</a>
+          <a href={ROUTES.WISHES} class="clay-btn clay-btn-lg" style="background: transparent; color: white; border: 1px solid rgba(255,255,255,0.4);">Write a Birthday Wish</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+(function () {
+  var backdrop = document.getElementById('theme-dialog-backdrop');
+  var dialog = document.getElementById('theme-dialog');
+  var titleEl = document.getElementById('theme-dialog-title');
+  var artEl = document.getElementById('theme-dialog-art');
+  var copyEl = document.getElementById('theme-dialog-copy');
+  var closeBtn = document.getElementById('theme-dialog-close');
+  var backBtn = document.getElementById('theme-dialog-back');
+  var lastFocus = null;
+  var THEMES = {
+    'lavender-parade': {
+      name: 'Lavender Parade',
+      bg: 'linear-gradient(160deg, #EDEBFA 0%, #DFD8F3 45%, #F3C5D7 130%)',
+      ink: '#201C38',
+      emoji: '🎈',
+      tag: 'HAPPY BIRTHDAY, JULES',
+      headline: 'Confetti looks good on you',
+      copy: 'Lavender Parade opens with a soft violet sky, floating confetti, and a message card that glows like candlelight. Best for joyful, gentle surprises — best friends, siblings, anyone who laughs easily.'
+    },
+    'peach-morning': {
+      name: 'Peach Morning',
+      bg: 'linear-gradient(160deg, #FFF3E0 0%, #FFC9B8 55%, #FFA88F 130%)',
+      ink: '#4A2418',
+      emoji: '🌅',
+      tag: 'HAPPY BIRTHDAY, PRIYA',
+      headline: 'A sunrise made just for you',
+      copy: 'Peach Morning feels like breakfast in bed: warm peach gradients, a golden message card, and sun-soft photo frames. Best for partners, parents, and golden-hearted people.'
+    },
+    'mint-meadow': {
+      name: 'Mint Meadow',
+      bg: 'linear-gradient(160deg, #EAF6EF 0%, #C7E8D2 55%, #9FD6B4 130%)',
+      ink: '#173A2B',
+      emoji: '🌿',
+      tag: 'HAPPY BIRTHDAY, THEO',
+      headline: 'Fresh air, fresh year',
+      copy: 'Mint Meadow is calm and outdoorsy — meadow greens, breathing space, and crisp white cards. Best for colleagues, mentors, and anyone who loves the quiet kind of celebration.'
+    },
+    'midnight-toast': {
+      name: 'Midnight Toast',
+      bg: 'linear-gradient(160deg, #2B2452 0%, #201C38 55%, #100E38 130%)',
+      ink: '#FFF9F0',
+      emoji: '🌙',
+      tag: 'HAPPY BIRTHDAY, NOOR',
+      headline: 'Raise a glass to the stars',
+      copy: 'Midnight Toast is candlelight and constellations: deep navy, starlight gold, and a message that glows after dark. Best for milestone birthdays and dramatic romantics.'
+    }
+  };
+  function openTheme(id, trigger) {
+    var t = THEMES[id];
+    if (!t || !backdrop) return;
+    lastFocus = trigger || document.activeElement;
+    if (titleEl) titleEl.textContent = t.name + ' — preview';
+    if (artEl) {
+      artEl.style.background = t.bg;
+      artEl.innerHTML = '<div style="font-size: 2.25rem; margin-bottom: var(--space-3);">' + t.emoji + '</div>'
+        + '<p class="text-xs font-semibold" style="letter-spacing: var(--tracking-widest); color: ' + t.ink + '; opacity: 0.75; margin-bottom: var(--space-2);">' + t.tag + '</p>'
+        + '<p class="font-display text-2xl font-bold" style="color: ' + t.ink + ';">' + t.headline + '</p>';
+    }
+    if (copyEl) copyEl.textContent = t.copy;
+    backdrop.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+    if (closeBtn) closeBtn.focus();
+  }
+  function closeTheme() {
+    if (!backdrop) return;
+    backdrop.classList.add('hidden');
+    document.body.style.overflow = '';
+    if (lastFocus && typeof lastFocus.focus === 'function') lastFocus.focus();
+  }
+  document.querySelectorAll('.theme-preview-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () { openTheme(btn.getAttribute('data-theme'), btn); });
+  });
+  if (closeBtn) closeBtn.addEventListener('click', closeTheme);
+  if (backBtn) backBtn.addEventListener('click', closeTheme);
+  if (backdrop) backdrop.addEventListener('click', function (e) { if (e.target === backdrop) closeTheme(); });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && backdrop && !backdrop.classList.contains('hidden')) closeTheme();
+  });
+})();
+</script>
+
+<style>
+  /*
+   * The dialog backdrop is centered with flexbox while open, and hidden via
+   * the .hidden class. The ID+class selector (specificity 1,1,0) beats both
+   * the ID-only rule above and Tailwind's .hidden, so closing always wins —
+   * an inline `display: flex` here would have overridden the class entirely
+   * and made the close button appear broken.
+   */
+  #theme-dialog-backdrop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #theme-dialog-backdrop.hidden {
+    display: none;
+  }
+
+  /* Guard for any attribute-based hiding on this page. */
+  [hidden] {
+    display: none !important;
+  }
+</style>

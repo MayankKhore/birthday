@@ -1,0 +1,33 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { ROUTES } from '@/utils/routes';
+---
+
+<BaseLayout title="Terms" description="Terms for using the BirthdayWish demo.">
+  <section class="section">
+    <div class="container-page">
+      <div class="mx-auto" style="max-width: 680px;">
+        <span class="clay-badge clay-badge-primary">Terms</span>
+        <h1 class="text-display" style="font-size: clamp(2.25rem, 5vw, 3.5rem); margin: var(--space-4) 0 var(--space-6);">Simple, fair terms</h1>
+        <div class="clay-card-static p-8" style="display: grid; gap: var(--space-5);">
+          <div>
+            <h2 class="font-display text-lg font-bold" style="color: var(--color-text-primary); margin-bottom: var(--space-2);">1. A demo, not a service</h2>
+            <p class="text-sm" style="color: var(--color-text-secondary); line-height: var(--leading-relaxed);">BirthdayWish is currently a front-end demo. Features marked “coming soon,” “simulated,” or “demo” do not process payments, create real accounts, or store data remotely.</p>
+          </div>
+          <div>
+            <h2 class="font-display text-lg font-bold" style="color: var(--color-text-primary); margin-bottom: var(--space-2);">2. Your content</h2>
+            <p class="text-sm" style="color: var(--color-text-secondary); line-height: var(--leading-relaxed);">Messages and photos you add belong to you. Keep them kind and lawful, and only upload photos you have permission to share.</p>
+          </div>
+          <div>
+            <h2 class="font-display text-lg font-bold" style="color: var(--color-text-primary); margin-bottom: var(--space-2);">3. Original design</h2>
+            <p class="text-sm" style="color: var(--color-text-secondary); line-height: var(--leading-relaxed);">The themes, copy, and decorations here are original to this demo. Please do not copy distinctive compositions or claim them as your own.</p>
+          </div>
+          <div>
+            <h2 class="font-display text-lg font-bold" style="color: var(--color-text-primary); margin-bottom: var(--space-2);">4. Questions</h2>
+            <p class="text-sm" style="color: var(--color-text-secondary); line-height: var(--leading-relaxed);">Something unclear? <a href={ROUTES.CONTACT}>Contact us</a> or read the <a href={ROUTES.FAQ}>FAQ</a> before relying on demo behavior.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

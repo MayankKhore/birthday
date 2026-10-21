@@ -1,0 +1,1476 @@
+﻿
+> birthday-platform@0.1.0 check
+> astro check
+
+18:03:32 [vite] Re-optimizing dependencies because vite config has changed
+18:03:32 [types] Generated 276ms
+18:03:32 [check] Getting diagnostics for Astro files in D:\New folder (3)...
+[96msrc/lib/auth/LocalAuthAdapter.ts[0m:[93m197[0m:[93m77[0m - [91merror[0m[90m ts(4111): [0mProperty 'password' comes from an index signature, so it must be accessed with ['password'].
+
+[7m197[0m     if (updates.email !== undefined || (updates as Record<string, unknown>).password !== undefined) {
+[7m   [0m [91m                                                                            ~~~~~~~~[0m
+[96msrc/lib/auth/LocalAuthAdapter.ts[0m:[93m74[0m:[93m18[0m - [91merror[0m[90m ts(4111): [0mProperty 'subscriptionStatus' comes from an index signature, so it must be accessed with ['subscriptionStatus'].
+
+[7m74[0m       typeof obj.subscriptionStatus === 'string'
+[7m  [0m [91m                 ~~~~~~~~~~~~~~~~~~[0m
+[96msrc/lib/auth/LocalAuthAdapter.ts[0m:[93m73[0m:[93m18[0m - [91merror[0m[90m ts(4111): [0mProperty 'subscriptionTier' comes from an index signature, so it must be accessed with ['subscriptionTier'].
+
+[7m73[0m       typeof obj.subscriptionTier === 'string' &&
+[7m  [0m [91m                 ~~~~~~~~~~~~~~~~[0m
+[96msrc/lib/auth/LocalAuthAdapter.ts[0m:[93m72[0m:[93m18[0m - [91merror[0m[90m ts(4111): [0mProperty 'updatedAt' comes from an index signature, so it must be accessed with ['updatedAt'].
+
+[7m72[0m       typeof obj.updatedAt === 'string' &&
+[7m  [0m [91m                 ~~~~~~~~~[0m
+[96msrc/lib/auth/LocalAuthAdapter.ts[0m:[93m71[0m:[93m18[0m - [91merror[0m[90m ts(4111): [0mProperty 'createdAt' comes from an index signature, so it must be accessed with ['createdAt'].
+
+[7m71[0m       typeof obj.createdAt === 'string' &&
+[7m  [0m [91m                 ~~~~~~~~~[0m
+[96msrc/lib/auth/LocalAuthAdapter.ts[0m:[93m70[0m:[93m18[0m - [91merror[0m[90m ts(4111): [0mProperty 'role' comes from an index signature, so it must be accessed with ['role'].
+
+[7m70[0m       typeof obj.role === 'string' &&
+[7m  [0m [91m                 ~~~~[0m
+[96msrc/lib/auth/LocalAuthAdapter.ts[0m:[93m69[0m:[93m18[0m - [91merror[0m[90m ts(4111): [0mProperty 'displayName' comes from an index signature, so it must be accessed with ['displayName'].
+
+[7m69[0m       typeof obj.displayName === 'string' &&
+[7m  [0m [91m                 ~~~~~~~~~~~[0m
+[96msrc/lib/auth/LocalAuthAdapter.ts[0m:[93m68[0m:[93m18[0m - [91merror[0m[90m ts(4111): [0mProperty 'email' comes from an index signature, so it must be accessed with ['email'].
+
+[7m68[0m       typeof obj.email === 'string' &&
+[7m  [0m [91m                 ~~~~~[0m
+[96msrc/lib/auth/LocalAuthAdapter.ts[0m:[93m67[0m:[93m18[0m - [91merror[0m[90m ts(4111): [0mProperty 'id' comes from an index signature, so it must be accessed with ['id'].
+
+[7m67[0m       typeof obj.id === 'string' &&
+[7m  [0m [91m                 ~~[0m
+[96msrc/lib/auth/LocalAuthAdapter.ts[0m:[93m8[0m:[93m40[0m - [91merror[0m[90m ts(2459): [0mModule '"./interfaces"' declares 'AuthState' locally, but it is not exported.
+
+[7m8[0m import type { AuthService, AuthResult, AuthState, AuthProvider } from './interfaces';
+[7m [0m [91m                                       ~~~~~~~~~[0m
+
+[96msrc/lib/auth/auth.test.ts[0m:[93m3[0m:[93m27[0m - [91merror[0m[90m ts(1484): [0m'DemoRegistration' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+
+[7m3[0m import { DemoCredentials, DemoRegistration } from './interfaces';
+[7m [0m [91m                          ~~~~~~~~~~~~~~~~[0m
+[96msrc/lib/auth/auth.test.ts[0m:[93m3[0m:[93m10[0m - [91merror[0m[90m ts(1484): [0m'DemoCredentials' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+
+[7m3[0m import { DemoCredentials, DemoRegistration } from './interfaces';
+[7m [0m [91m         ~~~~~~~~~~~~~~~[0m
+
+[96msrc/lib/auth/client.ts[0m:[93m73[0m:[93m27[0m - [91merror[0m[90m ts(2532): [0mObject is possibly 'undefined'.
+
+[7m73[0m     return (parts[0][0] + parts[1][0]).toUpperCase();
+[7m  [0m [91m                          ~~~~~~~~~~~[0m
+[96msrc/lib/auth/client.ts[0m:[93m73[0m:[93m13[0m - [91merror[0m[90m ts(2532): [0mObject is possibly 'undefined'.
+
+[7m73[0m     return (parts[0][0] + parts[1][0]).toUpperCase();
+[7m  [0m [91m            ~~~~~~~~~~~[0m
+[96msrc/lib/auth/client.ts[0m:[93m28[0m:[93m16[0m - [91merror[0m[90m ts(4111): [0mProperty 'subscriptionStatus' comes from an index signature, so it must be accessed with ['subscriptionStatus'].
+
+[7m28[0m     typeof obj.subscriptionStatus === 'string'
+[7m  [0m [91m               ~~~~~~~~~~~~~~~~~~[0m
+[96msrc/lib/auth/client.ts[0m:[93m27[0m:[93m16[0m - [91merror[0m[90m ts(4111): [0mProperty 'subscriptionTier' comes from an index signature, so it must be accessed with ['subscriptionTier'].
+
+[7m27[0m     typeof obj.subscriptionTier === 'string' &&
+[7m  [0m [91m               ~~~~~~~~~~~~~~~~[0m
+[96msrc/lib/auth/client.ts[0m:[93m26[0m:[93m16[0m - [91merror[0m[90m ts(4111): [0mProperty 'updatedAt' comes from an index signature, so it must be accessed with ['updatedAt'].
+
+[7m26[0m     typeof obj.updatedAt === 'string' &&
+[7m  [0m [91m               ~~~~~~~~~[0m
+[96msrc/lib/auth/client.ts[0m:[93m25[0m:[93m16[0m - [91merror[0m[90m ts(4111): [0mProperty 'createdAt' comes from an index signature, so it must be accessed with ['createdAt'].
+
+[7m25[0m     typeof obj.createdAt === 'string' &&
+[7m  [0m [91m               ~~~~~~~~~[0m
+[96msrc/lib/auth/client.ts[0m:[93m24[0m:[93m16[0m - [91merror[0m[90m ts(4111): [0mProperty 'role' comes from an index signature, so it must be accessed with ['role'].
+
+[7m24[0m     typeof obj.role === 'string' &&
+[7m  [0m [91m               ~~~~[0m
+[96msrc/lib/auth/client.ts[0m:[93m23[0m:[93m16[0m - [91merror[0m[90m ts(4111): [0mProperty 'displayName' comes from an index signature, so it must be accessed with ['displayName'].
+
+[7m23[0m     typeof obj.displayName === 'string' &&
+[7m  [0m [91m               ~~~~~~~~~~~[0m
+[96msrc/lib/auth/client.ts[0m:[93m22[0m:[93m16[0m - [91merror[0m[90m ts(4111): [0mProperty 'email' comes from an index signature, so it must be accessed with ['email'].
+
+[7m22[0m     typeof obj.email === 'string' &&
+[7m  [0m [91m               ~~~~~[0m
+[96msrc/lib/auth/client.ts[0m:[93m21[0m:[93m16[0m - [91merror[0m[90m ts(4111): [0mProperty 'id' comes from an index signature, so it must be accessed with ['id'].
+
+[7m21[0m     typeof obj.id === 'string' &&
+[7m  [0m [91m               ~~[0m
+
+[96msrc/lib/experience/config.ts[0m:[93m9[0m:[93m128[0m - [93mwarning[0m[90m ts(6196): [0m'GiftRevealConfig' is declared but never used.
+
+[7m9[0m import type { CardConfig, CardType, ExperienceConfig, SceneConfig, SceneType, QuizQuestion, StorybookChapter, MemoryMatchPair, GiftRevealConfig } from './types';
+[7m [0m [93m                                                                                                                               ~~~~~~~~~~~~~~~~[0m
+[96msrc/lib/experience/config.ts[0m:[93m9[0m:[93m111[0m - [93mwarning[0m[90m ts(6196): [0m'MemoryMatchPair' is declared but never used.
+
+[7m9[0m import type { CardConfig, CardType, ExperienceConfig, SceneConfig, SceneType, QuizQuestion, StorybookChapter, MemoryMatchPair, GiftRevealConfig } from './types';
+[7m [0m [93m                                                                                                              ~~~~~~~~~~~~~~~[0m
+[96msrc/lib/experience/config.ts[0m:[93m9[0m:[93m93[0m - [93mwarning[0m[90m ts(6196): [0m'StorybookChapter' is declared but never used.
+
+[7m9[0m import type { CardConfig, CardType, ExperienceConfig, SceneConfig, SceneType, QuizQuestion, StorybookChapter, MemoryMatchPair, GiftRevealConfig } from './types';
+[7m [0m [93m                                                                                            ~~~~~~~~~~~~~~~~[0m
+[96msrc/lib/experience/config.ts[0m:[93m9[0m:[93m79[0m - [93mwarning[0m[90m ts(6196): [0m'QuizQuestion' is declared but never used.
+
+[7m9[0m import type { CardConfig, CardType, ExperienceConfig, SceneConfig, SceneType, QuizQuestion, StorybookChapter, MemoryMatchPair, GiftRevealConfig } from './types';
+[7m [0m [93m                                                                              ~~~~~~~~~~~~[0m
+
+[96msrc/lib/media/config.ts[0m:[93m58[0m:[93m3[0m - [91merror[0m[90m ts(2322): [0mType 'MediaTierConfig | undefined' is not assignable to type 'MediaTierConfig'.
+  Type 'undefined' is not assignable to type 'MediaTierConfig'.
+
+[7m58[0m   return getTierById('premium') ?? MEDIA_TIERS[2];
+[7m  [0m [91m  ~~~~~~[0m
+
+[96msrc/lib/media/storage.ts[0m:[93m15[0m:[93m7[0m - [93mwarning[0m[90m ts(6133): [0m'PREVIEWS_KEY_PREFIX' is declared but its value is never read.
+
+[7m15[0m const PREVIEWS_KEY_PREFIX = 'media_preview_';
+[7m  [0m [93m      ~~~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/lib/sharing/copyToClipboard.ts[0m:[93m34[0m:[93m25[0m - [93mwarning[0m[90m ts(6387): [0mThe signature '(commandId: string, showUI?: boolean | undefined, value?: string | undefined): boolean' of 'document.execCommand' is deprecated.
+
+[7m34[0m     const ok = document.execCommand('copy');
+[7m  [0m [93m                        ~~~~~~~~~~~[0m
+
+[96msrc/lib/sharing/qrCode.ts[0m:[93m48[0m:[93m24[0m - [93mwarning[0m[90m ts(6387): [0mThe signature '(...text: string[]): void' of 'printWindow.document.write' is deprecated.
+
+[7m48[0m   printWindow.document.write(
+[7m  [0m [93m                       ~~~~~[0m
+
+[96msrc/lib/storage/LocalProjectAdapter.ts[0m:[93m304[0m:[93m5[0m - [91merror[0m[90m ts(2375): [0mType '{ success: boolean; data: number; error: { code: string; message: string; details?: Record<string, unknown>; } | undefined; }' is not assignable to type 'ServiceResult<number>' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Types of property 'error' are incompatible.
+    Type '{ code: string; message: string; details?: Record<string, unknown>; } | undefined' is not assignable to type '{ code: string; message: string; details?: Record<string, unknown>; }'.
+      Type 'undefined' is not assignable to type '{ code: string; message: string; details?: Record<string, unknown>; }'.
+
+[7m304[0m     return { success: result.success, data: project.viewCount + 1, error: result.error };
+[7m   [0m [91m    ~~~~~~[0m
+[96msrc/lib/storage/LocalProjectAdapter.ts[0m:[93m279[0m:[93m7[0m - [91merror[0m[90m ts(2322): [0mType '{ fileName: string; mimeType: string; sizeBytes: number; width: number; height: number; dataUrl: string; altText: string | undefined; caption: string | undefined; sortOrder: number; }[]' is not assignable to type 'Omit<ProjectPhoto, "id" | "createdAt" | "projectId">[]'.
+  Type '{ fileName: string; mimeType: string; sizeBytes: number; width: number; height: number; dataUrl: string; altText: string | undefined; caption: string | undefined; sortOrder: number; }' is not assignable to type 'Omit<ProjectPhoto, "id" | "createdAt" | "projectId">' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+    Types of property 'altText' are incompatible.
+      Type 'string | undefined' is not assignable to type 'string'.
+        Type 'undefined' is not assignable to type 'string'.
+
+[7m279[0m       photos: project.photos.map((photo) => ({
+[7m   [0m [91m      ~~~~~~[0m
+[96msrc/lib/storage/LocalProjectAdapter.ts[0m:[93m151[0m:[93m13[0m - [91merror[0m[90m ts(2375): [0mType '{ id: UUID; createdAt: ISODateString; status: ProjectStatus; updatedAt: ISODateString; title: string; occasion: OccasionType; ... 13 more ...; viewCount: number; }' is not assignable to type 'BirthdayProject' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Types of property 'photos' are incompatible.
+    Type 'Omit<ProjectPhoto, "id" | "createdAt" | "projectId">[]' is not assignable to type 'ProjectPhoto[]'.
+      Type 'Omit<ProjectPhoto, "id" | "createdAt" | "projectId">' is missing the following properties from type 'ProjectPhoto': id, projectId, createdAt
+
+[7m151[0m       const updated: BirthdayProject = {
+[7m   [0m [91m            ~~~~~~~[0m
+[96msrc/lib/storage/LocalProjectAdapter.ts[0m:[93m78[0m:[93m13[0m - [91merror[0m[90m ts(2375): [0mType '{ id: UUID; userId: UUID | null; slug: string; title: string; occasion: OccasionType; recipientName: string; recipientAge: number | undefined; relationship: string | undefined; ... 10 more ...; updatedAt: ISODateString; }' is not assignable to type 'BirthdayProject' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Types of property 'recipientAge' are incompatible.
+    Type 'number | undefined' is not assignable to type 'number'.
+      Type 'undefined' is not assignable to type 'number'.
+
+[7m78[0m       const project: BirthdayProject = {
+[7m  [0m [91m            ~~~~~~~[0m
+
+[96msrc/lib/subscriptions/LocalSubscriptionAdapter.ts[0m:[93m144[0m:[93m5[0m - [91merror[0m[90m ts(2412): [0mType 'undefined' is not assignable to type 'string' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the type of the target.
+
+[7m144[0m     state.cancelledAt = undefined;
+[7m   [0m [91m    ~~~~~~~~~~~~~~~~~[0m
+[96msrc/lib/subscriptions/LocalSubscriptionAdapter.ts[0m:[93m90[0m:[93m5[0m - [91merror[0m[90m ts(2412): [0mType 'undefined' is not assignable to type 'string' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the type of the target.
+
+[7m90[0m     state.cancelledAt = undefined;
+[7m  [0m [91m    ~~~~~~~~~~~~~~~~~[0m
+[96msrc/lib/subscriptions/LocalSubscriptionAdapter.ts[0m:[93m12[0m:[93m3[0m - [93mwarning[0m[90m ts(6196): [0m'PlanComparison' is declared but never used.
+
+[7m12[0m   PlanComparison,
+[7m  [0m [93m  ~~~~~~~~~~~~~~[0m
+
+[96msrc/lib/subscriptions/PlanComparisons.ts[0m:[93m1[0m:[93m32[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'PlanComparison'.
+
+[7m1[0m export const PLAN_COMPARISONS: PlanComparison[] = [
+[7m [0m [91m                               ~~~~~~~~~~~~~~[0m
+
+[96msrc/test/setup.ts[0m:[93m68[0m:[93m13[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'vi'.
+
+[7m68[0m       show: vi.fn(),
+[7m  [0m [91m            ~~[0m
+[96msrc/test/setup.ts[0m:[93m67[0m:[93m14[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'vi'.
+
+[7m67[0m       close: vi.fn(),
+[7m  [0m [91m             ~~[0m
+[96msrc/test/setup.ts[0m:[93m66[0m:[93m14[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'vi'.
+
+[7m66[0m       click: vi.fn(),
+[7m  [0m [91m             ~~[0m
+[96msrc/test/setup.ts[0m:[93m64[0m:[93m10[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'vi'.
+
+[7m64[0m   value: vi.fn().mockImplementation(() => {
+[7m  [0m [91m         ~~[0m
+[96msrc/test/setup.ts[0m:[93m47[0m:[93m20[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'vi'.
+
+[7m47[0m     dispatchEvent: vi.fn(),
+[7m  [0m [91m                   ~~[0m
+[96msrc/test/setup.ts[0m:[93m46[0m:[93m26[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'vi'.
+
+[7m46[0m     removeEventListener: vi.fn(),
+[7m  [0m [91m                         ~~[0m
+[96msrc/test/setup.ts[0m:[93m45[0m:[93m23[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'vi'.
+
+[7m45[0m     addEventListener: vi.fn(),
+[7m  [0m [91m                      ~~[0m
+[96msrc/test/setup.ts[0m:[93m44[0m:[93m21[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'vi'.
+
+[7m44[0m     removeListener: vi.fn(), // deprecated
+[7m  [0m [91m                    ~~[0m
+[96msrc/test/setup.ts[0m:[93m43[0m:[93m18[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'vi'.
+
+[7m43[0m     addListener: vi.fn(), // deprecated
+[7m  [0m [91m                 ~~[0m
+[96msrc/test/setup.ts[0m:[93m39[0m:[93m38[0m - [91merror[0m[90m ts(7006): [0mParameter 'query' implicitly has an 'any' type.
+
+[7m39[0m   value: vi.fn().mockImplementation((query) => ({
+[7m  [0m [91m                                     ~~~~~[0m
+[96msrc/test/setup.ts[0m:[93m39[0m:[93m10[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'vi'.
+
+[7m39[0m   value: vi.fn().mockImplementation((query) => ({
+[7m  [0m [91m         ~~[0m
+[96msrc/test/setup.ts[0m:[93m34[0m:[93m10[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'vi'.
+
+[7m34[0m   value: vi.fn(),
+[7m  [0m [91m         ~~[0m
+
+[96msrc/types/project.ts[0m:[93m6[0m:[93m1[0m - [93mwarning[0m[90m ts(6133): [0m'SubscriptionTier' is declared but its value is never read.
+
+[7m6[0m import type { SubscriptionTier } from './models';
+[7m [0m [93m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/components/editor/EditorShell.tsx[0m:[93m53[0m:[93m7[0m - [93mwarning[0m[90m ts(6385): [0m'returnValue' is deprecated.
+
+[7m53[0m     e.returnValue = '';
+[7m  [0m [93m      ~~~~~~~~~~~[0m
+
+[96msrc/components/editor/PhotoManager.tsx[0m:[93m20[0m:[93m10[0m - [93mwarning[0m[90m ts(6133): [0m'dragOverId' is declared but its value is never read.
+
+[7m20[0m   const [dragOverId, setDragOverId] = useState<string | null>(null);
+[7m  [0m [93m         ~~~~~~~~~~[0m
+
+[96msrc/components/editor/PreviewApp.tsx[0m:[93m24[0m:[93m10[0m - [93mwarning[0m[90m ts(6133): [0m'musicPlaying' is declared but its value is never read.
+
+[7m24[0m   const [musicPlaying, setMusicPlaying] = useState(false);
+[7m  [0m [93m         ~~~~~~~~~~~~[0m
+
+[96msrc/components/editor/steps/Step4Photos.tsx[0m:[93m18[0m:[93m9[0m - [93mwarning[0m[90m ts(6133): [0m'photos' is declared but its value is never read.
+
+[7m18[0m   const { photos } = useEditor();
+[7m  [0m [93m        ~~~~~~~~~~[0m
+[96msrc/components/editor/steps/Step4Photos.tsx[0m:[93m10[0m:[93m1[0m - [93mwarning[0m[90m ts(6133): [0m'TierComparison' is declared but its value is never read.
+
+[7m10[0m import { TierComparison } from '@/components/editor/TierComparison';
+[7m  [0m [93m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/components/editor/steps/Step5Personalize.tsx[0m:[93m459[0m:[93m101[0m - [91merror[0m[90m ts(2375): [0mType '{ message: string; title?: string; imageId?: UUID; animationType?: "unwrap" | "fade" | "pop" | "slide"; }' is not assignable to type 'GiftRevealConfig' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Property 'title' is optional in type '{ message: string; title?: string; imageId?: UUID; animationType?: "pop" | "unwrap" | "fade" | "slide"; }' but required in type 'GiftRevealConfig'.
+
+[7m459[0m             <textarea value={scene.giftConfig?.message ?? ''} onChange={(e) => onUpdate(scene.id, { giftConfig: { ...scene.giftConfig, message: e.target.value } })} className='clay-input w-full min-h-[60px] resize-y' placeholder='Open your gift to discover a wonderful surprise...' />
+[7m   [0m [91m                                                                                                    ~~~~~~~~~~[0m
+[96msrc/components/editor/steps/Step5Personalize.tsx[0m:[93m455[0m:[93m108[0m - [91merror[0m[90m ts(2375): [0mType '{ title: string; message?: string; imageId?: UUID; animationType?: "unwrap" | "fade" | "pop" | "slide"; }' is not assignable to type 'GiftRevealConfig' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Property 'message' is optional in type '{ title: string; message?: string; imageId?: UUID; animationType?: "pop" | "unwrap" | "fade" | "slide"; }' but required in type 'GiftRevealConfig'.
+
+[7m455[0m             <input type='text' value={scene.giftConfig?.title ?? ''} onChange={(e) => onUpdate(scene.id, { giftConfig: { ...scene.giftConfig, title: e.target.value } })} className='clay-input w-full' placeholder='A Special Gift for You!' />
+[7m   [0m [91m                                                                                                           ~~~~~~~~~~[0m
+[96msrc/components/editor/steps/Step5Personalize.tsx[0m:[93m446[0m:[93m111[0m - [91merror[0m[90m ts(2375): [0mType '{ animationType: any; title?: string; message?: string; imageId?: UUID; }' is not assignable to type 'GiftRevealConfig' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Property 'title' is optional in type '{ animationType: any; title?: string; message?: string; imageId?: UUID; }' but required in type 'GiftRevealConfig'.
+
+[7m446[0m             <select value={scene.giftConfig?.animationType ?? 'unwrap'} onChange={(e) => onUpdate(scene.id, { giftConfig: { ...scene.giftConfig, animationType: e.target.value as any } })} className='clay-input w-full sm:w-auto'>
+[7m   [0m [91m                                                                                                              ~~~~~~~~~~[0m
+[96msrc/components/editor/steps/Step5Personalize.tsx[0m:[93m410[0m:[93m19[0m - [91merror[0m[90m ts(2375): [0mType '{ text: string; id?: UUID; title?: string; imageId?: UUID; backgroundColor?: string; }' is not assignable to type 'StorybookChapter' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Property 'id' is optional in type '{ text: string; id?: UUID; title?: string; imageId?: UUID; backgroundColor?: string; }' but required in type 'StorybookChapter'.
+
+[7m410[0m                   newChapters[idx] = { ...newChapters[idx], text: e.target.value };
+[7m   [0m [91m                  ~~~~~~~~~~~~~~~~[0m
+[96msrc/components/editor/steps/Step5Personalize.tsx[0m:[93m126[0m:[93m21[0m - [91merror[0m[90m ts(2322): [0mType 'SceneConfig | undefined' is not assignable to type 'SceneConfig'.
+  Type 'undefined' is not assignable to type 'SceneConfig'.
+
+[7m126[0m       [next[index], next[newIndex]] = [next[newIndex], next[index]];
+[7m   [0m [91m                    ~~~~~~~~~~~~~~[0m
+[96msrc/components/editor/steps/Step5Personalize.tsx[0m:[93m126[0m:[93m8[0m - [91merror[0m[90m ts(2322): [0mType 'SceneConfig | undefined' is not assignable to type 'SceneConfig'.
+  Type 'undefined' is not assignable to type 'SceneConfig'.
+
+[7m126[0m       [next[index], next[newIndex]] = [next[newIndex], next[index]];
+[7m   [0m [91m       ~~~~~~~~~~~[0m
+[96msrc/components/editor/steps/Step5Personalize.tsx[0m:[93m92[0m:[93m70[0m - [91merror[0m[90m ts(2339): [0mProperty 'id' does not exist on type 'Omit<ProjectPhoto, "id" | "createdAt" | "projectId">'.
+
+[7m92[0m         return { layout: 'grid', photoIds: project.photos.map(p => p.id) };
+[7m  [0m [91m                                                                     ~~[0m
+[96msrc/components/editor/steps/Step5Personalize.tsx[0m:[93m92[0m:[93m44[0m - [91merror[0m[90m ts(18048): [0m'project.photos' is possibly 'undefined'.
+
+[7m92[0m         return { layout: 'grid', photoIds: project.photos.map(p => p.id) };
+[7m  [0m [91m                                           ~~~~~~~~~~~~~~[0m
+[96msrc/components/editor/steps/Step5Personalize.tsx[0m:[93m153[0m:[93m9[0m - [93mwarning[0m[90m ts(6133): [0m'handleScenesChange' is declared but its value is never read.
+
+[7m153[0m   const handleScenesChange = (newScenes: SceneConfig[]) => {
+[7m   [0m [93m        ~~~~~~~~~~~~~~~~~~[0m
+[96msrc/components/editor/steps/Step5Personalize.tsx[0m:[93m110[0m:[93m9[0m - [93mwarning[0m[90m ts(6133): [0m'reorderScenes' is declared but its value is never read.
+
+[7m110[0m   const reorderScenes = (sceneIds: string[]) => {
+[7m   [0m [93m        ~~~~~~~~~~~~~[0m
+[96msrc/components/editor/steps/Step5Personalize.tsx[0m:[93m45[0m:[93m5[0m - [93mwarning[0m[90m ts(6133): [0m'reorderCards' is declared but its value is never read.
+
+[7m45[0m     reorderCards,
+[7m  [0m [93m    ~~~~~~~~~~~~[0m
+[96msrc/components/editor/steps/Step5Personalize.tsx[0m:[93m44[0m:[93m5[0m - [93mwarning[0m[90m ts(6133): [0m'setCards' is declared but its value is never read.
+
+[7m44[0m     setCards,
+[7m  [0m [93m    ~~~~~~~~[0m
+[96msrc/components/editor/steps/Step5Personalize.tsx[0m:[93m43[0m:[93m5[0m - [93mwarning[0m[90m ts(6133): [0m'cards' is declared but its value is never read.
+
+[7m43[0m     cards,
+[7m  [0m [93m    ~~~~~[0m
+
+[96msrc/components/experience/BirthdayExperience.tsx[0m:[93m261[0m:[93m13[0m - [91merror[0m[90m ts(2375): [0mType '{ giftConfig: GiftRevealConfig | undefined; }' is not assignable to type '{ giftConfig?: GiftRevealConfig; }' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Types of property 'giftConfig' are incompatible.
+    Type 'GiftRevealConfig | undefined' is not assignable to type 'GiftRevealConfig'.
+      Type 'undefined' is not assignable to type 'GiftRevealConfig'.
+
+[7m261[0m             config={{ giftConfig: giftScene?.giftConfig }}
+[7m   [0m [91m            ~~~~~~[0m
+[96msrc/components/experience/BirthdayExperience.tsx[0m:[93m250[0m:[93m203[0m - [91merror[0m[90m ts(2353): [0mObject literal may only specify known properties, and 'gameType' does not exist in type 'CardConfig'.
+
+[7m250[0m             cards={[{ id: 'game' as any, type: cardType, title: gameType === 'memory-match' ? 'Memory Match' : gameType === 'roulette' ? 'Prize Roulette' : 'Surprise Quiz', enabled: true, sortOrder: 0, gameType: gameType as any }]}
+[7m   [0m [91m                                                                                                                                                                                                          ~~~~~~~~[0m
+[96msrc/components/experience/BirthdayExperience.tsx[0m:[93m191[0m:[93m13[0m - [91merror[0m[90m ts(2375): [0mType '{ chapters: StorybookChapter[] | undefined; }' is not assignable to type '{ chapters?: StorybookChapter[]; }' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Types of property 'chapters' are incompatible.
+    Type 'StorybookChapter[] | undefined' is not assignable to type 'StorybookChapter[]'.
+      Type 'undefined' is not assignable to type 'StorybookChapter[]'.
+
+[7m191[0m             config={{ chapters: storyScene?.chapters }}
+[7m   [0m [91m            ~~~~~~[0m
+[96msrc/components/experience/BirthdayExperience.tsx[0m:[93m173[0m:[93m14[0m - [91merror[0m[90m ts(2375): [0mType '{ project: BirthdayProject; confettiEnabled: boolean; reducedMotion: boolean; onComplete: () => void; candleCount: number | undefined; enableMicrophoneBlow: boolean | undefined; candleColors: string[] | undefined; }' is not assignable to type 'Props' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Types of property 'candleCount' are incompatible.
+    Type 'number | undefined' is not assignable to type 'number'.
+      Type 'undefined' is not assignable to type 'number'.
+
+[7m173[0m             <CakeCelebration
+[7m   [0m [91m             ~~~~~~~~~~~~~~~[0m
+[96msrc/components/experience/BirthdayExperience.tsx[0m:[93m154[0m:[93m113[0m - [91merror[0m[90m ts(2339): [0mProperty 'senderName' does not exist on type 'BirthdayProject'.
+
+[7m154[0m                   <p className='text-right font-medium' style={{ color: 'var(--color-text-primary)' }}>{project.senderName || 'Someone who cares'}</p>
+[7m   [0m [91m                                                                                                                ~~~~~~~~~~[0m
+[96msrc/components/experience/BirthdayExperience.tsx[0m:[93m107[0m:[93m6[0m - [91merror[0m[90m ts(2367): [0mThis comparison appears to be unintentional because the types 'ExperienceStage' and '"party"' have no overlap.
+
+[7m107[0m     (stage === 'party' || stage === 'celebration');
+[7m   [0m [91m     ~~~~~~~~~~~~~~~~~[0m
+[96msrc/components/experience/BirthdayExperience.tsx[0m:[93m105[0m:[93m28[0m - [91merror[0m[90m ts(2367): [0mThis comparison appears to be unintentional because the types '"storybook" | "gift-reveal" | "cake" | "photo-gallery" | "mini-game" | "celebration" | "entrance" | "cards" | "closing" | "complete"' and '"party"' have no overlap.
+
+[7m105[0m     (stage === 'letter' || stage === 'party' || stage === 'celebration');
+[7m   [0m [91m                           ~~~~~~~~~~~~~~~~~[0m
+[96msrc/components/experience/BirthdayExperience.tsx[0m:[93m72[0m:[93m16[0m - [91merror[0m[90m ts(2345): [0mArgument of type 'SceneType' is not assignable to parameter of type 'SetStateAction<ExperienceStage>'.
+  Type '"envelope"' is not assignable to type 'SetStateAction<ExperienceStage>'.
+
+[7m72[0m       setStage(nextScene.type);
+[7m  [0m [91m               ~~~~~~~~~~~~~~[0m
+[96msrc/components/experience/BirthdayExperience.tsx[0m:[93m60[0m:[93m9[0m - [93mwarning[0m[90m ts(6133): [0m'currentScene' is declared but its value is never read.
+
+[7m60[0m   const currentScene = enabledScenes[currentSceneIndex];
+[7m  [0m [93m        ~~~~~~~~~~~~[0m
+[96msrc/components/experience/BirthdayExperience.tsx[0m:[93m49[0m:[93m10[0m - [93mwarning[0m[90m ts(6133): [0m'letterVisible' is declared but its value is never read.
+
+[7m49[0m   const [letterVisible, setLetterVisible] = useState(false);
+[7m  [0m [93m         ~~~~~~~~~~~~~[0m
+[96msrc/components/experience/BirthdayExperience.tsx[0m:[93m48[0m:[93m10[0m - [93mwarning[0m[90m ts(6133): [0m'musicPlaying' is declared but its value is never read.
+
+[7m48[0m   const [musicPlaying, setMusicPlaying] = useState(false);
+[7m  [0m [93m         ~~~~~~~~~~~~[0m
+[96msrc/components/experience/BirthdayExperience.tsx[0m:[93m19[0m:[93m63[0m - [93mwarning[0m[90m ts(6196): [0m'SceneType' is declared but never used.
+
+[7m19[0m import type { ExperienceConfig, ExperienceStage, SceneConfig, SceneType } from '@/lib/experience/types';
+[7m  [0m [93m                                                              ~~~~~~~~~[0m
+[96msrc/components/experience/BirthdayExperience.tsx[0m:[93m19[0m:[93m50[0m - [93mwarning[0m[90m ts(6196): [0m'SceneConfig' is declared but never used.
+
+[7m19[0m import type { ExperienceConfig, ExperienceStage, SceneConfig, SceneType } from '@/lib/experience/types';
+[7m  [0m [93m                                                 ~~~~~~~~~~~[0m
+
+[96msrc/components/experience/CakeCelebration.tsx[0m:[93m225[0m:[93m49[0m - [91merror[0m[90m ts(2532): [0mObject is possibly 'undefined'.
+
+[7m225[0m                         boxShadow: '0 0 8px ' + candlePositions[i].color,
+[7m   [0m [91m                                                ~~~~~~~~~~~~~~~~~~[0m
+[96msrc/components/experience/CakeCelebration.tsx[0m:[93m224[0m:[93m42[0m - [91merror[0m[90m ts(2532): [0mObject is possibly 'undefined'.
+
+[7m224[0m                         backgroundColor: candlePositions[i].color,
+[7m   [0m [91m                                         ~~~~~~~~~~~~~~~~~~[0m
+[96msrc/components/experience/CakeCelebration.tsx[0m:[93m214[0m:[93m26[0m - [91merror[0m[90m ts(2532): [0mObject is possibly 'undefined'.
+
+[7m214[0m                     top: candlePositions[i].top,
+[7m   [0m [91m                         ~~~~~~~~~~~~~~~~~~[0m
+[96msrc/components/experience/CakeCelebration.tsx[0m:[93m213[0m:[93m27[0m - [91merror[0m[90m ts(2532): [0mObject is possibly 'undefined'.
+
+[7m213[0m                     left: candlePositions[i].left,
+[7m   [0m [91m                          ~~~~~~~~~~~~~~~~~~[0m
+[96msrc/components/experience/CakeCelebration.tsx[0m:[93m92[0m:[93m18[0m - [91merror[0m[90m ts(2532): [0mObject is possibly 'undefined'.
+
+[7m92[0m           sum += dataArray[i];
+[7m  [0m [91m                 ~~~~~~~~~~~~[0m
+[96msrc/components/experience/CakeCelebration.tsx[0m:[93m40[0m:[93m3[0m - [93mwarning[0m[90m ts(6133): [0m'confettiEnabled' is declared but its value is never read.
+
+[7m40[0m   confettiEnabled,
+[7m  [0m [93m  ~~~~~~~~~~~~~~~[0m
+
+[96msrc/components/experience/CountdownCard.tsx[0m:[93m32[0m:[93m9[0m - [93mwarning[0m[90m ts(6133): [0m'prefersReducedMotion' is declared but its value is never read.
+
+[7m32[0m   const prefersReducedMotion = reducedMotion;
+[7m  [0m [93m        ~~~~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/components/experience/ExperienceApp.tsx[0m:[93m25[0m:[93m10[0m - [93mwarning[0m[90m ts(6133): [0m'musicPlaying' is declared but its value is never read.
+
+[7m25[0m   const [musicPlaying, setMusicPlaying] = useState(false);
+[7m  [0m [93m         ~~~~~~~~~~~~[0m
+
+[96msrc/components/experience/MemoryGalleryCard.tsx[0m:[93m29[0m:[93m9[0m - [93mwarning[0m[90m ts(6133): [0m'prefersReducedMotion' is declared but its value is never read.
+
+[7m29[0m   const prefersReducedMotion = reducedMotion;
+[7m  [0m [93m        ~~~~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/components/experience/MemoryMatchCard.tsx[0m:[93m98[0m:[93m34[0m - [91merror[0m[90m ts(2538): [0mType 'undefined' cannot be used as an index type.
+
+[7m98[0m             next[i2] = { ...next[i2], flipped: false };
+[7m  [0m [91m                                 ~~[0m
+[96msrc/components/experience/MemoryMatchCard.tsx[0m:[93m98[0m:[93m18[0m - [91merror[0m[90m ts(2538): [0mType 'undefined' cannot be used as an index type.
+
+[7m98[0m             next[i2] = { ...next[i2], flipped: false };
+[7m  [0m [91m                 ~~[0m
+[96msrc/components/experience/MemoryMatchCard.tsx[0m:[93m97[0m:[93m34[0m - [91merror[0m[90m ts(2538): [0mType 'undefined' cannot be used as an index type.
+
+[7m97[0m             next[i1] = { ...next[i1], flipped: false };
+[7m  [0m [91m                                 ~~[0m
+[96msrc/components/experience/MemoryMatchCard.tsx[0m:[93m97[0m:[93m18[0m - [91merror[0m[90m ts(2538): [0mType 'undefined' cannot be used as an index type.
+
+[7m97[0m             next[i1] = { ...next[i1], flipped: false };
+[7m  [0m [91m                 ~~[0m
+[96msrc/components/experience/MemoryMatchCard.tsx[0m:[93m90[0m:[93m34[0m - [91merror[0m[90m ts(2538): [0mType 'undefined' cannot be used as an index type.
+
+[7m90[0m             next[i2] = { ...next[i2], matched: true, flipped: true };
+[7m  [0m [91m                                 ~~[0m
+[96msrc/components/experience/MemoryMatchCard.tsx[0m:[93m90[0m:[93m18[0m - [91merror[0m[90m ts(2538): [0mType 'undefined' cannot be used as an index type.
+
+[7m90[0m             next[i2] = { ...next[i2], matched: true, flipped: true };
+[7m  [0m [91m                 ~~[0m
+[96msrc/components/experience/MemoryMatchCard.tsx[0m:[93m89[0m:[93m34[0m - [91merror[0m[90m ts(2538): [0mType 'undefined' cannot be used as an index type.
+
+[7m89[0m             next[i1] = { ...next[i1], matched: true, flipped: true };
+[7m  [0m [91m                                 ~~[0m
+[96msrc/components/experience/MemoryMatchCard.tsx[0m:[93m89[0m:[93m18[0m - [91merror[0m[90m ts(2538): [0mType 'undefined' cannot be used as an index type.
+
+[7m89[0m             next[i1] = { ...next[i1], matched: true, flipped: true };
+[7m  [0m [91m                 ~~[0m
+[96msrc/components/experience/MemoryMatchCard.tsx[0m:[93m83[0m:[93m48[0m - [91merror[0m[90m ts(2538): [0mType 'undefined' cannot be used as an index type.
+
+[7m83[0m       const match = cards[i1].pairId === cards[i2].pairId;
+[7m  [0m [91m                                               ~~[0m
+[96msrc/components/experience/MemoryMatchCard.tsx[0m:[93m83[0m:[93m27[0m - [91merror[0m[90m ts(2538): [0mType 'undefined' cannot be used as an index type.
+
+[7m83[0m       const match = cards[i1].pairId === cards[i2].pairId;
+[7m  [0m [91m                          ~~[0m
+[96msrc/components/experience/MemoryMatchCard.tsx[0m:[93m72[0m:[93m7[0m - [91merror[0m[90m ts(2322): [0mType '{ flipped: true; id?: string; pairId?: string; label?: string; matched?: boolean; }' is not assignable to type '{ id: string; pairId: string; label: string; flipped: boolean; matched: boolean; }'.
+  Property 'id' is optional in type '{ flipped: true; id?: string; pairId?: string; label?: string; matched?: boolean; }' but required in type '{ id: string; pairId: string; label: string; flipped: boolean; matched: boolean; }'.
+
+[7m72[0m       next[index] = { ...next[index], flipped: true };
+[7m  [0m [91m      ~~~~~~~~~~~[0m
+[96msrc/components/experience/MemoryMatchCard.tsx[0m:[93m67[0m:[93m33[0m - [91merror[0m[90m ts(2532): [0mObject is possibly 'undefined'.
+
+[7m67[0m     if (cards[index].flipped || cards[index].matched) return;
+[7m  [0m [91m                                ~~~~~~~~~~~~[0m
+[96msrc/components/experience/MemoryMatchCard.tsx[0m:[93m67[0m:[93m9[0m - [91merror[0m[90m ts(2532): [0mObject is possibly 'undefined'.
+
+[7m67[0m     if (cards[index].flipped || cards[index].matched) return;
+[7m  [0m [91m        ~~~~~~~~~~~~[0m
+[96msrc/components/experience/MemoryMatchCard.tsx[0m:[93m31[0m:[93m19[0m - [91merror[0m[90m ts(2322): [0mType 'T | undefined' is not assignable to type 'T'.
+  'T' could be instantiated with an arbitrary type which could be unrelated to 'T | undefined'.
+
+[7m31[0m     [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+[7m  [0m [91m                  ~~~~~~~~~~~[0m
+[96msrc/components/experience/MemoryMatchCard.tsx[0m:[93m31[0m:[93m6[0m - [91merror[0m[90m ts(2322): [0mType 'T | undefined' is not assignable to type 'T'.
+  'T' could be instantiated with an arbitrary type which could be unrelated to 'T | undefined'.
+
+[7m31[0m     [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+[7m  [0m [91m     ~~~~~~~~~~~[0m
+
+[96msrc/components/experience/PhotoTimelineCard.tsx[0m:[93m31[0m:[93m9[0m - [93mwarning[0m[90m ts(6133): [0m'prefersReducedMotion' is declared but its value is never read.
+
+[7m31[0m   const prefersReducedMotion = reducedMotion;
+[7m  [0m [93m        ~~~~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/components/experience/PresentationCard.tsx[0m:[93m30[0m:[93m9[0m - [93mwarning[0m[90m ts(6133): [0m'prefersReducedMotion' is declared but its value is never read.
+
+[7m30[0m   const prefersReducedMotion = reducedMotion;
+[7m  [0m [93m        ~~~~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/components/experience/QuizCard.tsx[0m:[93m33[0m:[93m9[0m - [93mwarning[0m[90m ts(6133): [0m'prefersReducedMotion' is declared but its value is never read.
+
+[7m33[0m   const prefersReducedMotion = reducedMotion;
+[7m  [0m [93m        ~~~~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/components/experience/StorybookCard.tsx[0m:[93m84[0m:[93m25[0m - [91merror[0m[90m ts(2339): [0mProperty 'imageId' does not exist on type 'StorybookChapter | { id: any; title: string; text: string; }'.
+  Property 'imageId' does not exist on type '{ id: any; title: string; text: string; }'.
+
+[7m84[0m         {currentChapter.imageId && (
+[7m  [0m [91m                        ~~~~~~~[0m
+[96msrc/components/experience/StorybookCard.tsx[0m:[93m84[0m:[93m10[0m - [91merror[0m[90m ts(18048): [0m'currentChapter' is possibly 'undefined'.
+
+[7m84[0m         {currentChapter.imageId && (
+[7m  [0m [91m         ~~~~~~~~~~~~~~[0m
+[96msrc/components/experience/StorybookCard.tsx[0m:[93m82[0m:[93m134[0m - [91merror[0m[90m ts(18048): [0m'currentChapter' is possibly 'undefined'.
+
+[7m82[0m           <p className="text-body text-lg leading-relaxed" style={{ whiteSpace: 'pre-wrap', color: 'var(--color-text-secondary)' }}>{currentChapter.text}</p>
+[7m  [0m [91m                                                                                                                                     ~~~~~~~~~~~~~~[0m
+[96msrc/components/experience/StorybookCard.tsx[0m:[93m81[0m:[93m111[0m - [91merror[0m[90m ts(18048): [0m'currentChapter' is possibly 'undefined'.
+
+[7m81[0m           <h2 className="font-display text-xl font-bold mb-4" style={{ color: 'var(--color-text-primary)' }}>{currentChapter.title}</h2>
+[7m  [0m [91m                                                                                                              ~~~~~~~~~~~~~~[0m
+
+[96msrc/components/AuthMenu.astro[0m:[93m101[0m:[93m69[0m - [91merror[0m[90m ts(18047): [0m'menuBtn' is possibly 'null'.
+
+[7m101[0m if (t instanceof Node && !menuList.contains(t) && t !== menuBtn && !menuBtn.contains(t)) closeMenu();
+[7m   [0m [91m                                                                    ~~~~~~~[0m
+[96msrc/components/AuthMenu.astro[0m:[93m101[0m:[93m27[0m - [91merror[0m[90m ts(18047): [0m'menuList' is possibly 'null'.
+
+[7m101[0m if (t instanceof Node && !menuList.contains(t) && t !== menuBtn && !menuBtn.contains(t)) closeMenu();
+[7m   [0m [91m                          ~~~~~~~~[0m
+[96msrc/components/AuthMenu.astro[0m:[93m99[0m:[93m6[0m - [91merror[0m[90m ts(18047): [0m'menuList' is possibly 'null'.
+
+[7m99[0m if (!menuList.classList.contains('hidden')) {
+[7m  [0m [91m     ~~~~~~~~[0m
+[96msrc/components/AuthMenu.astro[0m:[93m96[0m:[93m1[0m - [91merror[0m[90m ts(18047): [0m'menuBtn' is possibly 'null'.
+
+[7m96[0m menuBtn.setAttribute('aria-expanded', 'true');
+[7m  [0m [91m~~~~~~~[0m
+[96msrc/components/AuthMenu.astro[0m:[93m95[0m:[93m1[0m - [91merror[0m[90m ts(18047): [0m'menuList' is possibly 'null'.
+
+[7m95[0m menuList.classList.remove('hidden');
+[7m  [0m [91m~~~~~~~~[0m
+[96msrc/components/AuthMenu.astro[0m:[93m93[0m:[93m15[0m - [91merror[0m[90m ts(18047): [0m'menuList' is possibly 'null'.
+
+[7m93[0m var isOpen = !menuList.classList.contains('hidden');
+[7m  [0m [91m              ~~~~~~~~[0m
+[96msrc/components/AuthMenu.astro[0m:[93m61[0m:[93m25[0m - [91merror[0m[90m ts(7006): [0mParameter 'email' implicitly has an 'any' type.
+
+[7m61[0m function initials(name, email) {
+[7m  [0m [91m                        ~~~~~[0m
+[96msrc/components/AuthMenu.astro[0m:[93m61[0m:[93m19[0m - [91merror[0m[90m ts(7006): [0mParameter 'name' implicitly has an 'any' type.
+
+[7m61[0m function initials(name, email) {
+[7m  [0m [91m                  ~~~~[0m
+
+[96msrc/pages/dashboard.astro[0m:[93m264[0m:[93m38[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'msg'.
+
+[7m264[0m if (errorEl) { errorEl.textContent = msg; errorEl.classList.remove('hidden'); }
+[7m   [0m [91m                                     ~~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m264[0m:[93m16[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'errorEl'.
+
+[7m264[0m if (errorEl) { errorEl.textContent = msg; errorEl.classList.remove('hidden'); }
+[7m   [0m [91m               ~~~~~~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m247[0m:[93m87[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'err'.
+
+[7m247[0m showError('Failed to load dashboard: ' + (err instanceof Error ? err.message : String(err)));
+[7m   [0m [91m                                                                                      ~~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m247[0m:[93m66[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'err'.
+
+[7m247[0m showError('Failed to load dashboard: ' + (err instanceof Error ? err.message : String(err)));
+[7m   [0m [91m                                                                 ~~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m247[0m:[93m43[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'err'.
+
+[7m247[0m showError('Failed to load dashboard: ' + (err instanceof Error ? err.message : String(err)));
+[7m   [0m [91m                                          ~~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m247[0m:[93m1[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'showError'.
+
+[7m247[0m showError('Failed to load dashboard: ' + (err instanceof Error ? err.message : String(err)));
+[7m   [0m [91m~~~~~~~~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m232[0m:[93m1[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'showLoading'.
+
+[7m232[0m showLoading();
+[7m   [0m [91m~~~~~~~~~~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m225[0m:[93m91[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'i'.
+
+[7m225[0m for (var i = 0; i < projects.length; i++) { if (projects[i].id === id) { found = projects[i]; break; } }
+[7m   [0m [91m                                                                                          ~[0m
+[96msrc/pages/dashboard.astro[0m:[93m225[0m:[93m82[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'projects'.
+
+[7m225[0m for (var i = 0; i < projects.length; i++) { if (projects[i].id === id) { found = projects[i]; break; } }
+[7m   [0m [91m                                                                                 ~~~~~~~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m225[0m:[93m74[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'found'.
+
+[7m225[0m for (var i = 0; i < projects.length; i++) { if (projects[i].id === id) { found = projects[i]; break; } }
+[7m   [0m [91m                                                                         ~~~~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m225[0m:[93m21[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'projects'.
+
+[7m225[0m for (var i = 0; i < projects.length; i++) { if (projects[i].id === id) { found = projects[i]; break; } }
+[7m   [0m [91m                    ~~~~~~~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m205[0m:[93m119[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'q'.
+
+[7m205[0m if (ph && typeof ph === 'object') { for (var q in ph) { if (Object.prototype.hasOwnProperty.call(ph, q)) { np[q] = ph[q]; } } }
+[7m   [0m [91m                                                                                                                      ~[0m
+[96msrc/pages/dashboard.astro[0m:[93m205[0m:[93m116[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'ph'.
+
+[7m205[0m if (ph && typeof ph === 'object') { for (var q in ph) { if (Object.prototype.hasOwnProperty.call(ph, q)) { np[q] = ph[q]; } } }
+[7m   [0m [91m                                                                                                                   ~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m205[0m:[93m111[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'q'.
+
+[7m205[0m if (ph && typeof ph === 'object') { for (var q in ph) { if (Object.prototype.hasOwnProperty.call(ph, q)) { np[q] = ph[q]; } } }
+[7m   [0m [91m                                                                                                              ~[0m
+[96msrc/pages/dashboard.astro[0m:[93m205[0m:[93m108[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'np'.
+
+[7m205[0m if (ph && typeof ph === 'object') { for (var q in ph) { if (Object.prototype.hasOwnProperty.call(ph, q)) { np[q] = ph[q]; } } }
+[7m   [0m [91m                                                                                                           ~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m198[0m:[93m94[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'key'.
+
+[7m198[0m for (var key in src) { if (Object.prototype.hasOwnProperty.call(src, key)) { copy[key] = src[key]; } }
+[7m   [0m [91m                                                                                             ~~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m198[0m:[93m90[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'src'.
+
+[7m198[0m for (var key in src) { if (Object.prototype.hasOwnProperty.call(src, key)) { copy[key] = src[key]; } }
+[7m   [0m [91m                                                                                         ~~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m198[0m:[93m83[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'key'.
+
+[7m198[0m for (var key in src) { if (Object.prototype.hasOwnProperty.call(src, key)) { copy[key] = src[key]; } }
+[7m   [0m [91m                                                                                  ~~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m198[0m:[93m78[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'copy'.
+
+[7m198[0m for (var key in src) { if (Object.prototype.hasOwnProperty.call(src, key)) { copy[key] = src[key]; } }
+[7m   [0m [91m                                                                             ~~~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m195[0m:[93m84[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'n'.
+
+[7m195[0m while (fresh.some(function (p) { return p.slug === slug; })) { slug = base + '-' + n; n++; }
+[7m   [0m [91m                                                                                   ~[0m
+[96msrc/pages/dashboard.astro[0m:[93m195[0m:[93m71[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'base'.
+
+[7m195[0m while (fresh.some(function (p) { return p.slug === slug; })) { slug = base + '-' + n; n++; }
+[7m   [0m [91m                                                                      ~~~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m195[0m:[93m64[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'slug'.
+
+[7m195[0m while (fresh.some(function (p) { return p.slug === slug; })) { slug = base + '-' + n; n++; }
+[7m   [0m [91m                                                               ~~~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m189[0m:[93m74[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'k'.
+
+[7m189[0m for (var k = 0; k < all.length; k++) { if (all[k].id === id) { src = all[k]; break; } }
+[7m   [0m [91m                                                                         ~[0m
+[96msrc/pages/dashboard.astro[0m:[93m189[0m:[93m70[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'all'.
+
+[7m189[0m for (var k = 0; k < all.length; k++) { if (all[k].id === id) { src = all[k]; break; } }
+[7m   [0m [91m                                                                     ~~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m189[0m:[93m64[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'src'.
+
+[7m189[0m for (var k = 0; k < all.length; k++) { if (all[k].id === id) { src = all[k]; break; } }
+[7m   [0m [91m                                                               ~~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m189[0m:[93m21[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'all'.
+
+[7m189[0m for (var k = 0; k < all.length; k++) { if (all[k].id === id) { src = all[k]; break; } }
+[7m   [0m [91m                    ~~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m182[0m:[93m59[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'btn'.
+
+[7m182[0m btn.addEventListener('click', function () { confirmDelete(btn.dataset.id); });
+[7m   [0m [91m                                                          ~~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m182[0m:[93m45[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'confirmDelete'.
+
+[7m182[0m btn.addEventListener('click', function () { confirmDelete(btn.dataset.id); });
+[7m   [0m [91m                                            ~~~~~~~~~~~~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m182[0m:[93m1[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'btn'.
+
+[7m182[0m btn.addEventListener('click', function () { confirmDelete(btn.dataset.id); });
+[7m   [0m [91m~~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m179[0m:[93m62[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'btn'.
+
+[7m179[0m btn.addEventListener('click', function () { duplicateProject(btn.dataset.id); });
+[7m   [0m [91m                                                             ~~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m179[0m:[93m45[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'duplicateProject'.
+
+[7m179[0m btn.addEventListener('click', function () { duplicateProject(btn.dataset.id); });
+[7m   [0m [91m                                            ~~~~~~~~~~~~~~~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m179[0m:[93m1[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'btn'.
+
+[7m179[0m btn.addEventListener('click', function () { duplicateProject(btn.dataset.id); });
+[7m   [0m [91m~~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m176[0m:[93m105[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'btn'.
+
+[7m176[0m btn.addEventListener('click', function () { window.location.href = '/create?edit=' + encodeURIComponent(btn.dataset.id); });
+[7m   [0m [91m                                                                                                        ~~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m176[0m:[93m1[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'btn'.
+
+[7m176[0m btn.addEventListener('click', function () { window.location.href = '/create?edit=' + encodeURIComponent(btn.dataset.id); });
+[7m   [0m [91m~~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m142[0m:[93m26[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'label'.
+
+[7m142[0m var b = map[status] || { label: status, cls: 'clay-badge-outline' };
+[7m   [0m [91m                         ~~~~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m140[0m:[93m13[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'label'.
+
+[7m140[0m archived: { label: 'Archived', cls: 'clay-badge-warning' },
+[7m   [0m [91m            ~~~~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m139[0m:[93m14[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'label'.
+
+[7m139[0m published: { label: 'Published', cls: 'clay-badge-success' },
+[7m   [0m [91m             ~~~~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m138[0m:[93m10[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'label'.
+
+[7m138[0m draft: { label: 'Draft', cls: 'clay-badge-outline' },
+[7m   [0m [91m         ~~~~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m138[0m:[93m1[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'draft'.
+
+[7m138[0m draft: { label: 'Draft', cls: 'clay-badge-outline' },
+[7m   [0m [91m~~~~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m132[0m:[93m55[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'year'.
+
+[7m132[0m return new Date(then).toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' });
+[7m   [0m [91m                                                      ~~~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m106[0m:[93m65[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'list'.
+
+[7m106[0m window.localStorage.setItem('bp_projects_index', JSON.stringify(list));
+[7m   [0m [91m                                                                ~~~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m64[0m:[93m1[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'USER_PROFILE'.
+
+[7m64[0m USER_PROFILE: 'bp_user_profile',
+[7m  [0m [91m~~~~~~~~~~~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m278[0m:[93m3[0m - [91merror[0m[90m ts(17002): [0mExpected corresponding JSX closing tag for 'div'.
+
+[7m278[0m </BaseLayout>
+[7m   [0m [91m  ~~~~~~~~~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m276[0m:[93m1[0m - [91merror[0m[90m ts(1381): [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m276[0m })();
+[7m   [0m [91m~[0m
+[96msrc/pages/dashboard.astro[0m:[93m272[0m:[93m1[0m - [91merror[0m[90m ts(1381): [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m272[0m }
+[7m   [0m [91m~[0m
+[96msrc/pages/dashboard.astro[0m:[93m268[0m:[93m1[0m - [91merror[0m[90m ts(1109): [0mExpression expected.
+
+[7m268[0m return String(str).toLowerCase().trim()
+[7m   [0m [91m~~~~~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m265[0m:[93m1[0m - [91merror[0m[90m ts(1381): [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m265[0m }
+[7m   [0m [91m~[0m
+[96msrc/pages/dashboard.astro[0m:[93m264[0m:[93m79[0m - [91merror[0m[90m ts(1381): [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m264[0m if (errorEl) { errorEl.textContent = msg; errorEl.classList.remove('hidden'); }
+[7m   [0m [91m                                                                              ~[0m
+[96msrc/pages/dashboard.astro[0m:[93m264[0m:[93m41[0m - [91merror[0m[90m ts(1005): [0m'}' expected.
+
+[7m264[0m if (errorEl) { errorEl.textContent = msg; errorEl.classList.remove('hidden'); }
+[7m   [0m [91m                                        ~[0m
+[96msrc/pages/dashboard.astro[0m:[93m260[0m:[93m1[0m - [91merror[0m[90m ts(1109): [0mExpression expected.
+
+[7m260[0m if (loadingEl) loadingEl.classList.add('hidden');
+[7m   [0m [91m~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m257[0m:[93m1[0m - [91merror[0m[90m ts(1381): [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m257[0m }
+[7m   [0m [91m~[0m
+[96msrc/pages/dashboard.astro[0m:[93m252[0m:[93m1[0m - [91merror[0m[90m ts(1109): [0mExpression expected.
+
+[7m252[0m if (loadingEl) loadingEl.classList.remove('hidden');
+[7m   [0m [91m~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m249[0m:[93m1[0m - [91merror[0m[90m ts(1381): [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m249[0m }
+[7m   [0m [91m~[0m
+[96msrc/pages/dashboard.astro[0m:[93m248[0m:[93m1[0m - [91merror[0m[90m ts(1381): [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m248[0m }
+[7m   [0m [91m~[0m
+[96msrc/pages/dashboard.astro[0m:[93m247[0m:[93m93[0m - [91merror[0m[90m ts(1005): [0m'}' expected.
+
+[7m247[0m showError('Failed to load dashboard: ' + (err instanceof Error ? err.message : String(err)));
+[7m   [0m [91m                                                                                            ~[0m
+[96msrc/pages/dashboard.astro[0m:[93m246[0m:[93m1[0m - [91merror[0m[90m ts(1381): [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m246[0m } catch (err) {
+[7m   [0m [91m~[0m
+[96msrc/pages/dashboard.astro[0m:[93m245[0m:[93m70[0m - [91merror[0m[90m ts(1382): [0mUnexpected token. Did you mean `{'>'}` or `&gt;`?
+
+[7m245[0m if (quotaEl) quotaEl.classList.toggle('hidden', !user || mine.length >= 3);
+[7m   [0m [91m                                                                     ~[0m
+[96msrc/pages/dashboard.astro[0m:[93m241[0m:[93m61[0m - [91merror[0m[90m ts(1382): [0mUnexpected token. Did you mean `{'>'}` or `&gt;`?
+
+[7m241[0m if (emptyEl) emptyEl.classList.toggle('hidden', mine.length > 0);
+[7m   [0m [91m                                                            ~[0m
+[96msrc/pages/dashboard.astro[0m:[93m237[0m:[93m79[0m - [91merror[0m[90m ts(1381): [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m237[0m var mine = user ? projects.filter(function (p) { return p.userId === user.id; }) : [];
+[7m   [0m [91m                                                                              ~[0m
+[96msrc/pages/dashboard.astro[0m:[93m237[0m:[93m50[0m - [91merror[0m[90m ts(1109): [0mExpression expected.
+
+[7m237[0m var mine = user ? projects.filter(function (p) { return p.userId === user.id; }) : [];
+[7m   [0m [91m                                                 ~~~~~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m234[0m:[93m1[0m - [91merror[0m[90m ts(1109): [0mExpression expected.
+
+[7m234[0m var user = readProfile();
+[7m   [0m [91m~~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m232[0m:[93m14[0m - [91merror[0m[90m ts(1005): [0m'}' expected.
+
+[7m232[0m showLoading();
+[7m   [0m [91m             ~[0m
+[96msrc/pages/dashboard.astro[0m:[93m230[0m:[93m1[0m - [91merror[0m[90m ts(1381): [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m230[0m }
+[7m   [0m [91m~[0m
+[96msrc/pages/dashboard.astro[0m:[93m228[0m:[93m88[0m - [91merror[0m[90m ts(1381): [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m228[0m writeProjects(readJSON('projects_index', []).filter(function (p) { return p.id !== id; }));
+[7m   [0m [91m                                                                                       ~[0m
+[96msrc/pages/dashboard.astro[0m:[93m228[0m:[93m68[0m - [91merror[0m[90m ts(1109): [0mExpression expected.
+
+[7m228[0m writeProjects(readJSON('projects_index', []).filter(function (p) { return p.id !== id; }));
+[7m   [0m [91m                                                                   ~~~~~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m225[0m:[93m104[0m - [91merror[0m[90m ts(1381): [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m225[0m for (var i = 0; i < projects.length; i++) { if (projects[i].id === id) { found = projects[i]; break; } }
+[7m   [0m [91m                                                                                                       ~[0m
+[96msrc/pages/dashboard.astro[0m:[93m225[0m:[93m102[0m - [91merror[0m[90m ts(1381): [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m225[0m for (var i = 0; i < projects.length; i++) { if (projects[i].id === id) { found = projects[i]; break; } }
+[7m   [0m [91m                                                                                                     ~[0m
+[96msrc/pages/dashboard.astro[0m:[93m225[0m:[93m93[0m - [91merror[0m[90m ts(1005): [0m'}' expected.
+
+[7m225[0m for (var i = 0; i < projects.length; i++) { if (projects[i].id === id) { found = projects[i]; break; } }
+[7m   [0m [91m                                                                                            ~[0m
+[96msrc/pages/dashboard.astro[0m:[93m225[0m:[93m45[0m - [91merror[0m[90m ts(1109): [0mExpression expected.
+
+[7m225[0m for (var i = 0; i < projects.length; i++) { if (projects[i].id === id) { found = projects[i]; break; } }
+[7m   [0m [91m                                            ~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m225[0m:[93m36[0m - [91merror[0m[90m ts(1003): [0mIdentifier expected.
+
+[7m225[0m for (var i = 0; i < projects.length; i++) { if (projects[i].id === id) { found = projects[i]; break; } }
+[7m   [0m [91m                                   ~[0m
+[96msrc/pages/dashboard.astro[0m:[93m223[0m:[93m1[0m - [91merror[0m[90m ts(1109): [0mExpression expected.
+
+[7m223[0m var projects = readJSON('projects_index', []);
+[7m   [0m [91m~~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m220[0m:[93m1[0m - [91merror[0m[90m ts(1381): [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m220[0m }
+[7m   [0m [91m~[0m
+[96msrc/pages/dashboard.astro[0m:[93m211[0m:[93m1[0m - [91merror[0m[90m ts(1381): [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m211[0m }) : [];
+[7m   [0m [91m~[0m
+[96msrc/pages/dashboard.astro[0m:[93m205[0m:[93m127[0m - [91merror[0m[90m ts(1381): [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m205[0m if (ph && typeof ph === 'object') { for (var q in ph) { if (Object.prototype.hasOwnProperty.call(ph, q)) { np[q] = ph[q]; } } }
+[7m   [0m [91m                                                                                                                              ~[0m
+[96msrc/pages/dashboard.astro[0m:[93m205[0m:[93m125[0m - [91merror[0m[90m ts(1381): [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m205[0m if (ph && typeof ph === 'object') { for (var q in ph) { if (Object.prototype.hasOwnProperty.call(ph, q)) { np[q] = ph[q]; } } }
+[7m   [0m [91m                                                                                                                            ~[0m
+[96msrc/pages/dashboard.astro[0m:[93m205[0m:[93m123[0m - [91merror[0m[90m ts(1381): [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m205[0m if (ph && typeof ph === 'object') { for (var q in ph) { if (Object.prototype.hasOwnProperty.call(ph, q)) { np[q] = ph[q]; } } }
+[7m   [0m [91m                                                                                                                          ~[0m
+[96msrc/pages/dashboard.astro[0m:[93m205[0m:[93m121[0m - [91merror[0m[90m ts(1005): [0m'}' expected.
+
+[7m205[0m if (ph && typeof ph === 'object') { for (var q in ph) { if (Object.prototype.hasOwnProperty.call(ph, q)) { np[q] = ph[q]; } } }
+[7m   [0m [91m                                                                                                                        ~[0m
+[96msrc/pages/dashboard.astro[0m:[93m205[0m:[93m57[0m - [91merror[0m[90m ts(1109): [0mExpression expected.
+
+[7m205[0m if (ph && typeof ph === 'object') { for (var q in ph) { if (Object.prototype.hasOwnProperty.call(ph, q)) { np[q] = ph[q]; } } }
+[7m   [0m [91m                                                        ~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m205[0m:[93m37[0m - [91merror[0m[90m ts(1109): [0mExpression expected.
+
+[7m205[0m if (ph && typeof ph === 'object') { for (var q in ph) { if (Object.prototype.hasOwnProperty.call(ph, q)) { np[q] = ph[q]; } } }
+[7m   [0m [91m                                    ~~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m204[0m:[93m1[0m - [91merror[0m[90m ts(1109): [0mExpression expected.
+
+[7m204[0m var np = {};
+[7m   [0m [91m~~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m198[0m:[93m102[0m - [91merror[0m[90m ts(1381): [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m198[0m for (var key in src) { if (Object.prototype.hasOwnProperty.call(src, key)) { copy[key] = src[key]; } }
+[7m   [0m [91m                                                                                                     ~[0m
+[96msrc/pages/dashboard.astro[0m:[93m198[0m:[93m100[0m - [91merror[0m[90m ts(1381): [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m198[0m for (var key in src) { if (Object.prototype.hasOwnProperty.call(src, key)) { copy[key] = src[key]; } }
+[7m   [0m [91m                                                                                                   ~[0m
+[96msrc/pages/dashboard.astro[0m:[93m198[0m:[93m98[0m - [91merror[0m[90m ts(1005): [0m'}' expected.
+
+[7m198[0m for (var key in src) { if (Object.prototype.hasOwnProperty.call(src, key)) { copy[key] = src[key]; } }
+[7m   [0m [91m                                                                                                 ~[0m
+[96msrc/pages/dashboard.astro[0m:[93m198[0m:[93m24[0m - [91merror[0m[90m ts(1109): [0mExpression expected.
+
+[7m198[0m for (var key in src) { if (Object.prototype.hasOwnProperty.call(src, key)) { copy[key] = src[key]; } }
+[7m   [0m [91m                       ~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m195[0m:[93m92[0m - [91merror[0m[90m ts(1381): [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m195[0m while (fresh.some(function (p) { return p.slug === slug; })) { slug = base + '-' + n; n++; }
+[7m   [0m [91m                                                                                           ~[0m
+[96msrc/pages/dashboard.astro[0m:[93m195[0m:[93m85[0m - [91merror[0m[90m ts(1005): [0m'}' expected.
+
+[7m195[0m while (fresh.some(function (p) { return p.slug === slug; })) { slug = base + '-' + n; n++; }
+[7m   [0m [91m                                                                                    ~[0m
+[96msrc/pages/dashboard.astro[0m:[93m195[0m:[93m58[0m - [91merror[0m[90m ts(1381): [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m195[0m while (fresh.some(function (p) { return p.slug === slug; })) { slug = base + '-' + n; n++; }
+[7m   [0m [91m                                                         ~[0m
+[96msrc/pages/dashboard.astro[0m:[93m195[0m:[93m34[0m - [91merror[0m[90m ts(1109): [0mExpression expected.
+
+[7m195[0m while (fresh.some(function (p) { return p.slug === slug; })) { slug = base + '-' + n; n++; }
+[7m   [0m [91m                                 ~~~~~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m189[0m:[93m87[0m - [91merror[0m[90m ts(1381): [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m189[0m for (var k = 0; k < all.length; k++) { if (all[k].id === id) { src = all[k]; break; } }
+[7m   [0m [91m                                                                                      ~[0m
+[96msrc/pages/dashboard.astro[0m:[93m189[0m:[93m85[0m - [91merror[0m[90m ts(1381): [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m189[0m for (var k = 0; k < all.length; k++) { if (all[k].id === id) { src = all[k]; break; } }
+[7m   [0m [91m                                                                                    ~[0m
+[96msrc/pages/dashboard.astro[0m:[93m189[0m:[93m76[0m - [91merror[0m[90m ts(1005): [0m'}' expected.
+
+[7m189[0m for (var k = 0; k < all.length; k++) { if (all[k].id === id) { src = all[k]; break; } }
+[7m   [0m [91m                                                                           ~[0m
+[96msrc/pages/dashboard.astro[0m:[93m189[0m:[93m40[0m - [91merror[0m[90m ts(1109): [0mExpression expected.
+
+[7m189[0m for (var k = 0; k < all.length; k++) { if (all[k].id === id) { src = all[k]; break; } }
+[7m   [0m [91m                                       ~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m189[0m:[93m31[0m - [91merror[0m[90m ts(1003): [0mIdentifier expected.
+
+[7m189[0m for (var k = 0; k < all.length; k++) { if (all[k].id === id) { src = all[k]; break; } }
+[7m   [0m [91m                              ~[0m
+[96msrc/pages/dashboard.astro[0m:[93m187[0m:[93m1[0m - [91merror[0m[90m ts(1109): [0mExpression expected.
+
+[7m187[0m var all = readJSON('projects_index', []);
+[7m   [0m [91m~~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m184[0m:[93m1[0m - [91merror[0m[90m ts(1381): [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m184[0m }
+[7m   [0m [91m~[0m
+[96msrc/pages/dashboard.astro[0m:[93m183[0m:[93m1[0m - [91merror[0m[90m ts(1381): [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m183[0m });
+[7m   [0m [91m~[0m
+[96msrc/pages/dashboard.astro[0m:[93m182[0m:[93m78[0m - [91merror[0m[90m ts(1005): [0m'}' expected.
+
+[7m182[0m btn.addEventListener('click', function () { confirmDelete(btn.dataset.id); });
+[7m   [0m [91m                                                                             ~[0m
+[96msrc/pages/dashboard.astro[0m:[93m180[0m:[93m1[0m - [91merror[0m[90m ts(1381): [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m180[0m });
+[7m   [0m [91m~[0m
+[96msrc/pages/dashboard.astro[0m:[93m179[0m:[93m81[0m - [91merror[0m[90m ts(1005): [0m'}' expected.
+
+[7m179[0m btn.addEventListener('click', function () { duplicateProject(btn.dataset.id); });
+[7m   [0m [91m                                                                                ~[0m
+[96msrc/pages/dashboard.astro[0m:[93m177[0m:[93m1[0m - [91merror[0m[90m ts(1381): [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m177[0m });
+[7m   [0m [91m~[0m
+[96msrc/pages/dashboard.astro[0m:[93m176[0m:[93m124[0m - [91merror[0m[90m ts(1005): [0m'}' expected.
+
+[7m176[0m btn.addEventListener('click', function () { window.location.href = '/create?edit=' + encodeURIComponent(btn.dataset.id); });
+[7m   [0m [91m                                                                                                                           ~[0m
+[96msrc/pages/dashboard.astro[0m:[93m173[0m:[93m1[0m - [91merror[0m[90m ts(1109): [0mExpression expected.
+
+[7m173[0m if (!grid) return;
+[7m   [0m [91m~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m170[0m:[93m1[0m - [91merror[0m[90m ts(1381): [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m170[0m }
+[7m   [0m [91m~[0m
+[96msrc/pages/dashboard.astro[0m:[93m147[0m:[93m1[0m - [91merror[0m[90m ts(1109): [0mExpression expected.
+
+[7m147[0m var updated = (typeof formatRelative === 'function') ? formatRelative(p.updatedAt) : '';
+[7m   [0m [91m~~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m144[0m:[93m1[0m - [91merror[0m[90m ts(1381): [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m144[0m }
+[7m   [0m [91m~[0m
+[96msrc/pages/dashboard.astro[0m:[93m142[0m:[93m67[0m - [91merror[0m[90m ts(1381): [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m142[0m var b = map[status] || { label: status, cls: 'clay-badge-outline' };
+[7m   [0m [91m                                                                  ~[0m
+[96msrc/pages/dashboard.astro[0m:[93m142[0m:[93m31[0m - [91merror[0m[90m ts(1005): [0m'}' expected.
+
+[7m142[0m var b = map[status] || { label: status, cls: 'clay-badge-outline' };
+[7m   [0m [91m                              ~[0m
+[96msrc/pages/dashboard.astro[0m:[93m141[0m:[93m1[0m - [91merror[0m[90m ts(1381): [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m141[0m };
+[7m   [0m [91m~[0m
+[96msrc/pages/dashboard.astro[0m:[93m140[0m:[93m58[0m - [91merror[0m[90m ts(1381): [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m140[0m archived: { label: 'Archived', cls: 'clay-badge-warning' },
+[7m   [0m [91m                                                         ~[0m
+[96msrc/pages/dashboard.astro[0m:[93m140[0m:[93m18[0m - [91merror[0m[90m ts(1005): [0m'}' expected.
+
+[7m140[0m archived: { label: 'Archived', cls: 'clay-badge-warning' },
+[7m   [0m [91m                 ~[0m
+[96msrc/pages/dashboard.astro[0m:[93m139[0m:[93m60[0m - [91merror[0m[90m ts(1381): [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m139[0m published: { label: 'Published', cls: 'clay-badge-success' },
+[7m   [0m [91m                                                           ~[0m
+[96msrc/pages/dashboard.astro[0m:[93m139[0m:[93m19[0m - [91merror[0m[90m ts(1005): [0m'}' expected.
+
+[7m139[0m published: { label: 'Published', cls: 'clay-badge-success' },
+[7m   [0m [91m                  ~[0m
+[96msrc/pages/dashboard.astro[0m:[93m138[0m:[93m52[0m - [91merror[0m[90m ts(1381): [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m138[0m draft: { label: 'Draft', cls: 'clay-badge-outline' },
+[7m   [0m [91m                                                   ~[0m
+[96msrc/pages/dashboard.astro[0m:[93m138[0m:[93m15[0m - [91merror[0m[90m ts(1005): [0m'}' expected.
+
+[7m138[0m draft: { label: 'Draft', cls: 'clay-badge-outline' },
+[7m   [0m [91m              ~[0m
+[96msrc/pages/dashboard.astro[0m:[93m138[0m:[93m6[0m - [91merror[0m[90m ts(1005): [0m'}' expected.
+
+[7m138[0m draft: { label: 'Draft', cls: 'clay-badge-outline' },
+[7m   [0m [91m     ~[0m
+[96msrc/pages/dashboard.astro[0m:[93m137[0m:[93m1[0m - [91merror[0m[90m ts(1109): [0mExpression expected.
+
+[7m137[0m var map = {
+[7m   [0m [91m~~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m134[0m:[93m1[0m - [91merror[0m[90m ts(1381): [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m134[0m }
+[7m   [0m [91m~[0m
+[96msrc/pages/dashboard.astro[0m:[93m133[0m:[93m33[0m - [91merror[0m[90m ts(1381): [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m133[0m } catch (e) { return 'Unknown'; }
+[7m   [0m [91m                                ~[0m
+[96msrc/pages/dashboard.astro[0m:[93m133[0m:[93m15[0m - [91merror[0m[90m ts(1109): [0mExpression expected.
+
+[7m133[0m } catch (e) { return 'Unknown'; }
+[7m   [0m [91m              ~~~~~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m133[0m:[93m1[0m - [91merror[0m[90m ts(1381): [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m133[0m } catch (e) { return 'Unknown'; }
+[7m   [0m [91m~[0m
+[96msrc/pages/dashboard.astro[0m:[93m132[0m:[93m103[0m - [91merror[0m[90m ts(1381): [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m132[0m return new Date(then).toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' });
+[7m   [0m [91m                                                                                                      ~[0m
+[96msrc/pages/dashboard.astro[0m:[93m132[0m:[93m59[0m - [91merror[0m[90m ts(1005): [0m'}' expected.
+
+[7m132[0m return new Date(then).toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' });
+[7m   [0m [91m                                                          ~[0m
+[96msrc/pages/dashboard.astro[0m:[93m132[0m:[93m1[0m - [91merror[0m[90m ts(1109): [0mExpression expected.
+
+[7m132[0m return new Date(then).toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' });
+[7m   [0m [91m~~~~~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m130[0m:[93m12[0m - [91merror[0m[90m ts(1003): [0mIdentifier expected.
+
+[7m130[0m if (diff < 7 * d) return Math.floor(diff / d) + 'd ago';
+[7m   [0m [91m           ~[0m
+[96msrc/pages/dashboard.astro[0m:[93m129[0m:[93m13[0m - [91merror[0m[90m ts(1003): [0mIdentifier expected.
+
+[7m129[0m if (diff < d) return Math.floor(diff / h) + 'h ago';
+[7m   [0m [91m            ~[0m
+[96msrc/pages/dashboard.astro[0m:[93m128[0m:[93m13[0m - [91merror[0m[90m ts(1003): [0mIdentifier expected.
+
+[7m128[0m if (diff < h) return Math.floor(diff / 60000) + 'm ago';
+[7m   [0m [91m            ~[0m
+[96msrc/pages/dashboard.astro[0m:[93m127[0m:[93m13[0m - [91merror[0m[90m ts(1003): [0mIdentifier expected.
+
+[7m127[0m if (diff < m) return 'Just now';
+[7m   [0m [91m            ~[0m
+[96msrc/pages/dashboard.astro[0m:[93m122[0m:[93m1[0m - [91merror[0m[90m ts(1109): [0mExpression expected.
+
+[7m122[0m if (!iso) return 'Unknown';
+[7m   [0m [91m~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m119[0m:[93m1[0m - [91merror[0m[90m ts(1381): [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m119[0m }
+[7m   [0m [91m~[0m
+[96msrc/pages/dashboard.astro[0m:[93m117[0m:[93m1[0m - [91merror[0m[90m ts(1381): [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m117[0m };
+[7m   [0m [91m~[0m
+[96msrc/pages/dashboard.astro[0m:[93m113[0m:[93m18[0m - [91merror[0m[90m ts(1005): [0m'}' expected.
+
+[7m113[0m 'lavender-parade': 'Lavender Parade',
+[7m   [0m [91m                 ~[0m
+[96msrc/pages/dashboard.astro[0m:[93m112[0m:[93m1[0m - [91merror[0m[90m ts(1109): [0mExpression expected.
+
+[7m112[0m var map = {
+[7m   [0m [91m~~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m109[0m:[93m1[0m - [91merror[0m[90m ts(1381): [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m109[0m }
+[7m   [0m [91m~[0m
+[96msrc/pages/dashboard.astro[0m:[93m108[0m:[93m29[0m - [91merror[0m[90m ts(1381): [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m108[0m } catch (e) { return false; }
+[7m   [0m [91m                            ~[0m
+[96msrc/pages/dashboard.astro[0m:[93m108[0m:[93m15[0m - [91merror[0m[90m ts(1109): [0mExpression expected.
+
+[7m108[0m } catch (e) { return false; }
+[7m   [0m [91m              ~~~~~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m108[0m:[93m1[0m - [91merror[0m[90m ts(1381): [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m108[0m } catch (e) { return false; }
+[7m   [0m [91m~[0m
+[96msrc/pages/dashboard.astro[0m:[93m106[0m:[93m71[0m - [91merror[0m[90m ts(1005): [0m'}' expected.
+
+[7m106[0m window.localStorage.setItem('bp_projects_index', JSON.stringify(list));
+[7m   [0m [91m                                                                      ~[0m
+[96msrc/pages/dashboard.astro[0m:[93m105[0m:[93m1[0m - [91merror[0m[90m ts(1109): [0mExpression expected.
+
+[7m105[0m try {
+[7m   [0m [91m~~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m102[0m:[93m1[0m - [91merror[0m[90m ts(1381): [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m102[0m }
+[7m   [0m [91m~[0m
+[96msrc/pages/dashboard.astro[0m:[93m100[0m:[93m1[0m - [91merror[0m[90m ts(1109): [0mExpression expected.
+
+[7m100[0m var idx = safeJSON(window.localStorage.getItem('bp_projects_index'));
+[7m   [0m [91m~~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m97[0m:[93m1[0m - [91merror[0m[90m ts(1381): [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m97[0m }
+[7m  [0m [91m~[0m
+[96msrc/pages/dashboard.astro[0m:[93m96[0m:[93m28[0m - [91merror[0m[90m ts(1381): [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m96[0m } catch (e) { return null; }
+[7m  [0m [91m                           ~[0m
+[96msrc/pages/dashboard.astro[0m:[93m96[0m:[93m15[0m - [91merror[0m[90m ts(1109): [0mExpression expected.
+
+[7m96[0m } catch (e) { return null; }
+[7m  [0m [91m              ~~~~~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m96[0m:[93m1[0m - [91merror[0m[90m ts(1381): [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m96[0m } catch (e) { return null; }
+[7m  [0m [91m~[0m
+[96msrc/pages/dashboard.astro[0m:[93m92[0m:[93m1[0m - [91merror[0m[90m ts(1109): [0mExpression expected.
+
+[7m92[0m var raw = window.localStorage.getItem('bp_user_profile');
+[7m  [0m [91m~~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m91[0m:[93m1[0m - [91merror[0m[90m ts(1109): [0mExpression expected.
+
+[7m91[0m try {
+[7m  [0m [91m~~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m88[0m:[93m54[0m - [91merror[0m[90m ts(1381): [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m88[0m function nowISO() { return new Date().toISOString(); }
+[7m  [0m [91m                                                     ~[0m
+[96msrc/pages/dashboard.astro[0m:[93m88[0m:[93m21[0m - [91merror[0m[90m ts(1109): [0mExpression expected.
+
+[7m88[0m function nowISO() { return new Date().toISOString(); }
+[7m  [0m [91m                    ~~~~~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m86[0m:[93m1[0m - [91merror[0m[90m ts(1381): [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m86[0m }
+[7m  [0m [91m~[0m
+[96msrc/pages/dashboard.astro[0m:[93m85[0m:[93m1[0m - [91merror[0m[90m ts(1381): [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m85[0m });
+[7m  [0m [91m~[0m
+[96msrc/pages/dashboard.astro[0m:[93m82[0m:[93m1[0m - [91merror[0m[90m ts(1109): [0mExpression expected.
+
+[7m82[0m var r = Math.random() * 16 | 0;
+[7m  [0m [91m~~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m80[0m:[93m1[0m - [91merror[0m[90m ts(1109): [0mExpression expected.
+
+[7m80[0m if (window.crypto && window.crypto.randomUUID) return window.crypto.randomUUID();
+[7m  [0m [91m~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m77[0m:[93m1[0m - [91merror[0m[90m ts(1381): [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m77[0m }
+[7m  [0m [91m~[0m
+[96msrc/pages/dashboard.astro[0m:[93m76[0m:[93m58[0m - [91merror[0m[90m ts(1381): [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m76[0m try { return JSON.parse(val); } catch (e) { return null; }
+[7m  [0m [91m                                                         ~[0m
+[96msrc/pages/dashboard.astro[0m:[93m76[0m:[93m45[0m - [91merror[0m[90m ts(1109): [0mExpression expected.
+
+[7m76[0m try { return JSON.parse(val); } catch (e) { return null; }
+[7m  [0m [91m                                            ~~~~~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m76[0m:[93m31[0m - [91merror[0m[90m ts(1381): [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m76[0m try { return JSON.parse(val); } catch (e) { return null; }
+[7m  [0m [91m                              ~[0m
+[96msrc/pages/dashboard.astro[0m:[93m76[0m:[93m7[0m - [91merror[0m[90m ts(1109): [0mExpression expected.
+
+[7m76[0m try { return JSON.parse(val); } catch (e) { return null; }
+[7m  [0m [91m      ~~~~~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m76[0m:[93m1[0m - [91merror[0m[90m ts(1109): [0mExpression expected.
+
+[7m76[0m try { return JSON.parse(val); } catch (e) { return null; }
+[7m  [0m [91m~~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m73[0m:[93m1[0m - [91merror[0m[90m ts(1381): [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m73[0m }
+[7m  [0m [91m~[0m
+[96msrc/pages/dashboard.astro[0m:[93m72[0m:[93m32[0m - [91merror[0m[90m ts(1381): [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m72[0m } catch (e) { return fallback; }
+[7m  [0m [91m                               ~[0m
+[96msrc/pages/dashboard.astro[0m:[93m72[0m:[93m15[0m - [91merror[0m[90m ts(1109): [0mExpression expected.
+
+[7m72[0m } catch (e) { return fallback; }
+[7m  [0m [91m              ~~~~~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m72[0m:[93m1[0m - [91merror[0m[90m ts(1381): [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m72[0m } catch (e) { return fallback; }
+[7m  [0m [91m~[0m
+[96msrc/pages/dashboard.astro[0m:[93m70[0m:[93m1[0m - [91merror[0m[90m ts(1109): [0mExpression expected.
+
+[7m70[0m var raw = window.localStorage.getItem('bp_' + key);
+[7m  [0m [91m~~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m69[0m:[93m1[0m - [91merror[0m[90m ts(1109): [0mExpression expected.
+
+[7m69[0m try {
+[7m  [0m [91m~~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m66[0m:[93m1[0m - [91merror[0m[90m ts(1381): [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m66[0m };
+[7m  [0m [91m~[0m
+[96msrc/pages/dashboard.astro[0m:[93m64[0m:[93m13[0m - [91merror[0m[90m ts(1005): [0m'}' expected.
+
+[7m64[0m USER_PROFILE: 'bp_user_profile',
+[7m  [0m [91m            ~[0m
+[96msrc/pages/dashboard.astro[0m:[93m54[0m:[93m1[0m - [91merror[0m[90m ts(1109): [0mExpression expected.
+
+[7m54[0m var grid = document.getElementById('projects-grid');
+[7m  [0m [91m~~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m45[0m:[93m2[0m - [91merror[0m[90m ts(17008): [0mHTML element 'div' has no corresponding closing tag.
+
+[7m45[0m <div id="dashboard-quota" class="hidden mt-8">
+[7m  [0m [91m ~~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m8[0m:[93m2[0m - [91merror[0m[90m ts(17008): [0mHTML element 'div' has no corresponding closing tag.
+
+[7m8[0m <div class="container-page" style="position: relative; z-index: 1;">
+[7m [0m [91m ~~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m7[0m:[93m2[0m - [91merror[0m[90m ts(17008): [0mHTML element 'section' has no corresponding closing tag.
+
+[7m7[0m <section class="section" style="background: var(--color-page);">
+[7m [0m [91m ~~~~~~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m6[0m:[93m2[0m - [91merror[0m[90m ts(17008): [0mHTML element 'BaseLayout' has no corresponding closing tag.
+
+[7m6[0m <BaseLayout title="Dashboard" description="Your birthday projects ΓÇö preview, edit, duplicate, or delete.">
+[7m [0m [91m ~~~~~~~~~~[0m
+[96msrc/pages/dashboard.astro[0m:[93m4[0m:[93m1[0m - [91merror[0m[90m ts(17008): [0mHTML element 'Fragment' has no corresponding closing tag.
+
+[7m4[0m ---
+[7m [0m [91m[0m
+[96msrc/pages/dashboard.astro[0m:[93m278[0m:[93m14[0m - [91merror[0m[90m astro: [0mExpected a closing tag but instead found the end of the file.
+
+[7m278[0m </BaseLayout>
+[7m   [0m [91m             [0m
+[96msrc/pages/dashboard.astro[0m:[93m278[0m:[93m1[0m - [91merror[0m[90m astro: [0mExpected a matching closing tag but instead found '</BaseLayout>'.
+
+[7m278[0m </BaseLayout>
+[7m   [0m [91m~~~~~~~~~~~~~[0m
+
+[96msrc/pages/design-system.astro[0m:[93m339[0m:[93m9[0m - [91merror[0m[90m ts(17002): [0mExpected corresponding JSX closing tag for 'BaseLayout'.
+
+[7m339[0m       </div>
+[7m   [0m [91m        ~~~[0m
+[96msrc/pages/design-system.astro[0m:[93m338[0m:[93m11[0m - [91merror[0m[90m ts(17002): [0mExpected corresponding JSX closing tag for 'section'.
+
+[7m338[0m         </div>
+[7m   [0m [91m          ~~~[0m
+[96msrc/pages/design-system.astro[0m:[93m324[0m:[93m3[0m - [91merror[0m[90m ts(17002): [0mExpected corresponding JSX closing tag for 'div'.
+
+[7m324[0m </BaseLayout>
+[7m   [0m [91m  ~~~~~~~~~~[0m
+[96msrc/pages/design-system.astro[0m:[93m323[0m:[93m5[0m - [91merror[0m[90m ts(17002): [0mExpected corresponding JSX closing tag for 'div'.
+
+[7m323[0m   </section>
+[7m   [0m [91m    ~~~~~~~[0m
+[96msrc/pages/design-system.astro[0m:[93m311[0m:[93m26[0m - [91merror[0m[90m ts(1382): [0mUnexpected token. Did you mean `{'>'}` or `&gt;`?
+
+[7m311[0m       <!-- Decorations -->
+[7m   [0m [91m                         ~[0m
+[96msrc/pages/design-system.astro[0m:[93m311[0m:[93m8[0m - [91merror[0m[90m ts(1003): [0mIdentifier expected.
+
+[7m311[0m       <!-- Decorations -->
+[7m   [0m [91m       ~[0m
+[96msrc/pages/design-system.astro[0m:[93m296[0m:[93m26[0m - [91merror[0m[90m ts(1382): [0mUnexpected token. Did you mean `{'>'}` or `&gt;`?
+
+[7m296[0m       <!-- Empty State -->
+[7m   [0m [91m                         ~[0m
+[96msrc/pages/design-system.astro[0m:[93m296[0m:[93m8[0m - [91merror[0m[90m ts(1003): [0mIdentifier expected.
+
+[7m296[0m       <!-- Empty State -->
+[7m   [0m [91m       ~[0m
+[96msrc/pages/design-system.astro[0m:[93m278[0m:[93m30[0m - [91merror[0m[90m ts(1382): [0mUnexpected token. Did you mean `{'>'}` or `&gt;`?
+
+[7m278[0m       <!-- Toggle & Avatar -->
+[7m   [0m [91m                             ~[0m
+[96msrc/pages/design-system.astro[0m:[93m278[0m:[93m8[0m - [91merror[0m[90m ts(1003): [0mIdentifier expected.
+
+[7m278[0m       <!-- Toggle & Avatar -->
+[7m   [0m [91m       ~[0m
+[96msrc/pages/design-system.astro[0m:[93m339[0m:[93m13[0m - [91merror[0m[90m astro: [0mExpected a closing tag but instead found the end of the file.
+
+[7m339[0m       </div>
+[7m   [0m [91m            [0m
+[96msrc/pages/design-system.astro[0m:[93m324[0m:[93m1[0m - [91merror[0m[90m astro: [0mExpected a matching closing tag but instead found '</BaseLayout>'.
+
+[7m324[0m </BaseLayout>
+[7m   [0m [91m~~~~~~~~~~~~~[0m
+[96msrc/pages/design-system.astro[0m:[93m323[0m:[93m3[0m - [91merror[0m[90m astro: [0mExpected a matching closing tag but instead found '</section>'.
+
+[7m323[0m   </section>
+[7m   [0m [91m  ~~~~~~~~~~[0m
+
+[96msrc/pages/forgot-password.astro[0m:[93m68[0m:[93m28[0m - [91merror[0m[90m ts(2339): [0mProperty 'disabled' does not exist on type 'HTMLElement'.
+
+[7m68[0m if (submitBtn) { submitBtn.disabled = false; submitBtn.classList.remove('clay-btn-loading'); submitBtn.textContent = 'Show demo acknowledgement'; }
+[7m  [0m [91m                           ~~~~~~~~[0m
+[96msrc/pages/forgot-password.astro[0m:[93m66[0m:[93m28[0m - [91merror[0m[90m ts(2339): [0mProperty 'disabled' does not exist on type 'HTMLElement'.
+
+[7m66[0m if (submitBtn) { submitBtn.disabled = true; submitBtn.classList.add('clay-btn-loading'); submitBtn.textContent = 'CheckingΓÇª'; }
+[7m  [0m [91m                           ~~~~~~~~[0m
+[96msrc/pages/forgot-password.astro[0m:[93m60[0m:[93m31[0m - [91merror[0m[90m ts(2339): [0mProperty 'value' does not exist on type 'HTMLElement'.
+
+[7m60[0m var email = emailEl ? emailEl.value.trim().toLowerCase() : '';
+[7m  [0m [91m                              ~~~~~[0m
+[96msrc/pages/forgot-password.astro[0m:[93m50[0m:[93m22[0m - [91merror[0m[90m ts(7006): [0mParameter 'msg' implicitly has an 'any' type.
+
+[7m50[0m function showSuccess(msg) {
+[7m  [0m [91m                     ~~~[0m
+[96msrc/pages/forgot-password.astro[0m:[93m43[0m:[93m20[0m - [91merror[0m[90m ts(7006): [0mParameter 'msg' implicitly has an 'any' type.
+
+[7m43[0m function showError(msg) {
+[7m  [0m [91m                   ~~~[0m
+
+[96msrc/pages/index.astro[0m:[93m389[0m:[93m9[0m - [91merror[0m[90m ts(7005): [0mVariable 'lastFocus' implicitly has an 'any' type.
+
+[7m389[0m     if (lastFocus && typeof lastFocus.focus === 'function') lastFocus.focus();
+[7m   [0m [91m        ~~~~~~~~~[0m
+[96msrc/pages/index.astro[0m:[93m370[0m:[93m13[0m - [91merror[0m[90m ts(7053): [0mElement implicitly has an 'any' type because expression of type 'any' can't be used to index type '{ 'lavender-parade': { name: string; bg: string; ink: string; emoji: string; tag: string; headline: string; copy: string; }; 'peach-morning': { name: string; bg: string; ink: string; emoji: string; tag: string; headline: string; copy: string; }; 'mint-meadow': { ...; }; 'midnight-toast': { ...; }; }'.
+
+[7m370[0m     var t = THEMES[id];
+[7m   [0m [91m            ~~~~~~~~~~[0m
+[96msrc/pages/index.astro[0m:[93m369[0m:[93m26[0m - [91merror[0m[90m ts(7006): [0mParameter 'trigger' implicitly has an 'any' type.
+
+[7m369[0m   function openTheme(id, trigger) {
+[7m   [0m [91m                         ~~~~~~~[0m
+[96msrc/pages/index.astro[0m:[93m369[0m:[93m22[0m - [91merror[0m[90m ts(7006): [0mParameter 'id' implicitly has an 'any' type.
+
+[7m369[0m   function openTheme(id, trigger) {
+[7m   [0m [91m                     ~~[0m
+[96msrc/pages/index.astro[0m:[93m330[0m:[93m7[0m - [91merror[0m[90m ts(7034): [0mVariable 'lastFocus' implicitly has type 'any' in some locations where its type cannot be determined.
+
+[7m330[0m   var lastFocus = null;
+[7m   [0m [91m      ~~~~~~~~~[0m
+[96msrc/pages/index.astro[0m:[93m324[0m:[93m7[0m - [93mwarning[0m[90m ts(6133): [0m'dialog' is declared but its value is never read.
+
+[7m324[0m   var dialog = document.getElementById('theme-dialog');
+[7m   [0m [93m      ~~~~~~[0m
+
+[96msrc/pages/login.astro[0m:[93m134[0m:[93m41[0m - [91merror[0m[90m ts(18047): [0m'instantBtn' is possibly 'null'.
+
+[7m134[0m if (!ok) { instantBtn.disabled = false; instantBtn.textContent = 'Try the instant demo account'; return; }
+[7m   [0m [91m                                        ~~~~~~~~~~[0m
+[96msrc/pages/login.astro[0m:[93m134[0m:[93m23[0m - [91merror[0m[90m ts(2339): [0mProperty 'disabled' does not exist on type 'HTMLElement'.
+
+[7m134[0m if (!ok) { instantBtn.disabled = false; instantBtn.textContent = 'Try the instant demo account'; return; }
+[7m   [0m [91m                      ~~~~~~~~[0m
+[96msrc/pages/login.astro[0m:[93m134[0m:[93m12[0m - [91merror[0m[90m ts(18047): [0m'instantBtn' is possibly 'null'.
+
+[7m134[0m if (!ok) { instantBtn.disabled = false; instantBtn.textContent = 'Try the instant demo account'; return; }
+[7m   [0m [91m           ~~~~~~~~~~[0m
+[96msrc/pages/login.astro[0m:[93m131[0m:[93m1[0m - [91merror[0m[90m ts(18047): [0m'instantBtn' is possibly 'null'.
+
+[7m131[0m instantBtn.textContent = 'Opening demoΓÇª';
+[7m   [0m [91m~~~~~~~~~~[0m
+[96msrc/pages/login.astro[0m:[93m130[0m:[93m12[0m - [91merror[0m[90m ts(2339): [0mProperty 'disabled' does not exist on type 'HTMLElement'.
+
+[7m130[0m instantBtn.disabled = true;
+[7m   [0m [91m           ~~~~~~~~[0m
+[96msrc/pages/login.astro[0m:[93m130[0m:[93m1[0m - [91merror[0m[90m ts(18047): [0m'instantBtn' is possibly 'null'.
+
+[7m130[0m instantBtn.disabled = true;
+[7m   [0m [91m~~~~~~~~~~[0m
+[96msrc/pages/login.astro[0m:[93m122[0m:[93m35[0m - [91merror[0m[90m ts(2339): [0mProperty 'disabled' does not exist on type 'HTMLElement'.
+
+[7m122[0m if (!ok && submitBtn) { submitBtn.disabled = false; submitBtn.classList.remove('clay-btn-loading'); submitBtn.textContent = 'Continue with email'; return; }
+[7m   [0m [91m                                  ~~~~~~~~[0m
+[96msrc/pages/login.astro[0m:[93m119[0m:[93m28[0m - [91merror[0m[90m ts(2339): [0mProperty 'disabled' does not exist on type 'HTMLElement'.
+
+[7m119[0m if (submitBtn) { submitBtn.disabled = true; submitBtn.classList.add('clay-btn-loading'); submitBtn.textContent = 'Signing inΓÇª'; }
+[7m   [0m [91m                           ~~~~~~~~[0m
+[96msrc/pages/login.astro[0m:[93m108[0m:[93m35[0m - [91merror[0m[90m ts(2339): [0mProperty 'value' does not exist on type 'HTMLElement'.
+
+[7m108[0m var displayName = nameEl ? nameEl.value.trim() : '';
+[7m   [0m [91m                                  ~~~~~[0m
+[96msrc/pages/login.astro[0m:[93m107[0m:[93m31[0m - [91merror[0m[90m ts(2339): [0mProperty 'value' does not exist on type 'HTMLElement'.
+
+[7m107[0m var email = emailEl ? emailEl.value.trim().toLowerCase() : '';
+[7m   [0m [91m                              ~~~~~[0m
+[96msrc/pages/login.astro[0m:[93m93[0m:[93m1[0m - [91merror[0m[90m ts(7053): [0mElement implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
+
+[7m93[0m registry[email] = user;
+[7m  [0m [91m~~~~~~~~~~~~~~~[0m
+[96msrc/pages/login.astro[0m:[93m90[0m:[93m12[0m - [91merror[0m[90m ts(7053): [0mElement implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
+
+[7m90[0m var user = registry[email];
+[7m  [0m [91m           ~~~~~~~~~~~~~~~[0m
+[96msrc/pages/login.astro[0m:[93m83[0m:[93m30[0m - [91merror[0m[90m ts(7006): [0mParameter 'displayName' implicitly has an 'any' type.
+
+[7m83[0m function writeSession(email, displayName) {
+[7m  [0m [91m                             ~~~~~~~~~~~[0m
+[96msrc/pages/login.astro[0m:[93m83[0m:[93m23[0m - [91merror[0m[90m ts(7006): [0mParameter 'email' implicitly has an 'any' type.
+
+[7m83[0m function writeSession(email, displayName) {
+[7m  [0m [91m                      ~~~~~[0m
+[96msrc/pages/login.astro[0m:[93m63[0m:[93m20[0m - [91merror[0m[90m ts(7006): [0mParameter 'msg' implicitly has an 'any' type.
+
+[7m63[0m function showError(msg) {
+[7m  [0m [91m                   ~~~[0m
+
+[96msrc/pages/pricing.astro[0m:[93m31[0m:[93m35[0m - [91merror[0m[90m ts(7006): [0mParameter 'feature' implicitly has an 'any' type.
+
+[7m31[0m               {plan.features.map((feature) => (
+[7m  [0m [91m                                  ~~~~~~~[0m
+
+[96msrc/pages/register.astro[0m:[93m100[0m:[93m28[0m - [91merror[0m[90m ts(2339): [0mProperty 'disabled' does not exist on type 'HTMLElement'.
+
+[7m100[0m if (submitBtn) { submitBtn.disabled = false; submitBtn.classList.remove('clay-btn-loading'); submitBtn.textContent = 'Create demo profile'; }
+[7m   [0m [91m                           ~~~~~~~~[0m
+[96msrc/pages/register.astro[0m:[93m99[0m:[93m1[0m - [91merror[0m[90m ts(2554): [0mExpected 2 arguments, but got 1.
+
+[7m99[0m showError('Browser storage is unavailable, so this demo profile cannot be saved. You can still browse and create.');
+[7m  [0m [91m~~~~~~~~~[0m
+[96msrc/pages/register.astro[0m:[93m94[0m:[93m1[0m - [91merror[0m[90m ts(7053): [0mElement implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
+
+[7m94[0m registry[email] = user;
+[7m  [0m [91m~~~~~~~~~~~~~~~[0m
+[96msrc/pages/register.astro[0m:[93m90[0m:[93m28[0m - [91merror[0m[90m ts(2339): [0mProperty 'disabled' does not exist on type 'HTMLElement'.
+
+[7m90[0m if (submitBtn) { submitBtn.disabled = false; submitBtn.classList.remove('clay-btn-loading'); submitBtn.textContent = 'Create demo profile'; }
+[7m  [0m [91m                           ~~~~~~~~[0m
+[96msrc/pages/register.astro[0m:[93m88[0m:[93m31[0m - [91merror[0m[90m ts(7053): [0mElement implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
+
+[7m88[0m if (registry[email] && typeof registry[email].email === 'string') {
+[7m  [0m [91m                              ~~~~~~~~~~~~~~~[0m
+[96msrc/pages/register.astro[0m:[93m88[0m:[93m5[0m - [91merror[0m[90m ts(7053): [0mElement implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
+
+[7m88[0m if (registry[email] && typeof registry[email].email === 'string') {
+[7m  [0m [91m    ~~~~~~~~~~~~~~~[0m
+[96msrc/pages/register.astro[0m:[93m80[0m:[93m28[0m - [91merror[0m[90m ts(2339): [0mProperty 'disabled' does not exist on type 'HTMLElement'.
+
+[7m80[0m if (submitBtn) { submitBtn.disabled = true; submitBtn.classList.add('clay-btn-loading'); submitBtn.textContent = 'CreatingΓÇª'; }
+[7m  [0m [91m                           ~~~~~~~~[0m
+[96msrc/pages/register.astro[0m:[93m71[0m:[93m31[0m - [91merror[0m[90m ts(2339): [0mProperty 'value' does not exist on type 'HTMLElement'.
+
+[7m71[0m var email = emailEl ? emailEl.value.trim().toLowerCase() : '';
+[7m  [0m [91m                              ~~~~~[0m
+[96msrc/pages/register.astro[0m:[93m70[0m:[93m35[0m - [91merror[0m[90m ts(2339): [0mProperty 'value' does not exist on type 'HTMLElement'.
+
+[7m70[0m var displayName = nameEl ? nameEl.value.trim() : '';
+[7m  [0m [91m                                  ~~~~~[0m
+[96msrc/pages/register.astro[0m:[93m46[0m:[93m25[0m - [91merror[0m[90m ts(7006): [0mParameter 'focusEl' implicitly has an 'any' type.
+
+[7m46[0m function showError(msg, focusEl) {
+[7m  [0m [91m                        ~~~~~~~[0m
+[96msrc/pages/register.astro[0m:[93m46[0m:[93m20[0m - [91merror[0m[90m ts(7006): [0mParameter 'msg' implicitly has an 'any' type.
+
+[7m46[0m function showError(msg, focusEl) {
+[7m  [0m [91m                   ~~~[0m
+
+[96msrc/pages/wishes.astro[0m:[93m262[0m:[93m31[0m - [91merror[0m[90m ts(4111): [0mProperty 'cat' comes from an index signature, so it must be accessed with ['cat'].
+
+[7m262[0m       category = chip.dataset.cat ?? '';
+[7m   [0m [91m                              ~~~[0m
+
+[96msrc/pages/experience/[id].astro[0m:[93m2[0m:[93m1[0m - [93mwarning[0m[90m ts(6133): [0m'BaseLayout' is declared but its value is never read.
+
+[7m2[0m import BaseLayout from '@/layouts/BaseLayout.astro';
+[7m [0m [93m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+Result (111 files): 
+- 315 errors
+- 0 warnings
+- 33 hints
+

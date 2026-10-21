@@ -1,0 +1,33 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { ROUTES } from '@/utils/routes';
+---
+
+<BaseLayout title="Privacy" description="How BirthdayWish handles your data in this demo.">
+  <section class="section">
+    <div class="container-page">
+      <div class="mx-auto" style="max-width: 680px;">
+        <span class="clay-badge clay-badge-primary">Privacy</span>
+        <h1 class="text-display" style="font-size: clamp(2.25rem, 5vw, 3.5rem); margin: var(--space-4) 0 var(--space-6);">Your memories stay yours</h1>
+        <div class="clay-card-static p-8" style="display: grid; gap: var(--space-5);">
+          <div>
+            <h2 class="font-display text-lg font-bold" style="color: var(--color-text-primary); margin-bottom: var(--space-2);">Local-first demo</h2>
+            <p class="text-sm" style="color: var(--color-text-secondary); line-height: var(--leading-relaxed);">Drafts, photos, and preferences are stored in your browser's local storage. Nothing is uploaded to a server, because there is no server in this demo.</p>
+          </div>
+          <div>
+            <h2 class="font-display text-lg font-bold" style="color: var(--color-text-primary); margin-bottom: var(--space-2);">No real accounts</h2>
+            <p class="text-sm" style="color: var(--color-text-secondary); line-height: var(--leading-relaxed);">The sign-in page opens a demo flow. Any email you enter stays on your device and is never verified, stored remotely, or shared.</p>
+          </div>
+          <div>
+            <h2 class="font-display text-lg font-bold" style="color: var(--color-text-primary); margin-bottom: var(--space-2);">No tracking claims</h2>
+            <p class="text-sm" style="color: var(--color-text-secondary); line-height: var(--leading-relaxed);">We do not fabricate analytics or sell data. Fonts load from a public CDN; everything else runs locally. Clearing your browser data removes your drafts.</p>
+          </div>
+          <div>
+            <h2 class="font-display text-lg font-bold" style="color: var(--color-text-primary); margin-bottom: var(--space-2);">Future versions</h2>
+            <p class="text-sm" style="color: var(--color-text-secondary); line-height: var(--leading-relaxed);">If accounts or cloud storage are added later, this page will be updated first — and uploads will always ask for your explicit choice. Questions? <a href={ROUTES.CONTACT}>Contact us</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

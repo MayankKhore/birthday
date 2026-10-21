@@ -1,0 +1,141 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { ROUTES } from '@/utils/routes';
+---
+
+<BaseLayout title="Sign In" description="Try the BirthdayWish demo sign-in — email only, no password, nothing leaves your browser.">
+<section class="section ambient-bg">
+<div class="container-page" style="position: relative; z-index: 1;">
+<div class="mx-auto" style="max-width: 480px;">
+<div class="clay-card-static p-8">
+<div class="text-center" style="margin-bottom: var(--space-6);">
+<span class="clay-badge clay-badge-primary" style="margin-bottom: var(--space-4);">Demo prototype</span>
+<h1 class="text-display" style="font-size: var(--text-3xl); margin-bottom: var(--space-2);">Sign in to the demo</h1>
+<p class="text-sm" style="color: var(--color-text-secondary);">Email only. No password. Nothing leaves this browser — and this demo offers no real account protection.</p>
+</div>
+<div id="login-storage-notice" class="hidden" role="status" style="margin-bottom: var(--space-4); padding: var(--space-3) var(--space-4); border-radius: var(--radius-lg); background: var(--color-warning-light); color: var(--color-warning-dark); font-size: var(--text-xs);"></div>
+<div id="login-error" class="hidden" role="alert" tabindex="-1" style="margin-bottom: var(--space-4); padding: var(--space-3) var(--space-4); border-radius: var(--radius-lg); background: var(--color-error-light); color: var(--color-error-dark); font-size: var(--text-sm);"></div>
+<form id="login-form" novalidate aria-label="Demo sign-in form">
+<div style="margin-bottom: var(--space-5);">
+<label class="clay-label" for="login-email">Email</label>
+<input class="clay-input" type="email" id="login-email" name="email" required autocomplete="email" placeholder="you@example.com" />
+<span class="clay-help">Use any valid-looking email. A demo profile is created locally on first use.</span>
+</div>
+<div style="margin-bottom: var(--space-6);">
+<label class="clay-label" for="login-name">Display name <span style="color: var(--color-text-tertiary); font-weight: 400;">(first-time profiles only)</span></label>
+<input class="clay-input" type="text" id="login-name" name="displayName" autocomplete="nickname" maxlength="50" placeholder="e.g. Sam" />
+</div>
+<button type="submit" id="login-submit" class="clay-btn clay-btn-primary clay-btn-full clay-btn-lg">Continue with email</button>
+</form>
+<div style="margin: var(--space-6) 0; border-top: 1px solid var(--color-divider);"></div>
+<button type="button" id="login-instant" class="clay-btn clay-btn-secondary clay-btn-full">Try the instant demo account</button>
+<p class="text-xs text-center" style="color: var(--color-text-tertiary); margin-top: var(--space-3);">One click. No form. Same local demo session.</p>
+<p class="text-sm text-center" style="color: var(--color-text-secondary); margin-top: var(--space-6);">
+Forgot how this works? <a href="/forgot-password">See the demo reset flow</a>
+<br />New here? <a href={ROUTES.REGISTER}>Create a demo profile</a>
+</p>
+</div>
+</div>
+</div>
+</section>
+
+<script>
+(function () {
+var form = document.getElementById('login-form');
+var emailEl = document.getElementById('login-email');
+var nameEl = document.getElementById('login-name');
+var submitBtn = document.getElementById('login-submit');
+var instantBtn = document.getElementById('login-instant');
+var errorBox = document.getElementById('login-error');
+var storageBox = document.getElementById('login-storage-notice');
+function storageOk() {
+try {
+var k = '__bw_probe__';
+window.localStorage.setItem(k, '1');
+window.localStorage.removeItem(k);
+return true;
+} catch (e) { return false; }
+}
+if (!storageOk() && storageBox) {
+storageBox.textContent = 'Browser storage is unavailable here, so demo sign-in will not persist after refresh. You can still browse and create.';
+storageBox.classList.remove('hidden');
+}
+function showError(msg) {
+if (!errorBox) return;
+errorBox.textContent = msg;
+errorBox.classList.remove('hidden');
+errorBox.focus();
+}
+function clearError() {
+if (!errorBox) return;
+errorBox.textContent = '';
+errorBox.classList.add('hidden');
+}
+var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+function uuid() {
+if (window.crypto && window.crypto.randomUUID) return window.crypto.randomUUID();
+return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+var r = Math.random() * 16 | 0;
+var v = c === 'x' ? r : (r & 0x3 | 0x8);
+return v.toString(16);
+});
+}
+function writeSession(email, displayName) {
+var now = new Date().toISOString();
+var registry = {};
+try {
+var raw = window.localStorage.getItem('bp_bp_demo_users');
+registry = raw ? JSON.parse(raw) : {};
+} catch (e) { registry = {}; }
+var user = registry[email];
+if (!user || typeof user.email !== 'string') {
+user = { id: uuid(), email: email, displayName: displayName || email.split('@')[0] || 'Demo user', role: 'user', createdAt: now, updatedAt: now, subscriptionTier: 'free', subscriptionStatus: 'active' };
+registry[email] = user;
+try { window.localStorage.setItem('bp_bp_demo_users', JSON.stringify(registry)); } catch (e) {}
+}
+try { window.localStorage.setItem('bp_user_profile', JSON.stringify(user)); }
+catch (e) {
+showError('Browser storage is unavailable, so this demo session cannot be saved. You can still browse and create.');
+return false;
+}
+return true;
+}
+if (form) {
+form.addEventListener('submit', function (e) {
+e.preventDefault();
+clearError();
+var email = emailEl ? emailEl.value.trim().toLowerCase() : '';
+var displayName = nameEl ? nameEl.value.trim() : '';
+if (!EMAIL_RE.test(email)) {
+showError('Enter a valid email address, like you@example.com.');
+if (emailEl) emailEl.focus();
+return;
+}
+if (displayName && displayName.length > 50) {
+showError('Display name must be 50 characters or fewer.');
+if (nameEl) nameEl.focus();
+return;
+}
+if (submitBtn) { submitBtn.disabled = true; submitBtn.classList.add('clay-btn-loading'); submitBtn.textContent = 'Signing in…'; }
+window.setTimeout(function () {
+var ok = writeSession(email, displayName);
+if (!ok && submitBtn) { submitBtn.disabled = false; submitBtn.classList.remove('clay-btn-loading'); submitBtn.textContent = 'Continue with email'; return; }
+window.location.href = '/dashboard';
+}, 250);
+});
+}
+if (instantBtn) {
+instantBtn.addEventListener('click', function () {
+clearError();
+instantBtn.disabled = true;
+instantBtn.textContent = 'Opening demo…';
+window.setTimeout(function () {
+var ok = writeSession('demo@birthdaywish.local', 'Demo Guest');
+if (!ok) { instantBtn.disabled = false; instantBtn.textContent = 'Try the instant demo account'; return; }
+window.location.href = '/dashboard';
+}, 200);
+});
+}
+})();
+</script>
+</BaseLayout>

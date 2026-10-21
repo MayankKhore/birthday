@@ -1,0 +1,278 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { ROUTES } from '@/utils/routes';
+---
+
+<BaseLayout title="Dashboard" description="Your birthday projects — preview, edit, duplicate, or delete.">
+<section class="section" style="background: var(--color-page);">
+<div class="container-page" style="position: relative; z-index: 1;">
+<div id="dashboard-loading" class="text-center" style="padding: var(--space-16) var(--space-4);">
+<p class="text-sm" style="color: var(--color-text-secondary);">Loading your projects…</p>
+</div>
+
+<div id="dashboard-empty" class="hidden" style="text-align: center; padding: var(--space-20) var(--space-4);">
+<div class="clay-icon-btn clay-icon-btn-lg mb-4" style="cursor: default; background: var(--color-lavender); color: var(--color-brand-600);" aria-hidden="true">
+<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2zm10-10V7a4 4 0 0 0-8 0v4h8z"/></svg>
+</div>
+<h2 class="font-display text-xl font-bold mb-2" style="color: var(--color-text-primary);">No birthday pages yet</h2>
+<p class="text-sm" style="color: var(--color-text-secondary); max-width: 360px; margin: 0 auto var(--space-6);">Start your first birthday page — write a wish, add photos, pick a theme, then share a single joyful link.</p>
+<div class="flex flex-col sm:flex-row gap-3 justify-center">
+<a href={ROUTES.CREATE} class="clay-btn clay-btn-primary clay-btn-lg">Create your first page</a>
+<a href={ROUTES.WISHES} class="clay-btn clay-btn-secondary clay-btn-lg">Write a wish first</a>
+</div>
+<p class="text-xs text-center" style="color: var(--color-text-tertiary); margin-top: var(--space-6);">
+You can create up to 3 free pages. <a href={ROUTES.PRICING} style="color: var(--color-brand-600); text-decoration: underline;">Upgrade for unlimited</a>.
+</p>
+</div>
+
+<div id="dashboard-projects" class="hidden">
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
+<div>
+<h1 class="text-display" style="font-size: var(--text-3xl);">Your birthday pages</h1>
+<p class="text-sm" style="color: var(--color-text-secondary);">Manage, preview, and share — all from here.</p>
+</div>
+<div class="flex flex-wrap gap-2">
+<a href={ROUTES.CREATE} class="clay-btn clay-btn-primary clay-btn-sm">+ New page</a>
+<a href={ROUTES.WISHES} class="clay-btn clay-btn-secondary clay-btn-sm">Write a wish</a>
+</div>
+</div>
+
+<div id="projects-grid" class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3" role="list" style="list-style: none; padding: 0; margin: 0;"></div>
+
+<div id="projects-error" class="hidden" role="alert" style="margin-top: var(--space-6); padding: var(--space-4) var(--space-5); border-radius: var(--radius-xl); background: var(--color-error-light); color: var(--color-error-dark); font-size: var(--text-sm);"></div>
+</div>
+
+<div id="dashboard-quota" class="hidden mt-8">
+<div class="clay-card-static p-6">
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+<div>
+<p class="text-sm" style="color: var(--color-text-secondary);">Free tier: <strong id="quota-used">0</strong> of 3 pages used.</p>
+</div>
+<a href={ROUTES.PRICING} class="clay-btn clay-btn-secondary clay-btn-sm">Upgrade for unlimited</a>
+<script>
+(function () {
+var grid = document.getElementById('projects-grid');
+var loadingEl = document.getElementById('dashboard-loading');
+var emptyEl = document.getElementById('dashboard-empty');
+var projectsEl = document.getElementById('dashboard-projects');
+var projectsGrid = document.getElementById('projects-grid');
+var errorEl = document.getElementById('projects-error');
+var quotaEl = document.getElementById('dashboard-quota');
+var quotaUsed = document.getElementById('quota-used');
+
+var STORAGE_KEYS = {
+USER_PROFILE: 'bp_user_profile',
+PROJECTS_INDEX: 'bp_projects_index'
+};
+
+function readJSON(key, fallback) {
+try {
+var raw = window.localStorage.getItem('bp_' + key);
+return raw ? JSON.parse(raw) : fallback;
+} catch (e) { return fallback; }
+}
+
+function safeJSON(val) {
+try { return JSON.parse(val); } catch (e) { return null; }
+}
+
+function uuid() {
+if (window.crypto && window.crypto.randomUUID) return window.crypto.randomUUID();
+return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+var r = Math.random() * 16 | 0;
+var v = c === 'x' ? r : (r & 0x3 | 0x8);
+return v.toString(16);
+});
+}
+
+function nowISO() { return new Date().toISOString(); }
+
+function readProfile() {
+try {
+var raw = window.localStorage.getItem('bp_user_profile');
+if (!raw) return null;
+var p = JSON.parse(raw);
+return (p && typeof p.id === 'string') ? p : null;
+} catch (e) { return null; }
+}
+
+function readProjects() {
+var idx = safeJSON(window.localStorage.getItem('bp_projects_index'));
+return Array.isArray(idx) ? idx : [];
+}
+
+function writeProjects(list) {
+try {
+window.localStorage.setItem('bp_projects_index', JSON.stringify(list));
+return true;
+} catch (e) { return false; }
+}
+
+function getThemeName(id) {
+var map = {
+'lavender-parade': 'Lavender Parade',
+'peach-morning': 'Peach Morning',
+'mint-meadow': 'Mint Meadow',
+'midnight-toast': 'Midnight Toast',
+};
+return map[id] || 'Custom theme';
+}
+
+function formatRelative(iso) {
+if (!iso) return 'Unknown';
+var then = Date.parse(iso);
+if (Number.isNaN(then)) return 'Unknown date';
+var diff = Math.max(0, Date.now() - then);
+var m = 60 * 1000, h = 60 * m, d = 24 * h;
+if (diff < m) return 'Just now';
+if (diff < h) return Math.floor(diff / 60000) + 'm ago';
+if (diff < d) return Math.floor(diff / h) + 'h ago';
+if (diff < 7 * d) return Math.floor(diff / d) + 'd ago';
+try {
+return new Date(then).toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' });
+} catch (e) { return 'Unknown'; }
+}
+
+function statusBadge(status) {
+var map = {
+draft: { label: 'Draft', cls: 'clay-badge-outline' },
+published: { label: 'Published', cls: 'clay-badge-success' },
+archived: { label: 'Archived', cls: 'clay-badge-warning' },
+};
+var b = map[status] || { label: status, cls: 'clay-badge-outline' };
+return '<span class="clay-badge ' + b.cls + '">' + b.label + '</span>';
+}
+
+function projectCard(p) {
+var updated = (typeof formatRelative === 'function') ? formatRelative(p.updatedAt) : '';
+var photos = Array.isArray(p.photos) ? p.photos.length : 0;
+var theme = (typeof getThemeName === 'function') ? getThemeName(p.themeId) : 'Custom theme';
+var slug = p.slug || p.id;
+return '' +
+'<article class="clay-card clay-card-hover p-6" role="listitem" style="position: relative;">' +
+'<div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: var(--space-3);">' +
+'<div style="display: flex; gap: var(--space-2);">' +
+statusBadge(p.status) +
+'<span class="clay-badge clay-badge-outline">' + photos + ' photos</span>' +
+'</div>' +
+'<span class="text-xs" style="color: var(--color-text-tertiary);">' + escapeHtml(updated) + '</span>' +
+'</div>' +
+'<p class="font-display font-semibold" style="color: var(--color-text-primary); margin-bottom: var(--space-1);">' + escapeHtml(p.title) + '</p>' +
+'<p class="text-xs" style="color: var(--color-text-tertiary); margin-bottom: var(--space-4);">for ' + escapeHtml(p.recipientName) + (p.recipientAge ? ' (' + escapeHtml(String(p.recipientAge)) + ')' : '') + ' · ' + escapeHtml(theme) + '</p>' +
+'<div style="display: flex; flex-wrap: wrap; gap: var(--space-2);">' +
+'<a href="/preview/' + encodeURIComponent(p.id) + '" class="clay-btn clay-btn-primary clay-btn-sm">Preview</a>' +
+'<a href="/share/' + encodeURIComponent(slug) + '" class="clay-btn clay-btn-secondary clay-btn-sm">Share</a>' +
+'<button type="button" class="clay-btn clay-btn-secondary clay-btn-sm edit-btn" data-id="' + escapeHtml(p.id) + '">Edit</button>' +
+'<button type="button" class="clay-btn clay-btn-ghost clay-btn-sm duplicate-btn" data-id="' + escapeHtml(p.id) + '">Duplicate</button>' +
+'<button type="button" class="clay-btn clay-btn-ghost clay-btn-sm delete-btn" data-id="' + escapeHtml(p.id) + '" style="color: var(--color-error-dark);">Delete</button>' +
+'</div>' +
+'</article>';
+}
+
+function renderGrid(list) {
+if (!grid) return;
+grid.innerHTML = list.map(projectCard).join('');
+grid.querySelectorAll('.edit-btn').forEach(function (btn) {
+btn.addEventListener('click', function () { window.location.href = '/create?edit=' + encodeURIComponent(btn.dataset.id); });
+});
+grid.querySelectorAll('.duplicate-btn').forEach(function (btn) {
+btn.addEventListener('click', function () { duplicateProject(btn.dataset.id); });
+});
+grid.querySelectorAll('.delete-btn').forEach(function (btn) {
+btn.addEventListener('click', function () { confirmDelete(btn.dataset.id); });
+});
+}
+
+function duplicateProject(id) {
+var all = readJSON('projects_index', []);
+var src = null;
+for (var k = 0; k < all.length; k++) { if (all[k].id === id) { src = all[k]; break; } }
+if (!src) return;
+var fresh = readJSON('projects_index', []);
+var base = slugify(String(src.title || 'Birthday page') + ' (Copy)');
+var slug = base;
+var n = 1;
+while (fresh.some(function (p) { return p.slug === slug; })) { slug = base + '-' + n; n++; }
+var newId = uuid();
+var copy = {};
+for (var key in src) { if (Object.prototype.hasOwnProperty.call(src, key)) { copy[key] = src[key]; } }
+copy.id = newId;
+copy.userId = src.userId;
+copy.slug = slug;
+copy.title = String(src.title || 'Untitled') + ' (Copy)';
+copy.photos = Array.isArray(src.photos) ? src.photos.map(function (ph, idx) {
+var np = {};
+if (ph && typeof ph === 'object') { for (var q in ph) { if (Object.prototype.hasOwnProperty.call(ph, q)) { np[q] = ph[q]; } } }
+np.id = uuid();
+np.projectId = newId;
+np.createdAt = nowISO();
+np.sortOrder = idx;
+return np;
+}) : [];
+copy.status = 'draft';
+copy.viewCount = 0;
+var stamp = nowISO();
+copy.createdAt = stamp;
+copy.updatedAt = stamp;
+fresh.push(copy);
+writeProjects(fresh);
+loadDashboard();
+}
+
+function confirmDelete(id) {
+var projects = readJSON('projects_index', []);
+var found = null;
+for (var i = 0; i < projects.length; i++) { if (projects[i].id === id) { found = projects[i]; break; } }
+var label = found ? found.title : 'this page';
+if (!window.confirm('Delete "' + label + '"? This cannot be undone.')) return;
+writeProjects(readJSON('projects_index', []).filter(function (p) { return p.id !== id; }));
+loadDashboard();
+}
+function loadDashboard() {
+showLoading();
+try {
+var user = readProfile();
+var profile = user;
+var projects = readJSON('projects_index', []);
+var mine = user ? projects.filter(function (p) { return p.userId === user.id; }) : [];
+if (projectsEl) projectsEl.classList.remove('hidden');
+if (loadingEl) loadingEl.classList.add('hidden');
+if (errorEl) errorEl.classList.add('hidden');
+if (emptyEl) emptyEl.classList.toggle('hidden', mine.length > 0);
+if (projectsEl) projectsEl.classList.toggle('hidden', mine.length === 0);
+renderGrid(mine);
+if (quotaUsed) quotaUsed.textContent = String(user ? mine.length : 0);
+if (quotaEl) quotaEl.classList.toggle('hidden', !user || mine.length >= 3);
+} catch (err) {
+showError('Failed to load dashboard: ' + (err instanceof Error ? err.message : String(err)));
+}
+}
+
+function showLoading() {
+if (loadingEl) loadingEl.classList.remove('hidden');
+if (emptyEl) emptyEl.classList.add('hidden');
+if (projectsEl) projectsEl.classList.add('hidden');
+if (quotaEl) quotaEl.classList.add('hidden');
+if (errorEl) errorEl.classList.add('hidden');
+}
+
+function showError(msg) {
+if (loadingEl) loadingEl.classList.add('hidden');
+if (emptyEl) emptyEl.classList.add('hidden');
+if (projectsEl) projectsEl.classList.add('hidden');
+if (quotaEl) quotaEl.classList.add('hidden');
+if (errorEl) { errorEl.textContent = msg; errorEl.classList.remove('hidden'); }
+}
+
+function slugify(str) {
+return String(str).toLowerCase().trim()
+.replace(/[^\w\s-]/g, '')
+.replace(/[\s_-]+/g, '-')
+.replace(/^-+|-+$/g, '');
+}
+
+// Start
+loadDashboard();
+})();
+</script>
+</BaseLayout>

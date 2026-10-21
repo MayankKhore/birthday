@@ -1,0 +1,11 @@
+node_modules
+dist
+.astro
+.output
+*.log
+.env
+.env.local
+.env*.local
+.DS_Store
+.vscode
+coverage

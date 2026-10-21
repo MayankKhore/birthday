@@ -1,0 +1,11 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { CreateApp } from '@/components/create/CreateApp';
+---
+
+<BaseLayout
+  title="Create"
+  description="Build a personalized birthday page — details, message, photos, music and scenes, then preview and share."
+>
+  <CreateApp client:load />
+</BaseLayout>

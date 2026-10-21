@@ -1,0 +1,186 @@
+/**
+ * Motion & Animations
+ * Elegant, intentional transitions and micro-interactions
+ */
+
+/* ============================================================
+ * Entrance Animations
+ * ============================================================ */
+.animate-fade-in {
+  animation: fadeIn var(--duration-normal) var(--ease-out) both;
+}
+
+.animate-slide-up {
+  animation: slideUp var(--duration-normal) var(--ease-out) both;
+}
+
+.animate-slide-down {
+  animation: slideDown var(--duration-normal) var(--ease-out) both;
+}
+
+.animate-scale-in {
+  animation: scaleIn var(--duration-fast) var(--ease-spring) both;
+}
+
+/* ============================================================
+ * Floating Decorations
+ * ============================================================ */
+.animate-float {
+  animation: floatGentle 6s ease-in-out infinite;
+}
+
+.animate-float-delay-1 {
+  animation: floatGentle 6s ease-in-out 1s infinite;
+}
+
+.animate-float-delay-2 {
+  animation: floatGentle 6s ease-in-out 2s infinite;
+}
+
+.animate-float-delay-3 {
+  animation: floatGentle 6s ease-in-out 3s infinite;
+}
+
+/* ============================================================
+ * Celebration Animations
+ * ============================================================ */
+.animate-pop {
+  animation: pop var(--duration-slow) var(--ease-spring) both;
+}
+
+.animate-twinkle {
+  animation: twinkle 3s ease-in-out infinite;
+}
+
+/* ============================================================
+ * Keyframes
+ * ============================================================ */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes floatGentle {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(1.5deg); }
+}
+
+@keyframes pop {
+  0% { transform: scale(0); opacity: 0; }
+  70% { transform: scale(1.05); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.85); }
+}
+
+/* ============================================================
+ * Decorative CSS Shapes — Celebrations
+ * ============================================================ */
+
+/* Star decoration */
+.deco-star {
+  display: inline-block;
+  color: var(--color-gold, #C9943A);
+  animation: twinkle 3s ease-in-out infinite;
+  line-height: 1;
+}
+
+.deco-star::before {
+  content: '✦';
+}
+
+.deco-star-violet { color: var(--color-brand-400); }
+.deco-star-rose { color: var(--color-rose-light, #D4749A); }
+.deco-star-mint { color: var(--color-sage, #7A9B7E); }
+
+.deco-star-sm { font-size: 0.75rem; }
+.deco-star-md { font-size: 1.25rem; }
+.deco-star-lg { font-size: 2rem; }
+.deco-star-xl { font-size: 3rem; }
+
+/* Dot decoration */
+.deco-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+  background: var(--color-brand-300);
+}
+
+.deco-dot-violet { background: var(--color-brand-400); }
+.deco-dot-peach { background: var(--color-gold-light, #E8C97A); }
+.deco-dot-mint { background: var(--color-sage, #7A9B7E); }
+.deco-dot-rose { background: var(--color-rose-light, #D4749A); }
+.deco-dot-butter { background: var(--color-gold, #C9943A); }
+
+/* Confetti piece */
+.deco-confetti {
+  position: absolute;
+  width: 6px;
+  height: 10px;
+  border-radius: 2px;
+  opacity: 0.7;
+  pointer-events: none;
+  animation: confettiFall 4s linear forwards;
+}
+
+@keyframes confettiFall {
+  0% { transform: translateY(-100%) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+}
+
+/* Floating ball decoration */
+.deco-ball {
+  position: absolute;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(44, 24, 16, 0.08);
+  pointer-events: none;
+}
+
+/* ============================================================
+ * Reduced Motion — disable all animations
+ * ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in,
+  .animate-slide-up,
+  .animate-slide-down,
+  .animate-scale-in,
+  .animate-float,
+  .animate-float-delay-1,
+  .animate-float-delay-2,
+  .animate-float-delay-3,
+  .animate-pop,
+  .animate-twinkle,
+  .deco-star,
+  .deco-confetti {
+    animation: none !important;
+  }
+
+  .clay-card:hover,
+  .clay-btn:hover:not(:disabled),
+  .clay-icon-btn:hover,
+  .clay-chip:hover,
+  .clay-tile:hover,
+  .clay-theme-card:hover,
+  .clay-photo-frame:hover {
+    transform: none;
+  }
+}

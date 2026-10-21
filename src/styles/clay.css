@@ -1,0 +1,766 @@
+/**
+ * Component Styles — BirthdayWish "Gilded Porcelain"
+ * White surfaces, warm hairlines, layered soft shadow, mulberry + gold detail.
+ * All class names preserved for compatibility.
+ */
+
+/* ============================================================
+ * Cards
+ * ============================================================ */
+.clay-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--clay-shadow-sm);
+  transition:
+    box-shadow var(--duration-normal) var(--ease-out),
+    border-color var(--duration-normal) var(--ease-out),
+    transform var(--duration-normal) var(--ease-out);
+  position: relative;
+}
+
+.clay-card:hover {
+  box-shadow: var(--clay-shadow-md);
+  border-color: var(--color-border-strong);
+  transform: translateY(-2px);
+}
+
+.clay-card-hover { /* alias used on landing cards */
+  cursor: default;
+}
+
+.clay-card-hover:hover {
+  box-shadow: var(--clay-shadow-md);
+  border-color: var(--color-brand-300);
+  transform: translateY(-2px);
+}
+
+.clay-card-static {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--clay-shadow-sm);
+}
+
+.clay-card-sunken {
+  background: var(--color-surface-sunken);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-2xl);
+}
+
+.clay-card-warm {
+  background: var(--color-surface-warm);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-2xl);
+}
+
+.clay-card-lavender {
+  background: var(--color-surface-lavender);
+  border: 1px solid var(--color-brand-200);
+  border-radius: var(--radius-2xl);
+}
+
+/* Dark band card (footer / CTA moments) */
+.clay-card-ink {
+  background: var(--color-ink);
+  border: 1px solid rgba(250, 247, 242, 0.08);
+  border-radius: var(--radius-2xl);
+  color: var(--color-text-on-dark);
+}
+
+/* ============================================================
+ * Buttons
+ * ============================================================ */
+.clay-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-6);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  letter-spacing: 0.01em;
+  line-height: 1.4;
+  border-radius: var(--radius-lg);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition:
+    background-color var(--duration-fast) var(--ease-smooth),
+    border-color var(--duration-fast) var(--ease-smooth),
+    color var(--duration-fast) var(--ease-smooth),
+    box-shadow var(--duration-fast) var(--ease-out),
+    transform var(--duration-fast) var(--ease-out);
+  white-space: nowrap;
+  text-decoration: none;
+  position: relative;
+  user-select: none;
+}
+
+.clay-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+/* Primary — mulberry */
+.clay-btn-primary {
+  background: var(--color-brand-600);
+  color: var(--color-text-on-primary);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.14),
+    0 1px 2px rgba(36, 29, 46, 0.10),
+    0 6px 16px -8px rgba(160, 47, 96, 0.55);
+}
+
+.clay-btn-primary:hover:not(:disabled) {
+  background: var(--color-brand-700);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.14),
+    0 2px 4px rgba(36, 29, 46, 0.10),
+    0 12px 26px -10px rgba(160, 47, 96, 0.6);
+  transform: translateY(-1px);
+}
+
+.clay-btn-primary:active:not(:disabled) {
+  background: var(--color-brand-800);
+  box-shadow: var(--clay-shadow-pressed);
+  transform: translateY(0);
+}
+
+/* Secondary — porcelain with hairline */
+.clay-btn-secondary {
+  background: var(--color-surface);
+  color: var(--color-text-primary);
+  border-color: var(--color-border-strong);
+  box-shadow: var(--clay-shadow-xs);
+}
+
+.clay-btn-secondary:hover:not(:disabled) {
+  background: var(--color-surface-warm);
+  border-color: var(--color-text-muted);
+  transform: translateY(-1px);
+}
+
+.clay-btn-secondary:active:not(:disabled) {
+  box-shadow: var(--clay-shadow-pressed);
+  transform: translateY(0);
+}
+
+/* Tertiary — quiet */
+.clay-btn-tertiary {
+  background: transparent;
+  color: var(--color-text-secondary);
+  border: 1px solid transparent;
+}
+
+.clay-btn-tertiary:hover:not(:disabled) {
+  background: var(--color-surface-sunken);
+  color: var(--color-text-primary);
+}
+
+.clay-btn-tertiary:active:not(:disabled) {
+  box-shadow: var(--clay-shadow-pressed);
+}
+
+/* Ghost — transparent */
+.clay-btn-ghost {
+  background: transparent;
+  color: var(--color-text-secondary);
+  box-shadow: none;
+}
+
+.clay-btn-ghost:hover:not(:disabled) {
+  background: var(--color-surface-sunken);
+  color: var(--color-text-primary);
+}
+
+/* Pastel accent buttons */
+.clay-btn-mint {
+  background: var(--color-sage-light);
+  color: var(--color-success-dark);
+}
+
+.clay-btn-mint:hover:not(:disabled) {
+  background: var(--color-success-light);
+}
+
+.clay-btn-rose {
+  background: var(--color-rose-soft);
+  color: var(--color-rose-dark);
+}
+
+.clay-btn-rose:hover:not(:disabled) {
+  background: var(--color-brand-100);
+}
+
+.clay-btn-peach {
+  background: var(--color-gold-soft);
+  color: var(--color-gold-deep);
+}
+
+.clay-btn-peach:hover:not(:disabled) {
+  background: var(--color-warning-light);
+}
+
+/* Icon Buttons */
+.clay-icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--clay-shadow-xs);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-out);
+}
+
+.clay-icon-btn:hover {
+  color: var(--color-text-primary);
+  border-color: var(--color-border-strong);
+  background: var(--color-surface-hover);
+  box-shadow: var(--clay-shadow-sm);
+}
+
+.clay-icon-btn:active {
+  box-shadow: var(--clay-shadow-pressed);
+}
+
+.clay-icon-btn-sm {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+}
+
+.clay-icon-btn-lg {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-xl);
+}
+
+/* ============================================================
+ * Button Sizes & States
+ * ============================================================ */
+.clay-btn-sm {
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--text-xs);
+  border-radius: var(--radius-md);
+}
+
+.clay-btn-lg {
+  padding: var(--space-4) var(--space-8);
+  font-size: var(--text-base);
+  border-radius: var(--radius-lg);
+}
+
+.clay-btn-full {
+  width: 100%;
+}
+
+.clay-btn-loading {
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+.clay-btn-loading::after {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: clay-spin 0.6s linear infinite;
+  margin-left: var(--space-2);
+}
+
+@keyframes clay-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ============================================================
+ * Form Fields
+ * ============================================================ */
+.clay-input {
+  width: 100%;
+  min-height: 46px;
+  padding: var(--space-3) var(--space-4);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  line-height: 1.5;
+  color: var(--color-text-primary);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--clay-shadow-xs);
+  transition:
+    border-color var(--duration-fast) var(--ease-smooth),
+    box-shadow var(--duration-fast) var(--ease-smooth),
+    background-color var(--duration-fast) var(--ease-smooth);
+}
+
+.clay-input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.clay-input:hover:not(:disabled):not(:focus) {
+  border-color: var(--color-text-muted);
+}
+
+.clay-input:focus {
+  outline: none;
+  border-color: var(--color-brand-500);
+  box-shadow: 0 0 0 3px rgba(188, 74, 124, 0.15);
+}
+
+.clay-input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background: var(--color-surface-sunken);
+}
+
+.clay-input-error {
+  border-color: var(--color-error);
+}
+
+.clay-input-error:focus {
+  border-color: var(--color-error);
+  box-shadow: 0 0 0 3px rgba(179, 50, 62, 0.14);
+}
+
+/* Textarea */
+.clay-textarea {
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  line-height: var(--leading-normal);
+  color: var(--color-text-primary);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--clay-shadow-xs);
+  resize: vertical;
+  min-height: 100px;
+  transition:
+    border-color var(--duration-fast) var(--ease-smooth),
+    box-shadow var(--duration-fast) var(--ease-smooth);
+}
+
+.clay-textarea:focus {
+  outline: none;
+  border-color: var(--color-brand-500);
+  box-shadow: 0 0 0 3px rgba(188, 74, 124, 0.15);
+}
+
+.clay-textarea::placeholder {
+  color: var(--color-text-muted);
+}
+
+/* Select */
+.clay-select {
+  width: 100%;
+  min-height: 46px;
+  padding: var(--space-3) var(--space-10) var(--space-3) var(--space-4);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--color-text-primary);
+  background-color: var(--color-surface);
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23736C82' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right var(--space-4) center;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--clay-shadow-xs);
+  appearance: none;
+  cursor: pointer;
+  transition: border-color var(--duration-fast) var(--ease-smooth), box-shadow var(--duration-fast) var(--ease-smooth);
+}
+
+.clay-select:focus {
+  outline: none;
+  border-color: var(--color-brand-500);
+  box-shadow: 0 0 0 3px rgba(188, 74, 124, 0.15);
+}
+
+/* Labels & helpers */
+.clay-label {
+  display: block;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  letter-spacing: 0.01em;
+  color: var(--color-text-primary);
+}
+
+.clay-help {
+  display: block;
+  margin-top: var(--space-1);
+  font-size: var(--text-xs);
+  color: var(--color-text-tertiary);
+}
+
+.clay-error-text {
+  display: block;
+  margin-top: var(--space-1);
+  font-size: var(--text-xs);
+  color: var(--color-error);
+}
+
+/* ============================================================
+ * Chips
+ * ============================================================ */
+.clay-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  color: var(--color-text-secondary);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  box-shadow: var(--clay-shadow-xs);
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-out);
+}
+
+.clay-chip:hover {
+  color: var(--color-text-primary);
+  border-color: var(--color-brand-300);
+}
+
+.clay-chip-active {
+  background: var(--color-brand-600);
+  border-color: var(--color-brand-600);
+  color: #FFFFFF;
+  box-shadow: 0 4px 12px -6px rgba(160, 47, 96, 0.6);
+}
+
+.clay-chip-active:hover {
+  background: var(--color-brand-700);
+  border-color: var(--color-brand-700);
+  color: #FFFFFF;
+}
+
+/* ============================================================
+ * Progress Indicators
+ * ============================================================ */
+.clay-progress {
+  width: 100%;
+  height: 8px;
+  background: var(--color-surface-sunken);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.clay-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-brand-400), var(--color-brand-600));
+  border-radius: var(--radius-full);
+  transition: width var(--duration-slow) var(--ease-out);
+}
+
+.clay-progress-bar-mint {
+  background: linear-gradient(90deg, var(--color-sage), var(--color-success));
+}
+
+.clay-progress-bar-peach {
+  background: linear-gradient(90deg, var(--color-gold-light), var(--color-gold));
+}
+
+/* ============================================================
+ * Photo Frames
+ * ============================================================ */
+.clay-photo-frame {
+  display: inline-block;
+  padding: var(--space-3);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--clay-shadow-sm);
+  transition: box-shadow var(--duration-normal) var(--ease-out), transform var(--duration-normal) var(--ease-out);
+}
+
+.clay-photo-frame:hover {
+  box-shadow: var(--clay-shadow-md);
+  transform: translateY(-2px);
+}
+
+.clay-photo-frame img {
+  border-radius: var(--radius-md);
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.clay-photo-frame-lg {
+  padding: var(--space-4);
+  border-radius: var(--radius-2xl);
+}
+
+/* ============================================================
+ * Selection Tiles
+ * ============================================================ */
+.clay-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-5);
+  background: var(--color-surface);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--clay-shadow-xs);
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-out);
+  text-align: center;
+  color: var(--color-text-primary);
+}
+
+.clay-tile:hover {
+  box-shadow: var(--clay-shadow-sm);
+  border-color: var(--color-brand-300);
+  transform: translateY(-2px);
+}
+
+.clay-tile-selected {
+  background: var(--color-brand-50);
+  border-color: var(--color-brand-600);
+  box-shadow: 0 0 0 3px var(--color-brand-500-10);
+}
+
+.clay-tile-selected:hover {
+  border-color: var(--color-brand-700);
+}
+
+/* ============================================================
+ * Theme Cards
+ * ============================================================ */
+.clay-theme-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--clay-shadow-sm);
+  overflow: hidden;
+  cursor: pointer;
+  transition:
+    box-shadow var(--duration-normal) var(--ease-out),
+    border-color var(--duration-normal) var(--ease-out),
+    transform var(--duration-normal) var(--ease-out);
+}
+
+.clay-theme-card:hover {
+  box-shadow: var(--clay-shadow-md);
+  border-color: var(--color-brand-300);
+  transform: translateY(-3px);
+}
+
+.clay-theme-card-preview {
+  position: relative;
+  overflow: hidden;
+}
+
+.clay-theme-card-body {
+  padding: var(--space-4) var(--space-5) var(--space-5);
+}
+
+.clay-theme-card-title {
+  font-family: var(--font-display);
+  font-weight: var(--weight-semibold);
+  font-size: var(--text-base);
+  letter-spacing: -0.01em;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-1);
+}
+
+.clay-theme-card-desc {
+  font-size: var(--text-xs);
+  line-height: var(--leading-relaxed);
+  color: var(--color-text-secondary);
+}
+
+/* ============================================================
+ * Dropzone
+ * ============================================================ */
+.clay-dropzone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-8) var(--space-4);
+  background: var(--color-surface-warm);
+  border: 1.5px dashed var(--color-border-strong);
+  border-radius: var(--radius-2xl);
+  text-align: center;
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-out);
+}
+
+.clay-dropzone:hover {
+  border-color: var(--color-brand-300);
+  background: var(--color-brand-50);
+}
+
+.clay-dropzone-active {
+  border-color: var(--color-brand-500);
+  background: var(--color-brand-50);
+  box-shadow: 0 0 0 3px var(--color-brand-500-10);
+}
+
+.clay-dropzone-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  background: var(--color-gold-soft);
+  color: var(--color-gold-deep);
+}
+
+.clay-dropzone-text {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--color-text-primary);
+}
+
+.clay-dropzone-hint {
+  font-size: var(--text-xs);
+  color: var(--color-text-tertiary);
+}
+
+/* ============================================================
+ * Divider & Avatars
+ * ============================================================ */
+.clay-divider {
+  height: 1px;
+  width: 100%;
+  background: var(--color-divider);
+  border: none;
+}
+
+.clay-avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-full);
+  background: var(--color-brand-100);
+  color: var(--color-brand-700);
+  font-family: var(--font-display);
+  font-weight: var(--weight-semibold);
+  font-size: var(--text-sm);
+  border: 1px solid var(--color-brand-200);
+}
+
+.clay-avatar-sm {
+  width: 32px;
+  height: 32px;
+  font-size: var(--text-xs);
+}
+
+.clay-avatar-lg {
+  width: 64px;
+  height: 64px;
+  font-size: var(--text-xl);
+}
+
+/* ============================================================
+ * Toggle
+ * ============================================================ */
+.clay-toggle {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.clay-toggle-track {
+  position: relative;
+  width: 44px;
+  height: 26px;
+  border-radius: var(--radius-full);
+  background: var(--color-surface-sunken);
+  border: 1px solid var(--color-border-strong);
+  transition: background-color var(--duration-fast) var(--ease-smooth), border-color var(--duration-fast) var(--ease-smooth);
+}
+
+.clay-toggle-thumb {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  border-radius: var(--radius-full);
+  background: var(--color-surface);
+  box-shadow: var(--clay-shadow-sm);
+  transition: transform var(--duration-fast) var(--ease-out);
+}
+
+.clay-toggle-active .clay-toggle-track {
+  background: var(--color-brand-600);
+  border-color: var(--color-brand-600);
+}
+
+.clay-toggle-active .clay-toggle-thumb {
+  transform: translateX(18px);
+}
+
+/* ============================================================
+ * Badges
+ * ============================================================ */
+.clay-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-1) var(--space-3);
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-semibold);
+  line-height: 1.5;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+}
+
+.clay-badge-primary { /* gilded signature chip */
+  background: var(--color-gold-soft);
+  color: var(--color-gold-deep);
+  border: 1px solid rgba(168, 127, 46, 0.25);
+}
+
+.clay-badge-success {
+  background: var(--color-success-light);
+  color: var(--color-success-dark);
+}
+
+.clay-badge-warning {
+  background: var(--color-warning-light);
+  color: var(--color-warning-dark);
+}
+
+.clay-badge-error {
+  background: var(--color-error-light);
+  color: var(--color-error-dark);
+}
+
+.clay-badge-outline {
+  background: transparent;
+  border: 1px solid var(--color-border-strong);
+  color: var(--color-text-secondary);
+}
+
+
+
+

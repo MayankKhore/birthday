@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 160" aria-label="Playful template thumbnail">
+  <rect x="4" y="4" width="192" height="152" rx="12" fill="#FDF7F2" stroke="#F07868" stroke-width="2"/>
+  <circle cx="100" cy="80" r="16" fill="#F07868"/>
+  <circle cx="100" cy="80" r="8" fill="#F5A17E"/>
+  <circle cx="100" cy="80" r="4" fill="#FFFFFF"/>
+  <path d="M82,105 Q100,115 118,105" fill="none" stroke="#F07868" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="75" cy="95" r="4" fill="#F5A17E" opacity="0.7"/>
+  <circle cx="125" cy="95" r="4" fill="#F5A17E" opacity="0.7"/>
+  <circle cx="85" cy="70" r="3" fill="#E6BB86" opacity="0.7"/>
+  <circle cx="115" cy="70" r="3" fill="#E6BB86" opacity="0.7"/>
+  <text x="100" y="148" font-family="Georgia, serif" font-size="12" fill="#5D4A4A" text-anchor="middle">Playful</text>
+</svg>

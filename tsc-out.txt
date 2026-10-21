@@ -1,0 +1,116 @@
+﻿src/components/editor/steps/Step5Personalize.tsx(92,44): error TS18048: 'project.photos' is possibly 'undefined'.
+src/components/editor/steps/Step5Personalize.tsx(92,70): error TS2339: Property 'id' does not exist on type 'Omit<ProjectPhoto, "id" | "projectId" | "createdAt">'.
+src/components/editor/steps/Step5Personalize.tsx(126,8): error TS2322: Type 'SceneConfig | undefined' is not assignable to type 'SceneConfig'.
+  Type 'undefined' is not assignable to type 'SceneConfig'.
+src/components/editor/steps/Step5Personalize.tsx(126,21): error TS2322: Type 'SceneConfig | undefined' is not assignable to type 'SceneConfig'.
+  Type 'undefined' is not assignable to type 'SceneConfig'.
+src/components/editor/steps/Step5Personalize.tsx(410,19): error TS2375: Type '{ text: string; id?: UUID; title?: string; imageId?: UUID; backgroundColor?: string; }' is not assignable to type 'StorybookChapter' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Property 'id' is optional in type '{ text: string; id?: UUID; title?: string; imageId?: UUID; backgroundColor?: string; }' but required in type 'StorybookChapter'.
+src/components/editor/steps/Step5Personalize.tsx(446,111): error TS2375: Type '{ animationType: any; title?: string; message?: string; imageId?: UUID; }' is not assignable to type 'GiftRevealConfig' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Property 'title' is optional in type '{ animationType: any; title?: string; message?: string; imageId?: UUID; }' but required in type 'GiftRevealConfig'.
+src/components/editor/steps/Step5Personalize.tsx(455,108): error TS2375: Type '{ title: string; message?: string; imageId?: UUID; animationType?: "unwrap" | "fade" | "pop" | "slide"; }' is not assignable to type 'GiftRevealConfig' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Property 'message' is optional in type '{ title: string; message?: string; imageId?: UUID; animationType?: "unwrap" | "fade" | "pop" | "slide"; }' but required in type 'GiftRevealConfig'.
+src/components/editor/steps/Step5Personalize.tsx(459,101): error TS2375: Type '{ message: string; title?: string; imageId?: UUID; animationType?: "unwrap" | "fade" | "pop" | "slide"; }' is not assignable to type 'GiftRevealConfig' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Property 'title' is optional in type '{ message: string; title?: string; imageId?: UUID; animationType?: "unwrap" | "fade" | "pop" | "slide"; }' but required in type 'GiftRevealConfig'.
+src/components/experience/BirthdayExperience.tsx(72,16): error TS2345: Argument of type 'SceneType' is not assignable to parameter of type 'SetStateAction<ExperienceStage>'.
+  Type '"envelope"' is not assignable to type 'SetStateAction<ExperienceStage>'.
+src/components/experience/BirthdayExperience.tsx(105,28): error TS2367: This comparison appears to be unintentional because the types '"cake" | "storybook" | "photo-gallery" | "mini-game" | "gift-reveal" | "celebration" | "entrance" | "cards" | "closing" | "complete"' and '"party"' have no overlap.
+src/components/experience/BirthdayExperience.tsx(107,6): error TS2367: This comparison appears to be unintentional because the types 'ExperienceStage' and '"party"' have no overlap.
+src/components/experience/BirthdayExperience.tsx(154,113): error TS2339: Property 'senderName' does not exist on type 'BirthdayProject'.
+src/components/experience/BirthdayExperience.tsx(173,14): error TS2375: Type '{ project: BirthdayProject; confettiEnabled: boolean; reducedMotion: boolean; onComplete: () => void; candleCount: number | undefined; enableMicrophoneBlow: boolean | undefined; candleColors: string[] | undefined; }' is not assignable to type 'Props' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Types of property 'candleCount' are incompatible.
+    Type 'number | undefined' is not assignable to type 'number'.
+      Type 'undefined' is not assignable to type 'number'.
+src/components/experience/BirthdayExperience.tsx(191,13): error TS2375: Type '{ chapters: StorybookChapter[] | undefined; }' is not assignable to type '{ chapters?: StorybookChapter[]; }' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Types of property 'chapters' are incompatible.
+    Type 'StorybookChapter[] | undefined' is not assignable to type 'StorybookChapter[]'.
+      Type 'undefined' is not assignable to type 'StorybookChapter[]'.
+src/components/experience/BirthdayExperience.tsx(250,203): error TS2353: Object literal may only specify known properties, and 'gameType' does not exist in type 'CardConfig'.
+src/components/experience/BirthdayExperience.tsx(261,13): error TS2375: Type '{ giftConfig: GiftRevealConfig | undefined; }' is not assignable to type '{ giftConfig?: GiftRevealConfig; }' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Types of property 'giftConfig' are incompatible.
+    Type 'GiftRevealConfig | undefined' is not assignable to type 'GiftRevealConfig'.
+      Type 'undefined' is not assignable to type 'GiftRevealConfig'.
+src/components/experience/CakeCelebration.tsx(92,18): error TS2532: Object is possibly 'undefined'.
+src/components/experience/CakeCelebration.tsx(213,27): error TS2532: Object is possibly 'undefined'.
+src/components/experience/CakeCelebration.tsx(214,26): error TS2532: Object is possibly 'undefined'.
+src/components/experience/CakeCelebration.tsx(224,42): error TS2532: Object is possibly 'undefined'.
+src/components/experience/CakeCelebration.tsx(225,49): error TS2532: Object is possibly 'undefined'.
+src/components/experience/MemoryMatchCard.tsx(31,6): error TS2322: Type 'T | undefined' is not assignable to type 'T'.
+  'T' could be instantiated with an arbitrary type which could be unrelated to 'T | undefined'.
+src/components/experience/MemoryMatchCard.tsx(31,19): error TS2322: Type 'T | undefined' is not assignable to type 'T'.
+  'T' could be instantiated with an arbitrary type which could be unrelated to 'T | undefined'.
+src/components/experience/MemoryMatchCard.tsx(67,9): error TS2532: Object is possibly 'undefined'.
+src/components/experience/MemoryMatchCard.tsx(67,33): error TS2532: Object is possibly 'undefined'.
+src/components/experience/MemoryMatchCard.tsx(72,7): error TS2322: Type '{ flipped: true; id?: string; pairId?: string; label?: string; matched?: boolean; }' is not assignable to type '{ id: string; pairId: string; label: string; flipped: boolean; matched: boolean; }'.
+  Property 'id' is optional in type '{ flipped: true; id?: string; pairId?: string; label?: string; matched?: boolean; }' but required in type '{ id: string; pairId: string; label: string; flipped: boolean; matched: boolean; }'.
+src/components/experience/MemoryMatchCard.tsx(83,27): error TS2538: Type 'undefined' cannot be used as an index type.
+src/components/experience/MemoryMatchCard.tsx(83,48): error TS2538: Type 'undefined' cannot be used as an index type.
+src/components/experience/MemoryMatchCard.tsx(89,18): error TS2538: Type 'undefined' cannot be used as an index type.
+src/components/experience/MemoryMatchCard.tsx(89,34): error TS2538: Type 'undefined' cannot be used as an index type.
+src/components/experience/MemoryMatchCard.tsx(90,18): error TS2538: Type 'undefined' cannot be used as an index type.
+src/components/experience/MemoryMatchCard.tsx(90,34): error TS2538: Type 'undefined' cannot be used as an index type.
+src/components/experience/MemoryMatchCard.tsx(97,18): error TS2538: Type 'undefined' cannot be used as an index type.
+src/components/experience/MemoryMatchCard.tsx(97,34): error TS2538: Type 'undefined' cannot be used as an index type.
+src/components/experience/MemoryMatchCard.tsx(98,18): error TS2538: Type 'undefined' cannot be used as an index type.
+src/components/experience/MemoryMatchCard.tsx(98,34): error TS2538: Type 'undefined' cannot be used as an index type.
+src/components/experience/StorybookCard.tsx(81,111): error TS18048: 'currentChapter' is possibly 'undefined'.
+src/components/experience/StorybookCard.tsx(82,134): error TS18048: 'currentChapter' is possibly 'undefined'.
+src/components/experience/StorybookCard.tsx(84,10): error TS18048: 'currentChapter' is possibly 'undefined'.
+src/components/experience/StorybookCard.tsx(84,25): error TS2339: Property 'imageId' does not exist on type 'StorybookChapter | { id: any; title: string; text: string; }'.
+  Property 'imageId' does not exist on type '{ id: any; title: string; text: string; }'.
+src/lib/auth/auth.test.ts(3,10): error TS1484: 'DemoCredentials' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/lib/auth/auth.test.ts(3,27): error TS1484: 'DemoRegistration' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/lib/auth/client.ts(21,16): error TS4111: Property 'id' comes from an index signature, so it must be accessed with ['id'].
+src/lib/auth/client.ts(22,16): error TS4111: Property 'email' comes from an index signature, so it must be accessed with ['email'].
+src/lib/auth/client.ts(23,16): error TS4111: Property 'displayName' comes from an index signature, so it must be accessed with ['displayName'].
+src/lib/auth/client.ts(24,16): error TS4111: Property 'role' comes from an index signature, so it must be accessed with ['role'].
+src/lib/auth/client.ts(25,16): error TS4111: Property 'createdAt' comes from an index signature, so it must be accessed with ['createdAt'].
+src/lib/auth/client.ts(26,16): error TS4111: Property 'updatedAt' comes from an index signature, so it must be accessed with ['updatedAt'].
+src/lib/auth/client.ts(27,16): error TS4111: Property 'subscriptionTier' comes from an index signature, so it must be accessed with ['subscriptionTier'].
+src/lib/auth/client.ts(28,16): error TS4111: Property 'subscriptionStatus' comes from an index signature, so it must be accessed with ['subscriptionStatus'].
+src/lib/auth/client.ts(73,13): error TS2532: Object is possibly 'undefined'.
+src/lib/auth/client.ts(73,27): error TS2532: Object is possibly 'undefined'.
+src/lib/auth/LocalAuthAdapter.ts(8,40): error TS2459: Module '"./interfaces"' declares 'AuthState' locally, but it is not exported.
+src/lib/auth/LocalAuthAdapter.ts(67,18): error TS4111: Property 'id' comes from an index signature, so it must be accessed with ['id'].
+src/lib/auth/LocalAuthAdapter.ts(68,18): error TS4111: Property 'email' comes from an index signature, so it must be accessed with ['email'].
+src/lib/auth/LocalAuthAdapter.ts(69,18): error TS4111: Property 'displayName' comes from an index signature, so it must be accessed with ['displayName'].
+src/lib/auth/LocalAuthAdapter.ts(70,18): error TS4111: Property 'role' comes from an index signature, so it must be accessed with ['role'].
+src/lib/auth/LocalAuthAdapter.ts(71,18): error TS4111: Property 'createdAt' comes from an index signature, so it must be accessed with ['createdAt'].
+src/lib/auth/LocalAuthAdapter.ts(72,18): error TS4111: Property 'updatedAt' comes from an index signature, so it must be accessed with ['updatedAt'].
+src/lib/auth/LocalAuthAdapter.ts(73,18): error TS4111: Property 'subscriptionTier' comes from an index signature, so it must be accessed with ['subscriptionTier'].
+src/lib/auth/LocalAuthAdapter.ts(74,18): error TS4111: Property 'subscriptionStatus' comes from an index signature, so it must be accessed with ['subscriptionStatus'].
+src/lib/auth/LocalAuthAdapter.ts(197,77): error TS4111: Property 'password' comes from an index signature, so it must be accessed with ['password'].
+src/lib/media/config.ts(58,3): error TS2322: Type 'MediaTierConfig | undefined' is not assignable to type 'MediaTierConfig'.
+  Type 'undefined' is not assignable to type 'MediaTierConfig'.
+src/lib/storage/LocalProjectAdapter.ts(78,13): error TS2375: Type '{ id: UUID; userId: UUID | null; slug: string; title: string; occasion: OccasionType; recipientName: string; recipientAge: number | undefined; relationship: string | undefined; ... 10 more ...; updatedAt: ISODateString; }' is not assignable to type 'BirthdayProject' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Types of property 'recipientAge' are incompatible.
+    Type 'number | undefined' is not assignable to type 'number'.
+      Type 'undefined' is not assignable to type 'number'.
+src/lib/storage/LocalProjectAdapter.ts(151,13): error TS2375: Type '{ id: UUID; createdAt: ISODateString; status: ProjectStatus; updatedAt: ISODateString; title: string; occasion: OccasionType; ... 13 more ...; viewCount: number; }' is not assignable to type 'BirthdayProject' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Types of property 'photos' are incompatible.
+    Type 'Omit<ProjectPhoto, "id" | "projectId" | "createdAt">[]' is not assignable to type 'ProjectPhoto[]'.
+      Type 'Omit<ProjectPhoto, "id" | "projectId" | "createdAt">' is missing the following properties from type 'ProjectPhoto': id, projectId, createdAt
+src/lib/storage/LocalProjectAdapter.ts(279,7): error TS2322: Type '{ fileName: string; mimeType: string; sizeBytes: number; width: number; height: number; dataUrl: string; altText: string | undefined; caption: string | undefined; sortOrder: number; }[]' is not assignable to type 'Omit<ProjectPhoto, "id" | "projectId" | "createdAt">[]'.
+  Type '{ fileName: string; mimeType: string; sizeBytes: number; width: number; height: number; dataUrl: string; altText: string | undefined; caption: string | undefined; sortOrder: number; }' is not assignable to type 'Omit<ProjectPhoto, "id" | "projectId" | "createdAt">' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+    Types of property 'altText' are incompatible.
+      Type 'string | undefined' is not assignable to type 'string'.
+        Type 'undefined' is not assignable to type 'string'.
+src/lib/storage/LocalProjectAdapter.ts(304,5): error TS2375: Type '{ success: boolean; data: number; error: { code: string; message: string; details?: Record<string, unknown>; } | undefined; }' is not assignable to type 'ServiceResult<number>' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Types of property 'error' are incompatible.
+    Type '{ code: string; message: string; details?: Record<string, unknown>; } | undefined' is not assignable to type '{ code: string; message: string; details?: Record<string, unknown>; }'.
+      Type 'undefined' is not assignable to type '{ code: string; message: string; details?: Record<string, unknown>; }'.
+src/lib/subscriptions/LocalSubscriptionAdapter.ts(90,5): error TS2412: Type 'undefined' is not assignable to type 'string' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the type of the target.
+src/lib/subscriptions/LocalSubscriptionAdapter.ts(144,5): error TS2412: Type 'undefined' is not assignable to type 'string' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the type of the target.
+src/lib/subscriptions/PlanComparisons.ts(1,32): error TS2304: Cannot find name 'PlanComparison'.
+src/test/setup.ts(34,10): error TS2304: Cannot find name 'vi'.
+src/test/setup.ts(39,10): error TS2304: Cannot find name 'vi'.
+src/test/setup.ts(39,38): error TS7006: Parameter 'query' implicitly has an 'any' type.
+src/test/setup.ts(43,18): error TS2304: Cannot find name 'vi'.
+src/test/setup.ts(44,21): error TS2304: Cannot find name 'vi'.
+src/test/setup.ts(45,23): error TS2304: Cannot find name 'vi'.
+src/test/setup.ts(46,26): error TS2304: Cannot find name 'vi'.
+src/test/setup.ts(47,20): error TS2304: Cannot find name 'vi'.
+src/test/setup.ts(64,10): error TS2304: Cannot find name 'vi'.
+src/test/setup.ts(66,14): error TS2304: Cannot find name 'vi'.
+src/test/setup.ts(67,14): error TS2304: Cannot find name 'vi'.
+src/test/setup.ts(68,13): error TS2304: Cannot find name 'vi'.

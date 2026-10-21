@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 160" aria-label="Floral template thumbnail">
+  <rect x="4" y="4" width="192" height="152" rx="10" fill="#FDF7F2" stroke="#E8DCCF" stroke-width="1"/>
+  <circle cx="100" cy="80" r="22" fill="#F4C2B2"/>
+  <circle cx="86" cy="71" r="11" fill="#F4C2B2" opacity="0.9"/>
+  <circle cx="114" cy="71" r="11" fill="#F4C2B2" opacity="0.9"/>
+  <circle cx="95" cy="89" r="11" fill="#F4C2B2" opacity="0.9"/>
+  <circle cx="105" cy="89" r="11" fill="#F4C2B2" opacity="0.9"/>
+  <circle cx="100" cy="80" r="5" fill="#C9A9A0"/>
+  <path d="M100,96 Q70,110 70,140" fill="none" stroke="#9FAE9E" stroke-width="2" stroke-linecap="round"/>
+  <path d="M100,96 Q130,110 130,140" fill="none" stroke="#9FAE9E" stroke-width="2" stroke-linecap="round"/>
+  <text x="100" y="148" font-family="Georgia, serif" font-size="12" fill="#5D4A4A" text-anchor="middle">Floral</text>
+</svg>

@@ -1,0 +1,118 @@
+---
+import { ROUTES } from '@/utils/routes';
+---
+
+<span id="auth-chip-logged-out">
+<a href={ROUTES.LOGIN} class="clay-btn clay-btn-ghost clay-btn-sm hidden sm:inline-flex">Sign In</a>
+</span>
+
+<span id="auth-chip-logged-in" class="hidden" style="position: relative;">
+<button
+type="button"
+id="auth-menu-btn"
+class="clay-btn clay-btn-secondary clay-btn-sm"
+aria-haspopup="menu"
+aria-expanded="false"
+aria-controls="auth-menu-list"
+>
+<span id="auth-menu-avatar" class="clay-avatar clay-avatar-sm" style="width: 24px; height: 24px; font-size: 0.625rem; margin-right: 2px;" aria-hidden="true">?</span>
+<span id="auth-menu-name" style="max-width: 96px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">Account</span>
+<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+<span
+id="auth-menu-list"
+role="menu"
+class="hidden"
+style="position: absolute; right: 0; top: calc(100% + 8px); min-width: 216px; background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-xl); box-shadow: var(--clay-shadow-lg); padding: var(--space-2); z-index: var(--z-dropdown);"
+>
+<span id="auth-menu-email" role="presentation" style="display: block; padding: var(--space-2) var(--space-3); font-size: var(--text-xs); color: var(--color-text-tertiary); overflow: hidden; text-overflow: ellipsis;"></span>
+<a href={ROUTES.DASHBOARD} role="menuitem" style="display: block; padding: var(--space-2) var(--space-3); border-radius: var(--radius-lg); font-size: var(--text-sm); color: var(--color-text-primary); text-decoration: none;">My projects</a>
+<a href={ROUTES.SETTINGS} role="menuitem" style="display: block; padding: var(--space-2) var(--space-3); border-radius: var(--radius-lg); font-size: var(--text-sm); color: var(--color-text-primary); text-decoration: none;">Settings</a>
+<button type="button" id="auth-signout-btn" role="menuitem" style="display: block; width: 100%; text-align: left; padding: var(--space-2) var(--space-3); border-radius: var(--radius-lg); font-size: var(--text-sm); color: var(--color-error-dark); cursor: pointer;">Sign out</button>
+</span>
+</span>
+
+<noscript>
+<a href={ROUTES.LOGIN} class="clay-btn clay-btn-ghost clay-btn-sm">Sign In</a>
+</noscript>
+
+<script>
+(function () {
+var loggedOut = document.getElementById('auth-chip-logged-out');
+var loggedIn = document.getElementById('auth-chip-logged-in');
+var menuBtn = document.getElementById('auth-menu-btn');
+var menuList = document.getElementById('auth-menu-list');
+var menuName = document.getElementById('auth-menu-name');
+var menuAvatar = document.getElementById('auth-menu-avatar');
+var menuEmail = document.getElementById('auth-menu-email');
+var signoutBtn = document.getElementById('auth-signout-btn');
+
+function readSession() {
+try {
+var raw = window.localStorage.getItem('bp_user_profile');
+if (!raw) return null;
+var parsed = JSON.parse(raw);
+if (!parsed || typeof parsed !== 'object') return null;
+if (typeof parsed.email !== 'string' || typeof parsed.displayName !== 'string') return null;
+return parsed;
+} catch (e) { return null; }
+}
+
+function initials(name, email) {
+var base = (name || '').trim() || (email || '').trim();
+if (!base) return '?';
+var parts = base.split(/\s+/).filter(Boolean);
+if (parts.length >= 2) return (parts[0][0] + parts[1][0]).toUpperCase();
+if (base.indexOf('@') > 0) return base.slice(0, 2).toUpperCase();
+return base.slice(0, 2).toUpperCase();
+}
+
+var user = readSession();
+if (user) {
+if (loggedOut) loggedOut.classList.add('hidden');
+if (loggedIn) loggedIn.classList.remove('hidden');
+if (menuName) menuName.textContent = user.displayName || user.email;
+if (menuAvatar) menuAvatar.textContent = initials(user.displayName, user.email);
+if (menuEmail) menuEmail.textContent = user.email + ' · demo session';
+}
+if (loggedOut) {
+loggedOut.classList.toggle('hidden', !!user);
+var link = loggedOut.querySelector('a');
+if (link) link.classList.toggle('hidden', !!user);
+}
+
+function closeMenu() {
+if (!menuList || !menuBtn) return;
+menuList.classList.add('hidden');
+menuBtn.setAttribute('aria-expanded', 'false');
+}
+
+if (menuBtn && menuList) {
+menuBtn.addEventListener('click', function (e) {
+e.stopPropagation();
+var isOpen = !menuList.classList.contains('hidden');
+if (isOpen) { closeMenu(); return; }
+menuList.classList.remove('hidden');
+menuBtn.setAttribute('aria-expanded', 'true');
+});
+document.addEventListener('click', function (e) {
+if (!menuList.classList.contains('hidden')) {
+var t = e.target;
+if (t instanceof Node && !menuList.contains(t) && t !== menuBtn && !menuBtn.contains(t)) closeMenu();
+}
+});
+document.addEventListener('keydown', function (e) {
+if (e.key === 'Escape') closeMenu();
+});
+}
+
+if (signoutBtn) {
+signoutBtn.addEventListener('click', function () {
+try {
+window.localStorage.removeItem('bp_user_profile');
+} catch (e) {}
+window.location.href = '/';
+});
+}
+})();
+</script>

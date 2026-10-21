@@ -1,0 +1,339 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Design System" description="BirthdayWish design system component showcase.">
+  <section class="section ambient-bg">
+    <div class="container-page" style="position: relative; z-index: 1;">
+      <!-- Floating decorations -->
+      <div class="animate-float" style="position: absolute; top: 60px; left: 5%;" aria-hidden="true"><span class="deco-star deco-star-lg">✦</span></div>
+      <div class="animate-float-delay-2" style="position: absolute; top: 100px; right: 8%;" aria-hidden="true"><span class="deco-star deco-star-md deco-star-rose">✦</span></div>
+      <div class="animate-float-delay-1" style="position: absolute; bottom: 40px; left: 12%;" aria-hidden="true"><span class="deco-star deco-star-sm deco-star-mint">✦</span></div>
+
+      <div class="mx-auto max-w-2xl text-center mb-16">
+        <span class="clay-badge clay-badge-primary mb-4">Design System</span>
+        <h1 class="text-display mb-4" style="font-size: var(--text-4xl);">Component Showcase</h1>
+        <p class="text-body">A curated collection of Claymorphism + Glassmorphism components.</p>
+      </div>
+
+      <!-- Color Palette -->
+      <div class="mb-16">
+        <h2 class="text-heading text-2xl mb-6">Color Palette</h2>
+        <div class="clay-card-static p-6">
+          <div class="grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-9 gap-3">
+            <div class="text-center"><div class="h-14 rounded-lg mb-2" style="background: var(--color-lavender);"></div><p class="text-xs" style="color: var(--color-text-tertiary);">Lavender</p></div>
+            <div class="text-center"><div class="h-14 rounded-lg mb-2" style="background: var(--color-periwinkle);"></div><p class="text-xs" style="color: var(--color-text-tertiary);">Periwinkle</p></div>
+            <div class="text-center"><div class="h-14 rounded-lg mb-2" style="background: var(--color-brand-500);"></div><p class="text-xs" style="color: var(--color-text-tertiary);">Violet</p></div>
+            <div class="text-center"><div class="h-14 rounded-lg mb-2" style="background: var(--color-midnight);"></div><p class="text-xs" style="color: var(--color-text-tertiary);">Midnight</p></div>
+            <div class="text-center"><div class="h-14 rounded-lg mb-2" style="background: var(--color-cream);"></div><p class="text-xs" style="color: var(--color-text-tertiary);">Cream</p></div>
+            <div class="text-center"><div class="h-14 rounded-lg mb-2" style="background: var(--color-peach);"></div><p class="text-xs" style="color: var(--color-text-tertiary);">Peach</p></div>
+            <div class="text-center"><div class="h-14 rounded-lg mb-2" style="background: var(--color-butter);"></div><p class="text-xs" style="color: var(--color-text-tertiary);">Butter</p></div>
+            <div class="text-center"><div class="h-14 rounded-lg mb-2" style="background: var(--color-mint);"></div><p class="text-xs" style="color: var(--color-text-tertiary);">Mint</p></div>
+            <div class="text-center"><div class="h-14 rounded-lg mb-2" style="background: var(--color-rose);"></div><p class="text-xs" style="color: var(--color-text-tertiary);">Rose</p></div>
+          </div>
+
+      <!-- Typography -->
+      <div class="mb-16">
+        <h2 class="text-heading text-2xl mb-6">Typography</h2>
+        <div class="clay-card-static p-8 space-y-3">
+          <p class="text-display" style="font-size: var(--text-4xl);">Display — Fraunces Bold</p>
+          <p class="font-display font-semibold text-2xl" style="color: var(--color-text-primary);">Heading — Fraunces Semibold</p>
+          <p class="font-body text-base" style="color: var(--color-text-primary);">Body — Plus Jakarta Sans Regular</p>
+          <p class="font-body text-sm font-medium" style="color: var(--color-text-secondary);">Label — Jakarta Sans Medium</p>
+          <p class="font-body text-xs" style="color: var(--color-text-tertiary);">Caption — Jakarta Sans, small</p>
+        </div>
+      </div>
+
+      <!-- Clay Buttons -->
+      <div class="mb-16">
+        <h2 class="text-heading text-2xl mb-6">Clay Buttons</h2>
+        <div class="clay-card-static p-8">
+          <div class="flex flex-wrap gap-3 mb-6">
+            <button class="clay-btn clay-btn-primary">Primary</button>
+            <button class="clay-btn clay-btn-secondary">Secondary</button>
+            <button class="clay-btn clay-btn-tertiary">Tertiary</button>
+            <button class="clay-btn clay-btn-ghost">Ghost</button>
+            <button class="clay-btn clay-btn-mint">Mint</button>
+            <button class="clay-btn clay-btn-rose">Rose</button>
+            <button class="clay-btn clay-btn-peach">Peach</button>
+          </div>
+          <div class="flex flex-wrap gap-3 mb-6">
+            <button class="clay-btn clay-btn-primary clay-btn-sm">Small</button>
+            <button class="clay-btn clay-btn-primary">Default</button>
+            <button class="clay-btn clay-btn-primary clay-btn-lg">Large</button>
+          </div>
+          <div class="flex flex-wrap gap-3 mb-6">
+            <button class="clay-btn clay-btn-primary" disabled>Disabled</button>
+            <button class="clay-btn clay-btn-primary clay-btn-loading">Loading</button>
+          </div>
+          <div class="flex flex-wrap gap-3">
+            <button class="clay-icon-btn" aria-label="Settings"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></button>
+            <button class="clay-icon-btn clay-icon-btn-sm" aria-label="Small"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14m-7-7h14"/></svg></button>
+            <button class="clay-icon-btn clay-icon-btn-lg" aria-label="Large"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+
+      <!-- Form Controls -->
+      <div class="mb-16">
+        <h2 class="text-heading text-2xl mb-6">Form Controls</h2>
+        <div class="clay-card-static p-8 grid gap-6 sm:grid-cols-2">
+          <div>
+            <label class="clay-label" for="ds-name">Name</label>
+            <input class="clay-input" type="text" id="ds-name" placeholder="Enter name" />
+            <span class="clay-help">This is helper text</span>
+          </div>
+          <div>
+            <label class="clay-label" for="ds-email">Email (error state)</label>
+            <input class="clay-input clay-input-error" type="email" id="ds-email" value="invalid" />
+            <span class="clay-error-text">Please enter a valid email</span>
+          </div>
+          <div>
+            <label class="clay-label" for="ds-select">Theme</label>
+            <select class="clay-select" id="ds-select"><option>Elegant</option><option>Fun</option><option>Minimal</option></select>
+          </div>
+          <div>
+            <label class="clay-label" for="ds-textarea">Message</label>
+            <textarea class="clay-textarea" id="ds-textarea" placeholder="Write a message..."></textarea>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chips & Badges -->
+      <div class="mb-16">
+        <h2 class="text-heading text-2xl mb-6">Chips & Badges</h2>
+        <div class="clay-card-static p-8">
+          <div class="flex flex-wrap gap-2 mb-6">
+            <span class="clay-badge clay-badge-primary">Primary</span>
+            <span class="clay-badge clay-badge-success">Success</span>
+            <span class="clay-badge clay-badge-warning">Warning</span>
+            <span class="clay-badge clay-badge-error">Error</span>
+            <span class="clay-badge clay-badge-outline">Outline</span>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <button class="clay-chip clay-chip-active">Active</button>
+            <button class="clay-chip">Default</button>
+            <button class="clay-chip">Another</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Clay Cards & Theme Tiles -->
+      <div class="mb-16">
+        <h2 class="text-heading text-2xl mb-6">Clay Cards</h2>
+        <div class="grid gap-6 sm:grid-cols-3">
+          <div class="clay-card p-6">
+            <h3 class="font-display font-semibold mb-2" style="color: var(--color-text-primary);">Hover Card</h3>
+            <p class="text-sm" style="color: var(--color-text-secondary);">Elevates on hover with layered clay shadow.</p>
+          </div>
+          <div class="clay-card-sunken p-6">
+            <h3 class="font-display font-semibold mb-2" style="color: var(--color-text-primary);">Sunken</h3>
+            <p class="text-sm" style="color: var(--color-text-secondary);">Inset shadow for recessed surfaces.</p>
+          </div>
+          <div class="clay-card-warm p-6">
+            <h3 class="font-display font-semibold mb-2" style="color: var(--color-text-primary);">Warm</h3>
+            <p class="text-sm" style="color: var(--color-text-secondary);">Cream surface with peach border.</p>
+
+      <!-- Theme Tiles & Selection -->
+      <div class="mb-16">
+        <h2 class="text-heading text-2xl mb-6">Selection Tiles & Theme Cards</h2>
+        <div class="grid gap-4 grid-cols-2 sm:grid-cols-4 mb-6">
+          <div class="clay-tile clay-tile-selected">
+            <span class="deco-star deco-star-md">✦</span>
+            <span class="text-sm font-medium" style="color: var(--color-text-primary);">Selected</span>
+          </div>
+          <div class="clay-tile">
+            <span class="deco-star deco-star-md deco-star-rose">✦</span>
+            <span class="text-sm font-medium" style="color: var(--color-text-secondary);">Default</span>
+          </div>
+          <div class="clay-tile">
+            <span class="deco-star deco-star-md deco-star-mint">✦</span>
+            <span class="text-sm font-medium" style="color: var(--color-text-secondary);">Default</span>
+          </div>
+          <div class="clay-tile">
+            <span class="deco-star deco-star-md deco-star-violet">✦</span>
+            <span class="text-sm font-medium" style="color: var(--color-text-secondary);">Default</span>
+          </div>
+        </div>
+        <div class="grid gap-4 sm:grid-cols-3">
+          <div class="clay-theme-card">
+            <div class="clay-theme-card-preview" style="background: var(--color-lavender);"><span class="deco-star deco-star-lg">✦</span></div>
+            <div class="clay-theme-card-body"><p class="clay-theme-card-title">Elegant</p><p class="clay-theme-card-desc">Soft lavender with refined typography</p></div>
+          </div>
+          <div class="clay-theme-card">
+            <div class="clay-theme-card-preview" style="background: var(--color-peach);"><span class="deco-star deco-star-lg deco-star-violet">✦</span></div>
+            <div class="clay-theme-card-body"><p class="clay-theme-card-title">Warm</p><p class="clay-theme-card-desc">Peach tones with gentle warmth</p></div>
+          </div>
+          <div class="clay-theme-card">
+            <div class="clay-theme-card-preview" style="background: var(--color-mint);"><span class="deco-star deco-star-lg">✦</span></div>
+            <div class="clay-theme-card-body"><p class="clay-theme-card-title">Fresh</p><p class="clay-theme-card-desc">Mint green for a light, airy feel</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Progress Indicators -->
+      <div class="mb-16">
+        <h2 class="text-heading text-2xl mb-6">Progress Indicators</h2>
+        <div class="clay-card-static p-8 space-y-4">
+          <div><p class="text-xs mb-2" style="color: var(--color-text-tertiary);">Default (violet)</p><div class="clay-progress"><div class="clay-progress-bar" style="width: 65%;"></div></div></div>
+          <div><p class="text-xs mb-2" style="color: var(--color-text-tertiary);">Mint</p><div class="clay-progress"><div class="clay-progress-bar clay-progress-bar-mint" style="width: 40%;"></div></div></div>
+          <div><p class="text-xs mb-2" style="color: var(--color-text-tertiary);">Peach</p><div class="clay-progress"><div class="clay-progress-bar clay-progress-bar-peach" style="width: 85%;"></div></div></div>
+
+      <!-- Glass Surfaces -->
+      <div class="mb-16">
+        <h2 class="text-heading text-2xl mb-6">Glass Surfaces</h2>
+        <div class="clay-card-static p-8" style="background: linear-gradient(135deg, var(--color-lavender), var(--color-peach));">
+          <div class="grid gap-4 sm:grid-cols-3">
+            <div class="glass p-6 text-center">
+              <p class="font-display font-semibold text-sm mb-1" style="color: var(--color-text-primary);">Glass</p>
+              <p class="text-xs" style="color: var(--color-text-secondary);">Default translucent</p>
+            </div>
+            <div class="glass-subtle p-6 text-center">
+              <p class="font-display font-semibold text-sm mb-1" style="color: var(--color-text-primary);">Glass Subtle</p>
+              <p class="text-xs" style="color: var(--color-text-secondary);">Lighter blur</p>
+            </div>
+            <div class="glass-strong p-6 text-center">
+              <p class="font-display font-semibold text-sm mb-1" style="color: var(--color-text-primary);">Glass Strong</p>
+              <p class="text-xs" style="color: var(--color-text-secondary);">Heavy blur</p>
+            </div>
+          </div>
+          <div class="mt-4 flex flex-wrap gap-3">
+            <div class="glass-toolbar">
+              <button class="clay-icon-btn clay-icon-btn-sm" aria-label="Bold"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 4h8a4 4 0 0 1 0 8H6zM6 12h9a4 4 0 0 1 0 8H6z"/></svg></button>
+              <button class="clay-icon-btn clay-icon-btn-sm" aria-label="Italic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="4" x2="10" y2="4"/><line x1="14" y1="20" x2="5" y2="20"/><line x1="15" y1="4" x2="9" y2="20"/></svg></button>
+              <button class="clay-icon-btn clay-icon-btn-sm" aria-label="Underline"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3v7a6 6 0 0 0 6 6 6 6 0 0 0 6-6V3"/><line x1="4" y1="21" x2="20" y2="21"/></svg></button>
+            </div>
+            <div class="glass-panel">
+              <span class="text-xs font-medium" style="color: var(--color-text-secondary);">Floating panel</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Upload Drop Zone -->
+      <div class="mb-16">
+        <h2 class="text-heading text-2xl mb-6">Upload Drop Zone</h2>
+        <div class="clay-dropzone">
+          <div class="clay-dropzone-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+          </div>
+          <p class="clay-dropzone-text">Drop photos here or click to browse</p>
+          <p class="clay-dropzone-hint">PNG, JPG, GIF up to 10MB</p>
+        </div>
+      </div>
+
+      <!-- Photo Frames -->
+      <div class="mb-16">
+        <h2 class="text-heading text-2xl mb-6">Photo Frames</h2>
+        <div class="flex flex-wrap gap-6 justify-center">
+          <div class="clay-photo-frame" style="width: 200px;">
+            <div style="height: 140px; border-radius: var(--radius-lg); background: linear-gradient(135deg, var(--color-lavender), var(--color-periwinkle)); display: flex; align-items: center; justify-content: center;"><span class="deco-star deco-star-lg">✦</span></div>
+          </div>
+          <div class="clay-photo-frame clay-photo-frame-lg" style="width: 240px;">
+            <div style="height: 160px; border-radius: var(--radius-lg); background: linear-gradient(135deg, var(--color-peach), var(--color-rose)); display: flex; align-items: center; justify-content: center;"><span class="deco-star deco-star-lg deco-star-violet">✦</span></div>
+          </div>
+          <div class="clay-photo-frame" style="width: 200px;">
+            <div style="height: 140px; border-radius: var(--radius-lg); background: linear-gradient(135deg, var(--color-mint), var(--color-butter)); display: flex; align-items: center; justify-content: center;"><span class="deco-star deco-star-lg">✦</span></div>
+
+      <!-- Toast Notifications -->
+      <div class="mb-16">
+        <h2 class="text-heading text-2xl mb-6">Toast Notifications</h2>
+        <div class="clay-card-static p-8 space-y-3" style="max-width: 420px;">
+          <div class="glass-panel flex items-start gap-3 p-4">
+            <div class="flex items-center justify-center flex-shrink-0" style="width: 32px; height: 32px; border-radius: var(--radius-md); background: var(--color-success-light);">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-success-dark)" stroke-width="2" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
+            </div>
+            <div><p class="text-sm font-semibold" style="color: var(--color-text-primary);">Saved successfully</p><p class="text-xs" style="color: var(--color-text-tertiary);">Your project has been saved.</p></div>
+          </div>
+          <div class="glass-panel flex items-start gap-3 p-4">
+            <div class="flex items-center justify-center flex-shrink-0" style="width: 32px; height: 32px; border-radius: var(--radius-md); background: var(--color-warning-light);">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-warning-dark)" stroke-width="2" stroke-linecap="round"><path d="M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/></svg>
+            </div>
+            <div><p class="text-sm font-semibold" style="color: var(--color-text-primary);">Storage almost full</p><p class="text-xs" style="color: var(--color-text-tertiary);">Consider removing unused photos.</p></div>
+          </div>
+          <div class="glass-panel flex items-start gap-3 p-4">
+            <div class="flex items-center justify-center flex-shrink-0" style="width: 32px; height: 32px; border-radius: var(--radius-md); background: var(--color-error-light);">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-error-dark)" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M15 9l-6 6m0-6l6 6"/></svg>
+            </div>
+            <div><p class="text-sm font-semibold" style="color: var(--color-text-primary);">Upload failed</p><p class="text-xs" style="color: var(--color-text-tertiary);">Please try a smaller image.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dialog Preview -->
+      <div class="mb-16">
+        <h2 class="text-heading text-2xl mb-6">Dialog</h2>
+        <div class="clay-card-static p-8" style="background: linear-gradient(135deg, var(--color-lavender), var(--color-rose)); display: flex; justify-content: center;">
+          <div class="glass-dialog">
+            <div class="flex items-center justify-between p-6 pb-4">
+              <h3 class="font-display text-lg font-bold" style="color: var(--color-text-primary);">Dialog Title</h3>
+              <button class="clay-icon-btn clay-icon-btn-sm" aria-label="Close"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+            </div>
+            <div class="px-6 pb-6">
+              <p class="text-sm" style="color: var(--color-text-secondary);">This is a glass dialog panel with backdrop blur and a fine border.</p>
+              <div class="flex gap-3 mt-4">
+                <button class="clay-btn clay-btn-primary clay-btn-sm">Confirm</button>
+                <button class="clay-btn clay-btn-ghost clay-btn-sm">Cancel</button>
+              </div>
+            </div>
+          </div>
+
+      <!-- Toggle & Avatar -->
+      <div class="mb-16">
+        <h2 class="text-heading text-2xl mb-6">Toggle & Avatar</h2>
+        <div class="clay-card-static p-8 flex flex-wrap items-center gap-8">
+          <div class="clay-toggle clay-toggle-active">
+            <div class="clay-toggle-track"><div class="clay-toggle-thumb"></div></div>
+            <span class="text-sm font-medium" style="color: var(--color-text-primary);">Enabled</span>
+          </div>
+          <div class="clay-toggle">
+            <div class="clay-toggle-track"><div class="clay-toggle-thumb"></div></div>
+            <span class="text-sm font-medium" style="color: var(--color-text-secondary);">Disabled</span>
+          </div>
+          <div class="clay-avatar">AB</div>
+          <div class="clay-avatar clay-avatar-sm">CD</div>
+          <div class="clay-avatar clay-avatar-lg">EF</div>
+        </div>
+      </div>
+
+      <!-- Empty State -->
+      <div class="mb-16">
+        <h2 class="text-heading text-2xl mb-6">Empty State</h2>
+        <div class="clay-card-static">
+          <div class="flex flex-col items-center justify-center text-center" style="padding: var(--space-16) var(--space-8);">
+            <div class="clay-icon-btn clay-icon-btn-lg mb-4" style="cursor: default;">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--color-brand-400)" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <h3 class="font-display text-lg font-semibold mb-2" style="color: var(--color-text-primary);">No messages yet</h3>
+            <p class="text-sm mb-6" style="color: var(--color-text-secondary); max-width: 320px;">Start by creating your first birthday wish. It only takes a minute.</p>
+            <button class="clay-btn clay-btn-primary">Create a Wish</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Decorations -->
+      <div class="mb-16">
+        <h2 class="text-heading text-2xl mb-6">Decorations</h2>
+        <div class="clay-card-static p-8 flex flex-wrap items-center gap-8">
+          <div class="text-center"><span class="deco-star deco-star-xl animate-twinkle block mb-2">✦</span><p class="text-xs" style="color: var(--color-text-tertiary);">Star XL</p></div>
+          <div class="text-center"><span class="deco-star deco-star-lg deco-star-rose block mb-2">✦</span><p class="text-xs" style="color: var(--color-text-tertiary);">Star Rose</p></div>
+          <div class="text-center"><span class="deco-star deco-star-md deco-star-mint block mb-2">✦</span><p class="text-xs" style="color: var(--color-text-tertiary);">Star Mint</p></div>
+          <div class="text-center flex gap-2 items-end mb-2"><span class="deco-dot deco-dot-violet"></span><span class="deco-dot deco-dot-peach"></span><span class="deco-dot deco-dot-mint"></span><span class="deco-dot deco-dot-rose"></span><span class="deco-dot deco-dot-butter"></span></div>
+          <div class="text-center"><div class="animate-float" style="width: 40px; height: 40px; border-radius: 50%; background: radial-gradient(circle at 30% 30%, var(--color-peach), #FFA88F); margin: 0 auto var(--space-2);"></div><p class="text-xs" style="color: var(--color-text-tertiary);">Floating ball</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+        </div>
+      </div>
+          </div>
+        </div>
+      </div>
+        </div>
+      </div>
+          </div>
+        </div>
+      </div>
+          </div>
+        </div>
+      </div>
+        </div>
+      </div>

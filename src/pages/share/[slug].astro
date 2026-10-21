@@ -1,0 +1,18 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { ShareApp } from '@/components/preview/ShareApp';
+
+
+
+const { slug } = Astro.params;
+---
+
+<BaseLayout
+  title="Birthday page"
+  description="A shared birthday surprise."
+  bodyClass="share-page"
+>
+  <section class="section" style="padding: 0; min-height: 100vh; background: var(--color-page);">
+    <ShareApp slug={slug ?? ''} client:load />
+  </section>
+</BaseLayout>

@@ -1,0 +1,291 @@
+00:25:30 [ERROR] Unterminated regular expression
+  Stack trace:
+    at D:\New folder (3)\D:\New folder (3)\src\components\editor\themeRenderers\KeepsakeRenderer.tsx:88:16
+    [...] See full stack trace in the browser, or rerun with --verbose.
+00:27:48 [ERROR] Unterminated regular expression
+  Stack trace:
+    at D:\New folder (3)\D:\New folder (3)\src\components\editor\themeRenderers\KeepsakeRenderer.tsx:88:16
+    [...] See full stack trace in the browser, or rerun with --verbose.
+00:34:21 [ERROR] [vite] Error: [31m  Failed to scan for dependencies from entries:
+  D:/New folder (3)/src/components/AuthMenu.astro
+D:/New folder (3)/src/layouts/BaseLayout.astro
+D:/New folder (3)/src/pages/404.astro
+D:/New folder (3)/src/pages/about.astro
+D:/New folder (3)/src/pages/contact.astro
+D:/New folder (3)/src/pages/create.astro
+D:/New folder (3)/src/pages/dashboard.astro
+D:/New folder (3)/src/pages/design-system.astro
+D:/New folder (3)/src/pages/faq.astro
+D:/New folder (3)/src/pages/forgot-password.astro
+D:/New folder (3)/src/pages/how-it-works.astro
+D:/New folder (3)/src/pages/index.astro
+D:/New folder (3)/src/pages/login.astro
+D:/New folder (3)/src/pages/pricing.astro
+D:/New folder (3)/src/pages/privacy.astro
+D:/New folder (3)/src/pages/register.astro
+D:/New folder (3)/src/pages/settings.astro
+D:/New folder (3)/src/pages/templates.astro
+D:/New folder (3)/src/pages/terms.astro
+D:/New folder (3)/src/pages/wishes.astro
+D:/New folder (3)/src/components/editor/EditorProvider.tsx
+D:/New folder (3)/src/components/editor/EditorShell.tsx
+D:/New folder (3)/src/components/editor/PreviewApp.tsx
+D:/New folder (3)/src/components/editor/PreviewRenderer.tsx
+D:/New folder (3)/src/components/editor/ProgressIndicator.tsx
+D:/New folder (3)/src/components/editor/StepNavigation.tsx
+D:/New folder (3)/src/pages/preview/[id].astro
+D:/New folder (3)/src/components/editor/steps/Step1Occasion.tsx
+D:/New folder (3)/src/components/editor/steps/Step2Details.tsx
+D:/New folder (3)/src/components/editor/steps/Step3Theme.tsx
+D:/New folder (3)/src/components/editor/steps/Step4Photos.tsx
+D:/New folder (3)/src/components/editor/steps/Step5Personalize.tsx
+D:/New folder (3)/src/components/editor/steps/Step6Preview.tsx
+D:/New folder (3)/src/components/editor/themeRenderers/AfterglowRenderer.tsx
+D:/New folder (3)/src/components/editor/themeRenderers/DaydreamRenderer.tsx
+D:/New folder (3)/src/components/editor/themeRenderers/KeepsakeRenderer.tsx
+D:/New folder (3)/src/components/editor/themeRenderers/StarlitRenderer.tsx
+
+  [39m[31mX [41;31m[[41;97mERROR[41;31m][0m [1mThe character "}" is not valid inside a JSX element[0m
+
+    src/components/editor/themeRenderers/AfterglowRenderer.tsx:99:7:
+[37m      99 │       )[32m}[37m
+         │        [32m^[37m
+         ╵        [32m{'}'}[0m
+
+  Did you mean to escape it as "{'}'}" instead?
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mUnexpected closing "div" tag does not match opening "main" tag[0m
+
+    src/components/editor/themeRenderers/AfterglowRenderer.tsx:111:6:
+[37m      111 │     </[32mdiv[37m>
+          │       [32m~~~[37m
+          ╵       [32mmain[0m
+
+  The opening "main" tag is here:
+
+    src/components/editor/themeRenderers/AfterglowRenderer.tsx:67:11:
+[37m      67 │           <[32mmain[37m className="flex-1 flex flex-col items-center justi...
+         ╵            [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mThe character "}" is not valid inside a JSX element[0m
+
+    src/components/editor/themeRenderers/AfterglowRenderer.tsx:113:0:
+[37m      113 │ [32m}[37m
+          │ [32m^[37m
+          ╵ [32m{'}'}[0m
+
+  Did you mean to escape it as "{'}'}" instead?
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mUnexpected end of file before a closing "div" tag[0m
+
+    src/components/editor/themeRenderers/AfterglowRenderer.tsx:113:1:
+[37m      113 │ }[32m[37m
+          │  [32m^[37m
+          ╵  [32m</div>[0m
+
+  The opening "div" tag is here:
+
+    src/components/editor/themeRenderers/AfterglowRenderer.tsx:59:9:
+[37m      59 │         <[32mdiv[37m className="min-h-screen flex flex-col px-6 py-24">
+         ╵          [32m~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mThe character "}" is not valid inside a JSX element[0m
+
+    src/components/editor/themeRenderers/DaydreamRenderer.tsx:151:7:
+[37m      151 │       )[32m}[37m
+          │        [32m^[37m
+          ╵        [32m{'}'}[0m
+
+  Did you mean to escape it as "{'}'}" instead?
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mThe character "}" is not valid inside a JSX element[0m
+
+    src/components/editor/themeRenderers/DaydreamRenderer.tsx:165:0:
+[37m      165 │ [32m}[37m
+          │ [32m^[37m
+          ╵ [32m{'}'}[0m
+
+  Did you mean to escape it as "{'}'}" instead?
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mUnexpected end of file before a closing "div" tag[0m
+
+    src/components/editor/themeRenderers/DaydreamRenderer.tsx:165:1:
+[37m      165 │ }[32m[37m
+          │  [32m^[37m
+          ╵  [32m</div>[0m
+
+  The opening "div" tag is here:
+
+    src/components/editor/themeRenderers/DaydreamRenderer.tsx:97:9:
+[37m      97 │         <[32mdiv[37m className="min-h-screen flex flex-col px-6 py-20 text...
+         ╵          [32m~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mUnterminated regular expression[0m
+
+    src/components/editor/themeRenderers/KeepsakeRenderer.tsx:88:16:
+[37m      88 │           </div>[32m[37m
+         ╵                 [32m^[0m
+
+
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    at D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:945:25
+    at runOnEndCallbacks (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1315:45)
+    at buildResponseToResult (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:943:7)
+    at D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:955:9
+    at new Promise (<anonymous>)
+    at requestCallbacks.on-end (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:954:54)
+    at handleRequest (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:647:17)
+    at handleIncomingPacket (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:672:7)
+    at Socket.readFromStdout (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:600:7)
+00:38:58 [ERROR] Unterminated regular expression
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+00:52:22 [ERROR] Unterminated regular expression
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+00:52:25 [ERROR] Unterminated regular expression
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+00:54:56 [ERROR] Unterminated regular expression
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+00:54:58 [ERROR] Unterminated regular expression
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+00:54:59 [ERROR] Unterminated regular expression
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+00:55:02 [ERROR] Unterminated regular expression
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+00:55:03 [ERROR] Unterminated regular expression
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+00:55:03 [ERROR] Unterminated regular expression
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+00:55:07 [ERROR] Unterminated regular expression
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+00:55:13 [ERROR] Unterminated regular expression
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+01:01:21 [ERROR] Unterminated regular expression
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+01:01:23 [ERROR] Unterminated regular expression
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+01:02:47 [ERROR] Unterminated regular expression
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+01:06:17 [ERROR] Unterminated regular expression
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+01:13:02 [ERROR] Unterminated regular expression
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+01:15:13 [ERROR] Unterminated regular expression
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+01:17:03 [ERROR] Unterminated regular expression
+  Stack trace:
+    at failureErrorWithLog (D:\New folder (3)\node_modules\astro\node_modules\esbuild\lib\main.js:1472:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+01:23:39 [ERROR] [GetStaticPathsRequired] `getStaticPaths()` function is required for dynamic routes. Make sure that you `export` a `getStaticPaths` function from your dynamic route.
+  Hint:
+    See https://docs.astro.build/en/guides/routing/#dynamic-routes for more information on dynamic routes.
+    
+    Alternatively, set `output: "server"` or `output: "hybrid"` in your Astro config file to switch to a non-static server build. This error can also occur if using `export const prerender = true;`.
+    See https://docs.astro.build/en/guides/server-side-rendering/ for more information on non-static rendering.
+  Error reference:
+    https://docs.astro.build/en/reference/errors/get-static-paths-required/
+  Stack trace:
+    at D:\New folder (3)\src\pages\preview\[id].astro
+    [...] See full stack trace in the browser, or rerun with --verbose.
+01:25:45 [ERROR] [GetStaticPathsRequired] `getStaticPaths()` function is required for dynamic routes. Make sure that you `export` a `getStaticPaths` function from your dynamic route.
+  Hint:
+    See https://docs.astro.build/en/guides/routing/#dynamic-routes for more information on dynamic routes.
+    
+    Alternatively, set `output: "server"` or `output: "hybrid"` in your Astro config file to switch to a non-static server build. This error can also occur if using `export const prerender = true;`.
+    See https://docs.astro.build/en/guides/server-side-rendering/ for more information on non-static rendering.
+  Error reference:
+    https://docs.astro.build/en/reference/errors/get-static-paths-required/
+  Stack trace:
+    at validateDynamicRouteModule (file:///D:/New%20folder%20(3)/node_modules/astro/dist/core/routing/validation.js:19:11)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+01:28:12 [ERROR] [GetStaticPathsRequired] `getStaticPaths()` function is required for dynamic routes. Make sure that you `export` a `getStaticPaths` function from your dynamic route.
+  Hint:
+    See https://docs.astro.build/en/guides/routing/#dynamic-routes for more information on dynamic routes.
+    
+    Alternatively, set `output: "server"` or `output: "hybrid"` in your Astro config file to switch to a non-static server build. This error can also occur if using `export const prerender = true;`.
+    See https://docs.astro.build/en/guides/server-side-rendering/ for more information on non-static rendering.
+  Error reference:
+    https://docs.astro.build/en/reference/errors/get-static-paths-required/
+  Stack trace:
+    at D:\New folder (3)\src\pages\preview\[id].astro
+    [...] See full stack trace in the browser, or rerun with --verbose.
+01:28:57 [ERROR] [GetStaticPathsRequired] `getStaticPaths()` function is required for dynamic routes. Make sure that you `export` a `getStaticPaths` function from your dynamic route.
+  Hint:
+    See https://docs.astro.build/en/guides/routing/#dynamic-routes for more information on dynamic routes.
+    
+    Alternatively, set `output: "server"` or `output: "hybrid"` in your Astro config file to switch to a non-static server build. This error can also occur if using `export const prerender = true;`.
+    See https://docs.astro.build/en/guides/server-side-rendering/ for more information on non-static rendering.
+  Error reference:
+    https://docs.astro.build/en/reference/errors/get-static-paths-required/
+  Stack trace:
+    at D:\New folder (3)\src\pages\preview\[id].astro
+    [...] See full stack trace in the browser, or rerun with --verbose.
+01:29:28 [ERROR] [GetStaticPathsRequired] `getStaticPaths()` function is required for dynamic routes. Make sure that you `export` a `getStaticPaths` function from your dynamic route.
+  Hint:
+    See https://docs.astro.build/en/guides/routing/#dynamic-routes for more information on dynamic routes.
+    
+    Alternatively, set `output: "server"` or `output: "hybrid"` in your Astro config file to switch to a non-static server build. This error can also occur if using `export const prerender = true;`.
+    See https://docs.astro.build/en/guides/server-side-rendering/ for more information on non-static rendering.
+  Error reference:
+    https://docs.astro.build/en/reference/errors/get-static-paths-required/
+  Stack trace:
+    at validateDynamicRouteModule (file:///D:/New%20folder%20(3)/node_modules/astro/dist/core/routing/validation.js:19:11)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+Warning: Invalid DOM property `stroke-width`. Did you mean `strokeWidth`?
+    at svg
+    at div
+    at div
+    at div
+    at PreviewApp (eval at instantiateModule (file:///D:/New%20folder%20(3)/node_modules/astro/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:53012:24), <anonymous>:14:23)
+Warning: Invalid DOM property `stroke-linecap`. Did you mean `strokeLinecap`?
+    at svg
+    at div
+    at div
+    at div
+    at PreviewApp (eval at instantiateModule (file:///D:/New%20folder%20(3)/node_modules/astro/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:53012:24), <anonymous>:14:23)
+Warning: Invalid DOM property `stroke-linejoin`. Did you mean `strokeLinejoin`?
+    at svg
+    at div
+    at div
+    at div
+    at PreviewApp (eval at instantiateModule (file:///D:/New%20folder%20(3)/node_modules/astro/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:53012:24), <anonymous>:14:23)
