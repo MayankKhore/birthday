@@ -218,7 +218,7 @@ export function MemoryMatchCard({
                card.flipped ? 'border-[var(--color-brand-500)] bg-white cursor-default' :
                'border-[var(--color-border)] bg-[var(--color-surface)] hover:border-[var(--color-brand-500)] hover:shadow-md')}
             style={{
-              transform: card.flipped || card.matched ? 'rotateY(0deg)' : 'rotateY(180deg)',
+              transform: card.flipped || card.matched ? 'rotateY(180deg)' : 'rotateY(0deg)',
               transition: prefersReducedMotion ? 'none' : 'transform 0.4s ease',
               transformStyle: 'preserve-3d',
             }}
