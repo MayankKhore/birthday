@@ -141,7 +141,10 @@ export function MemoryMatchCard({ project, config, onComplete, reducedMotion }: 
     <div className='clay-card p-8 sm:p-12 max-w-md mx-auto' role='region' aria-label='Memory match card'>
       <div className='flex items-center justify-between mb-6'>
         <h2 className='font-display text-xl font-bold' style={{ color: 'var(--color-text-primary)' }}>Memory Match</h2>
-        <span className='text-sm text-[var(--color-text-tertiary)]'>Moves: {moves}</span>
+        <div className='flex items-center gap-2'>
+          <span className='text-sm text-[var(--color-text-tertiary)]'>Moves: {moves}</span>
+          <button type='button' role='button' aria-label='Skip memory match and continue' onClick={onComplete} onKeyDown={handleKeyDown} className='clay-btn clay-btn-secondary clay-btn-sm'>Next â†’</button>
+        </div>
       </div>
 
       <p className='text-sm text-[var(--color-text-secondary)] mb-6 text-center'>

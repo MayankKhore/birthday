@@ -100,7 +100,10 @@ export function QuizCard({ project, config, onComplete, reducedMotion }: Props) 
       {!showFeedback && <p className="mt-8 text-sm text-[var(--color-text-tertiary)]">Select an answer to continue</p>}
 
       {showFeedback && selectedAnswer === null && (
-        <button type="button" role="button" aria-label="Next question" onClick={nextQuestion} onKeyDown={handleKeyDown} className="mt-8 clay-btn clay-btn-primary clay-btn-lg">Next question â†’</button>
+        <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
+          <button type="button" role="button" aria-label="Next question" onClick={nextQuestion} onKeyDown={handleKeyDown} className="clay-btn clay-btn-primary clay-btn-lg">Next question â†’</button>
+          <button type="button" role="button" aria-label="Skip quiz and continue" onClick={onComplete} onKeyDown={handleKeyDown} className="clay-btn clay-btn-secondary clay-btn-lg">Next â†’</button>
+        </div>
       )}
     </div>
   );
