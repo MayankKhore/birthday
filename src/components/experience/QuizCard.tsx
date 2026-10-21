@@ -92,19 +92,20 @@ export function QuizCard({ project, config, onComplete, reducedMotion }: Props) 
       {showFeedback && selectedAnswer !== null && (
         <div className="mt-4 animate-fade-in">
           <p className={`text-sm font-medium ${selectedAnswer === currentQuestion.correctAnswerIndex ? 'text-[var(--color-success-dark)]' : 'text-[var(--color-error-dark)]'}`}>
-            {selectedAnswer === currentQuestion.correctAnswerIndex ? 'âœ“ ' : 'âœ— '}{currentQuestion.feedback}
+            {selectedAnswer === currentQuestion.correctAnswerIndex ? '✓ ' : '✗ '}{currentQuestion.feedback}
           </p>
+          <div className="mt-4 flex flex-col sm:flex-row gap-3 justify-center">
+            {currentIndex < questions.length - 1 ? (
+              <button type="button" role="button" aria-label="Next question" onClick={nextQuestion} onKeyDown={handleKeyDown} className="clay-btn clay-btn-primary clay-btn-lg">Next question →</button>
+            ) : (
+              <button type="button" role="button" aria-label="Finish quiz and continue" onClick={onComplete} onKeyDown={handleKeyDown} className="clay-btn clay-btn-primary clay-btn-lg">Next →</button>
+            )}
+            <button type="button" role="button" aria-label="Skip quiz and continue" onClick={onComplete} onKeyDown={handleKeyDown} className="clay-btn clay-btn-secondary clay-btn-lg">Skip quiz →</button>
+          </div>
         </div>
       )}
 
       {!showFeedback && <p className="mt-8 text-sm text-[var(--color-text-tertiary)]">Select an answer to continue</p>}
-
-      {showFeedback && selectedAnswer === null && (
-        <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
-          <button type="button" role="button" aria-label="Next question" onClick={nextQuestion} onKeyDown={handleKeyDown} className="clay-btn clay-btn-primary clay-btn-lg">Next question â†’</button>
-          <button type="button" role="button" aria-label="Skip quiz and continue" onClick={onComplete} onKeyDown={handleKeyDown} className="clay-btn clay-btn-secondary clay-btn-lg">Next â†’</button>
-        </div>
-      )}
     </div>
   );
 }
