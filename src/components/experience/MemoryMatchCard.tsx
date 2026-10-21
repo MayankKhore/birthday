@@ -1,3 +1,4 @@
+﻿// src/components/experience/MemoryMatchCard.tsx
 ﻿/**
  * MemoryMatchCard — Stage 12 interactive birthday card.
  *
@@ -6,7 +7,7 @@
  * Respects prefers-reduced-motion.
  */
 
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import type { BirthdayProject } from '@/types';
 import type { MemoryMatchPair } from '@/lib/experience/types';
 
@@ -33,13 +34,27 @@ function shuffle<T>(array: T[]): T[] {
   return shuffled;
 }
 
-export function MemoryMatchCard({ project, config, onComplete, reducedMotion }: Props) {
-  const pairs = config?.pairs?.length ? config.pairs : DEFAULT_PAIRS;
-  const gridSize = config?.gridSize ?? 8;
-  const cardCount = Math.min(gridSize, pairs.length * 2);
-  const gamePairs = pairs.slice(0, cardCount / 2);
+export function MemoryMatchCard({
+  project,
+  config,
+  onComplete,
+  reducedMotion,
+}: Props) {
+  /* ───── stable refs ───── */
+  const configRef = useRef(config);
+  useEffect(() => { configRef.current = config; }, [config]);
 
-  const [cards, setCards] = useState<Array<{ id: string; pairId: string; label: string; flipped: boolean; matched: boolean }>>([]);
+  const cardsRef = useRef<Array<{
+    id: string; pairId: string; label: string; flipped: boolean; matched: boolean
+  }>>([]);
+
+  /* ───── state ───── */
+  const [cards, setCards] = useState<Array<{
+    id: string; pairId: string; label: string; flipped: boolean; matched: boolean
+  }>>([]);
+
+  // keep cardsRef in sync with cards state
+  useEffect(() => { cardsRef.current = cards; }, [cards]);
   const [flippedIndices, setFlippedIndices] = useState<number[]>([]);
   const [matchedCount, setMatchedCount] = useState(0);
   const [moves, setMoves] = useState(0);
@@ -48,23 +63,34 @@ export function MemoryMatchCard({ project, config, onComplete, reducedMotion }: 
 
   const prefersReducedMotion = reducedMotion;
 
+  /* ───── one‑time board setup ───── */
   useEffect(() => {
+    const cfg = configRef.current;
+    const pairs = cfg?.pairs?.length ? cfg.pairs : DEFAULT_PAIRS;
+    const gridSize = cfg?.gridSize ?? 8;
+    const cardCount = Math.min(gridSize, pairs.length * 2);
+    const gamePairs = pairs.slice(0, cardCount / 2);
+
     const cardData = shuffle([
       ...gamePairs.flatMap(pair => [
         { id: pair.id + '-a', pairId: pair.id, label: pair.label, flipped: false, matched: false },
         { id: pair.id + '-b', pairId: pair.id, label: pair.label, flipped: false, matched: false },
       ]),
     ]).slice(0, cardCount);
+
     setCards(cardData);
     setFlippedIndices([]);
     setMatchedCount(0);
     setMoves(0);
     setCompleted(false);
-  }, [gamePairs, cardCount]);
+    setLockBoard(false);
+  }, []);                     // ← run once on mount
 
+  /* ───── flip handling ───── */
   const flipCard = useCallback((index: number) => {
     if (lockBoard) return;
-    if (cards[index].flipped || cards[index].matched) return;
+    const currentCards = cardsRef.current;
+    if (currentCards[index].flipped || currentCards[index].matched) return;
     if (flippedIndices.length >= 2) return;
 
     setCards(prev => {
@@ -73,51 +99,60 @@ export function MemoryMatchCard({ project, config, onComplete, reducedMotion }: 
       return next;
     });
     setFlippedIndices(prev => [...prev, index]);
-  }, [cards, flippedIndices, lockBoard]);
+  }, [flippedIndices, lockBoard]);
 
+  /* ───── helper for final‑pair check ───── */
+  const gamePairsLength = (() => {
+    const cfg = configRef.current;
+    const pairs = cfg?.pairs?.length ? cfg.pairs : DEFAULT_PAIRS;
+    const gridSize = cfg?.gridSize ?? 8;
+    const cardCount = Math.min(gridSize, pairs.length * 2);
+    return cardCount / 2;
+  })();
+
+  /* ───── match / mismatch resolution ───── */
   useEffect(() => {
-    if (flippedIndices.length === 2) {
-      setLockBoard(true);
-      setMoves(prev => prev + 1);
-      const [i1, i2] = flippedIndices;
-      const match = cards[i1].pairId === cards[i2].pairId;
+    if (flippedIndices.length !== 2) return;
 
-      setTimeout(() => {
-        if (match) {
-          setCards(prev => {
-            const next = [...prev];
-            next[i1] = { ...next[i1], matched: true, flipped: true };
-            next[i2] = { ...next[i2], matched: true, flipped: true };
-            return next;
-          });
-          setMatchedCount(prev => prev + 1);
-        } else {
-          setCards(prev => {
-            const next = [...prev];
-            next[i1] = { ...next[i1], flipped: false };
-            next[i2] = { ...next[i2], flipped: false };
-            return next;
-          });
-        }
-        setFlippedIndices([]);
-        setLockBoard(false);
-      }, prefersReducedMotion ? 100 : 800);
-    }
-  }, [flippedIndices, cards, prefersReducedMotion]);
+    setLockBoard(true);
+    setMoves(prev => prev + 1);
+    const [i1, i2] = flippedIndices;
+    const currentCards = cardsRef.current;
+    const match = currentCards[i1].pairId === currentCards[i2].pairId;
 
-  useEffect(() => {
-    if (matchedCount === gamePairs.length && !completed) {
-      setCompleted(true);
-      setTimeout(() => onComplete?.(), 1000);
-    }
-  }, [matchedCount, gamePairs.length, completed, onComplete]);
+    const timer = setTimeout(() => {
+      if (match) {
+        setCards(prev => {
+          const next = [...prev];
+          next[i1] = { ...next[i1], matched: true, flipped: true };
+          next[i2] = { ...next[i2], matched: true, flipped: true };
+          return next;
+        });
+        setMatchedCount(prev => prev + 1);
+      } else {
+        setCards(prev => {
+          const next = [...prev];
+          next[i1] = { ...next[i1], flipped: false };
+          next[i2] = { ...next[i2], flipped: false };
+          return next;
+        });
+      }
+      setFlippedIndices([]);
+      setLockBoard(false);
 
+      if (match && matchedCount + 1 === gamePairsLength) {
+        setCompleted(true);
+      }
+    }, prefersReducedMotion ? 0 : 800);
+
+    return () => clearTimeout(timer);
+  }, [flippedIndices, matchedCount, prefersReducedMotion, gamePairsLength]);
+
+  /* ───── keyboard / completion ───── */
   const handleKeyDown = useCallback((e: React.KeyboardEvent) => {
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault();
-      if (completed) {
-        onComplete?.();
-      }
+      if (completed) onComplete?.();
     }
   }, [completed, onComplete]);
 
@@ -135,7 +170,13 @@ export function MemoryMatchCard({ project, config, onComplete, reducedMotion }: 
     );
   }
 
-  const cols = cardCount <= 4 ? 2 : cardCount <= 8 ? 4 : 6;
+  const cols = (() => {
+    const cfg = configRef.current;
+    const pairs = cfg?.pairs?.length ? cfg.pairs : DEFAULT_PAIRS;
+    const gridSize = cfg?.gridSize ?? 8;
+    const cardCount = Math.min(gridSize, pairs.length * 2);
+    return cardCount <= 4 ? 2 : cardCount <= 8 ? 4 : 6;
+  })();
 
   return (
     <div className='clay-card p-8 sm:p-12 max-w-md mx-auto' role='region' aria-label='Memory match card'>
@@ -143,7 +184,7 @@ export function MemoryMatchCard({ project, config, onComplete, reducedMotion }: 
         <h2 className='font-display text-xl font-bold' style={{ color: 'var(--color-text-primary)' }}>Memory Match</h2>
         <div className='flex items-center gap-2'>
           <span className='text-sm text-[var(--color-text-tertiary)]'>Moves: {moves}</span>
-          <button type='button' role='button' aria-label='Skip memory match and continue' onClick={onComplete} onKeyDown={handleKeyDown} className='clay-btn clay-btn-secondary clay-btn-sm'>Next â†’</button>
+          <button type='button' role='button' aria-label='Skip memory match and continue' onClick={onComplete} onKeyDown={handleKeyDown} className='clay-btn clay-btn-secondary clay-btn-sm'>Next →</button>
         </div>
       </div>
 
@@ -172,7 +213,10 @@ export function MemoryMatchCard({ project, config, onComplete, reducedMotion }: 
                 flipCard(index);
               }
             }}
-            className={'relative aspect-square rounded-xl border-2 transition-all ' + (card.matched ? 'border-[var(--color-success-dark)] bg-[var(--color-success-light)] cursor-default' : card.flipped ? 'border-[var(--color-brand-500)] bg-white cursor-default' : 'border-[var(--color-border)] bg-[var(--color-surface)] hover:border-[var(--color-brand-500)] hover:shadow-md')}
+            className={'relative aspect-square rounded-xl border-2 transition-all ' +
+              (card.matched ? 'border-[var(--color-success-dark)] bg-[var(--color-success-light)] cursor-default' :
+               card.flipped ? 'border-[var(--color-brand-500)] bg-white cursor-default' :
+               'border-[var(--color-border)] bg-[var(--color-surface)] hover:border-[var(--color-brand-500)] hover:shadow-md')}
             style={{
               transform: card.flipped || card.matched ? 'rotateY(0deg)' : 'rotateY(180deg)',
               transition: prefersReducedMotion ? 'none' : 'transform 0.4s ease',
@@ -190,7 +234,7 @@ export function MemoryMatchCard({ project, config, onComplete, reducedMotion }: 
       </div>
 
       <p className='mt-6 text-center text-sm text-[var(--color-text-tertiary)]'>
-        {matchedCount} of {gamePairs.length} pairs found
+        {matchedCount} of {gamePairsLength} pairs found
       </p>
     </div>
   );
