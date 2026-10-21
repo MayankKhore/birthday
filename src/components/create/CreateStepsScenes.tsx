@@ -49,7 +49,6 @@ export function StepScenes({ form, set }: StepProps): React.ReactElement {
         <SceneToggle label="Birthday cake" blurb="Candles, wishes and blow-out" checked={form.includeCake} onChange={(v) => set('includeCake', v)} />
         <SceneToggle label="Storybook" blurb="Personalized chapters" checked={form.includeStorybook} onChange={(v) => set('includeStorybook', v)} />
         <SceneToggle label="Photo memories" blurb={form.photos.length > 0 ? `${form.photos.length} uploaded photos` : 'Needs photos from step 3'} checked={form.includeGallery} onChange={(v) => set('includeGallery', v)} />
-        <SceneToggle label="Gift reveal" blurb="The final surprise" checked={form.includeGift} onChange={(v) => set('includeGift', v)} />
       </div>
 
       {form.includeCake ? (
@@ -76,6 +75,10 @@ export function StepScenes({ form, set }: StepProps): React.ReactElement {
           ))}
         </div>
         {form.games.length === 0 ? <p className="clay-error-text" style={{ marginTop: 'var(--space-2)' }}>Pick at least one game, or the journey will skip straight to the gift.</p> : null}
+      </div>
+
+      <div className="space-y-2">
+        <SceneToggle label="Gift reveal" blurb="The final surprise" checked={form.includeGift} onChange={(v) => set('includeGift', v)} />
       </div>
 
       {form.includeStorybook ? <StoryEditor form={form} set={set} /> : null}
