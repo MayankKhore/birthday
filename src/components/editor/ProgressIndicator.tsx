@@ -2,6 +2,7 @@
  * ProgressIndicator — Stage 6 editor step progress.
  *
  * Shows the current step in a 6-step journey with completed/in-progress states.
+ * Centered connecting line.
  */
 
 import type { EditorStep } from '@/components/editor/EditorProvider';
@@ -25,42 +26,38 @@ const STEP_LABELS: Record<EditorStep, string> = {
 const STEPS: EditorStep[] = [1, 2, 3, 4, 5, 6, 7, 8];
 
 export function ProgressIndicator({ currentStep, completedSteps }: Props) {
-
   return (
     <div className="clay-card p-6 mb-8" role="progressbar" aria-valuenow={currentStep} aria-valuemin={1} aria-valuemax={8}>
-      <h2 className="font-display text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: 'var(--color-text-tertiary)' }}>
+      <h2 className="font-display text-xs font-semibold uppercase tracking-widest mb-6 text-center" style={{ color: 'var(--color-text-tertiary)' }}>
         Building your birthday page
       </h2>
-      <div className="grid grid-cols-8 gap-2" style={{ position: 'relative' }}>
-        <div className="col-span-8 h-[1px] bg-[var(--color-border)] -mt-[6px] mb-8 relative" aria-hidden="true" />
-        {STEPS.map((step) => {
-          const isActive = step === currentStep;
-          const isCompleted = completedSteps.has(step);
-          return (
-            <div
-              key={step}
-              className="flex flex-col items-center gap-2 relative z-10"
-              style={{ position: 'relative' }}
-            >
-              <div
-                className={`flex h-10 w-10 items-center justify-center rounded-full text-xs font-bold shadow-md transition-all ${
-                  isActive
-                    ? 'bg-[var(--color-brand-500)] text-white ring-2 ring-white ring-offset-2 ring-offset-[var(--color-surface)]'
-                    : isCompleted
-                    ? 'bg-[var(--color-brand-500)] text-white'
-                    : 'bg-[var(--color-surface)] text-[var(--color-text-tertiary)] border border-[var(--color-border)]'
-                }`}
-              >
-                {step}
+      <div className="relative flex items-center justify-center">
+        {/* Connecting line */}
+        <div className="absolute left-1/2 right-1/2 h-[2px] bg-[var(--color-border)]" style={{ top: '24px' }} aria-hidden="true" />
+        <div className="flex justify-between w-full max-w-4xl mx-auto" style={{ position: 'relative', zIndex: 1 }}>
+          {STEPS.map((step) => {
+            const isActive = step === currentStep;
+            const isCompleted = completedSteps.has(step);
+            return (
+              <div key={step} className="flex flex-col items-center gap-2">
+                <div
+                  className={`flex h-10 w-10 items-center justify-center rounded-full text-xs font-bold shadow-md transition-all ${
+                    isActive
+                      ? 'bg-[var(--color-brand-500)] text-white ring-2 ring-white ring-offset-2 ring-offset-[var(--color-surface)]'
+                      : isCompleted
+                      ? 'bg-[var(--color-brand-500)] text-white'
+                      : 'bg-[var(--color-surface)] text-[var(--color-text-tertiary)] border border-[var(--color-border)]'
+                  }`}
+                >
+                  {isCompleted ? '✓' : step}
+                </div>
+                <span className={`text-xs font-medium text-center leading-none w-20 ${isActive || isCompleted ? 'text-[var(--color-text-primary)]' : 'text-[var(--color-text-tertiary)]'}`}>
+                  {STEP_LABELS[step]}
+                </span>
               </div>
-              <span className={`text-xs font-medium text-center leading-none ${
-                isActive || isCompleted ? 'text-[var(--color-text-primary)]' : 'text-[var(--color-text-tertiary)]'
-              }`}>
-                {STEP_LABELS[step]}
-              </span>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
     </div>
   );
