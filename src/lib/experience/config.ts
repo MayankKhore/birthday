@@ -171,10 +171,24 @@ export function buildExperienceConfig(
     createDefaultScene('celebration'),
   ];
 
+  // Start with provided scenes or defaults
+  let finalScenes = scenes.length > 0 ? [...scenes] : [...defaultScenes];
+
+  // Ensure gift-reveal and celebration are present at the end
+  if (!finalScenes.some(s => s.type === 'gift-reveal')) {
+    finalScenes.push(createDefaultScene('gift-reveal'));
+  }
+  if (!finalScenes.some(s => s.type === 'celebration')) {
+    finalScenes.push(createDefaultScene('celebration'));
+  }
+
+  // Keep order by sortOrder
+  finalScenes.sort((a, b) => a.sortOrder - b.sortOrder);
+
   return {
     ...DEFAULT_EXPERIENCE_CONFIG,
     cards: cards.length > 0 ? cards : defaultCards,
-    scenes: scenes.length > 0 ? scenes : defaultScenes,
+    scenes: finalScenes,
     musicEnabled: !!project.musicEnabled,
     ...(project.musicTrackId ? { musicTrackId: project.musicTrackId } : {}),
     confettiEnabled: theme.animations.enableConfetti,
