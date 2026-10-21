@@ -1,0 +1,129 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { ThreeDCake } from '@/components/birthday-assets/ThreeDCake';
+import { LetterOpener } from '@/components/birthday-assets/LetterOpener';
+import { BirthdayDecorGallery } from '@/components/birthday-assets/BirthdayDecorGallery';
+import { InteractiveControls } from '@/components/birthday-assets/InteractiveControls';
+---
+
+<BaseLayout title="Birthday Preview — Interactive Celebration" description="An interactive birthday preview featuring a 3D cake, animated letter opening, and celebratory decor.">
+  <section class="min-h-screen bg-gradient-to-br from-[var(--color-midnight)] via-[var(--color-lavender)] to-[var(--color-midnight)] text-[var(--color-warm-ivory)] px-4 py-8">
+    <header class="max-w-5xl mx-auto mb-12 text-center">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[var(--color-coral)]/10 border border-[var(--color-coral)]/30 text-[var(--color-coral)] text-sm font-medium mb-6">
+        <span class="w-2 h-2 rounded-full bg-[var(--color-coral)]"></span>
+        Birthday Preview • Interactive Experience
+      </div>
+      <h1 class="text-display font-bold text-[clamp(2rem,5vw,3.5rem)] mb-4 tracking-tight">A Celebration for You</h1>
+      <p class="text-[var(--color-warm-ivory)]/80 text-lg max-w-2xl mx-auto leading-relaxed">
+        Explore the interactive birthday experience with a 3D cake, animated letter, and celebratory decor.
+      </p>
+    </header>
+
+    <main class="max-w-5xl mx-auto space-y-12">
+      
+      <section class="clay-card-static p-8 rounded-3xl border border-[var(--color-border)] bg-[var(--color-surface)] shadow-xl relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[var(--color-coral)] via-[var(--color-lavender)] to-[var(--color-midnight)]"></div>
+        
+        <div class="flex flex-col lg:flex-row gap-8 items-start">
+          <div class="lg:w-1/2">
+            <h2 class="font-display text-2xl font-bold mb-6 text-[var(--color-text-primary)]">Interactive 3D Cake</h2>
+            <p class="text-[var(--color-text-secondary)] mb-6">
+              A procedurally-generated 3D cake built with Three.js. Drag to rotate, click to blow out the candles.
+            </p>
+            <ThreeDCake recipientName="Birthday Star" candleCount={4} autoRotate={true} />
+          </div>
+          <div class="lg:w-1/2 flex flex-col gap-6">
+            <div class="clay-card-static p-6 rounded-2xl bg-[var(--color-surface-lavender)] border border-[var(--color-border)]">
+              <h3 class="font-bold text-lg mb-3 text-[var(--color-text-primary)]">Cake Features</h3>
+              <ul class="space-y-3 text-sm text-[var(--color-text-secondary)]">
+                <li class="flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-[var(--color-coral)]"></span>
+                  Real-time 3D rotation (mouse/touch drag)
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-[var(--color-coral)]"></span>
+                  Animated flickering candle flames
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-[var(--color-coral)]"></span>
+                  Blow out / relight interaction
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-[var(--color-coral)]"></span>
+                  Respects <code>prefers-reduced-motion</code>
+                </li>
+              </ul>
+            </div>
+            <div class="clay-card-static p-6 rounded-2xl bg-[var(--color-surface)] border border-[var(--color-border)]">
+              <h3 class="font-bold text-lg mb-3 text-[var(--color-text-primary)]">Color Palette</h3>
+              <div class="flex gap-3">
+                <div class="w-8 h-8 rounded-full bg-[var(--color-midnight)] border border-[var(--color-border)]" title="Midnight Plum"></div>
+                <div class="w-8 h-8 rounded-full bg-[var(--color-lavender)] border border-[var(--color-border)]" title="Lavender"></div>
+                <div class="w-8 h-8 rounded-full bg-[var(--color-coral)] border border-[var(--color-border)]" title="Coral"></div>
+                <div class="w-8 h-8 rounded-full bg-[var(--color-warm-ivory)] border border-[var(--color-border)]" title="Warm Ivory"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="clay-card-static p-8 rounded-3xl border border-[var(--color-border)] bg-[var(--color-surface)] shadow-xl">
+        <div class="flex flex-col lg:flex-row gap-8 items-start">
+          <div class="lg:w-1/2">
+            <h2 class="font-display text-2xl font-bold mb-6 text-[var(--color-text-primary)]">Animated Letter Opening</h2>
+            <p class="text-[var(--color-text-secondary)] mb-6">
+              Tap the sealed envelope to open it and reveal the birthday letter inside.
+            </p>
+            <LetterOpener recipientName="Birthday Star" />
+          </div>
+          <div class="lg:w-1/2">
+            <div class="clay-card-static p-6 rounded-2xl bg-[var(--color-surface-lavender)] border border-[var(--color-border)]">
+              <h3 class="font-bold text-lg mb-3 text-[var(--color-text-primary)]">Letter Experience</h3>
+              <ul class="space-y-3 text-sm text-[var(--color-text-secondary)]">
+                <li class="flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-[var(--color-coral)]"></span>
+                  Sealed envelope with wax heart seal
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-[var(--color-coral)]"></span>
+                  Smooth unfold animation
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-[var(--color-coral)]"></span>
+                  Line-by-line text reveal
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-[var(--color-coral)]"></span>
+                  Keyboard accessible (Enter/Space)
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="clay-card-static p-8 rounded-3xl border border-[var(--color-border)] bg-[var(--color-surface)] shadow-xl">
+        <h2 class="font-display text-2xl font-bold mb-6 text-[var(--color-text-primary)] text-center">Birthday Decor Gallery</h2>
+        <p class="text-[var(--color-text-secondary)] text-center mb-8">
+          Storybook, photo frames, gifts, balloons, flowers, and hearts — all from the Birthday Moments asset pack.
+        </p>
+        <BirthdayDecorGallery />
+      </section>
+
+      <section class="clay-card-static p-8 rounded-3xl border border-[var(--color-border)] bg-[var(--color-surface)] shadow-xl">
+        <h2 class="font-display text-2xl font-bold mb-6 text-[var(--color-text-primary)] text-center">Interactive Controls</h2>
+        <p class="text-[var(--color-text-secondary)] text-center mb-8">
+          All controls are built with HTML, CSS, and SVG — no images used as buttons.
+        </p>
+        <InteractiveControls />
+      </section>
+
+    </main>
+
+    <footer class="max-w-5xl mx-auto mt-12 mb-8 text-center pt-8 border-t border-[var(--color-border)]/30">
+      <p class="text-[var(--color-text-secondary)]/60 text-sm">
+        Birthday Moments Asset Pack Integration • Built with Astro, React, and Three.js
+      </p>
+    </footer>
+  </section>
+</BaseLayout>

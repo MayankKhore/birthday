@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 220" role="img" aria-label="Sealed lavender envelope with heart wax seal">
+  <defs>
+    <linearGradient id="envBody" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#C3BDEC"/>
+      <stop offset="100%" stop-color="#A78BFA"/>
+    </linearGradient>
+    <filter id="envShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  
+  <!-- Envelope body -->
+  <rect x="30" y="80" width="240" height="120" rx="10" fill="url(#envBody)" filter="url(#envShadow)"/>
+  <!-- Envelope flap -->
+  <path d="M 30 80 L 150 140 L 270 80 Z" fill="url(#envBody)" filter="url(#envShadow)"/>
+  <!-- Flap fold lines -->
+  <path d="M 30 80 L 150 140" stroke="#94A3B8" stroke-width="2" stroke-linecap="round"/>
+  <path d="M 150 140 L 270 80" stroke="#94A3B8" stroke-width="2" stroke-linecap="round"/>
+  <path d="M 30 200 L 150 140" stroke="#94A3B8" stroke-width="2" stroke-linecap="round"/>
+  <path d="M 150 140 L 270 200" stroke="#94A3B8" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Wax seal -->
+  <circle cx="150" cy="80" r="22" fill="#F472B6" filter="url(#envShadow)"/>
+  <circle cx="150" cy="80" r="14" fill="#FB7185"/>
+  <path d="M 144 77 Q 150 80 156 77 M 144 83 Q 150 80 156 83" stroke="#B45363" stroke-width="2" stroke-linecap="round"/>
+  <path d="M 148 79 Q 150 82 152 79" stroke="#B45363" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Heart in seal -->
+  <path d="M 146 78 Q 144 76 146 74 Q 148 74 150 76 Q 152 74 154 76 Q 156 78 154 80 Q 150 84 146 80 Z" fill="#B45363"/>
+  
+  <!-- Address lines -->
+  <rect x="70" y="130" width="160" height="6" rx="3" fill="rgba(255,255,255,0.4)"/>
+  <rect x="70" y="140" width="100" height="4" rx="2" fill="rgba(255,255,255,0.3)"/>
+</svg>

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 260" role="img" aria-label="Purple gift box with coral ribbon bow">
+  <defs>
+    <filter id="giftShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#000" flood-opacity="0.15"/>
+    </filter>
+    <linearGradient id="boxGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C3BDEC"/>
+      <stop offset="100%" stop-color="#94A3B8"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Gift box -->
+  <rect x="50" y="90" width="160" height="130" rx="10" fill="url(#boxGradient)" filter="url(#giftShadow)"/>
+  <rect x="50" y="90" width="160" height="12" rx="4" fill="rgba(255,255,255,0.2)"/>
+  
+  <!-- Ribbon vertical -->
+  <rect x="125" y="90" width="10" height="130" rx="3" fill="#F472B6"/>
+  <!-- Ribbon horizontal -->
+  <rect x="50" y="145" width="160" height="10" rx="3" fill="#F472B6"/>
+  
+  <!-- Bow center -->
+  <circle cx="130" cy="145" r="10" fill="#E0A428"/>
+  <circle cx="130" cy="145" r="6" fill="#FCD34D"/>
+  
+  <!-- Bow loops -->
+  <path d="M 120 130 Q 110 110 115 100 Q 120 95 130 100 Q 140 95 145 100 Q 150 110 140 130 Q 145 145 130 145 Q 115 145 120 130 Z" fill="#FB7185" opacity="0.9"/>
+  <path d="M 120 160 Q 110 180 115 190 Q 120 195 130 190 Q 140 195 145 190 Q 150 180 140 160 Q 145 145 130 145 Q 115 145 120 160 Z" fill="#FB7185" opacity="0.9"/>
+  
+  <!-- Bow tails -->
+  <path d="M 125 155 L 125 210 Q 120 220 115 215 L 105 200 Q 115 190 120 180 L 120 155 Z" fill="#F472B6"/>
+  <path d="M 135 155 L 135 210 Q 140 220 145 215 L 155 200 Q 145 190 140 180 L 140 155 Z" fill="#F472B6"/>
+  
+  <!-- Star decorations on box -->
+  <path d="M 75 150 L 77 154 L 82 154 L 78 157 L 79 161 L 75 158 L 71 161 L 72 157 L 68 154 L 73 154 Z" fill="#FCD34D"/>
+  <path d="M 205 130 L 207 134 L 212 134 L 208 137 L 209 141 L 205 138 L 201 141 L 202 137 L 198 134 L 203 134 Z" fill="#FCD34D"/>
+</svg>

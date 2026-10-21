@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 260" role="img" aria-label="Colorful birthday balloon bunch">
+  <defs>
+    <radialGradient id="balloonGrad1" cx="30%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#FB7185"/>
+      <stop offset="100%" stop-color="#E11D48"/>
+    </radialGradient>
+    <radialGradient id="balloonGrad2" cx="30%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#A78BFA"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </radialGradient>
+    <radialGradient id="balloonGrad3" cx="30%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#FCD34D"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </radialGradient>
+    <radialGradient id="balloonGrad4" cx="30%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#C3BDEC"/>
+      <stop offset="100%" stop-color="#6366F1"/>
+    </radialGradient>
+    <filter id="balloonShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  
+  <!-- Balloon strings -->
+  <path d="M 130 110 Q 120 180 125 240" fill="none" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round"/>
+  <path d="M 130 110 Q 130 180 130 240" fill="none" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round"/>
+  <path d="M 130 110 Q 140 180 135 240" fill="none" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Bow at bottom -->
+  <path d="M 120 240 Q 115 250 120 255 Q 125 250 130 240 Q 135 250 140 255 Q 145 250 140 240 Z" fill="#F472B6"/>
+  
+  <!-- Balloons -->
+  <ellipse cx="110" cy="100" rx="22" ry="28" fill="url(#balloonGrad1)" filter="url(#balloonShadow)"/>
+  <ellipse cx="150" cy="95" rx="26" ry="32" fill="url(#balloonGrad2)" filter="url(#balloonShadow)"/>
+  <ellipse cx="130" cy="115" rx="24" ry="30" fill="url(#balloonGrad3)" filter="url(#balloonShadow)"/>
+  <ellipse cx="100" cy="125" rx="20" ry="26" fill="url(#balloonGrad4)" filter="url(#balloonShadow)"/>
+  
+  <!-- Balloon highlights -->
+  <ellipse cx="104" cy="94" rx="6" ry="10" fill="white" fill-opacity="0.4"/>
+  <ellipse cx="144" cy="89" rx="7" ry="12" fill="white" fill-opacity="0.4"/>
+  <ellipse cx="124" cy="109" rx="6" ry="10" fill="white" fill-opacity="0.4"/>
+  <ellipse cx="94" cy="119" rx="5" ry="9" fill="white" fill-opacity="0.4"/>
+  
+  <!-- Knots -->
+  <path d="M 110 128 Q 110 136 114 136 Q 114 128 110 128 Z" fill="#BE185D"/>
+  <path d="M 150 127 Q 150 135 154 135 Q 154 127 150 127 Z" fill="#5B21B6"/>
+  <path d="M 130 145 Q 130 153 134 153 Q 134 145 130 145 Z" fill="#B45309"/>
+  <path d="M 100 151 Q 100 159 104 159 Q 104 151 100 151 Z" fill="#4338CA"/>
+</svg>

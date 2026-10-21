@@ -1,0 +1,145 @@
+{
+  "project": "Birthday Moments Asset Pack Integration",
+  "description": "SVG assets cropped and organized from Birthday Moments reference asset sheets. All assets are original vector artwork inspired by the reference sheets, using the midnight-plum, lavender, coral, and warm-ivory visual identity.",
+  "colorPalette": {
+    "midnightPlum": "#2B2452",
+    "lavender": "#C3BDEC",
+    "coral": "#F472B6",
+    "warmIvory": "#FBF2E7"
+  },
+  "source": "birthday-moments-original-assets (AI-generated reference sheets)",
+  "license": "Reference assets may be similar to other outputs; review before commercial release. See README.txt for details.",
+  "assets": {
+    "cakes": {
+      "birthday-cake-3d.svg": {
+        "description": "3-tier birthday cake with candles, berries, and heart decoration. Visual reference for Three.js 3D cake implementation.",
+        "sourceSheet": "03-cake-letter-photo-icons.png",
+        "type": "reference",
+        "dimensions": "400x400",
+        "optimized": true,
+        "transparent": true
+      }
+    },
+    "envelopes": {
+      "sealed-envelope.svg": {
+        "description": "Sealed lavender envelope with coral heart wax seal. Used in the envelope-opening experience.",
+        "sourceSheet": "02-stationery-decor-stickers.png",
+        "type": "ui",
+        "dimensions": "300x220",
+        "optimized": true,
+        "transparent": true
+      },
+      "open-envelope.svg": {
+        "description": "Open envelope revealing letter paper inside. Used in animated letter opening.",
+        "sourceSheet": "02-stationery-decor-stickers.png",
+        "type": "ui",
+        "dimensions": "300x260",
+        "optimized": true,
+        "transparent": true
+      }
+    },
+    "letters": {
+      "love-letter.svg": {
+        "description": "Decorative birthday letter with floral border corners and heart seal.",
+        "sourceSheet": "02-stationery-decor-stickers.png",
+        "type": "ui",
+        "dimensions": "340x260",
+        "optimized": true,
+        "transparent": true
+      }
+    },
+    "gifts": {
+      "gift-box.svg": {
+        "description": "Purple gift box with coral ribbon bow and star decorations.",
+        "sourceSheet": "02-stationery-decor-stickers.png",
+        "type": "ui",
+        "dimensions": "260x260",
+        "optimized": true,
+        "transparent": true
+      }
+    },
+    "balloons": {
+      "balloon-bunch.svg": {
+        "description": "Bunch of four colorful balloons (pink, purple, gold, lavender) with strings and bow.",
+        "sourceSheet": "01-pastel-3d-assets.png",
+        "type": "decor",
+        "dimensions": "260x260",
+        "optimized": true,
+        "transparent": true
+      }
+    },
+    "flowers": {
+      "bouquet.svg": {
+        "description": "Flower bouquet with pink and purple blooms, green stems and leaves, wrapped in coral paper.",
+        "sourceSheet": "02-stationery-decor-stickers.png",
+        "type": "decor",
+        "dimensions": "300x300",
+        "optimized": true,
+        "transparent": true
+      }
+    },
+    "hearts": {
+      "floating-hearts.svg": {
+        "description": "Collection of floating hearts in coral, purple, and pink of various sizes.",
+        "sourceSheet": "01-pastel-3d-assets.png",
+        "type": "decor",
+        "dimensions": "400x200",
+        "optimized": true,
+        "transparent": true
+      }
+    },
+    "storybook": {
+      "storybook-open.svg": {
+        "description": "Open storybook with castle illustration, moon, stars, and lined pages.",
+        "sourceSheet": "02-stationery-decor-stickers.png",
+        "type": "ui",
+        "dimensions": "400x280",
+        "optimized": true,
+        "transparent": true
+      }
+    },
+    "photos": {
+      "polaroid-frame.svg": {
+        "description": "Polaroid-style photo frame with heart decoration, for memory gallery display.",
+        "sourceSheet": "01-pastel-3d-assets.png",
+        "type": "ui",
+        "dimensions": "200x240",
+        "optimized": true,
+        "transparent": true
+      }
+    },
+    "decor": {
+      "stars-sparkles.svg": {
+        "description": "Decorative gold, purple, and coral stars with sparkle dots.",
+        "sourceSheet": "01-pastel-3d-assets.png",
+        "type": "decor",
+        "dimensions": "500x100",
+        "optimized": true,
+        "transparent": true
+      },
+      "crescent-moon.svg": {
+        "description": "Golden crescent moon with surrounding stars for night-time decoration.",
+        "sourceSheet": "01-pastel-3d-assets.png",
+        "type": "decor",
+        "dimensions": "160x160",
+        "optimized": true,
+        "transparent": true
+      },
+      "confetti-cannon.svg": {
+        "description": "Party confetti cannon with streamers and confetti pieces for celebration moments.",
+        "sourceSheet": "01-pastel-3d-assets.png",
+        "type": "decor",
+        "dimensions": "200x200",
+        "optimized": true,
+        "transparent": true
+      }
+    }
+  },
+  "implementationNotes": [
+    "All assets are SVG for infinite scalability and small file size.",
+    "The cake SVG is a visual reference only - the actual interactive 3D cake is implemented in Three.js (see src/components/birthday-assets/ThreeDCake.tsx).",
+    "Interactive controls (buttons, toggles) are built with HTML/CSS/SVG per requirements - not using images as buttons.",
+    "Assets use the project color palette: midnight-plum, lavender, coral, warm-ivory.",
+    "Lazy-load non-critical assets using loading='lazy' on  tags."
+  ]
+}

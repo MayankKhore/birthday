@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Birthday cake reference artwork">
+  <defs>
+    <radialGradient id="cakeGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FCD34D" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#FCD34D" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="frostingTop" x1="0%" y1="0%" x2="0%" x2="100%">
+      <stop offset="0%" stop-color="#F3C5D7"/>
+      <stop offset="100%" stop-color="#DFD8F3"/>
+    </linearGradient>
+    <linearGradient id="cakeLayer1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E9D7F5"/>
+      <stop offset="100%" stop-color="#C3BDEC"/>
+    </linearGradient>
+    <linearGradient id="cakeLayer2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#DFD8F3"/>
+      <stop offset="100%" stop-color="#B8A3D9"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Cake stand -->
+  <ellipse cx="200" cy="330" rx="95" ry="25" fill="#E0A428"/>
+  <ellipse cx="200" cy="325" rx="90" ry="20" fill="#FCD34D"/>
+  
+  <!-- Bottom cake layer -->
+  <path d="M 120 300 Q 120 230 200 230 Q 280 230 280 300 Q 280 330 200 330 Q 120 330 120 300 Z" fill="url(#cakeLayer1)" stroke="#B8A3D9" stroke-width="3"/>
+  
+  <!-- Middle cake layer -->
+  <path d="M 140 230 Q 140 170 200 170 Q 260 170 260 230 Q 260 255 200 255 Q 140 255 140 230 Z" fill="url(#cakeLayer2)" stroke="#B8A3D9" stroke-width="3"/>
+  
+  <!-- Top cake layer -->
+  <path d="M 160 170 Q 160 120 200 120 Q 240 120 240 170 Q 240 190 200 190 Q 160 190 160 170 Z" fill="url(#frostingTop)" stroke="#B8A3D9" stroke-width="3"/>
+  
+  <!-- Dripping frosting -->
+  <path d="M 165 170 Q 165 180 175 180 Q 175 170 180 170" fill="none" stroke="#F3C5D7" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 185 170 Q 185 182 195 182 Q 195 170 200 170" fill="none" stroke="#F3C5D7" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 205 170 Q 205 178 215 178 Q 215 170 220 170" fill="none" stroke="#F3C5D7" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 225 170 Q 225 182 235 182 Q 235 170 235 170" fill="none" stroke="#F3C5D7" stroke-width="4" stroke-linecap="round"/>
+  
+  <!-- Candles -->
+  <g stroke="#B8A3D9" stroke-width="3">
+    <rect x="135" y="90" width="8" height="30" rx="2" fill="#A78BFA"/>
+    <rect x="155" y="80" width="8" height="40" rx="2" fill="#F472B6"/>
+    <rect x="175" y="85" width="8" height="35" rx="2" fill="#FCD34D"/>
+    <rect x="195" y="75" width="8" height="45" rx="2" fill="#34D399"/>
+    <rect x="215" y="95" width="8" height="25" rx="2" fill="#60A5FA"/>
+  </g>
+  
+  <!-- Flames -->
+  <g>
+    <path d="M 139 90 Q 139 80 143 78 Q 147 80 147 90 Z" fill="#FCD34D"/>
+    <path d="M 159 80 Q 159 65 163 63 Q 167 65 167 80 Z" fill="#FB923C"/>
+    <path d="M 179 85 Q 179 72 183 70 Q 187 72 187 85 Z" fill="#FCD34D"/>
+    <path d="M 199 75 Q 199 60 203 58 Q 207 60 207 75 Z" fill="#34D399"/>
+    <path d="M 219 95 Q 219 85 223 83 Q 227 85 227 95 Z" fill="#60A5FA"/>
+  </g>
+  
+  <!-- Decorations: berries and stars -->
+  <circle cx="130" cy="235" r="6" fill="#EC4899"/>
+  <circle cx="270" cy="235" r="6" fill="#3B82F6"/>
+  <circle cx="160" cy="175" r="5" fill="#EC4899"/>
+  <circle cx="240" cy="175" r="5" fill="#3B82F6"/>
+  <circle cx="190" cy="125" r="4" fill="#FCD34D"/>
+  <circle cx="210" cy="125" r="4" fill="#EC4899"/>
+  
+  <!-- Heart decoration -->
+  <path d="M 195 150 Q 190 145 190 155 Q 190 165 200 175 Q 210 165 210 155 Q 210 145 205 150 Q 200 155 195 150 Z" fill="#F472B6" opacity="0.8"/>
+</svg>
