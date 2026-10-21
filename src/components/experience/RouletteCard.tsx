@@ -116,11 +116,12 @@ export function RouletteCard({
           <div className="clay-card-static p-6 rounded-xl bg-[var(--color-surface-lavender)] mb-6">
             <p className="text-xl font-bold text-center" style={{ color: 'var(--color-text-primary)' }}>{result}</p>
           </div>
-          {spins > 0 ? (
-            <button type="button" role="button" aria-label="Spin again" onClick={handleSpin} onKeyDown={handleKeyDown} className="clay-btn clay-btn-secondary clay-btn-lg">Spin again</button>
-          ) : (
-            <button type="button" role="button" aria-label="Continue to next card" onClick={onComplete} onKeyDown={handleKeyDown} className="clay-btn clay-btn-primary clay-btn-lg">Continue â†’</button>
-          )}
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            {spins > 0 && (
+              <button type="button" role="button" aria-label="Spin again" onClick={handleSpin} onKeyDown={handleKeyDown} className="clay-btn clay-btn-secondary clay-btn-lg">Spin again</button>
+            )}
+            <button type="button" role="button" aria-label="Continue to next card" onClick={onComplete} onKeyDown={handleKeyDown} className="clay-btn clay-btn-primary clay-btn-lg">Next â†’</button>
+          </div>
         </div>
       )}
     </div>
