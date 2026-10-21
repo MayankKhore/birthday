@@ -174,18 +174,20 @@ export function buildExperienceConfig(
   // Start with provided scenes or defaults
   let finalScenes = scenes.length > 0 ? [...scenes] : [...defaultScenes];
 
-  // Ensure gift-reveal and celebration are present and placed at the very end
-  const ensureEndScene = (type: SceneType, orderOffset: number) => {
-    let scene = finalScenes.find(s => s.type === type);
-    if (!scene) {
-      scene = createDefaultScene(type);
-      finalScenes.push(scene);
-    }
-    // Force very high sortOrder so they appear last, gift-reveal before celebration
-    scene.sortOrder = Number.MAX_SAFE_INTEGER - orderOffset;
-  };
-  ensureEndScene('gift-reveal', 1);
-  ensureEndScene('celebration', 0);
+  // Ensure celebration is present and placed at the very end
+  let celebrationScene = finalScenes.find(s => s.type === 'celebration');
+  if (!celebrationScene) {
+    celebrationScene = createDefaultScene('celebration');
+    finalScenes.push(celebrationScene);
+  }
+  // Force very high sortOrder so celebration appears last
+  celebrationScene.sortOrder = Number.MAX_SAFE_INTEGER;
+
+  // Ensure gift-reveal (if present) is placed just before celebration
+  const giftScene = finalScenes.find(s => s.type === 'gift-reveal');
+  if (giftScene) {
+    giftScene.sortOrder = Number.MAX_SAFE_INTEGER - 1;
+  }
 
   // Keep order by sortOrder
   finalScenes.sort((a, b) => a.sortOrder - b.sortOrder);
