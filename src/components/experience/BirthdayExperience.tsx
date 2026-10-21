@@ -264,6 +264,7 @@ export function BirthdayExperience({
           onRestart={handleRestart}
           onClose={onClose}
           onCelebrate={() => { sfx('fanfare'); setShowConfetti(true); setShowBalloons(true); }}
+          onViewPage={() => { window.location.href = `/preview/${project.id}`; }}
         />
       ) : (
         renderCurrentScene()
@@ -281,12 +282,13 @@ export function BirthdayExperience({
   );
 }
 
-function CelebrationScene({ recipientName, project, onRestart, onClose, onCelebrate }: {
+function CelebrationScene({ recipientName, project, onRestart, onClose, onCelebrate, onViewPage }: {
   recipientName: string;
   project: BirthdayProject;
   onRestart?: () => void;
   onClose?: () => void;
   onCelebrate: () => void;
+  onViewPage?: () => void;
 }): React.ReactElement {
   const [celebrated, setCelebrated] = useState(false);
   const celebrate = (): void => {
@@ -316,6 +318,11 @@ function CelebrationScene({ recipientName, project, onRestart, onClose, onCelebr
             <button type="button" className="clay-btn clay-btn-primary clay-btn-lg" onClick={onRestart} aria-label="Experience again">
               Experience again
             </button>
+            {onViewPage ? (
+              <button type="button" className="clay-btn clay-btn-secondary clay-btn-lg" onClick={onViewPage} aria-label="View birthday page">
+                View birthday page
+              </button>
+            ) : null}
             {onClose ? (
               <button type="button" className="clay-btn clay-btn-ghost clay-btn-lg" onClick={onClose} aria-label="Close">
                 Close
