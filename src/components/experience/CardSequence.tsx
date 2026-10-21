@@ -71,10 +71,6 @@ export function CardSequence({ project, cards, onComplete, reducedMotion }: Prop
     }
   }, [cardIndex, enabledCards.length]);
 
-  if (completed || !currentCard) {
-    return null;
-  }
-
   useEffect(() => {
     if (completed || !currentCard) {
       const t = window.setTimeout(() => onComplete(), 60);
@@ -82,6 +78,10 @@ export function CardSequence({ project, cards, onComplete, reducedMotion }: Prop
     }
     return undefined;
   }, [completed, currentCard, onComplete]);
+
+  if (completed || !currentCard) {
+    return null;
+  }
   const cardConfig: any = {
     revealName: currentCard.revealName,
     revealMessage: currentCard.revealMessage,
