@@ -7,7 +7,7 @@
  * scene always starts it fresh. Sound effects are wired to the moments.
  */
 
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useCallback, useMemo, useRef, useState } from 'react';
 import type { BirthdayProject, Theme } from '@/types';
 import type { ExperienceConfig, SceneConfig } from '@/lib/experience/types';
 import { DEFAULT_EXPERIENCE_CONFIG } from '@/lib/experience/types';
@@ -20,8 +20,9 @@ import { CardSequence } from './CardSequence';
 import { Confetti } from './Confetti';
 import { Balloons } from './Balloons';
 import { StorybookCard } from './StorybookCard';
+import StorybookBook from './StorybookBook';
 import { GiftRevealCard } from './GiftRevealCard';
-import { ExperienceMusicPlayer } from './ExperienceMusicPlayer';
+import { ExperienceMusicPlayer, type ExperienceMusicPlayerHandle } from './ExperienceMusicPlayer';
 import { PhotoGalleryScene } from './PhotoGalleryScene';
 
 interface Props {
@@ -52,6 +53,7 @@ export function BirthdayExperience({
   const [musicPlaying, setMusicPlaying] = useState(false);
   const [showConfetti, setShowConfetti] = useState(false);
   const [showBalloons, setShowBalloons] = useState(false);
+  const musicPlayerRef = useRef<ExperienceMusicPlayerHandle | null>(null);
 
   const config: ExperienceConfig = { ...DEFAULT_EXPERIENCE_CONFIG, ...partialConfig };
 
@@ -121,7 +123,7 @@ export function BirthdayExperience({
     const key = `${runId}-${currentScene.id}`;
     switch (currentScene.type) {
       case 'envelope':
-        return <EnvelopeOpener key={key} project={project} reducedMotion={false} onOpen={() => { sfx('chime'); advance(); }} />;
+        return <EnvelopeOpener key={key} project={project} reducedMotion={config.reducedMotion} onOpen={() => { sfx('chime'); advance(); }} />;
       case 'letter':
         return (
           <LetterScene
@@ -129,7 +131,7 @@ export function BirthdayExperience({
             letterText={personalized.letterText}
             recipientName={recipientName}
             sfxEnabled={sfxEnabled}
-            reducedMotion={false}
+            reducedMotion={config.reducedMotion}
             onComplete={() => advance()}
           />
         );
@@ -139,23 +141,27 @@ export function BirthdayExperience({
             key={key}
             project={project}
             confettiEnabled={config.confettiEnabled}
-            reducedMotion={false}
-            candleCount={currentScene.candleCount ?? 5}
+            reducedMotion={config.reducedMotion}
             enableMicrophoneBlow={currentScene.enableMicrophoneBlow !== false}
             onComplete={handleCakeComplete}
           />
         );
       case 'storybook':
         return (
-          <div key={key} className="fixed inset-0 z-[500] flex flex-col items-center justify-center p-6 overflow-y-auto" style={{ background: 'var(--color-page)' }}>
-            <div className="w-full max-w-md">
-              <StorybookCard
-                project={project}
-                config={{ chapters: storyChapters }}
-                onComplete={() => { sfx('chime'); advance(); }}
-                reducedMotion={false}
-              />
-            </div>
+          <div key={key} className="fixed inset-0 z-[500] overflow-y-auto bg-[var(--color-page)]">
+            <StorybookBook
+              project={project}
+              theme={theme}
+              chapters={storyChapters}
+              letterText={personalized.letterText}
+              reducedMotion={config.reducedMotion}
+              sfxEnabled={sfxEnabled}
+              musicEnabled={config.musicEnabled}
+              musicPlaying={musicPlaying}
+              onToggleMusic={() => musicPlayerRef.current?.toggle()}
+              onComplete={() => { sfx('chime'); advance(); }}
+              onExit={advance}
+            />
           </div>
         );
       case 'photo-gallery':
@@ -272,6 +278,7 @@ export function BirthdayExperience({
 
       {(config.musicEnabled || config.soundEffectsEnabled) && (
         <ExperienceMusicPlayer
+          ref={musicPlayerRef}
           project={project}
           soundEffectsEnabled={config.soundEffectsEnabled}
           onMusicToggle={handleMusic}

@@ -1,0 +1,549 @@
+/**
+ * Storybook scene — an open book spread.
+ *
+ * Palette: the website's "Gilded Porcelain" tokens only (mulberry, gold,
+ * porcelain, sage). The reference design's pink/mint was translated into the
+ * site's own colours so the scene always feels part of the product.
+ */
+
+.storybook-book {
+  --book-mulberry: var(--color-brand-600);
+  --book-mulberry-deep: var(--color-brand-700);
+  --book-mulberry-soft: var(--color-brand-100);
+  --book-gold: var(--color-gold);
+  --book-paper: #fffdf9;
+  --book-paper-shade: var(--color-surface-warm);
+  --book-ink: var(--color-text-primary);
+  --book-ink-soft: var(--color-text-secondary);
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(1rem, 3vh, 2rem);
+  padding: clamp(1.25rem, 4vw, 3rem) clamp(1rem, 4vw, 3rem) clamp(2rem, 6vh, 3.5rem);
+  overflow-x: hidden;
+  color: var(--book-ink);
+  background:
+    radial-gradient(circle at 12% 8%, var(--color-brand-500-10) 0, transparent 32rem),
+    radial-gradient(circle at 88% 88%, var(--color-gold-soft) 0, transparent 34rem),
+    linear-gradient(165deg, var(--color-surface-lavender) 0%, var(--color-page) 45%, var(--color-sage-light) 100%);
+}
+
+.storybook-book__glow {
+  position: absolute;
+  z-index: 0;
+  border-radius: 9999px;
+  filter: blur(70px);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.storybook-book__glow--one {
+  top: -6rem;
+  left: -4rem;
+  width: 18rem;
+  height: 18rem;
+  background: var(--color-brand-200);
+}
+
+.storybook-book__glow--two {
+  right: -5rem;
+  bottom: -7rem;
+  width: 20rem;
+  height: 20rem;
+  background: var(--color-gold-soft);
+}
+
+/* ---------------------------------------------------------------- masthead */
+
+.storybook-book__masthead {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  width: min(100%, 62rem);
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.storybook-book__eyebrow {
+  margin: 0;
+  color: var(--color-gold-deep);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.storybook-book__title {
+  margin: 0.2rem 0 0;
+  color: var(--book-mulberry);
+  font-family: var(--font-display);
+  font-size: clamp(2.1rem, 6vw, 3.4rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+}
+
+.storybook-book__masthead-tools {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.storybook-book__tool {
+  padding: 0.45rem 0.9rem;
+  border: 1px solid var(--color-border-strong);
+  border-radius: 9999px;
+  background: var(--color-surface);
+  color: var(--color-text-secondary);
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, color 0.18s ease;
+  box-shadow: var(--clay-shadow-xs);
+}
+
+.storybook-book__tool:hover {
+  color: var(--book-mulberry);
+  transform: translateY(-1px);
+  box-shadow: var(--clay-shadow-sm);
+}
+
+.storybook-book__tool:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+/* ------------------------------------------------------------------- stage */
+
+.storybook-book__stage {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  width: min(100%, 62rem);
+  align-items: center;
+  justify-content: center;
+  gap: clamp(0.5rem, 2vw, 1.5rem);
+}
+
+.storybook-book__nav {
+  display: grid;
+  width: clamp(2.25rem, 5vw, 2.9rem);
+  height: clamp(2.25rem, 5vw, 2.9rem);
+  flex: 0 0 auto;
+  place-items: center;
+  padding: 0;
+  border: 1px solid var(--color-border-strong);
+  border-radius: 9999px;
+  background: var(--color-surface);
+  color: var(--book-mulberry);
+  font-size: 1.35rem;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: var(--clay-shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+.storybook-book__nav:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: var(--clay-shadow-md);
+}
+
+.storybook-book__nav:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+.storybook-book__nav:disabled {
+  opacity: 0.32;
+  cursor: default;
+}
+
+/* -------------------------------------------------------------------- book */
+
+.storybook-book__book {
+  position: relative;
+  width: min(100%, 54rem);
+  padding: clamp(0.5rem, 1.4vw, 0.9rem);
+  border-radius: 1.4rem;
+  background: linear-gradient(160deg, var(--book-mulberry) 0%, var(--book-mulberry-deep) 100%);
+  box-shadow: var(--clay-shadow-xl);
+}
+
+.storybook-book__cover {
+  position: relative;
+  border-radius: 1rem;
+  padding: clamp(0.4rem, 1vw, 0.7rem);
+  background:
+    repeating-linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.16) 0 6px,
+      transparent 6px 14px
+    ),
+    var(--color-brand-800);
+}
+
+.storybook-book__ribbon {
+  position: absolute;
+  bottom: -1.5rem;
+  left: 50%;
+  width: 2.1rem;
+  height: 3.4rem;
+  transform: translateX(-50%);
+  border-radius: 0 0 0.5rem 0.5rem;
+  background: linear-gradient(180deg, var(--color-gold) 0%, var(--color-gold-deep) 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 78%, 0 100%);
+  box-shadow: 0 8px 18px rgba(36, 29, 46, 0.22);
+}
+
+/* ------------------------------------------------------------------ spread */
+
+.storybook-book__spread {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(0.6rem, 1.6vw, 1.2rem);
+  border-radius: 0.6rem;
+  background: var(--book-paper);
+  box-shadow: inset 0 0 0 1px rgba(36, 29, 46, 0.06);
+  transform-style: preserve-3d;
+}
+
+/* The right-hand column holds the live page plus the turning leaf. */
+.storybook-book__stack {
+  position: relative;
+  display: block;
+  min-width: 0;
+  transform-style: preserve-3d;
+}
+
+/*
+ * The leaf is a sheet hinged on the spine (its left edge). "next" sweeps it
+ * away from the reader; "back" sweeps it back over the spine.
+ */
+.storybook-book__leaf {
+  position: absolute;
+  z-index: 3;
+  inset: 0;
+  transform-style: preserve-3d;
+  transform-origin: left center;
+  will-change: transform;
+  pointer-events: none;
+}
+
+.storybook-book__leaf--next {
+  animation: storybook-leaf-next 0.72s cubic-bezier(0.42, 0.02, 0.24, 1) forwards;
+}
+
+/*
+ * Both directions pivot on the same hinge — the spine at the leaf's left
+ * edge — exactly like a real bound book. "back" starts with the sheet lying
+ * over the left page and swings it home again.
+ */
+.storybook-book__leaf--back {
+  animation: storybook-leaf-back 0.72s cubic-bezier(0.42, 0.02, 0.24, 1) forwards;
+}
+
+@keyframes storybook-leaf-next {
+  0% { transform: rotateY(0deg); }
+  100% { transform: rotateY(-168deg); }
+}
+
+@keyframes storybook-leaf-back {
+  0% { transform: rotateY(-168deg); }
+  100% { transform: rotateY(0deg); }
+}
+
+/* Entrance animation for the single-page (compact) layout. */
+@keyframes storybook-page-fade {
+  0% { opacity: 0; transform: translateY(0.6rem); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.storybook-book__leaf-face {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: 0.35rem;
+  backface-visibility: hidden;
+  background: var(--book-paper);
+}
+
+.storybook-book__leaf-face--front {
+  box-shadow: -14px 0 26px rgba(36, 29, 46, 0.18);
+}
+
+.storybook-book__leaf-face--back {
+  transform: rotateY(180deg);
+  box-shadow: 14px 0 26px rgba(36, 29, 46, 0.18);
+}
+
+.storybook-book__page {
+  position: relative;
+  display: flex;
+  min-height: clamp(20rem, 46vh, 27rem);
+  flex-direction: column;
+  padding: clamp(1.4rem, 3.4vw, 2.6rem);
+  border-radius: 0.35rem;
+  background: var(--book-paper);
+}
+
+.storybook-book__page--left {
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(150deg, var(--color-surface-lavender) 0%, var(--color-brand-50) 55%, var(--color-surface-warm) 100%);
+  box-shadow: inset 0 0 0 1px rgba(36, 29, 46, 0.05);
+}
+
+/* ------------------------------------------------------------------- dots */
+
+.storybook-book__dots {
+  position: absolute;
+  inset: 0;
+  opacity: 0.5;
+  background-image: radial-gradient(var(--color-brand-200) 1.5px, transparent 1.6px);
+  background-size: 16px 16px;
+  mask-image: radial-gradient(circle at 50% 50%, #000 22%, transparent 76%);
+  -webkit-mask-image: radial-gradient(circle at 50% 50%, #000 22%, transparent 76%);
+}
+
+.storybook-book__confetti {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.storybook-book__confetti-mark {
+  position: absolute;
+  display: block;
+  border-radius: 2px;
+  opacity: 0.85;
+}
+
+/* --------------------------------------------------------------- portrait */
+
+.storybook-book__portrait {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  width: min(78%, 15rem);
+  aspect-ratio: 3 / 4;
+  place-items: center;
+  margin: 0;
+  padding: clamp(0.6rem, 1.4vw, 0.9rem);
+  border-radius: 50% 50% 48% 48% / 44% 44% 56% 56%;
+  background: var(--color-surface);
+  box-shadow:
+    0 18px 40px rgba(36, 29, 46, 0.16),
+    inset 0 0 0 1px var(--color-border);
+}
+
+.storybook-book__portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+/* Flat illustrations should sit inside the frame, not be cropped to it. */
+.storybook-book__portrait img[src$='.svg'] {
+  object-fit: contain;
+  padding: 12%;
+  border-radius: 0;
+}
+
+.storybook-book__portrait figcaption {
+  position: absolute;
+  right: 0;
+  bottom: -1.4rem;
+  left: 0;
+  color: var(--book-ink-soft);
+  font-size: 0.72rem;
+  font-style: italic;
+  text-align: center;
+}
+
+/* ------------------------------------------------------------ right  page */
+
+.storybook-book__page--right {
+  justify-content: flex-start;
+  box-shadow: inset 0 0 0 1px rgba(36, 29, 46, 0.05);
+}
+
+.storybook-book__chapter-label {
+  margin: 0;
+  color: var(--book-mulberry);
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3.4vw, 2.1rem);
+  font-style: italic;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.storybook-book__chapter-title {
+  margin: 0.35rem 0 1.1rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--book-ink);
+  font-family: var(--font-display);
+  font-size: clamp(1.05rem, 2.2vw, 1.35rem);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.storybook-book__prose {
+  flex: 1;
+  overflow-y: auto;
+  color: var(--book-ink-soft);
+  font-size: clamp(0.92rem, 1.5vw, 1.02rem);
+  line-height: 1.75;
+}
+
+.storybook-book__prose p {
+  margin: 0 0 0.9rem;
+}
+
+.storybook-book__prose p:last-child {
+  margin-bottom: 0;
+}
+
+.storybook-book__dropcap::first-letter {
+  float: left;
+  margin: 0.12em 0.16em 0 0;
+  color: var(--book-mulberry);
+  font-family: var(--font-display);
+  font-size: 3.1em;
+  font-weight: 700;
+  line-height: 0.82;
+}
+
+.storybook-book__folio {
+  align-self: flex-end;
+  display: grid;
+  width: 1.9rem;
+  height: 1.9rem;
+  place-items: center;
+  margin-top: 1rem;
+  border-radius: 9999px;
+  background: var(--book-mulberry);
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+/* ---------------------------------------------------------------- controls */
+
+.storybook-book__controls {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  width: min(100%, 62rem);
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.storybook-book__pager {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin: 0;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 9999px;
+  background: var(--color-surface);
+  color: var(--color-text-secondary);
+  font-size: 0.78rem;
+  font-weight: 600;
+  box-shadow: var(--clay-shadow-xs);
+}
+
+.storybook-book__pager-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 9999px;
+  background: var(--book-mulberry);
+}
+
+.storybook-book__hint {
+  margin: 0;
+  color: var(--color-text-tertiary);
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.storybook-book__empty {
+  margin: auto;
+  color: var(--color-text-secondary);
+}
+
+/* ------------------------------------------------------------- responsive */
+
+@media (max-width: 700px) {
+  /* Stack the masthead so the title is not pushed to the far edge. */
+  .storybook-book__masthead {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0.75rem;
+  }
+
+  .storybook-book__spread {
+    grid-template-columns: 1fr;
+  }
+
+  /*
+   * A single-column spread has no spine, so the 3D leaf cannot hinge here.
+   * The pages swap instantly and cross-fade instead.
+   */
+  .storybook-book--compact .storybook-book__leaf {
+    display: none;
+  }
+
+  .storybook-book--compact .storybook-book__page {
+    animation: storybook-page-fade 0.32s ease both;
+  }
+
+  .storybook-book__page {
+    min-height: 0;
+  }
+
+  .storybook-book__page--left {
+    min-height: 15rem;
+  }
+
+  .storybook-book__portrait {
+    width: min(62%, 11rem);
+    aspect-ratio: 4 / 3;
+  }
+
+  .storybook-book__controls {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+/* The scene disables the sweep itself when the reader asks for less motion. */
+.storybook-book--reduced .storybook-book__leaf {
+  animation: none !important;
+}
+
+.storybook-book--reduced .storybook-book__page {
+  animation: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .storybook-book__leaf,
+  .storybook-book__page {
+    animation: none !important;
+  }
+}

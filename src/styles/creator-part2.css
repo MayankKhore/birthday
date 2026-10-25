@@ -206,5 +206,17 @@ label {
   .progress-label { font-size: 0.65rem; }
   .progress-circle { width: 26px; height: 26px; font-size: 0.7rem; }
   .progress-connector { top: 13px; }
+  .create-progress { padding: var(--space-3) var(--space-3) var(--space-1); }
+  .create-progress-card { padding: var(--space-4); border-radius: var(--radius-xl); }
+  .create-progress-header { margin-bottom: var(--space-4); }
+  .create-progress-kicker { font-size: 0.625rem; }
+  .create-progress-title { font-size: var(--text-base); }
+  .create-progress-percent { min-width: 48px; height: 30px; }
+  .create-progress-list { gap: var(--space-1); }
+  .create-progress-item:not(:last-child)::after { left: calc(50% + 15px); width: calc(100% + var(--space-1) - 30px); }
+  .create-progress-circle { width: 30px; height: 30px; font-size: var(--text-xs); }
+  .create-progress-circle svg { width: 15px; height: 15px; }
+  .create-progress-label { font-size: 0.625rem; }
+  .create-progress-status { display: none; }
 }
 

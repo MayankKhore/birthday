@@ -1,9 +1,15 @@
 /**
  * PhotoGalleryScene — swipeable photo gallery with captions.
+ *
+ * The gallery is presented as the decorative "Our Moments" board: the photo
+ * in focus sits in the cream centre frame while the remaining photos fan out
+ * as tilted polaroids on either side. Picking a tile promotes it to the
+ * centre, so the board stays browsable without losing the collage look.
  */
 
 import { useState } from 'react';
 import { playSfx } from '@/lib/media/sound';
+import { MomentsCollage } from '@/components/create/MomentsCollage';
 import type { BirthdayProject } from '@/types';
 
 interface Props {
@@ -29,21 +35,28 @@ export function PhotoGalleryScene({ photos, recipientName, sfxEnabled, onComplet
     );
   }
   return (
-    <div className="fixed inset-0 z-[500] flex flex-col items-center justify-center p-6 overflow-y-auto" style={{ background: 'var(--color-page)' }}>
-      <div className="w-full max-w-md text-center">
-        <p className="eyebrow" style={{ marginBottom: 'var(--space-2)' }}>Photo memories</p>
-        <h2 className="font-display text-2xl font-bold" style={{ color: 'var(--color-text-primary)', marginBottom: 'var(--space-4)' }}>
+    <div className="fixed inset-0 z-[500] flex flex-col items-center justify-center p-4 sm:p-6 overflow-y-auto" style={{ background: 'var(--color-page)' }}>
+      <div className="w-full max-w-2xl">
+        <MomentsCollage
+          photos={photos.map((p) => ({
+            id: p.id,
+            src: p.dataUrl,
+            caption: p.caption || '',
+          }))}
+          featuredId={current.id}
+          onSelect={(id) => {
+            const next = photos.findIndex((p) => p.id === id);
+            if (next >= 0 && next !== index) {
+              if (sfxEnabled) playSfx('pop');
+              setIndex(next);
+            }
+          }}
+        />
+
+        <p className="text-center text-sm" style={{ color: 'var(--color-text-secondary)', marginTop: 'var(--space-5)' }}>
           Moments with {recipientName}
-        </h2>
-        <div className="clay-photo-frame" style={{ width: '100%' }}>
-          <img src={current.dataUrl} alt={current.caption || current.fileName || `Memory ${index + 1}`} style={{ width: '100%', maxHeight: '46vh', objectFit: 'cover', borderRadius: 'var(--radius-md)', display: 'block' }} />
-        </div>
-        {current.caption ? (
-          <p className="text-body" style={{ marginTop: 'var(--space-3)' }}>{current.caption}</p>
-        ) : null}
-        <p className="text-xs" style={{ color: 'var(--color-text-tertiary)', marginTop: 'var(--space-2)' }}>
-          {index + 1} of {photos.length}
         </p>
+
         <div className="flex items-center justify-center gap-2" style={{ marginTop: 'var(--space-4)' }}>
           <button type="button" className="clay-icon-btn" onClick={() => go(-1)} aria-label="Previous photo">←</button>
           {photos.map((p, i) => (
@@ -61,9 +74,12 @@ export function PhotoGalleryScene({ photos, recipientName, sfxEnabled, onComplet
           ))}
           <button type="button" className="clay-icon-btn" onClick={() => go(1)} aria-label="Next photo">→</button>
         </div>
-        <button type="button" className="clay-btn clay-btn-primary clay-btn-lg" style={{ marginTop: 'var(--space-6)' }} onClick={onComplete}>
-          Continue →
-        </button>
+
+        <div className="text-center">
+          <button type="button" className="clay-btn clay-btn-primary clay-btn-lg" style={{ marginTop: 'var(--space-5)' }} onClick={onComplete}>
+            Continue →
+          </button>
+        </div>
       </div>
     </div>
   );

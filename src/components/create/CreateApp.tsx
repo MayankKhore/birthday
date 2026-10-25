@@ -6,10 +6,10 @@ import { formToProjectInput } from './createMapping';
 import { DRAFT_KEY, EMPTY_FORM, type CreateFormState } from './createTypes';
 import { StepDetails, StepMessage, type FieldSetter } from './CreateStepsA';
 import { StepPhotos } from './CreateStepsPhotos';
+import { MomentsCollage } from './MomentsCollage';
 import { StepMusic } from './CreateStepsMusic';
 import { StepScenes } from './CreateStepsScenes';
 import { StepReview } from './CreateStepsReview';
-import type { UUID } from '@/types';
 
 const STEPS = [
   { id: 1, label: 'Details' },
@@ -145,28 +145,52 @@ export function CreateApp(): React.ReactElement {
         </p>
       ) : null}
 
-      <nav className="progress-indicator" aria-label="Creation steps">
-        <ol className="progress-list">
-          {STEPS.map((s, idx) => (
-            <li className="progress-item" key={s.id} aria-current={s.id === step ? 'step' : undefined}>
-              <button
-                type="button"
-                className={'progress-step' + (s.id === step ? ' active' : '') + (s.id < step ? ' completed' : '')}
-                disabled={s.id >= step}
-                onClick={() => setStep(s.id)}
-              >
-                <span className="progress-circle" aria-hidden="true">{s.id < step ? '✓' : s.id}</span>
-                <span className="progress-label">{s.label}</span>
-              </button>
-              {idx < STEPS.length - 1 ? <span className="progress-connector" aria-hidden="true" /> : null}
-            </li>
-          ))}
-        </ol>
+      <nav className="create-progress" aria-label={`Creation steps. Step ${step} of ${STEPS.length}`}>
+        <div className="create-progress-card">
+          <div className="create-progress-header">
+            <div>
+              <span className="create-progress-kicker">Your creation journey</span>
+              <p className="create-progress-title">Step {step} of {STEPS.length} <span aria-hidden="true">·</span> <span>{STEPS[step - 1]?.label}</span></p>
+            </div>
+            <span className="create-progress-percent" aria-hidden="true">{step * 20}%</span>
+          </div>
+
+          <ol className="create-progress-list">
+            {STEPS.map((s) => {
+              const isActive = s.id === step;
+              const isCompleted = s.id < step;
+              const status = isActive ? 'Current' : isCompleted ? 'Done' : 'Upcoming';
+              return (
+                <li className={`create-progress-item${isActive ? ' is-active' : ''}${isCompleted ? ' is-completed' : ''}`} key={s.id} aria-current={isActive ? 'step' : undefined}>
+                  <button
+                    type="button"
+                    className="create-progress-step"
+                    disabled={s.id >= step}
+                    onClick={() => setStep(s.id)}
+                    aria-label={`${s.label}, ${status}`}
+                  >
+                    <span className="create-progress-circle" aria-hidden="true">
+                      {isCompleted ? (
+                        <svg viewBox="0 0 20 20" fill="none">
+                          <path d="m5.5 10.25 2.75 2.75 6.25-6.25" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                      ) : s.id}
+                    </span>
+                    <span className="create-progress-copy">
+                      <span className="create-progress-label">{s.label}</span>
+                      <span className="create-progress-status">{status}</span>
+                    </span>
+                  </button>
+                </li>
+              );
+            })}
+          </ol>
+        </div>
       </nav>
 
       <div style={{ maxWidth: 'var(--max-width-2xl)', margin: '0 auto', padding: 'var(--space-4) var(--space-6) var(--space-16)', width: '100%' }}>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-          <section className="lg:col-span-5" aria-label={`Step ${step}: ${STEPS[step - 1]?.label ?? ''}`}>
+          <section className={step === 3 ? 'lg:col-span-7' : 'lg:col-span-5'} aria-label={`Step ${step}: ${STEPS[step - 1]?.label ?? ''}`}>
             <div className="clay-card-static" style={{ padding: 'var(--space-6)' }}>
               {step === 1 ? <StepDetails form={form} set={set} /> : null}
               {step === 2 ? <StepMessage form={form} set={set} /> : null}
@@ -202,7 +226,7 @@ export function CreateApp(): React.ReactElement {
             </div>
           </section>
 
-          <section className="lg:col-span-7" aria-label="Live preview">
+          <section className={step === 3 ? 'lg:col-span-5' : 'lg:col-span-7'} aria-label="Live preview">
             <CreatePreview form={form} step={step} sceneSummary={sceneSummary} />
           </section>
         </div>
@@ -228,11 +252,10 @@ function CreatePreview({ form, step, sceneSummary }: {
           </div>
           <div className="text-body" style={{ fontSize: 'var(--text-sm)', maxWidth: '340px', margin: '0 auto' }}>{message}</div>
           {shownPhotos.length > 0 ? (
-            <div style={{ display: 'flex', gap: 'var(--space-2)', justifyContent: 'center', marginTop: 'var(--space-4)' }}>
-              {shownPhotos.map((p) => (
-                <img key={p.localId} src={p.dataUrl} alt={p.caption || p.fileName} style={{ width: '72px', height: '72px', objectFit: 'cover', borderRadius: 'var(--radius-lg)', border: '1px solid var(--color-border)' }} />
-              ))}
-            </div>
+            <MomentsCollage
+              compact
+              photos={shownPhotos.map((p) => ({ id: p.localId, src: p.dataUrl, caption: p.caption }))}
+            />
           ) : (
             <img src="/images/floral-card.svg" alt="Floral birthday card illustration" style={{ width: '100%', maxWidth: '220px', margin: 'var(--space-4) auto 0' }} />
           )}

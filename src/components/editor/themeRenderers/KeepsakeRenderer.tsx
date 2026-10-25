@@ -45,7 +45,7 @@ export function KeepsakeRenderer({ project, theme, onMusicToggle }: Props) {
       {stage === 'entrance' && (
         <div className="fixed inset-0 z-50 flex flex-col items-center justify-center text-center p-6" style={{ background: theme.colors.background }}>
           <div className="clay-icon-btn clay-icon-btn-lg mb-6 animate-pop" style={{ background: theme.colors.surface, color: theme.colors.primary }}>
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><polyline points="8 12 12 16 16 12"/></svg>
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><polyline points="8 12 12 16 16 12"/></svg>
           </div>
           <h1 className="font-display text-4xl font-bold mb-2" style={{ letterSpacing: '-0.02em' }}>{project.recipientName}</h1>
           <p className="text-lg text-[var(--color-text-secondary)] mb-8">A little something for your birthday</p>
@@ -97,7 +97,7 @@ export function KeepsakeRenderer({ project, theme, onMusicToggle }: Props) {
       {stage === 'closed' && (
         <div className="fixed inset-0 z-50 flex flex-col items-center justify-center text-center p-6" style={{ background: theme.colors.background }}>
           <div className="clay-icon-btn clay-icon-btn-lg mb-6 animate-scale-in" style={{ background: theme.colors.surface, color: theme.colors.primary }}>
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
           </div>
           <h2 className="font-display text-2xl font-bold mb-2">Saved as a keepsake</h2>
           <p className="text-lg text-[var(--color-text-secondary)] mb-6">Thank you for celebrating.</p>

@@ -45,7 +45,7 @@ export function AfterglowRenderer({ project, theme, onMusicToggle }: Props) {
       {stage === 'entrance' && (
         <div className="fixed inset-0 z-50 flex flex-col items-center justify-center text-center p-6" style={{ background: theme.colors.background }}>
           <div className="clay-icon-btn clay-icon-btn-lg mb-8 animate-pop" style={{ background: 'rgba(255,255,255,0.08)', color: theme.colors.textPrimary }}>
-            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/></svg>
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/></svg>
           </div>
           <h1 className="font-display text-5xl font-bold mb-3 tracking-tight" style={{ letterSpacing: '-0.03em' }}>{project.recipientName}</h1>
           <p className="text-xl text-[var(--color-text-secondary)] mb-10 tracking-wide uppercase">A birthday to remember</p>
@@ -103,7 +103,7 @@ export function AfterglowRenderer({ project, theme, onMusicToggle }: Props) {
       {stage === 'closed' && (
         <div className="fixed inset-0 z-50 flex flex-col items-center justify-center text-center p-6" style={{ background: theme.colors.background }}>
           <div className="clay-icon-btn clay-icon-btn-lg mb-8 animate-scale-in" style={{ background: 'rgba(255,255,255,0.08)', color: theme.colors.textPrimary }}>
-            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
           </div>
           <h2 className="font-display text-3xl font-bold mb-3 tracking-tight">Shared</h2>
           <p className="text-xl text-[var(--color-text-secondary)] mb-10">Thank you for celebrating.</p>

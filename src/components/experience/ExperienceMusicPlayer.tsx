@@ -6,7 +6,7 @@
  * Floating pill UI that never covers the scene content.
  */
 
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { forwardRef, useCallback, useEffect, useImperativeHandle, useRef, useState } from 'react';
 import type { BirthdayProject } from '@/types';
 import {
   MUSIC_TRACKS, setMusicVolume, setSfxVolume,
@@ -21,6 +21,10 @@ interface Props {
   onMusicToggle?: (playing: boolean) => void;
 }
 
+export interface ExperienceMusicPlayerHandle {
+  toggle: () => Promise<void>;
+}
+
 const SFX_BUTTONS: Array<{ key: SfxKey; label: string }> = [
   { key: 'pop', label: 'Pop' },
   { key: 'chime', label: 'Chime' },
@@ -32,7 +36,10 @@ const SFX_BUTTONS: Array<{ key: SfxKey; label: string }> = [
   { key: 'fanfare', label: 'Fanfare' },
 ];
 
-export function ExperienceMusicPlayer({ project, soundEffectsEnabled = true, onMusicToggle }: Props): React.ReactElement | null {
+export const ExperienceMusicPlayer = forwardRef<ExperienceMusicPlayerHandle, Props>(function ExperienceMusicPlayer(
+  { project, soundEffectsEnabled = true, onMusicToggle },
+  ref,
+): React.ReactElement | null {
   const [playing, setPlaying] = useState(false);
   const [volume, setVolumeState] = useState(0.5);
   const [sfxVol, setSfxVolState] = useState(0.4);
@@ -110,6 +117,8 @@ export function ExperienceMusicPlayer({ project, soundEffectsEnabled = true, onM
     setPlaying(true);
     onMusicToggle?.(true);
   }, [playing, stopAll, trackId, volume, onMusicToggle]);
+
+  useImperativeHandle(ref, () => ({ toggle: handleToggle }), [handleToggle]);
 
   const handleVolume = useCallback((v: number) => {
     setVolumeState(v);
@@ -205,7 +214,7 @@ export function ExperienceMusicPlayer({ project, soundEffectsEnabled = true, onM
       ) : null}
     </div>
   );
-}
+});
 
 /** Global helper so scenes can trigger real sound effects. */
 export function playSoundEffect(key: SfxKey): void {

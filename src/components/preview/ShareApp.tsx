@@ -8,7 +8,7 @@
  * slug cannot be found.
  */
 
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import type { BirthdayProject, Theme } from '@/types';
 import { BirthdayExperience } from '@/components/experience/BirthdayExperience';
 import { buildExperienceConfig } from '@/lib/experience/config';
@@ -26,7 +26,17 @@ export function ShareApp({ slug }: Props) {
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
 
-  const publishingService = new LocalPublishingService();
+  // Stable across renders: a new instance on every render would change the
+  // `load` callback identity and re-trigger the load effect in a loop.
+  const publishingService = useMemo(() => new LocalPublishingService(), []);
+
+  // Memoized so the scene queue keeps stable ids between renders — otherwise
+  // every render would mint new scene UUIDs and remount the active scene.
+  // Declared before the early returns below to keep the hook order stable.
+  const config = useMemo(
+    () => (project && theme ? buildExperienceConfig(project, theme) : null),
+    [project, theme],
+  );
 
   const load = useCallback(async () => {
     if (!slug) {
@@ -79,11 +89,11 @@ export function ShareApp({ slug }: Props) {
     );
   }
 
-  const config = buildExperienceConfig(project, theme);
-
+  // Memoized so the scene queue keeps stable ids between renders — otherwise
+  // every render would mint new scene UUIDs and remount the active scene.
   return (
     <div className="min-h-screen w-full" style={{ background: 'var(--color-page)' }}>
-      <BirthdayExperience project={project} theme={theme} config={config} />
+      <BirthdayExperience project={project} theme={theme} config={config ?? {}} />
     </div>
   );
 }

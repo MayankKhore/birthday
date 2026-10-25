@@ -91,7 +91,7 @@ export function StarlitRenderer({ project, theme, onMusicToggle }: Props) {
           style={{ background: theme.colors.background }}
         >
           <div className="clay-icon-btn clay-icon-btn-lg mb-6 animate-pop" style={{ background: 'rgba(255,255,255,0.1)', color: theme.colors.textOnPrimary }}>
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
           </div>
           <h1 className="font-display text-5xl font-bold mb-2" style={{ letterSpacing: '-0.02em' }}>{project.recipientName}</h1>
           <p className="text-lg text-[var(--color-text-secondary)] mb-8">It&apos;s your birthday</p>
@@ -106,7 +106,7 @@ export function StarlitRenderer({ project, theme, onMusicToggle }: Props) {
           <header className="fixed top-0 left-0 right-0 p-6 z-40 flex items-center justify-between">
             <div className="flex items-center gap-2">
               <div className="clay-icon-btn clay-icon-btn-sm" style={{ background: 'rgba(255,255,255,0.1)', color: theme.colors.textOnPrimary }}>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/></svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/></svg>
               </div>
               <span className="font-display text-sm font-bold tracking-widest uppercase">{project.recipientName}</span>
             </div>
@@ -163,7 +163,7 @@ export function StarlitRenderer({ project, theme, onMusicToggle }: Props) {
       {stage === 'closed' && (
         <div className="fixed inset-0 z-50 flex flex-col items-center justify-center text-center" style={{ background: theme.colors.background }}>
           <div className="clay-icon-btn clay-icon-btn-lg mb-6 animate-scale-in" style={{ background: 'rgba(255,255,255,0.1)', color: theme.colors.textOnPrimary }}>
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
           </div>
           <h2 className="font-display text-3xl font-bold mb-2">Thanks for celebrating</h2>
           <p className="text-lg text-[var(--color-text-secondary)] mb-6">The moment has been shared.</p>

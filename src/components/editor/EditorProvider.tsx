@@ -140,6 +140,7 @@ export function EditorProvider({ children }: { children: React.ReactNode }) {
       project: state.project,
       photos: state.photos.map((p) => ({ ...p, file: undefined })),
       cards: state.cards,
+      scenes: state.scenes,
     };
     LocalStorage.set(DRAFT_KEY, draft);
   }, [state]);

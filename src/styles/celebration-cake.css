@@ -1,0 +1,345 @@
+/** Celebration cake artwork, wind reaction, and post-blow atmosphere. */
+
+.cake-scene {
+  --cake-wind: 0;
+  position: fixed;
+  inset: 0;
+  z-index: 500;
+  display: flex;
+  min-height: 100%;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: clamp(1rem, 4vw, 3rem);
+  color: var(--color-text-primary);
+  isolation: isolate;
+  background:
+    radial-gradient(circle at 50% 68%, rgba(255, 219, 151, 0.22), transparent 32rem),
+    radial-gradient(circle at 12% 12%, rgba(216, 191, 210, 0.2), transparent 25rem),
+    linear-gradient(150deg, #fffaf6 0%, #faf3f3 48%, #f2edf5 100%);
+}
+
+.cake-scene::before,
+.cake-scene::after {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  content: '';
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+
+.cake-scene::before {
+  background:
+    radial-gradient(circle at 50% 43%, rgba(255, 244, 190, 0.88) 0, rgba(255, 207, 226, 0.4) 25%, transparent 53%),
+    conic-gradient(from 0deg at 50% 43%, rgba(255,255,255,.24), rgba(240,181,210,.2), rgba(187,171,235,.18), rgba(255,255,255,.24));
+  filter: blur(2px);
+}
+
+.cake-scene::after {
+  background:
+    radial-gradient(ellipse at 18% 90%, rgba(122, 201, 174, 0.24), transparent 38%),
+    radial-gradient(ellipse at 84% 82%, rgba(188, 147, 225, 0.28), transparent 42%),
+    linear-gradient(180deg, transparent 30%, rgba(160, 47, 96, 0.08));
+  mix-blend-mode: multiply;
+}
+
+.cake-scene--celebrating::before,
+.cake-scene--celebrating::after { opacity: 1; }
+
+.cake-scene__content {
+  position: relative;
+  z-index: 2;
+  width: min(100%, 46rem);
+  margin: auto;
+  text-align: center;
+}
+
+.cake-scene__intro {
+  position: relative;
+  z-index: 3;
+  padding-bottom: 0.9rem;
+}
+.cake-scene__eyebrow {
+  margin: 0 0 0.7rem;
+  color: var(--color-gold-deep);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.cake-scene__title {
+  margin: 0;
+  color: var(--color-text-primary);
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  font-weight: 700;
+  line-height: 1.05;
+  text-wrap: balance;
+}
+
+.cake-scene__copy {
+  margin: 0.6rem auto 0;
+  max-width: 30rem;
+  color: var(--color-text-secondary);
+  font-size: clamp(0.82rem, 2vw, 0.94rem);
+  line-height: 1.5;
+}
+
+.cake-scene__stage {
+  position: relative;
+  width: min(100%, 18rem);
+  margin: 0 auto;
+  padding-bottom: 1.25rem;
+}
+
+.cake-scene__halo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 76%;
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 222, 133, 0.42), rgba(255, 190, 219, 0.14) 48%, transparent 70%);
+  filter: blur(10px);
+  pointer-events: none;
+  transition: opacity 700ms ease, transform 900ms var(--ease-out);
+}
+
+.cake-scene--celebrating .cake-scene__halo {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.28);
+}
+
+.cake-scene__actions {
+  position: relative;
+  z-index: 8;
+  display: flex;
+  min-height: 7rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.8rem;
+  margin-top: 0;
+}
+
+.cake-scene__buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; }
+
+.cake-scene__blow-button {
+  min-width: 12rem;
+  min-height: 3.2rem;
+  touch-action: none;
+  user-select: none;
+}
+
+.cake-scene__blow-button.is-blowing {
+  transform: translateY(1px) scale(0.98);
+  box-shadow: inset 0 2px 5px rgba(77, 15, 44, 0.25), 0 4px 12px rgba(160, 47, 96, 0.22);
+}
+
+.cake-scene__wind-meter {
+  display: flex;
+  width: min(100%, 15rem);
+  align-items: center;
+  gap: 0.65rem;
+  color: var(--color-text-secondary);
+  font-size: 0.74rem;
+  font-weight: 700;
+}
+
+.cake-scene__wind-track {
+  position: relative;
+  height: 0.42rem;
+  flex: 1;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(160, 47, 96, 0.1);
+}
+
+.cake-scene__wind-fill {
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--color-gold), var(--color-brand-400), var(--color-brand-600));
+  transform-origin: left;
+  transition: width 70ms linear;
+}
+
+.cake-scene__mic-message {
+  margin: 0;
+  color: var(--color-text-tertiary);
+  font-size: 0.78rem;
+}
+
+.cake-scene__success { animation: cake-copy-in 700ms var(--ease-spring) both; }
+
+.cake-scene__celebration {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 700ms ease;
+}
+
+.cake-scene--celebrating .cake-scene__celebration { opacity: 1; }
+
+.cake-scene__rays {
+  position: absolute;
+  left: 50%;
+  top: 43%;
+  width: 42rem;
+  height: 42rem;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: repeating-conic-gradient(from 8deg, rgba(255, 218, 113, 0.2) 0 4deg, transparent 4deg 17deg);
+  animation: cake-rays 22s linear infinite;
+}
+
+.cake-scene__sparkle {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: var(--size);
+  height: var(--size);
+  color: var(--color);
+  font-size: var(--size);
+  line-height: 1;
+  text-shadow: 0 0 12px currentColor;
+  animation: cake-sparkle var(--duration) var(--delay) ease-in-out infinite;
+}
+
+.cake-scene__particle {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: var(--w);
+  height: var(--h);
+  border-radius: 2px;
+  background: var(--color);
+  opacity: 0;
+  transform: translateY(-10vh) rotate(0deg);
+  animation: cake-particle var(--duration) var(--delay) cubic-bezier(.2,.7,.3,1) forwards;
+}
+
+@keyframes cake-rays { to { transform: translate(-50%, -50%) rotate(360deg); } }
+@keyframes cake-sparkle {
+  0%, 100% { opacity: 0.25; transform: scale(0.65) rotate(0deg); }
+  50% { opacity: 1; transform: scale(1.25) rotate(45deg); }
+}
+@keyframes cake-particle {
+  0% { opacity: 0; transform: translate3d(0, -10vh, 0) rotate(0deg); }
+  12% { opacity: 1; }
+  100% { opacity: 0; transform: translate3d(var(--drift), 105vh, 0) rotate(720deg); }
+}
+@keyframes cake-copy-in {
+  from { opacity: 0; transform: translateY(14px) scale(0.96); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* PNG cake and precisely aligned effect overlay */
+.celebration-cake {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  aspect-ratio: 430 / 497;
+  overflow: visible;
+  filter: saturate(1.04);
+  transform-origin: 50% 78%;
+}
+
+.celebration-cake__image {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.celebration-cake__effects {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.cake-scene--celebrating .celebration-cake { animation: cake-bob 2.4s ease-in-out infinite; }
+.celebration-cake__candle { transform-box: fill-box; transform-origin: 50% 100%; }
+.celebration-cake__flame-lean {
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+  transform: rotate(var(--wind-turn, 0deg));
+  transition: transform 110ms ease-out;
+}
+.celebration-cake__flame {
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+  animation: cake-flame 650ms ease-in-out infinite alternate;
+  animation-delay: var(--flame-delay, 0ms);
+}
+.celebration-cake__flame-core { animation: cake-flame-core 480ms ease-in-out infinite alternate; }
+.celebration-cake__smoke { animation: cake-smoke 2.2s ease-out infinite; animation-delay: var(--smoke-delay, 0ms); }
+.celebration-cake__glow { animation: cake-glow 1.6s ease-in-out infinite alternate; }
+.celebration-cake__wind { opacity: var(--wind-opacity, 0); transition: opacity 100ms linear; }
+
+@keyframes cake-flame {
+  from { transform: scaleX(0.94) scaleY(1.03); }
+  to { transform: scaleX(1.04) scaleY(0.96); }
+}
+@keyframes cake-flame-core { from { opacity: 0.75; } to { opacity: 1; } }
+@keyframes cake-smoke {
+  0% { opacity: 0; transform: translateY(3px) scale(0.65); }
+  22% { opacity: 0.55; }
+  100% { opacity: 0; transform: translateY(-38px) scale(1.7); }
+}
+@keyframes cake-glow { from { opacity: 0.45; transform: scale(0.88); } to { opacity: 0.78; transform: scale(1.12); } }
+@keyframes cake-bob { 0%, 100% { transform: translateY(0) rotate(-0.25deg); } 50% { transform: translateY(-8px) rotate(0.25deg); } }
+
+@media (max-width: 560px) {
+  .cake-scene { padding: 0.75rem 0.75rem 1rem; }
+  .cake-scene__title { font-size: clamp(1.75rem, 8vw, 2.35rem); }
+  .cake-scene__copy { margin-top: 0.5rem; line-height: 1.5; }
+  .cake-scene__intro { padding-bottom: 0.75rem; }
+  .cake-scene__stage { width: min(100%, 17rem); padding-bottom: 1rem; }
+  .cake-scene__actions { min-height: 6.5rem; gap: 0.6rem; }
+  .cake-scene__buttons { width: 100%; }
+  .cake-scene__blow-button { width: 100%; }
+}
+
+@media (max-height: 760px) {
+  .cake-scene { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+  .cake-scene__title { font-size: clamp(1.75rem, 4.5vw, 2.5rem); }
+  .cake-scene__copy { margin-top: 0.5rem; line-height: 1.5; }
+  .cake-scene__intro { padding-bottom: 0.65rem; }
+  .cake-scene__stage { width: min(100%, 17rem); padding-bottom: 0.85rem; }
+  .cake-scene__actions { min-height: 5.75rem; gap: 0.55rem; }
+}
+
+@media (max-height: 620px) {
+  .cake-scene__eyebrow { margin-bottom: 0.35rem; }
+  .cake-scene__copy { font-size: 0.86rem; }
+  .cake-scene__intro { padding-bottom: 0.5rem; }
+  .cake-scene__stage { width: min(100%, 15rem); padding-bottom: 0.7rem; }
+  .cake-scene__actions { min-height: 5rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cake-scene *,
+  .cake-scene::before,
+  .cake-scene::after {
+    animation: none !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
